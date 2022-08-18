@@ -2,22 +2,37 @@
 
 namespace AUP_HA 
 {
+	/*
+	*
+	*/
 	StateManager::StateManager() : mStateFactories()
 	{
 	}
 
+	/*
+	*
+	*/
 	StateManager::~StateManager()
 	{
 	}
 
+	/*
+	*
+	*/
 	void StateManager::render()
 	{
 		if (mActiveState)
 		{
+#ifndef _DEBUG
+			system("cls");
+#endif
 			mActiveState->render();
 		}
 	}
 
+	/*
+	*
+	*/
 	void StateManager::processEvents()
 	{
 		if (mActiveState)
@@ -26,6 +41,9 @@ namespace AUP_HA
 		}
 	}
 
+	/*
+	*
+	*/
 	void StateManager::update()
 	{
 		if (mActiveState)
@@ -34,6 +52,9 @@ namespace AUP_HA
 		}
 	}
 
+	/*
+	*
+	*/
 	void StateManager::changeState(States::ID stateID)
 	{
 		if (stateID == States::NONE)
@@ -53,6 +74,9 @@ namespace AUP_HA
 		}
 	}
 
+	/*
+	*
+	*/
 	bool StateManager::hasActiveState() const
 	{
 		return static_cast<bool>(mActiveState);
