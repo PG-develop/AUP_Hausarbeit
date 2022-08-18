@@ -24,15 +24,36 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Application.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\StateManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
     <ClCompile Include="src\Main.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\Application.cpp">
+    <ClCompile Include="src\State.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IntroState.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Application.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\StateManager.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\State.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\StatesIdentifier.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IntroState.hpp">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>

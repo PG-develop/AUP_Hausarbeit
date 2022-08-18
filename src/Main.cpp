@@ -20,24 +20,21 @@
 
 #include "Application.hpp"
 
-namespace AUP_HA {
+int main() {
 
-	int main(int argc, char* argv[]) {
-	
-		try
-		{
-			// Instanz - Anwendung instanziieren und ausführen
-			std::unique_ptr<Application> app(new Application);
-			app->run();
-		}
-
-		// Wenn einer unbehandelter Fehler auftritt, wird dieser hier bearbeitet.
-		// z.B. für ein Fehlerlog
-		catch (const std::exception& e)
-		{
-			std::cout << "Es ist ein unbehandelter Fehler aufgetreten: " << e.what() << std::endl;
-		}
-
-		return EXIT_SUCCESS;
+	try
+	{
+		// Instanz - Anwendung instanziieren und ausführen
+		std::unique_ptr<AUP_HA::Application> app(new AUP_HA::Application);
+		app->run();
 	}
+
+	// Wenn einer unbehandelter Fehler auftritt, wird dieser hier bearbeitet.
+	// z.B. für ein Fehlerlog
+	catch (const std::exception& e)
+	{
+		std::cout << "Es ist ein unbehandelter Fehler aufgetreten: " << e.what() << std::endl;
+	}
+
+	return EXIT_SUCCESS;
 }
