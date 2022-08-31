@@ -3,7 +3,7 @@
 * Matr.Nr.:				214849
 * 
 * Erstelldatum:			08.08.2022
-* letzte Bearbeitung:	18.08.2022
+* letzte Bearbeitung:	31.08.2022
 *
 * Fach:					Algorithmen und Programmieren
 * KursNr.:				I_ET_B_026

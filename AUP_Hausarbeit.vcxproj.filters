@@ -39,6 +39,21 @@
     <ClCompile Include="src\IntroState.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\MainState.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameState.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SetupState.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LeaderboardState.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Utilities.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Application.hpp">
@@ -56,5 +71,25 @@
     <ClInclude Include="include\IntroState.hpp">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="include\MainState.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GameState.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\LeaderboardState.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SetupState.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Utilities.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="docs\Version.txt">
+      <Filter>docs</Filter>
+    </Text>
   </ItemGroup>
 </Project>

@@ -1,0 +1,58 @@
+Titel: Zahlenratespiel
+Autor: Patrick Gehrt
+
+letzte Bearbeitung: 31.08.2022
+aktuelle Version: A00.00.00.02
+
+####################################################################################
+A00.00.00.01
+18.08.2022
+
+	+ Application
+		- Programmfluss wird durch aufeinanderfollgenden Ticks gesteuert. Innerhalbt
+		  eines Ticks werden drei Methoden aufgerufen: Render, processEvents, Update
+			
+		+ Render: Im Render wird die Ausgabe generiert. Alle Ausgabekomandos werden hier
+				  beschrieben.
+
+		+ processEvents: In der Verarbeitung von Events werden die Eingaben des Benutzers,
+						 oder Events aufgerufen und bearbeitet.
+
+		+ Update: Im Update werden die Programmlogicen ausgeführt.
+
+	+ StateManager
+		- Im StateManager werden die verschiedenen States der Anwendung kontrolliert. Es
+		  ist immer ein State aktiv. Wenn kein State nach dem Ende eines Ticks aktiv ist,
+		  wird die Anwendung geschlossen.
+		  Es wird immer nur der aktive State im Speicher belassen. Mithilfe einer Factory
+		  wird ein neuer State in den Speicher gerufen. Die States müssen vorab in der
+		  Factory mithilfe eines Identifiziers registriert werden.
+		  Folgende States sind geplant: IntroState, MainState, GameState, LeaderboardState,
+		  SetupState
+
+		+ IntroState: Begin der Anwendung, zeigt Anwendungsinformationen an
+
+		+ MainState: Auswahlmenü 
+
+		+ GameState: Durchführung des Spiels "Zahlenratespiel"
+
+		+ SetupState: Einstellung der Anwendungsoptionen
+
+		+ LeaderboardState: Anzeige der Bestenliste
+
+####################################################################################
+A00.00.00.02
+31.08.2022
+	
+	+ MenuState
+	+ GameState
+	+ SetupState
+	+ LeaderboardState
+	+ Utilities
+
+	- States hinzugefügt und die Ausgabeinformation im IntroState festgelegt. Der
+	  IntroState soll mit einer beliebigen Taste zum MainState traversieren. Der MainState
+	  gibt die Menüstruktur für die Anwendung aus.
+	- Utilities soll nur statische Methoden zur Verfügung stellen. In ihr sind Anwendungs-
+	  übergreifende Funktionen. 
+	

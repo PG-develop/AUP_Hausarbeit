@@ -1,5 +1,11 @@
 #include "Application.hpp"
+
+// States
 #include "IntroState.hpp"
+#include "MainState.hpp"
+#include "GameState.hpp"
+#include "SetupState.hpp"
+#include "LeaderboardState.hpp"
 
 namespace AUP_HA 
 {
@@ -65,10 +71,14 @@ namespace AUP_HA
 	}
 
 	/*
-	*
+	* @description Registriert States in der Statefactory
 	*/
 	void Application::RegisterStates()
 	{
 		mStateManager->registerStates<IntroState>(States::INTRO);
+		mStateManager->registerStates<MainState>(States::MAIN);
+		mStateManager->registerStates<GameState>(States::GAME);
+		mStateManager->registerStates<SetupState>(States::SETUP);
+		mStateManager->registerStates<LeaderboardState>(States::LEADERBOARD);
 	}
 }
