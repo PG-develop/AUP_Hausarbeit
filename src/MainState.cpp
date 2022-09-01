@@ -46,10 +46,12 @@ namespace AUP_HA
 		if (userInput)
 		{
 			// TODO: Handler aus dem Menu aufrufen
+			std::cout << "Erfolgreiche Eingabe: " << *userInput << std::endl;
 		}
 		else
 		{
 			// TODO: Eingabe inkorrekt, Nachricht an den Benutzer und nächster Tik
+			std::cout << "Invalide Eingabe. " << std::endl;
 		}
 	}
 
