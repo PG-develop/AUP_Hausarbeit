@@ -1,5 +1,5 @@
-#include "State.hpp"
-#include "StateManager.hpp"
+#include "../include/State.hpp"
+#include "../include/StateManager.hpp"
 
 namespace AUP_HA 
 {

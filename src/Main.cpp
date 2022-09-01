@@ -3,7 +3,7 @@
 * Matr.Nr.:				214849
 * 
 * Erstelldatum:			08.08.2022
-* letzte Bearbeitung:	31.08.2022
+* letzte Bearbeitung:	01.09.2022
 *
 * Fach:					Algorithmen und Programmieren
 * KursNr.:				I_ET_B_026
@@ -18,7 +18,7 @@
 ******************************************************************************************** */
 #include <iostream>
 
-#include "Application.hpp"
+#include "../include/Application.hpp"
 
 int main() {
 
@@ -33,7 +33,9 @@ int main() {
 	// z.B. für ein Fehlerlog
 	catch (const std::exception& e)
 	{
-		std::cout << "Es ist ein unbehandelter Fehler aufgetreten: " << e.what() << std::endl;
+		std::cerr << "Es ist ein unbehandelter Fehler aufgetreten: " << e.what() << std::endl;
+
+		return EXIT_FAILURE;
 	}
 
 	return EXIT_SUCCESS;

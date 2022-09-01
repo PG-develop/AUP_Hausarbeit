@@ -1,4 +1,4 @@
-#include "SetupState.hpp"
+#include "../include/SetupState.hpp"
 
 namespace AUP_HA
 {
@@ -12,6 +12,7 @@ namespace AUP_HA
 
 	void SetupState::render()
 	{
+		std::cout << "SetupState" << std::endl;
 	}
 
 	void SetupState::processEvents()

@@ -1,4 +1,4 @@
-#include "GameState.hpp"
+#include "../include/GameState.hpp"
 
 namespace AUP_HA
 {
@@ -12,6 +12,7 @@ namespace AUP_HA
 
 	void GameState::render()
 	{
+		std::cout << "GameState" << std::endl;
 	}
 
 	void GameState::processEvents()

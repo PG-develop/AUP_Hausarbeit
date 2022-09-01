@@ -54,6 +54,15 @@
     <ClCompile Include="src\Utilities.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\TXTUserPersistenceListService.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Leaderboard.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UserRepository.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Application.hpp">
@@ -90,6 +99,21 @@
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="include\MenuIdentifier.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\User.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\PersistenceListService.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TXTUserPersistenceListService.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Leaderboard.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UserRepository.hpp">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>

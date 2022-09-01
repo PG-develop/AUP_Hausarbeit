@@ -10,7 +10,7 @@ namespace AUP_HA
 	* @class MenuManager
 	* @brief Manager für numerische Menüs.
 	* 
-	* Für den generischen Typen muss der verwendete Identifiziertyp angegeben werden.
+	* Für den generischen Typen T muss der verwendete Identifiziertyp angegeben werden.
 	*/
 	template<typename T>
 	class MenuManager
@@ -23,8 +23,10 @@ namespace AUP_HA
 		void selectMenuItem(T menuID);
 		void selectMenuItem(int menuIntID);
 
+		int count() const;
+
 	private:
-		std::map<T, std::function<void()>>	mRegisteresHandlers;
+		std::map<T, std::function<void()>>	mRegisteredHandlers;
 
 	};
 
@@ -48,15 +50,15 @@ namespace AUP_HA
 	inline void MenuManager<T>::registerMenu(T menuID, std::function<void()> handler)
 	{
 #ifdef _DEBUG
-		auto found = mRegisteresHandlers.find(menuID);
+		auto found = mRegisteredHandlers.find(menuID);
 
 		// Prüfe, ob die ID bereits vergeben wurde
-		if (found != mRegisteresHandlers.end()) 
+		if (found != mRegisteredHandlers.end()) 
 		{
 			assert("ID wurde bereits registriert!");
 		}
 #endif
-		mRegisteresHandlers[menuID] = handler;
+		mRegisteredHandlers[menuID] = handler;
 	}
 
 	/**
@@ -67,10 +69,10 @@ namespace AUP_HA
 	template<typename T>
 	inline void MenuManager<T>::selectMenuItem(T menuID)
 	{
-		auto found = mRegisteresHandlers.find(menuID);
+		auto found = mRegisteredHandlers.find(menuID);
 #ifdef _DEBUG
 		// Prüfe, ob die ID vorhanden ist
-		if (found == mRegisteresHandlers.end())
+		if (found == mRegisteredHandlers.end())
 		{
 			assert("Die ID wurde nicht gefunden. Gehen Sie sicher, dass die ID korrekt registriert wurde.");
 		}
@@ -89,5 +91,14 @@ namespace AUP_HA
 	inline void MenuManager<T>::selectMenuItem(int menuIntID)
 	{
 		selectMenuItem(static_cast<T>(menuIntID));
+	}
+
+	/**
+	* @brief Gibt die Anzahl der registrierten Handlers zurück.
+	*/
+	template<typename T>
+	inline int MenuManager<T>::count() const
+	{
+		return mRegisteredHandlers.size();
 	}
 }

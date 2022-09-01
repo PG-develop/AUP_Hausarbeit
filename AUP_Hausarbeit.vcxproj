@@ -124,6 +124,7 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\Users\gehrt\source\repos\PG-develop\AUP_Hausarbeit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalUsingDirectories>AUP_HA</AdditionalUsingDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -138,26 +139,34 @@
     <ClCompile Include="src\IntroState.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\gehrt\source\repos\PG-develop\AUP_Hausarbeit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="src\Leaderboard.cpp" />
     <ClCompile Include="src\LeaderboardState.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\MainState.cpp" />
     <ClCompile Include="src\SetupState.cpp" />
     <ClCompile Include="src\State.cpp" />
     <ClCompile Include="src\StateManager.cpp" />
+    <ClCompile Include="src\TXTUserPersistenceListService.cpp" />
+    <ClCompile Include="src\UserRepository.cpp" />
     <ClCompile Include="src\Utilities.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Application.hpp" />
     <ClInclude Include="include\GameState.hpp" />
     <ClInclude Include="include\IntroState.hpp" />
+    <ClInclude Include="include\Leaderboard.hpp" />
     <ClInclude Include="include\LeaderboardState.hpp" />
     <ClInclude Include="include\MenuIdentifier.hpp" />
     <ClInclude Include="include\MainState.hpp" />
     <ClInclude Include="include\MenuManager.hpp" />
+    <ClInclude Include="include\PersistenceListService.hpp" />
     <ClInclude Include="include\SetupState.hpp" />
     <ClInclude Include="include\State.hpp" />
     <ClInclude Include="include\StateManager.hpp" />
     <ClInclude Include="include\StatesIdentifier.hpp" />
+    <ClInclude Include="include\TXTUserPersistenceListService.hpp" />
+    <ClInclude Include="include\User.hpp" />
+    <ClInclude Include="include\UserRepository.hpp" />
     <ClInclude Include="include\Utilities.hpp" />
   </ItemGroup>
   <ItemGroup>
