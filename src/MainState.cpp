@@ -3,8 +3,11 @@
 
 namespace AUP_HA
 {
-	MainState::MainState(StateManager& stateManager) : State(stateManager)
+	MainState::MainState(StateManager& stateManager)
+		: State(stateManager)
+		, mMenu()
 	{
+		registerMenu();
 	}
 
 	MainState::~MainState()
@@ -33,6 +36,29 @@ namespace AUP_HA
 
 	void MainState::update()
 	{
+		// Limits für die Menueingabe für Menuitem 1 - 4
+		auto limits = std::make_pair(1, 4);
+
+		// 
+		auto userInput = Utilities::ParseStringToIntWithLimits(mUserinput, limits);
+
+		// Prüfe auf valide Benutzereingabe
+		if (userInput)
+		{
+			// TODO: Handler aus dem Menu aufrufen
+		}
+		else
+		{
+			// TODO: Eingabe inkorrekt, Nachricht an den Benutzer und nächster Tik
+		}
+	}
+
+	void MainState::registerMenu()
+	{
+		mMenu.registerMenu(MainMenu::GAME, std::bind(&MainState::onGame, this));
+		mMenu.registerMenu(MainMenu::SETUP, std::bind(&MainState::onSetup, this));
+		mMenu.registerMenu(MainMenu::LEADERBOARD, std::bind(&MainState::onLeaderboard, this));
+		mMenu.registerMenu(MainMenu::EXIT, std::bind(&MainState::onExit, this));	
 	}
 
 	void MainState::onGame()

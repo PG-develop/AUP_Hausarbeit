@@ -1,8 +1,28 @@
 Titel: Zahlenratespiel
 Autor: Patrick Gehrt
 
-letzte Bearbeitung: 31.08.2022
-aktuelle Version: A00.00.00.02
+letzte Bearbeitung: 01.09.2022
+aktuelle Version: A00.00.00.03
+
+####################################################################################
+A00.00.00.03
+01.09.2022
+
+####################################################################################
+A00.00.00.02
+31.08.2022
+	
+	+ MenuState
+	+ GameState
+	+ SetupState
+	+ LeaderboardState
+	+ Utilities
+
+	- States hinzugefügt und die Ausgabeinformation im IntroState festgelegt. Der
+	  IntroState soll mit einer beliebigen Taste zum MainState traversieren. Der MainState
+	  gibt die Menüstruktur für die Anwendung aus.
+	- Utilities soll nur statische Methoden zur Verfügung stellen. In ihr sind Anwendungs-
+	  übergreifende Funktionen. 
 
 ####################################################################################
 A00.00.00.01
@@ -39,20 +59,3 @@ A00.00.00.01
 		+ SetupState: Einstellung der Anwendungsoptionen
 
 		+ LeaderboardState: Anzeige der Bestenliste
-
-####################################################################################
-A00.00.00.02
-31.08.2022
-	
-	+ MenuState
-	+ GameState
-	+ SetupState
-	+ LeaderboardState
-	+ Utilities
-
-	- States hinzugefügt und die Ausgabeinformation im IntroState festgelegt. Der
-	  IntroState soll mit einer beliebigen Taste zum MainState traversieren. Der MainState
-	  gibt die Menüstruktur für die Anwendung aus.
-	- Utilities soll nur statische Methoden zur Verfügung stellen. In ihr sind Anwendungs-
-	  übergreifende Funktionen. 
-	

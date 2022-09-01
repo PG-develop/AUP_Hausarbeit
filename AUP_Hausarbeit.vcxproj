@@ -151,7 +151,9 @@
     <ClInclude Include="include\GameState.hpp" />
     <ClInclude Include="include\IntroState.hpp" />
     <ClInclude Include="include\LeaderboardState.hpp" />
+    <ClInclude Include="include\MenuIdentifier.hpp" />
     <ClInclude Include="include\MainState.hpp" />
+    <ClInclude Include="include\MenuManager.hpp" />
     <ClInclude Include="include\SetupState.hpp" />
     <ClInclude Include="include\State.hpp" />
     <ClInclude Include="include\StateManager.hpp" />

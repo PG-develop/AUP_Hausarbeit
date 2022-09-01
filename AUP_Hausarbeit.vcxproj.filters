@@ -86,6 +86,12 @@
     <ClInclude Include="include\Utilities.hpp">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="include\MenuManager.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MenuIdentifier.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="docs\Version.txt">

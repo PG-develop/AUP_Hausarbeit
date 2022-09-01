@@ -1,18 +1,16 @@
-#include "Application.hpp"
+#include "../include/Application.hpp"
 
 // States
-#include "IntroState.hpp"
-#include "MainState.hpp"
-#include "GameState.hpp"
-#include "SetupState.hpp"
-#include "LeaderboardState.hpp"
+#include "../include/IntroState.hpp"
+#include "../include/MainState.hpp"
+#include "../include/GameState.hpp"
+#include "../include/SetupState.hpp"
+#include "../include/LeaderboardState.hpp"
 
 namespace AUP_HA 
 {
-	/*
-	* @Constructor
-	* 
-	* @description Instanz des StateManager instanziieren und States registrieren
+	/**
+	* @brief Instanz des StateManager instanziieren und States registrieren
 	*/
 	Application::Application()
 	{
@@ -23,21 +21,25 @@ namespace AUP_HA
 		// States für den StateManager registrieren
 		RegisterStates();
 
+		// IntroState als aktiven State festlegen
 		mStateManager->changeState(States::INTRO);
 	}
 
-	/*
+	/**
 	* @Destructor
 	*/
 	Application::~Application()
 	{
 	}
 
-	/*
-	* @description Steuerung des Programmflusses
+	/**
+	* @bief Steuerung des Programmflusses (Ticks),
+	*		jeder Durchgang ist ein Tick.
 	*/
 	void Application::run()
 	{
+		// Solange ein State aktiv ist, bleibt der 
+		// Programmfluss erhalten und es kommt zum nächsten Tick.
 		while (mStateManager->hasActiveState())
 		{
 			render();
@@ -46,32 +48,32 @@ namespace AUP_HA
 		}
 	}
 
-	/*
-	*
+	/**
+	* @brief Darstellung 
 	*/
 	void Application::render()
 	{
 		mStateManager->render();
 	}
 
-	/*
-	*
+	/**
+	* @brief Benutzer- oder/und Eventeingabe
 	*/
 	void Application::processEvents()
 	{
 		mStateManager->processEvents();
 	}
 
-	/*
-	*
+	/**
+	* @brief Durchfühung der Logic
 	*/
 	void Application::update()
 	{
 		mStateManager->update();
 	}
 
-	/*
-	* @description Registriert States in der Statefactory
+	/**
+	* @brief Registriert States in der Statefactory
 	*/
 	void Application::RegisterStates()
 	{
