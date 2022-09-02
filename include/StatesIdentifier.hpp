@@ -14,4 +14,17 @@ namespace AUP_HA
 			SETUP
 		};
 	}
+
+	namespace GameStates
+	{
+		enum ID
+		{
+
+		};
+
+		enum TRANSITION
+		{
+
+		};
+	}
 }

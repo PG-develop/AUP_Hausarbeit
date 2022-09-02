@@ -64,8 +64,9 @@ namespace AUP_HA
 		else
 		{
 			auto found = mStateFactories.find(stateID);
+#ifdef _DEBUG
 			assert(found != mStateFactories.end());
-
+#endif
 			if (mActiveState) 
 			{
 				mActiveState.reset();

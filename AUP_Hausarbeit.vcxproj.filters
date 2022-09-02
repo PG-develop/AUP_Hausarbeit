@@ -57,10 +57,10 @@
     <ClCompile Include="src\TXTUserPersistenceListService.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\Leaderboard.cpp">
+    <ClCompile Include="src\UserRepository.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\UserRepository.cpp">
+    <ClCompile Include="src\NumberGameStateManager.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -110,10 +110,16 @@
     <ClInclude Include="include\TXTUserPersistenceListService.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\Leaderboard.hpp">
+    <ClInclude Include="include\UserRepository.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\UserRepository.hpp">
+    <ClInclude Include="include\NumberGameStateManager.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\NumberGameState.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GameTransition.hpp">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>
@@ -121,5 +127,10 @@
     <Text Include="docs\Version.txt">
       <Filter>docs</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\Downloads\AUP_HA.pdf">
+      <Filter>docs</Filter>
+    </None>
   </ItemGroup>
 </Project>

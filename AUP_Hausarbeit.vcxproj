@@ -139,10 +139,10 @@
     <ClCompile Include="src\IntroState.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\gehrt\source\repos\PG-develop\AUP_Hausarbeit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
-    <ClCompile Include="src\Leaderboard.cpp" />
     <ClCompile Include="src\LeaderboardState.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\MainState.cpp" />
+    <ClCompile Include="src\NumberGameStateManager.cpp" />
     <ClCompile Include="src\SetupState.cpp" />
     <ClCompile Include="src\State.cpp" />
     <ClCompile Include="src\StateManager.cpp" />
@@ -153,12 +153,14 @@
   <ItemGroup>
     <ClInclude Include="include\Application.hpp" />
     <ClInclude Include="include\GameState.hpp" />
+    <ClInclude Include="include\GameTransition.hpp" />
     <ClInclude Include="include\IntroState.hpp" />
-    <ClInclude Include="include\Leaderboard.hpp" />
     <ClInclude Include="include\LeaderboardState.hpp" />
     <ClInclude Include="include\MenuIdentifier.hpp" />
     <ClInclude Include="include\MainState.hpp" />
     <ClInclude Include="include\MenuManager.hpp" />
+    <ClInclude Include="include\NumberGameState.hpp" />
+    <ClInclude Include="include\NumberGameStateManager.hpp" />
     <ClInclude Include="include\PersistenceListService.hpp" />
     <ClInclude Include="include\SetupState.hpp" />
     <ClInclude Include="include\State.hpp" />
@@ -171,6 +173,9 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="docs\Version.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\Downloads\AUP_HA.pdf" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
