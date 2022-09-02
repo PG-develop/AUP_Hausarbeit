@@ -142,7 +142,9 @@
     <ClCompile Include="src\LeaderboardState.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\MainState.cpp" />
+    <ClCompile Include="src\NumberGameState.cpp" />
     <ClCompile Include="src\NumberGameStateManager.cpp" />
+    <ClCompile Include="src\NumberGameStateName.cpp" />
     <ClCompile Include="src\SetupState.cpp" />
     <ClCompile Include="src\State.cpp" />
     <ClCompile Include="src\StateManager.cpp" />
@@ -161,6 +163,7 @@
     <ClInclude Include="include\MenuManager.hpp" />
     <ClInclude Include="include\NumberGameState.hpp" />
     <ClInclude Include="include\NumberGameStateManager.hpp" />
+    <ClInclude Include="include\NumberGameStateName.hpp" />
     <ClInclude Include="include\PersistenceListService.hpp" />
     <ClInclude Include="include\SetupState.hpp" />
     <ClInclude Include="include\State.hpp" />

@@ -19,7 +19,7 @@ namespace AUP_HA
 		mStateManager = std::move(stateManager);
 
 		// States für den StateManager registrieren
-		RegisterStates();
+		registerStates();
 
 		// IntroState als aktiven State festlegen
 		mStateManager->changeState(States::INTRO);
@@ -75,7 +75,7 @@ namespace AUP_HA
 	/**
 	* @brief Registriert States in der Statefactory
 	*/
-	void Application::RegisterStates()
+	void Application::registerStates()
 	{
 		mStateManager->registerStates<IntroState>(States::INTRO);
 		mStateManager->registerStates<MainState>(States::MAIN);

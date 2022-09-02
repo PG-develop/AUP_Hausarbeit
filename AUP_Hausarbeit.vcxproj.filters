@@ -63,6 +63,12 @@
     <ClCompile Include="src\NumberGameStateManager.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\NumberGameState.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NumberGameStateName.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Application.hpp">
@@ -120,6 +126,9 @@
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="include\GameTransition.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\NumberGameStateName.hpp">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>

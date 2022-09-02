@@ -1,6 +1,6 @@
 #include <conio.h>
 
-#include "IntroState.hpp"
+#include "../include/IntroState.hpp"
 
 namespace AUP_HA 
 {

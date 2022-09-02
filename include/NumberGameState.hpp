@@ -1,6 +1,10 @@
 #pragma once
 
 #include <memory>
+#include <string>
+#include <optional>
+#include <vector>
+#include <functional>
 
 #include "../include/StatesIdentifier.hpp"
 #include "../include/GameTransition.hpp"
@@ -24,8 +28,15 @@ namespace AUP_HA
 
 	protected:
 		void requestChange(GameStates::ID stateID);
+		void checkTransitions();
 
-		std::map<GameStates::TRANSITION, GameTransition::Ptr> mTransitionFacotry;
+		//std::map<GameStates::TRANSITION, GameTransition::Ptr> mTransitionFacotry;
+
+	protected:
+		std::string mInputBuffer;
+
+		// In dem Vector werden Funktionen gespeichert, in denen die Transitionbedingungen geprüft werden.
+		std::vector<std::function<std::optional<GameStates::ID>(const std::string&)>> mTransitionList;
 
 	private:
 		NumberGameStateManager* mManager;

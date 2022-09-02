@@ -2,7 +2,25 @@ Titel: Zahlenratespiel
 Autor: Patrick Gehrt
 
 letzte Bearbeitung: 01.09.2022
-aktuelle Version: A00.00.00.03
+aktuelle Version: A00.00.00.04
+
+####################################################################################
+A00.00.00.04
+02.09.2022
+
+	- Leaderboard => wurde durch das userRepository obsolet
+	+ NumberGameStateManager
+	+ NumberGameState
+	+ NumberGameStateName
+
+	- Im Spielfluss werden verschiedene Zustände (States) angenommen. Diese werden im
+	  Statemanager gesteuert. Jeder State hat eine Anzahl an Transitions. Diese werden
+	  in einer Transitionliste gespeichert. Am Ende eines Ticks wird die Transitionsliste
+	  durchgegangen. Jede Transition prüft die Benutzereingabe auf ihre Funktionalität.
+	  Wenn eine Transition-Bedinung erfüllt ist, wird diese den State des Spiels ändern.
+	  Die Transitionfunktionen sind im StateManager hinterlegt.
+
+	  Problem: 
 
 ####################################################################################
 A00.00.00.03

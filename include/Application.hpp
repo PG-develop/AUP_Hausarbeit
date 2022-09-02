@@ -24,7 +24,7 @@ namespace AUP_HA
 		void processEvents();
 		void update();
 
-		void RegisterStates();
+		void registerStates();
 
 	private:
 		std::unique_ptr<StateManager>	mStateManager;

@@ -5,7 +5,7 @@
 
 #include "../include/State.hpp"
 #include "../include/UserRepository.hpp"
-
+#include "../include/NumberGameStateManager.hpp"
 
 namespace AUP_HA
 {
@@ -20,6 +20,12 @@ namespace AUP_HA
 		virtual void update();
 
 	private:
-		std::unique_ptr<UserRepository>	mUserRepository;
+		void registerStates();
+
+	private:
+		std::unique_ptr<UserRepository>			mUserRepository;
+		std::unique_ptr<NumberGameStateManager> mGameStateManager;
+
+		User mUser;
 	};
 }
