@@ -6,9 +6,10 @@
 
 namespace AUP_HA
 {
-	NumberGameStateManager::NumberGameStateManager(UserRepository& userRepository)
+	NumberGameStateManager::NumberGameStateManager(UserRepository& userRepository, Game& game)
 	{
 		mUserRepository = &userRepository;
+		mGame = &game;
 
 		registerTransitions();
 	}
@@ -49,36 +50,26 @@ namespace AUP_HA
 
 	NumberGameStateManager::TransitionHandler& NumberGameStateManager::getTransition(GameStates::TRANSITION transitionID)
 	{
-		// TODO: hier return-Anweisung eingeben
+		auto found = mTransitionHandlers.find(transitionID);
+
+		assert(found != mTransitionHandlers.end());
+
+		return found->second;
 	}
 
 	void NumberGameStateManager::registerTransitions()
 	{
 		mTransitionHandlers[GameStates::TRANSITION::EMPTY]	 = std::bind(&NumberGameStateManager::onEmpty, this, std::placeholders::_1);
-		mTransitionHandlers[GameStates::TRANSITION::N_EMPTY] = std::bind(&NumberGameStateManager::onNotEmpty, this, std::placeholders::_1);
 		mTransitionHandlers[GameStates::TRANSITION::NN]		 = std::bind(&NumberGameStateManager::onNoNumber, this, std::placeholders::_1);
-		mTransitionHandlers[GameStates::TRANSITION::NH]		 = std::bind(&NumberGameStateManager::onNoHit, this, std::placeholders::_1);
+		mTransitionHandlers[GameStates::TRANSITION::NH]		 = std::bind(&NumberGameStateManager::onHitOrNoHit, this, std::placeholders::_1);
 		mTransitionHandlers[GameStates::TRANSITION::OB]		 = std::bind(&NumberGameStateManager::onOutBorders, this, std::placeholders::_1);
-		mTransitionHandlers[GameStates::TRANSITION::H]		 = std::bind(&NumberGameStateManager::onHit, this, std::placeholders::_1);
 	}
 
 	std::optional<GameStates::ID> NumberGameStateManager::onEmpty(const std::string& string)
 	{
 		if (string.empty())
 		{
-			return std::nullopt;
-		}
-		else
-		{
 			return GameStates::ID::FIRST;
-		}
-	}
-
-	std::optional<GameStates::ID> NumberGameStateManager::onNotEmpty(const std::string& string)
-	{
-		if (!string.empty())
-		{
-			return std::nullopt;
 		}
 		else
 		{
@@ -88,22 +79,41 @@ namespace AUP_HA
 
 	std::optional<GameStates::ID> NumberGameStateManager::onNoNumber(const std::string& string)
 	{
-		return std::optional<GameStates::ID>();
+		auto parsedString = Utilities::ParseStringToInt(string);
+
+		// Wenn String nicht valide ist, dann gehe über in State 3 (NoNumber)
+		if (!parsedString)
+		{
+			return GameStates::ID::STATE_3;
+		}
+		return std::nullopt;
 	}
 
-	std::optional<GameStates::ID> NumberGameStateManager::onNoHit(const std::string& string)
+	std::optional<GameStates::ID> NumberGameStateManager::onHitOrNoHit(const std::string& string)
 	{
-		return std::optional<GameStates::ID>();
+		// an der Stelle, muss der String definitiv eine Zahl sein.
+		auto parsedString = Utilities::ParseStringToInt(string);
+
+		// String war keine Zahl, wenn hier gestoppt [[DEBUG]]
+		assert(!parsedString);
+
+		// Wurde die Zahl gefunden?
+		if (mGame->check(*parsedString))
+		{
+			return GameStates::ID::STATE_5;
+		}
+		return GameStates::ID::STATE_2;
 	}
 
 	std::optional<GameStates::ID> NumberGameStateManager::onOutBorders(const std::string& string)
 	{
-		return std::optional<GameStates::ID>();
-	}
+		auto limits = std::make_pair<const std::int32_t&, const std::int32_t&>(mGame->getMinBoard(), mGame->getMaxBoarder());
+		auto parsedString = Utilities::ParseStringToIntWithLimits(string, limits);
 
-	std::optional<GameStates::ID> NumberGameStateManager::onHit(const std::string& string)
-	{
-		return std::optional<GameStates::ID>();
+		if (!parsedString)
+		{
+			return GameStates::ID::STATE_4;
+		}
+		return std::nullopt;
 	}
-
 }

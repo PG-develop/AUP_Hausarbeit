@@ -2,15 +2,19 @@
 #include "../include/StatesIdentifier.hpp"
 
 #include "../include/NumberGameStateName.hpp"
+#include "../include/NumberGameStateNormal.hpp"
 
 namespace AUP_HA
 {
 	GameState::GameState(StateManager& stateManager) : State(stateManager)
 	{
 		mUserRepository = std::make_unique<UserRepository>();
-		mGameStateManager = std::make_unique<NumberGameStateManager>(*(mUserRepository.get()));
+		mGame = std::make_unique<Game>();
+		mGameStateManager = std::make_unique<NumberGameStateManager>(*(mUserRepository.get()), *(mGame.get()));
 
 		registerStates();
+
+		
 
 		mGameStateManager->changeState(GameStates::ID::FIRST);
 	}
@@ -38,5 +42,6 @@ namespace AUP_HA
 	void GameState::registerStates()
 	{
 		mGameStateManager->registerStates<NumberGameStateName>(GameStates::FIRST);
+		mGameStateManager->registerStates<NumberGameStateNormal>(GameStates::STATE_2);
 	}
 }

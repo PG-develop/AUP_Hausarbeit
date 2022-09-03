@@ -2,7 +2,19 @@ Titel: Zahlenratespiel
 Autor: Patrick Gehrt
 
 letzte Bearbeitung: 01.09.2022
-aktuelle Version: A00.00.00.04
+aktuelle Version: A00.00.00.05
+
+####################################################################################
+A00.00.00.05
+03.09.2022
+
+	+ Game
+	+ NumberGameStateNormal
+
+	- Die spezifischen Spieleparameter werden jetzt in einer Game Klasse behandelt und
+	  angeboten. Der GameState beinhaltet die Game-Instanz und gibt diese dem Game-
+	  StateManager zur Verfügung. So können die TransitionHandler auf die Game-Instanz Einfluss
+	  ausüben. 
 
 ####################################################################################
 A00.00.00.04
@@ -19,8 +31,6 @@ A00.00.00.04
 	  durchgegangen. Jede Transition prüft die Benutzereingabe auf ihre Funktionalität.
 	  Wenn eine Transition-Bedinung erfüllt ist, wird diese den State des Spiels ändern.
 	  Die Transitionfunktionen sind im StateManager hinterlegt.
-
-	  Problem: 
 
 ####################################################################################
 A00.00.00.03

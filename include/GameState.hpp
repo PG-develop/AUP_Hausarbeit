@@ -6,6 +6,7 @@
 #include "../include/State.hpp"
 #include "../include/UserRepository.hpp"
 #include "../include/NumberGameStateManager.hpp"
+#include "../include/Game.hpp"
 
 namespace AUP_HA
 {
@@ -25,7 +26,6 @@ namespace AUP_HA
 	private:
 		std::unique_ptr<UserRepository>			mUserRepository;
 		std::unique_ptr<NumberGameStateManager> mGameStateManager;
-
-		User mUser;
+		std::unique_ptr<Game>					mGame;
 	};
 }

@@ -8,6 +8,7 @@
 #include "../include/NumberGameState.hpp"
 #include "../include/StatesIdentifier.hpp"
 #include "../include/UserRepository.hpp"
+#include "../include/Game.hpp"
 
 namespace AUP_HA
 {
@@ -17,7 +18,7 @@ namespace AUP_HA
 		typedef std::function<std::optional<GameStates::ID>(const std::string&)> TransitionHandler;
 
 	public:
-		explicit NumberGameStateManager(UserRepository& userRepository);
+		explicit NumberGameStateManager(UserRepository& userRepository, Game& game);
 		~NumberGameStateManager();
 
 		template <typename T>
@@ -34,11 +35,9 @@ namespace AUP_HA
 		//TODO:: Funktionsobjekte erstellen
 		void registerTransitions();
 		std::optional<GameStates::ID> onEmpty(const std::string& string);
-		std::optional<GameStates::ID> onNotEmpty(const std::string& string);
 		std::optional<GameStates::ID> onNoNumber(const std::string& string);
-		std::optional<GameStates::ID> onNoHit(const std::string& string);
+		std::optional<GameStates::ID> onHitOrNoHit(const std::string& string);
 		std::optional<GameStates::ID> onOutBorders(const std::string& string);
-		std::optional<GameStates::ID> onHit(const std::string& string);
 
 	private:
 		NumberGameState::Ptr	mActiveState;
@@ -46,6 +45,9 @@ namespace AUP_HA
 		std::map<GameStates::TRANSITION, std::function<std::optional<GameStates::ID>(const std::string&)>> mTransitionHandlers;
 
 		UserRepository* mUserRepository;
+		Game* mGame;
+
+
 	};
 
 	template<typename T>
