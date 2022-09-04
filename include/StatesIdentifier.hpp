@@ -20,11 +20,15 @@ namespace AUP_HA
 		//TODO: Namen der IDs müssen noch angepasst werden
 		enum ID
 		{
+			NONE,
 			FIRST,
 			STATE_2,
 			STATE_3,
 			STATE_4,
 			STATE_5,
+			STATE_6,
+			STATE_7,
+			END
 		};
 
 		enum TRANSITION
@@ -34,7 +38,10 @@ namespace AUP_HA
 			NH,
 			NN,
 			OB,
-			H
+			L,
+			I,
+			NG,
+			E
 		};
 	}
 }

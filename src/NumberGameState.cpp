@@ -5,12 +5,14 @@ namespace AUP_HA
 {
 	NumberGameState::NumberGameState(NumberGameStateManager& manager) : mInputBuffer(), mManager{&manager}
 	{
+		mGame = &(mManager->getGame());
 	}
 	NumberGameState::~NumberGameState()
 	{
 	}
 	void NumberGameState::requestChange(GameStates::ID stateID)
 	{
+		mGame->setNewInput(mInputBuffer);
 		mManager->changeState(stateID);
 	}
 	void NumberGameState::checkTransitions()

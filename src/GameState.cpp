@@ -3,6 +3,9 @@
 
 #include "../include/NumberGameStateName.hpp"
 #include "../include/NumberGameStateNormal.hpp"
+#include "../include/NumberGameStateNoNumber.hpp"
+#include "../include/NumberGameStateOutBorders.hpp"
+#include "../include/NumberGameStateWin.hpp"
 
 namespace AUP_HA
 {
@@ -43,5 +46,8 @@ namespace AUP_HA
 	{
 		mGameStateManager->registerStates<NumberGameStateName>(GameStates::FIRST);
 		mGameStateManager->registerStates<NumberGameStateNormal>(GameStates::STATE_2);
+		mGameStateManager->registerStates<NumberGameStateNoNumber>(GameStates::STATE_3);
+		mGameStateManager->registerStates<NumberGameStateOutBorders>(GameStates::STATE_4);
+		mGameStateManager->registerStates<NumberGameStateWin>(GameStates::STATE_5);
 	}
 }

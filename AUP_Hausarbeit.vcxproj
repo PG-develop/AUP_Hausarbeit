@@ -146,7 +146,10 @@
     <ClCompile Include="src\NumberGameState.cpp" />
     <ClCompile Include="src\NumberGameStateManager.cpp" />
     <ClCompile Include="src\NumberGameStateName.cpp" />
+    <ClCompile Include="src\NumberGameStateNoNumber.cpp" />
     <ClCompile Include="src\NumberGameStateNormal.cpp" />
+    <ClCompile Include="src\NumberGameStateOutBorders.cpp" />
+    <ClCompile Include="src\NumberGameStateWin.cpp" />
     <ClCompile Include="src\SetupState.cpp" />
     <ClCompile Include="src\State.cpp" />
     <ClCompile Include="src\StateManager.cpp" />
@@ -167,7 +170,10 @@
     <ClInclude Include="include\NumberGameState.hpp" />
     <ClInclude Include="include\NumberGameStateManager.hpp" />
     <ClInclude Include="include\NumberGameStateName.hpp" />
+    <ClInclude Include="include\NumberGameStateNoNumber.hpp" />
     <ClInclude Include="include\NumberGameStateNormal.hpp" />
+    <ClInclude Include="include\NumberGameStateOutBorders.hpp" />
+    <ClInclude Include="include\NumberGameStateWin.hpp" />
     <ClInclude Include="include\PersistenceListService.hpp" />
     <ClInclude Include="include\SetupState.hpp" />
     <ClInclude Include="include\State.hpp" />
@@ -182,7 +188,7 @@
     <Text Include="docs\Version.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\..\Downloads\AUP_HA.pdf" />
+    <None Include="..\..\..\OneDrive - Axel Springer SE\Downloads\AUP_HA.pdf" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

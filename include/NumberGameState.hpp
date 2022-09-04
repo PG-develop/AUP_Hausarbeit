@@ -8,6 +8,7 @@
 
 #include "../include/StatesIdentifier.hpp"
 #include "../include/GameTransition.hpp"
+#include "../include/Game.hpp"
 
 namespace AUP_HA
 {
@@ -34,6 +35,7 @@ namespace AUP_HA
 
 	protected:
 		std::string mInputBuffer;
+		Game* mGame;
 
 		// In dem Vector werden Funktionen gespeichert, in denen die Transitionbedingungen geprüft werden.
 		std::vector<std::function<std::optional<GameStates::ID>(const std::string&)>> mTransitionList;

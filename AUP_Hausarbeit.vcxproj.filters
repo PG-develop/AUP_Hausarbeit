@@ -75,6 +75,15 @@
     <ClCompile Include="src\NumberGameStateNormal.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\NumberGameStateNoNumber.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NumberGameStateOutBorders.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NumberGameStateWin.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Application.hpp">
@@ -143,6 +152,15 @@
     <ClInclude Include="include\NumberGameStateNormal.hpp">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="include\NumberGameStateNoNumber.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\NumberGameStateOutBorders.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\NumberGameStateWin.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="docs\Version.txt">
@@ -150,7 +168,7 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\..\Downloads\AUP_HA.pdf">
+    <None Include="..\..\..\OneDrive - Axel Springer SE\Downloads\AUP_HA.pdf">
       <Filter>docs</Filter>
     </None>
   </ItemGroup>

@@ -10,7 +10,6 @@ namespace AUP_HA
 		, mSearchedNumber{ }
 		, mTries{ }
 		, mMaxTries{ }
-		, mUser{ }
 	{
 		
 	}
@@ -33,8 +32,8 @@ namespace AUP_HA
 		// Prüfe, ob die gesuchte Zahl gefunden wurde
 		if (number == mSearchedNumber)
 		{
-			mUser.Tries = mTries;
-			mUser.Date = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
+			mUser->Tries = mTries;
+			mUser->Date = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
 			return true;
 		}
 		else
@@ -54,12 +53,12 @@ namespace AUP_HA
 		}
 	}
 
-	const std::int32_t& Game::getMinBoard() const
+	const std::int32_t& Game::getMinBorder() const
 	{
 		return mMinBoarder;
 	}
 
-	const std::int32_t& Game::getMaxBoarder() const
+	const std::int32_t& Game::getMaxBorder() const
 	{
 		return mMaxBoarder;
 	}
@@ -79,15 +78,30 @@ namespace AUP_HA
 		return mMaxTries;
 	}
 
+	const User& Game::getUser() const
+	{
+		return *mUser;
+	}
+
+	void Game::setNewInput(const std::string& input)
+	{
+		mLastInput = input;
+	}
+
+	const std::string& Game::getLastInput() const
+	{
+		return mLastInput;
+	}
+
 	/**
 	* @brief Initialisiert ein neues Spiel
 	*/
 	void Game::newGame(User& user)
 	{
-		mUser = user;
+		mUser = std::make_unique<User>(user);
 
 		// TODO: Daten aus einer Configdatei einlesen
-		mTries = 0;
+		mTries = 1;
 		mMaxTries = 0;
 		mMinBoarder = 1;
 		mMaxBoarder = 1000;

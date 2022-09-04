@@ -35,17 +35,23 @@ namespace AUP_HA
 		mActiveState->update();
 	}
 
+	Game& NumberGameStateManager::getGame()
+	{
+		return *mGame;
+	}
+
 	void NumberGameStateManager::changeState(GameStates::ID stateID)
 	{
 		auto found = mFactory.find(stateID);
 #ifdef _DEBUG
 		assert(found != mFactory.end());
 #endif
-		if (mActiveState)
+		// Nur wenn sich die stateID von der aktuelle Unterscheidet, wird ein neuer State instanziiert.
+		if (mActiveID != stateID)
 		{
-			mActiveState.reset();
+			mActiveID = stateID;
+			mActiveState = found->second();
 		}
-		mActiveState = found->second();
 	}
 
 	NumberGameStateManager::TransitionHandler& NumberGameStateManager::getTransition(GameStates::TRANSITION transitionID)
@@ -59,10 +65,13 @@ namespace AUP_HA
 
 	void NumberGameStateManager::registerTransitions()
 	{
-		mTransitionHandlers[GameStates::TRANSITION::EMPTY]	 = std::bind(&NumberGameStateManager::onEmpty, this, std::placeholders::_1);
-		mTransitionHandlers[GameStates::TRANSITION::NN]		 = std::bind(&NumberGameStateManager::onNoNumber, this, std::placeholders::_1);
-		mTransitionHandlers[GameStates::TRANSITION::NH]		 = std::bind(&NumberGameStateManager::onHitOrNoHit, this, std::placeholders::_1);
-		mTransitionHandlers[GameStates::TRANSITION::OB]		 = std::bind(&NumberGameStateManager::onOutBorders, this, std::placeholders::_1);
+		mTransitionHandlers[GameStates::TRANSITION::EMPTY]	= std::bind(&NumberGameStateManager::onEmpty, this, std::placeholders::_1);
+		mTransitionHandlers[GameStates::TRANSITION::NN]		= std::bind(&NumberGameStateManager::onNoNumber, this, std::placeholders::_1);
+		mTransitionHandlers[GameStates::TRANSITION::NH]		= std::bind(&NumberGameStateManager::onHitOrNoHit, this, std::placeholders::_1);
+		mTransitionHandlers[GameStates::TRANSITION::OB]		= std::bind(&NumberGameStateManager::onOutBorders, this, std::placeholders::_1);
+		mTransitionHandlers[GameStates::TRANSITION::L]		= std::bind(&NumberGameStateManager::onToLeaderboard, this, std::placeholders::_1);
+		mTransitionHandlers[GameStates::TRANSITION::I]		= std::bind(&NumberGameStateManager::onToIfNewGame, this, std::placeholders::_1);
+		mTransitionHandlers[GameStates::TRANSITION::NG]		= std::bind(&NumberGameStateManager::onNewGame, this, std::placeholders::_1);
 	}
 
 	std::optional<GameStates::ID> NumberGameStateManager::onEmpty(const std::string& string)
@@ -73,6 +82,9 @@ namespace AUP_HA
 		}
 		else
 		{
+			User user(string);
+
+			mGame->newGame(user);
 			return GameStates::ID::STATE_2;
 		}
 	}
@@ -95,7 +107,7 @@ namespace AUP_HA
 		auto parsedString = Utilities::ParseStringToInt(string);
 
 		// String war keine Zahl, wenn hier gestoppt [[DEBUG]]
-		assert(!parsedString);
+		assert(parsedString);
 
 		// Wurde die Zahl gefunden?
 		if (mGame->check(*parsedString))
@@ -107,7 +119,7 @@ namespace AUP_HA
 
 	std::optional<GameStates::ID> NumberGameStateManager::onOutBorders(const std::string& string)
 	{
-		auto limits = std::make_pair<const std::int32_t&, const std::int32_t&>(mGame->getMinBoard(), mGame->getMaxBoarder());
+		auto limits = std::make_pair<const std::int32_t&, const std::int32_t&>(mGame->getMinBorder(), mGame->getMaxBorder());
 		auto parsedString = Utilities::ParseStringToIntWithLimits(string, limits);
 
 		if (!parsedString)
@@ -115,5 +127,25 @@ namespace AUP_HA
 			return GameStates::ID::STATE_4;
 		}
 		return std::nullopt;
+	}
+	std::optional<GameStates::ID> NumberGameStateManager::onToLeaderboard(const std::string& string)
+	{
+		return GameStates::STATE_6;
+	}
+	std::optional<GameStates::ID> NumberGameStateManager::onToIfNewGame(const std::string& string)
+	{
+		return GameStates::STATE_7;
+	}
+	std::optional<GameStates::ID> NumberGameStateManager::onNewGame(const std::string& string)
+	{
+		if (string.compare("y") == 0)
+		{
+			return GameStates::FIRST;
+		}
+		
+		if (string.compare("n") == 0)
+		{
+			return GameStates::END;
+		}
 	}
 }

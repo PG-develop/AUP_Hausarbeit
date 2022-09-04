@@ -24,11 +24,15 @@ namespace AUP_HA
 
 		bool check(const std::int32_t& number);
 
-		const std::int32_t& getMinBoard() const;
-		const std::int32_t& getMaxBoarder() const;
+		const std::int32_t& getMinBorder() const;
+		const std::int32_t& getMaxBorder() const;
 		const std::int32_t& getSearchedNumber() const;
 		const std::int32_t& getTries() const;
 		const std::uint32_t& getMaxTries() const;
+		const User& getUser() const;
+
+		void setNewInput(const std::string& input);
+		const std::string& getLastInput() const;
 
 		void newGame(User& user);
 
@@ -41,6 +45,8 @@ namespace AUP_HA
 		std::int32_t mSearchedNumber;
 		std::int32_t mTries;
 		std::uint32_t mMaxTries;
-		User mUser;
+		std::unique_ptr<User> mUser;
+
+		std::string mLastInput;
 	};
 }

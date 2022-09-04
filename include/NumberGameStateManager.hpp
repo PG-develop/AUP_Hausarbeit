@@ -28,6 +28,7 @@ namespace AUP_HA
 		void processEvents();
 		void update();
 
+		Game& getGame();
 		void changeState(GameStates::ID stateID);
 		TransitionHandler& getTransition(GameStates::TRANSITION transitionID);
 
@@ -38,9 +39,13 @@ namespace AUP_HA
 		std::optional<GameStates::ID> onNoNumber(const std::string& string);
 		std::optional<GameStates::ID> onHitOrNoHit(const std::string& string);
 		std::optional<GameStates::ID> onOutBorders(const std::string& string);
+		std::optional<GameStates::ID> onToLeaderboard(const std::string& string);
+		std::optional<GameStates::ID> onToIfNewGame(const std::string& string);
+		std::optional<GameStates::ID> onNewGame(const std::string& string);
 
 	private:
 		NumberGameState::Ptr	mActiveState;
+		GameStates::ID			mActiveID;
 		std::map<GameStates::ID, std::function<NumberGameState::Ptr()>> mFactory;
 		std::map<GameStates::TRANSITION, std::function<std::optional<GameStates::ID>(const std::string&)>> mTransitionHandlers;
 
