@@ -40,12 +40,16 @@ namespace AUP_HA
 		return *mGame;
 	}
 
+	UserRepository& NumberGameStateManager::getUserRepository()
+	{
+		return *mUserRepository;
+	}
+
 	void NumberGameStateManager::changeState(GameStates::ID stateID)
 	{
 		auto found = mFactory.find(stateID);
-#ifdef _DEBUG
 		assert(found != mFactory.end());
-#endif
+
 		// Nur wenn sich die stateID von der aktuelle Unterscheidet, wird ein neuer State instanziiert.
 		if (mActiveID != stateID)
 		{

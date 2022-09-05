@@ -84,6 +84,9 @@
     <ClCompile Include="src\NumberGameStateWin.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="include\NumberGameStateShowLeaderboard.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Application.hpp">
@@ -159,6 +162,9 @@
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="include\NumberGameStateWin.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\NumberGameStateShowLeaderboard.hpp">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>

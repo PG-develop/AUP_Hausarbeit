@@ -14,6 +14,9 @@ namespace AUP_HA
 		virtual void			pushList(const std::vector<T>& list) = 0;
 		virtual std::vector<T>& getList() = 0;
 		virtual void			clear() = 0;
+
+	protected:
+		std::vector<T>			mList;
 	};
 
 	template<typename T>

@@ -29,6 +29,8 @@ namespace AUP_HA
 		void update();
 
 		Game& getGame();
+		UserRepository& getUserRepository();
+
 		void changeState(GameStates::ID stateID);
 		TransitionHandler& getTransition(GameStates::TRANSITION transitionID);
 

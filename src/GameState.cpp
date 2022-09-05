@@ -6,6 +6,7 @@
 #include "../include/NumberGameStateNoNumber.hpp"
 #include "../include/NumberGameStateOutBorders.hpp"
 #include "../include/NumberGameStateWin.hpp"
+#include "../include/NumberGameStateShowLeaderboard.hpp"
 
 namespace AUP_HA
 {
@@ -49,5 +50,6 @@ namespace AUP_HA
 		mGameStateManager->registerStates<NumberGameStateNoNumber>(GameStates::STATE_3);
 		mGameStateManager->registerStates<NumberGameStateOutBorders>(GameStates::STATE_4);
 		mGameStateManager->registerStates<NumberGameStateWin>(GameStates::STATE_5);
+		mGameStateManager->registerStates<NumberGameStateShowLeaderboard>(GameStates::STATE_6);
 	}
 }
