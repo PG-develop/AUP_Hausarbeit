@@ -25,7 +25,7 @@ namespace AUP_HA
 		{
 			std::cout << "Ihre letzte Eingabe: " << *lastInput << std::endl;
 		}
-		std::cout << mGame->getTries() << ". Versuche - " << mGame->getUser().Name << std::endl;
+		std::cout << mGame->getTries() + 1 << ". Versuche - " << mGame->getUser().Name << std::endl;
 		std::cout << "Finde die Zahl! Geben Sie eine Zahl zwischen " << mGame->getMinBorder() << " und " << mGame->getMaxBorder() << " ein: ";
 	}
 

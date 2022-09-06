@@ -101,8 +101,8 @@ namespace AUP_HA
 		mUser = std::make_unique<User>(user);
 
 		// TODO: Daten aus einer Configdatei einlesen
-		mTries = 1;
-		mMaxTries = 0;
+		mTries = 0;
+		mMaxTries = 5;
 		mMinBoarder = 1;
 		mMaxBoarder = 1000;
 		generateNewSearchedNumber();

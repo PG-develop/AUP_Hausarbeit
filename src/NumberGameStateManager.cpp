@@ -131,7 +131,26 @@ namespace AUP_HA
 		{
 			return GameStates::ID::STATE_5;
 		}
-		return GameStates::ID::STATE_2;
+		
+		// Nur wenn die Beschränkung der Versuche auf 0 gesetzt ist geht das Spiel ohne Einschränlung weiter.
+		if (mGame->getMaxTries() == 0)
+		{
+			return GameStates::ID::STATE_2;
+		}
+		else
+		{
+			// Wenn die maximale Anzahl an Versuchen erreicht ist, beende das Spiel
+			if (mGame->getMaxTries() == mGame->getTries())
+			{
+				return GameStates::ID::STATE_6;
+			}
+
+			// Ansonsten zum nächsten Versuch.
+			else
+			{
+				return GameStates::ID::STATE_2;
+			}
+		}
 	}
 
 	std::optional<GameStates::ID> NumberGameStateManager::onOutBorders(const std::string& string)
