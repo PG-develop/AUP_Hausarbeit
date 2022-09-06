@@ -51,8 +51,6 @@ namespace AUP_HA
 
 	void NumberGameStateShowLeaderboard::processEvents()
 	{
-		while (!_kbhit());
-		_getch();
 	}
 
 	void NumberGameStateShowLeaderboard::update()

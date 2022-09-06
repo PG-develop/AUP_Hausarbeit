@@ -145,6 +145,7 @@
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\MainState.cpp" />
     <ClCompile Include="src\NumberGameState.cpp" />
+    <ClCompile Include="src\NumberGameStateAskNewGame.cpp" />
     <ClCompile Include="src\NumberGameStateManager.cpp" />
     <ClCompile Include="src\NumberGameStateName.cpp" />
     <ClCompile Include="src\NumberGameStateNoNumber.cpp" />
@@ -169,6 +170,7 @@
     <ClInclude Include="include\MainState.hpp" />
     <ClInclude Include="include\MenuManager.hpp" />
     <ClInclude Include="include\NumberGameState.hpp" />
+    <ClInclude Include="include\NumberGameStateAskNewGame.hpp" />
     <ClInclude Include="include\NumberGameStateManager.hpp" />
     <ClInclude Include="include\NumberGameStateName.hpp" />
     <ClInclude Include="include\NumberGameStateNoNumber.hpp" />

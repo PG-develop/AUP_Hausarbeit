@@ -27,8 +27,6 @@ namespace AUP_HA
 
 	void NumberGameStateWin::processEvents()
 	{
-		while (!_kbhit());
-		_getch();
 	}
 
 	void NumberGameStateWin::update()

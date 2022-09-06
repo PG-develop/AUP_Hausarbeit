@@ -23,6 +23,7 @@ namespace AUP_HA
 
 		template <typename T>
 		void registerStates(GameStates::ID stateID);
+		void registerEndGameHandler(std::function<void()> handler);
 		
 		void render();
 		void processEvents();
@@ -50,6 +51,7 @@ namespace AUP_HA
 		GameStates::ID			mActiveID;
 		std::map<GameStates::ID, std::function<NumberGameState::Ptr()>> mFactory;
 		std::map<GameStates::TRANSITION, std::function<std::optional<GameStates::ID>(const std::string&)>> mTransitionHandlers;
+		std::function<void()>	mEndGame;
 
 		UserRepository* mUserRepository;
 		Game* mGame;

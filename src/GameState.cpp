@@ -7,6 +7,7 @@
 #include "../include/NumberGameStateOutBorders.hpp"
 #include "../include/NumberGameStateWin.hpp"
 #include "../include/NumberGameStateShowLeaderboard.hpp"
+#include "../include/NumberGameStateAskNewGame.hpp"
 
 namespace AUP_HA
 {
@@ -17,8 +18,9 @@ namespace AUP_HA
 		mGameStateManager = std::make_unique<NumberGameStateManager>(*(mUserRepository.get()), *(mGame.get()));
 
 		registerStates();
-
-		
+		mGameStateManager->registerEndGameHandler([&]() {
+			requestChange(States::MAIN);
+		});
 
 		mGameStateManager->changeState(GameStates::ID::FIRST);
 	}
@@ -51,5 +53,6 @@ namespace AUP_HA
 		mGameStateManager->registerStates<NumberGameStateOutBorders>(GameStates::STATE_4);
 		mGameStateManager->registerStates<NumberGameStateWin>(GameStates::STATE_5);
 		mGameStateManager->registerStates<NumberGameStateShowLeaderboard>(GameStates::STATE_6);
+		mGameStateManager->registerStates<NumberGameStateAskNewGame>(GameStates::STATE_7);
 	}
 }

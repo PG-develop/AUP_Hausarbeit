@@ -18,6 +18,11 @@ namespace AUP_HA
 	{
 	}
 
+	void NumberGameStateManager::registerEndGameHandler(std::function<void()> handler)
+	{
+		mEndGame = handler;
+	}
+
 	void NumberGameStateManager::render()
 	{
 		mActiveState->render();
@@ -47,14 +52,22 @@ namespace AUP_HA
 
 	void NumberGameStateManager::changeState(GameStates::ID stateID)
 	{
-		auto found = mFactory.find(stateID);
-		assert(found != mFactory.end());
-
-		// Nur wenn sich die stateID von der aktuelle Unterscheidet, wird ein neuer State instanziiert.
-		if (mActiveID != stateID)
+		// Wenn der State "ENDE" besteht, beende das Spiel.
+		if (stateID == GameStates::END)
 		{
-			mActiveID = stateID;
-			mActiveState = found->second();
+			mEndGame();
+		}
+		else
+		{
+			auto found = mFactory.find(stateID);
+			assert(found != mFactory.end());
+
+			// Nur wenn sich die stateID von der aktuelle Unterscheidet, wird ein neuer State instanziiert.
+			if (mActiveID != stateID)
+			{
+				mActiveID = stateID;
+				mActiveState = found->second();
+			}
 		}
 	}
 
@@ -151,5 +164,6 @@ namespace AUP_HA
 		{
 			return GameStates::END;
 		}
+		return std::nullopt;
 	}
 }
