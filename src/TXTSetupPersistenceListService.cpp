@@ -1,14 +1,15 @@
 #include <filesystem>
 #include <fstream>
-#include <iostream>
 #include <sstream>
 
-#include "../include/TXTUserPersistenceListService.hpp"
+#include "../include/TXTSetupPersistenceListService.hpp"
 #include "../include/Utilities.hpp"
 
 namespace AUP_HA
 {
-	TXTUserPersistenceListService::TXTUserPersistenceListService() : PersistenceListService(), mFileName("leaderboard.txt")
+	TXTSetupPersistenceListService::TXTSetupPersistenceListService() 
+		: PersistenceListService()
+		, mFileName("setup.txt")
 	{
 		// Prüfen, ob die Datei bereits existiert
 		if (!std::filesystem::exists(mFileName))
@@ -19,15 +20,11 @@ namespace AUP_HA
 		}
 	}
 
-	TXTUserPersistenceListService::~TXTUserPersistenceListService()
+	TXTSetupPersistenceListService::~TXTSetupPersistenceListService()
 	{
 	}
-	/**
-	* @brief Speichert die Bestenliste in die Datenbank.
-	*
-	* @param Speichert die Liste in der Datei
-	*/
-	void TXTUserPersistenceListService::pushList(const std::vector<User>& list)
+
+	void TXTSetupPersistenceListService::pushList(const std::vector<Setup>& list)
 	{
 		mList = list;
 		std::ofstream stream(mFileName, std::ios_base::trunc);
@@ -38,7 +35,7 @@ namespace AUP_HA
 
 			// String für die Datenbank bauen
 			// Carry return sorgt beim einlesen für einen weiteren durchlauf, wird jedoch durch die Abfrage des Inhalts abgebrochen.
-			ss << std::to_string(item.Date) << "," << item.Name << "," << std::to_string(item.Tries) << "\n";
+			ss << std::to_string(item.AmmountOfChoices) << "," << std::to_string(item.MaxRange) << "\n";
 			line = ss.str();
 
 			stream.write(line.c_str(), line.size());
@@ -46,10 +43,7 @@ namespace AUP_HA
 		stream.close();
 	}
 
-	/**
-	* @brief Liest die aktuelle Leaderboarddatei ein.
-	*/
-	std::vector<User>& TXTUserPersistenceListService::getList()
+	std::vector<Setup>& TXTSetupPersistenceListService::getList()
 	{
 		std::ifstream stream(mFileName, std::ios_base::in);
 		std::string line;
@@ -67,7 +61,7 @@ namespace AUP_HA
 
 			// Spalten aus dem Zeilenstring parsen
 			// 1. Spalte Datum
-			User temp;
+			Setup temp;
 			std::size_t first = 0;
 			// suche Spaltenseperatur für 1. Spalte
 			std::size_t found = line.find_first_of(",");
@@ -80,14 +74,7 @@ namespace AUP_HA
 				throw std::runtime_error("ERROR: Parsen der Datenbank fehlgeschlagen [Datum stimmt nicht].");
 			}
 
-			temp.Date = static_cast<std::time_t>(*intNumber);
-
-			// + 1 um das Komma zu überspringen und zum ersten Char der neuen Spalte zu springen
-			first = found + 1;
-
-			// 2. Spalte Name
-			found = line.find_first_of(",", first);
-			temp.Name = line.substr(first, found - first);
+			temp.AmmountOfChoices = static_cast<std::time_t>(*intNumber);
 
 			// + 1 um das Komma zu überspringen und zum ersten Char der neuen Spalte zu springen
 			first = found + 1;
@@ -102,25 +89,24 @@ namespace AUP_HA
 				throw std::runtime_error("ERROR: Parsen der Datenbank fehlgeschlagen.");
 			}
 
-			temp.Tries = *intNumber;
+			temp.MaxRange = *intNumber;
 
-			// geparster User in die Highscoreliste eintragen
+			// geparster Setup in die Liste eintragen
 			mList.push_back(temp);
 		}
 		stream.close();
-
-		// Auf eine Sortierung wird verzichtet. Die Datei darf nicht manuell bearbeitet werden. Daher muss auch die Reihenfolge stimmen.
 
 		return mList;
 	}
 
 	/**
-	* @brief Löscht die gesamte Bestenliste.
+	* @brief Löscht die Einstellungen
+	*		 Wird nicht benötigt und daher nicht implementiert
+	*		 Kann eventuell für das Zurücksetzen auf Werkseinstellungen benutzt werden.
 	*/
-	void TXTUserPersistenceListService::clear()
+	void TXTSetupPersistenceListService::clear()
 	{
-		mList.clear();
-		std::ofstream stream(mFileName, std::ios_base::trunc);
-		stream.close();
+		// Auslösung einer Exception, falls Funktion benutzt werden sollte.
+		throw std::logic_error("function not yet implemented!");
 	}
 }

@@ -84,7 +84,7 @@ namespace AUP_HA
 	}
 
 	/**
-	* @brief Handler für den Menüpunkt [1] Bestenliste
+	* @brief Handler für den Menüpunkt [3] Bestenliste
 	*/
 	void MainState::onLeaderboard()
 	{
@@ -92,7 +92,7 @@ namespace AUP_HA
 	}
 
 	/**
-	* @brief Handler für den Menüpunkt [1] Beenden
+	* @brief Handler für den Menüpunkt [4] Beenden
 	*/
 	void MainState::onExit()
 	{

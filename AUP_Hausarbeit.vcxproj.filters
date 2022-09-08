@@ -90,6 +90,15 @@
     <ClCompile Include="src\NumberGameStateAskNewGame.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\TXTSetupPersistenceListService.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SetupRepository.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="include\Setup.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Application.hpp">
@@ -171,6 +180,15 @@
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="include\NumberGameStateAskNewGame.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Setup.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TXTSetupPersistenceListService.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SetupRepository.hpp">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>
