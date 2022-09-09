@@ -153,6 +153,7 @@
     <ClCompile Include="src\NumberGameStateNormal.cpp" />
     <ClCompile Include="src\NumberGameStateOutBorders.cpp" />
     <ClCompile Include="src\NumberGameStateWin.cpp" />
+    <ClCompile Include="src\SetupGameState.cpp" />
     <ClCompile Include="src\SetupRepository.cpp" />
     <ClCompile Include="src\SetupState.cpp" />
     <ClCompile Include="src\State.cpp" />
@@ -183,6 +184,7 @@
     <ClInclude Include="include\NumberGameStateWin.hpp" />
     <ClInclude Include="include\PersistenceListService.hpp" />
     <ClInclude Include="include\Setup.hpp" />
+    <ClInclude Include="include\SetupGameState.hpp" />
     <ClInclude Include="include\SetupRepository.hpp" />
     <ClInclude Include="include\SetupState.hpp" />
     <ClInclude Include="include\State.hpp" />

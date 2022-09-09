@@ -41,7 +41,7 @@ namespace AUP_HA
 
 	void SetupRepository::setMaxRange(std::int32_t p_value)
 	{
-		mSetup.AmmountOfChoices = p_value;
+		mSetup.MaxRange = p_value;
 		setSetup(mSetup);
 	}
 

@@ -6,6 +6,7 @@
 #include "../include/GameState.hpp"
 #include "../include/SetupState.hpp"
 #include "../include/LeaderboardState.hpp"
+#include "../include/SetupGameState.hpp"
 
 namespace AUP_HA 
 {
@@ -82,5 +83,6 @@ namespace AUP_HA
 		mStateManager->registerStates<GameState>(States::GAME);
 		mStateManager->registerStates<SetupState>(States::SETUP);
 		mStateManager->registerStates<LeaderboardState>(States::LEADERBOARD);
+		mStateManager->registerStates<SetupGameState>(States::GAMESETUP_GAME);
 	}
 }

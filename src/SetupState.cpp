@@ -9,7 +9,9 @@ namespace AUP_HA
 		: State(stateManager)
 		, mMenu( )
 	{
+		// Menü initialisieren
 		registerMenu();
+		mLimits = std::make_pair(1, mMenu.count());
 	}
 
 	SetupState::~SetupState()
@@ -24,7 +26,7 @@ namespace AUP_HA
 		std::cout << "    Einstellungen" << std::endl;
 		std::cout << "[1] Spieleinstellungen" << std::endl;
 		std::cout << "[2] Bestenliste zuruecksetzen" << std::endl;
-		std::cout << "[4] Zurueck" << std::endl << std::endl;
+		std::cout << "[3] Zurueck" << std::endl << std::endl;
 
 		std::cout << "Auswahl: ";
 	
@@ -39,9 +41,6 @@ namespace AUP_HA
 
 	void SetupState::update()
 	{
-		// Limits für die Menueingabe für Menuitem 1 - 4
-		//auto limits = std::make_pair(1, 4);
-
 		// Eingabe des Benutzers parsen
 		auto userInput = Utilities::ParseStringToIntWithLimits(mUserinput, mLimits);
 
@@ -60,6 +59,26 @@ namespace AUP_HA
 
 	void SetupState::registerMenu()
 	{
-
+		mMenu.registerMenu(SetupMenu::GAMESETUP, [&]() {
+			onGameSetup();
+			});
+		mMenu.registerMenu(SetupMenu::CLEAR, [&]() {
+			onClear();
+			});
+		mMenu.registerMenu(SetupMenu::EXIT, [&]() {
+			onExit();
+			});
+	}
+	void SetupState::onGameSetup()
+	{
+		requestChange(States::GAMESETUP_GAME);
+	}
+	void SetupState::onClear()
+	{
+		requestChange(States::GAMESETUP_CLEAR);
+	}
+	void SetupState::onExit()
+	{
+		requestChange(States::MAIN);
 	}
 }

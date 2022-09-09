@@ -21,10 +21,14 @@ namespace AUP_HA
 	private:
 		void registerMenu();
 
+		void onGameSetup();
+		void onClear();
+		void onExit();
+
 	private:
 		std::string					mUserinput;	// Benutzereingabe
 		std::pair<int, int>			mLimits;	// Grenzen für die Menüeingabe
-		MenuManager<MainMenu::ID>	mMenu;		// Menü
+		MenuManager<SetupMenu::ID>	mMenu;		// Menü
 
 	};
 }

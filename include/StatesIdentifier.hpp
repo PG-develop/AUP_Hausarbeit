@@ -11,7 +11,9 @@ namespace AUP_HA
 			MAIN,
 			GAME,
 			LEADERBOARD,
-			SETUP
+			SETUP,
+			GAMESETUP_GAME,
+			GAMESETUP_CLEAR
 		};
 	}
 
