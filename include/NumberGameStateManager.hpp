@@ -45,12 +45,17 @@ namespace AUP_HA
 		std::optional<GameStates::ID> onToLeaderboard(const std::string& string);
 		std::optional<GameStates::ID> onToIfNewGame(const std::string& string);
 		std::optional<GameStates::ID> onNewGame(const std::string& string);
+		std::optional<GameStates::ID> onNegativ(const std::string& string);
+		std::optional<GameStates::ID> onWin(const std::string& string);
+
+		void registerCheatCodes();
 
 	private:
 		NumberGameState::Ptr	mActiveState;
 		GameStates::ID			mActiveID;
 		std::map<GameStates::ID, std::function<NumberGameState::Ptr()>> mFactory;
 		std::map<GameStates::TRANSITION, std::function<std::optional<GameStates::ID>(const std::string&)>> mTransitionHandlers;
+		std::map<std::int64_t, GameStates::ID>	mCheatCodes;
 		std::function<void()>	mEndGame;
 
 		UserRepository* mUserRepository;

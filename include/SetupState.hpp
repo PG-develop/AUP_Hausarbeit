@@ -8,6 +8,9 @@
 
 namespace AUP_HA
 {
+	// Vorwärtsdeklaration
+	class UserRepository;
+
 	class SetupState : public State
 	{
 	public:
@@ -26,9 +29,10 @@ namespace AUP_HA
 		void onExit();
 
 	private:
-		std::string					mUserinput;	// Benutzereingabe
-		std::pair<int, int>			mLimits;	// Grenzen für die Menüeingabe
-		MenuManager<SetupMenu::ID>	mMenu;		// Menü
+		std::string						mUserinput;			// Benutzereingabe
+		std::pair<int, int>				mLimits;			// Grenzen für die Menüeingabe
+		MenuManager<SetupMenu::ID>		mMenu;				// Menü
+		std::unique_ptr<UserRepository> mUserRepository;	// UserRepository
 
 	};
 }

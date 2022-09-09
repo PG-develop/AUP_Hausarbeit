@@ -1,6 +1,8 @@
 #include <chrono>
+#include <random>
 
 #include "../include/Game.hpp"
+#include "../include/SetupRepository.hpp"
 
 namespace AUP_HA
 {
@@ -11,7 +13,7 @@ namespace AUP_HA
 		, mTries{ }
 		, mMaxTries{ }
 	{
-		
+		mSetupRepository = std::make_unique<SetupRepository>();
 	}
 
 	Game::~Game()
@@ -78,7 +80,7 @@ namespace AUP_HA
 		return mMaxTries;
 	}
 
-	const User& Game::getUser() const
+	const User Game::getUser() const
 	{
 		return *mUser;
 	}
@@ -86,6 +88,11 @@ namespace AUP_HA
 	void Game::setNewInput(const std::string& input)
 	{
 		mLastInput = input;
+	}
+
+	void Game::setNewTime(std::time_t time)
+	{
+		mUser->Date = time;
 	}
 
 	const std::string& Game::getLastInput() const
@@ -102,9 +109,9 @@ namespace AUP_HA
 
 		// TODO: Daten aus einer Configdatei einlesen
 		mTries = 0;
-		mMaxTries = 5;
+		mMaxTries = mSetupRepository->getAmountOfChoices();
 		mMinBoarder = 1;
-		mMaxBoarder = 1000;
+		mMaxBoarder = mSetupRepository->getMaxRange();
 		generateNewSearchedNumber();
 	}
 
@@ -113,8 +120,12 @@ namespace AUP_HA
 	*/
 	void Game::generateNewSearchedNumber()
 	{
-		//TODO: Zahlengenerator
-		mSearchedNumber = 500;
+		// Zufallszahl generieren
+		std::random_device rd;
+		std::default_random_engine eng(rd());
+		std::uniform_int_distribution<std::int32_t> distr(mMinBoarder, mMaxBoarder);
+
+		mSearchedNumber = distr(eng);
 	}
 
 }

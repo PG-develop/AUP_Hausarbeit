@@ -4,6 +4,9 @@ Autor: Patrick Gehrt
 letzte Bearbeitung: 01.09.2022
 aktuelle Version: A00.00.00.05
 
+Um die Funktionen an andere Handler zu übergeben habe ich in der ersten Iteration via std::bind durchgeführt. Da dies in der Laufzeit bei zu häufiger Anwendung
+jedoch ineffizent sein soll, habe ich mich dazu entschlossen Lambda-Funktionen zu nutzen in denen die eigentliche Funktion aufgerufen wird.
+
 ####################################################################################
 A00.00.00.05
 03.09.2022

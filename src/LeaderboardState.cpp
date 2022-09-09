@@ -19,11 +19,13 @@ namespace AUP_HA
 	void LeaderboardState::render()
 	{
 		// Kopf
-		std::cout << "+-----------------------------------------------+" << std::endl;
-		std::cout << "|                  Bestenliste                  |" << std::endl;
-		std::cout << "+-------------------+------------------+--------+" << std::endl;
-		std::cout << "|       Datum       |       Name       |Versuche|" << std::endl;
-		std::cout << "+-------------------+------------------+--------+" << std::endl;
+		std::cout << "+----------------------------------------------------+" << std::endl;
+		std::cout << "|                     Bestenliste                    |" << std::endl;
+		std::cout << "+----+-------------------+------------------+--------+" << std::endl;
+		std::cout << "|    |       Datum       |       Name       |Versuche|" << std::endl;
+		std::cout << "+----+-------------------+------------------+--------+" << std::endl;
+
+		int i = 0;
 
 		for (const User& user : mUserRepository->GetUserSortedByRang()) {
 			// Zeit parsen
@@ -33,10 +35,10 @@ namespace AUP_HA
 			localtime_s(date, &user.Date);
 			strftime(buffer, sizeof(buffer), "%d.%m.%Y  %R", date);
 
-			std::cout << "| " << buffer << " | " << std::setw(16) << user.Name << " | " << std::setw(6) << user.Tries << " |" << std::endl;
+			std::cout << "|" << std::setw(3) << ++i << " | " << buffer << " | " << std::setw(16) << user.Name << " | " << std::setw(6) << user.Tries << " |" << std::endl;
 		}
 
-		std::cout << "+-------------------+------------------+--------+" << std::endl << std::endl;
+		std::cout << "+----+-------------------+------------------+--------+" << std::endl << std::endl;
 		std::cout << "Zurueck mit einer Taste";
 	}
 

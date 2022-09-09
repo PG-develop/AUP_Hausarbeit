@@ -6,12 +6,13 @@
 
 namespace AUP_HA
 {
-	NumberGameStateManager::NumberGameStateManager(UserRepository& userRepository, Game& game)
+	NumberGameStateManager::NumberGameStateManager(UserRepository& userRepository, Game& game) : mCheatCodes()
 	{
 		mUserRepository = &userRepository;
 		mGame = &game;
 
 		registerTransitions();
+		registerCheatCodes();
 	}
 
 	NumberGameStateManager::~NumberGameStateManager()
@@ -89,6 +90,14 @@ namespace AUP_HA
 		mTransitionHandlers[GameStates::TRANSITION::L]		= std::bind(&NumberGameStateManager::onToLeaderboard, this, std::placeholders::_1);
 		mTransitionHandlers[GameStates::TRANSITION::I]		= std::bind(&NumberGameStateManager::onToIfNewGame, this, std::placeholders::_1);
 		mTransitionHandlers[GameStates::TRANSITION::NG]		= std::bind(&NumberGameStateManager::onNewGame, this, std::placeholders::_1);
+		
+		mTransitionHandlers[GameStates::TRANSITION::C] = [&] (const std::string& string) {
+			return onNegativ(string);
+		};
+
+		mTransitionHandlers[GameStates::TRANSITION::W] = [&](const std::string& string) {
+			return onWin(string);
+		};
 	}
 
 	std::optional<GameStates::ID> NumberGameStateManager::onEmpty(const std::string& string)
@@ -153,6 +162,21 @@ namespace AUP_HA
 		}
 	}
 
+	// Funktion ist auf den CheatCode -456 angepasst
+	std::optional<GameStates::ID> NumberGameStateManager::onWin(const std::string& string)
+	{
+		auto parsedString = Utilities::ParseStringToInt(string);
+
+		if (parsedString)
+		{
+			if (*parsedString > 0)
+			{
+				return GameStates::STATE_6;
+			}
+		}
+		return GameStates::STATE_9;
+	}
+
 	std::optional<GameStates::ID> NumberGameStateManager::onOutBorders(const std::string& string)
 	{
 		auto limits = std::make_pair<const std::int32_t&, const std::int32_t&>(mGame->getMinBorder(), mGame->getMaxBorder());
@@ -174,7 +198,7 @@ namespace AUP_HA
 	}
 	std::optional<GameStates::ID> NumberGameStateManager::onNewGame(const std::string& string)
 	{
-		if (string.compare("y") == 0)
+		if (string.compare("j") == 0)
 		{
 			return GameStates::FIRST;
 		}
@@ -184,5 +208,29 @@ namespace AUP_HA
 			return GameStates::END;
 		}
 		return std::nullopt;
+	}
+	std::optional<GameStates::ID> NumberGameStateManager::onNegativ(const std::string& string)
+	{
+		auto parsedString = Utilities::ParseStringToInt(string);
+
+		if (*parsedString < 0)
+		{
+			// Prüfe, ob es einen Cheatcode gibt
+			auto founded = mCheatCodes.find(*parsedString);
+			if (founded != mCheatCodes.end())
+			{
+				return founded->second;
+			}
+
+			// Wenn es keinen speziellen Cheatcode gibt, beende das Spiel
+			return GameStates::STATE_6;
+		}
+
+		return std::nullopt;
+	}
+	void NumberGameStateManager::registerCheatCodes()
+	{
+		mCheatCodes[-123] = GameStates::STATE_8;
+		mCheatCodes[-456] = GameStates::STATE_9;
 	}
 }

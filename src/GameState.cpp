@@ -8,6 +8,8 @@
 #include "../include/NumberGameStateWin.hpp"
 #include "../include/NumberGameStateShowLeaderboard.hpp"
 #include "../include/NumberGameStateAskNewGame.hpp"
+#include "../include/NumberGameStateShowSearchedNumber.hpp"
+#include "../include/NumberGameStateCheatWin.hpp"
 
 namespace AUP_HA
 {
@@ -54,5 +56,7 @@ namespace AUP_HA
 		mGameStateManager->registerStates<NumberGameStateWin>(GameStates::STATE_5);
 		mGameStateManager->registerStates<NumberGameStateShowLeaderboard>(GameStates::STATE_6);
 		mGameStateManager->registerStates<NumberGameStateAskNewGame>(GameStates::STATE_7);
+		mGameStateManager->registerStates<NumberGameStateShowSearchedNumber>(GameStates::STATE_8);
+		mGameStateManager->registerStates<NumberGameStateCheatWin>(GameStates::STATE_9);
 	}
 }

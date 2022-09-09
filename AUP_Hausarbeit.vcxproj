@@ -147,8 +147,10 @@
     <ClCompile Include="src\MainState.cpp" />
     <ClCompile Include="src\NumberGameState.cpp" />
     <ClCompile Include="src\NumberGameStateAskNewGame.cpp" />
+    <ClCompile Include="src\NumberGameStateCheatWin.cpp" />
     <ClCompile Include="src\NumberGameStateManager.cpp" />
     <ClCompile Include="src\NumberGameStateName.cpp" />
+    <ClCompile Include="src\NumberGameStateShowSearchedNumber.cpp" />
     <ClCompile Include="src\NumberGameStateNoNumber.cpp" />
     <ClCompile Include="src\NumberGameStateNormal.cpp" />
     <ClCompile Include="src\NumberGameStateOutBorders.cpp" />
@@ -177,10 +179,12 @@
     <ClInclude Include="include\NumberGameStateAskNewGame.hpp" />
     <ClInclude Include="include\NumberGameStateManager.hpp" />
     <ClInclude Include="include\NumberGameStateName.hpp" />
+    <ClInclude Include="include\NumberGameStateShowSearchedNumber.hpp" />
     <ClInclude Include="include\NumberGameStateNoNumber.hpp" />
     <ClInclude Include="include\NumberGameStateNormal.hpp" />
     <ClInclude Include="include\NumberGameStateOutBorders.hpp" />
     <ClInclude Include="include\NumberGameStateShowLeaderboard.hpp" />
+    <ClInclude Include="include\NumberGameStateCheatWin.hpp" />
     <ClInclude Include="include\NumberGameStateWin.hpp" />
     <ClInclude Include="include\PersistenceListService.hpp" />
     <ClInclude Include="include\Setup.hpp" />

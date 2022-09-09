@@ -2,6 +2,7 @@
 
 #include "../include/SetupState.hpp"
 #include "../include/Utilities.hpp"
+#include "../include/UserRepository.hpp"
 
 namespace AUP_HA
 {
@@ -12,6 +13,7 @@ namespace AUP_HA
 		// Menü initialisieren
 		registerMenu();
 		mLimits = std::make_pair(1, mMenu.count());
+		mUserRepository = std::make_unique<UserRepository>();
 	}
 
 	SetupState::~SetupState()
@@ -75,7 +77,20 @@ namespace AUP_HA
 	}
 	void SetupState::onClear()
 	{
-		requestChange(States::GAMESETUP_CLEAR);
+		// Abfrage, ob Benutzer Sicher ist
+		do
+		{
+			std::cout << "Moechten Sie wirklich die Bestenliste loeschen? Die Daten koennen nicht wiederhergestellt werden!" << std::endl;
+			std::cout << "[J]a oder [N]ein: ";
+
+			std::cin >> mUserinput;
+		} while (mUserinput != "j" && mUserinput != "n");
+
+		// Mit "j" wird das löschen der Bestenliste bestätigt
+		if (mUserinput == "j")
+		{
+			mUserRepository->ClearRepository();
+		}
 	}
 	void SetupState::onExit()
 	{

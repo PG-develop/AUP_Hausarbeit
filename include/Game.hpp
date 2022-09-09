@@ -6,6 +6,9 @@
 
 namespace AUP_HA
 {
+	// Vorwärts Deklaration
+	class SetupRepository;
+
 	/**
 	* @class Game
 	* @brief Zahlenratespiel
@@ -29,9 +32,10 @@ namespace AUP_HA
 		const std::int32_t& getSearchedNumber() const;
 		const std::int32_t& getTries() const;
 		const std::uint32_t& getMaxTries() const;
-		const User& getUser() const;
+		const User getUser() const;
 
 		void setNewInput(const std::string& input);
+		void setNewTime(std::time_t time);
 		const std::string& getLastInput() const;
 
 		void newGame(User& user);
@@ -40,12 +44,14 @@ namespace AUP_HA
 		void generateNewSearchedNumber();
 
 	private:
+		std::unique_ptr<SetupRepository>	mSetupRepository;
+		std::unique_ptr<User>				mUser;
+
 		std::int32_t mMinBoarder;
 		std::int32_t mMaxBoarder;
 		std::int32_t mSearchedNumber;
 		std::int32_t mTries;
 		std::uint32_t mMaxTries;
-		std::unique_ptr<User> mUser;
 
 		std::string mLastInput;
 	};

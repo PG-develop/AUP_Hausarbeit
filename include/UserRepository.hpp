@@ -22,6 +22,7 @@ namespace AUP_HA
 
 		const std::vector<User>& GetUserSortedByRang();
 		void SaveOrUpdate(User user);
+		void ClearRepository();
 
 	private:
 		std::unique_ptr<PersistenceListService<User>> mPersistenceUserList;

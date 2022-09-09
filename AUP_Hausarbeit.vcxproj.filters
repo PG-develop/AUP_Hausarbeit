@@ -102,6 +102,12 @@
     <ClCompile Include="src\SetupGameState.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\NumberGameStateShowSearchedNumber.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NumberGameStateCheatWin.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Application.hpp">
@@ -195,6 +201,12 @@
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="include\SetupGameState.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\NumberGameStateShowSearchedNumber.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\NumberGameStateCheatWin.hpp">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>

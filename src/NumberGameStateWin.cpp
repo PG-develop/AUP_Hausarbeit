@@ -12,7 +12,6 @@ namespace AUP_HA
 
 		// Update der Bestenliste
 		manager.getUserRepository().SaveOrUpdate(manager.getGame().getUser());
-		mCurrentLeaderboard = manager.getUserRepository().GetUserSortedByRang();
 	}
 
 	NumberGameStateWin::~NumberGameStateWin()

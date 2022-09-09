@@ -35,7 +35,7 @@ namespace AUP_HA
 	void UserRepository::SaveOrUpdate(User user)
 	{
 		// Prüfe, ob bereits 20 User im Leaderbord eingetragen sind
-		if (mUserList.size() > 20) {
+		if (mUserList.size() >= 19) {
 
 			// Prüfe, ob der neue User weniger Versuche als der letzte User hat.
 			// Wenn dieser weniger versuche hat, entferne den letzten User.
@@ -52,6 +52,12 @@ namespace AUP_HA
 
 		// Übergebe das UserRepository an den PersistenceListService
 		mPersistenceUserList->pushList(mUserList);
+	}
+
+	void UserRepository::ClearRepository()
+	{
+		mPersistenceUserList->clear();
+		mUserList.clear();
 	}
 
 }

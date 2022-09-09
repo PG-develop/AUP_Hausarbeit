@@ -30,6 +30,9 @@ namespace AUP_HA
 			STATE_5,
 			STATE_6,
 			STATE_7,
+			STATE_8,	// Negative Zahl ohne Sonderfunktion
+			STATE_9,	// CheatState -123
+			STATE_10,	// CheatState -456
 			END
 		};
 
@@ -41,9 +44,11 @@ namespace AUP_HA
 			NN,
 			OB,
 			L,
-			I,
-			NG,
-			E
+			I,			// 
+			NG,			// Neues Spiel
+			E,			// Exit
+			C,			// Sonderfunktionen
+			W
 		};
 	}
 }
