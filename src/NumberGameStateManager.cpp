@@ -83,14 +83,34 @@ namespace AUP_HA
 
 	void NumberGameStateManager::registerTransitions()
 	{
-		mTransitionHandlers[GameStates::TRANSITION::EMPTY]	= std::bind(&NumberGameStateManager::onEmpty, this, std::placeholders::_1);
-		mTransitionHandlers[GameStates::TRANSITION::NN]		= std::bind(&NumberGameStateManager::onNoNumber, this, std::placeholders::_1);
-		mTransitionHandlers[GameStates::TRANSITION::NH]		= std::bind(&NumberGameStateManager::onHitOrNoHit, this, std::placeholders::_1);
-		mTransitionHandlers[GameStates::TRANSITION::OB]		= std::bind(&NumberGameStateManager::onOutBorders, this, std::placeholders::_1);
-		mTransitionHandlers[GameStates::TRANSITION::L]		= std::bind(&NumberGameStateManager::onToLeaderboard, this, std::placeholders::_1);
-		mTransitionHandlers[GameStates::TRANSITION::I]		= std::bind(&NumberGameStateManager::onToIfNewGame, this, std::placeholders::_1);
-		mTransitionHandlers[GameStates::TRANSITION::NG]		= std::bind(&NumberGameStateManager::onNewGame, this, std::placeholders::_1);
-		
+		mTransitionHandlers[GameStates::TRANSITION::EMPTY] = [&](const std::string& string) {
+			return onEmpty(string);
+		};
+
+		mTransitionHandlers[GameStates::TRANSITION::NN]	= [&](const std::string& string) {
+			return onNoNumber(string);
+		};
+
+		mTransitionHandlers[GameStates::TRANSITION::NH]	= [&](const std::string& string) {
+			return onHitOrNoHit(string);
+		};
+
+		mTransitionHandlers[GameStates::TRANSITION::OB]	= [&](const std::string& string) {
+			return onOutBorders(string);
+		};
+
+		mTransitionHandlers[GameStates::TRANSITION::L] = [&](const std::string& string) {
+			return onToLeaderboard(string);
+		};
+
+		mTransitionHandlers[GameStates::TRANSITION::I] = [&](const std::string& string) {
+			return onToIfNewGame(string);
+		};
+
+		mTransitionHandlers[GameStates::TRANSITION::NG] = [&](const std::string& string) {
+			return onNewGame(string);
+		};
+
 		mTransitionHandlers[GameStates::TRANSITION::C] = [&] (const std::string& string) {
 			return onNegativ(string);
 		};

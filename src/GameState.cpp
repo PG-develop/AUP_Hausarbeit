@@ -20,6 +20,8 @@ namespace AUP_HA
 		mGameStateManager = std::make_unique<NumberGameStateManager>(*(mUserRepository.get()), *(mGame.get()));
 
 		registerStates();
+
+		// Handler für das Spielende definieren
 		mGameStateManager->registerEndGameHandler([&]() {
 			requestChange(States::MAIN);
 		});

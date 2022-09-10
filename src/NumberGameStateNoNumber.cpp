@@ -7,6 +7,7 @@ namespace AUP_HA
 	NumberGameStateNoNumber::NumberGameStateNoNumber(NumberGameStateManager& manager) : NumberGameState(manager)
 	{
 		mTransitionList.push_back(manager.getTransition(GameStates::TRANSITION::NN));
+		mTransitionList.push_back(manager.getTransition(GameStates::TRANSITION::C));
 		mTransitionList.push_back(manager.getTransition(GameStates::TRANSITION::OB));
 		mTransitionList.push_back(manager.getTransition(GameStates::TRANSITION::NH));
 	}
@@ -15,7 +16,7 @@ namespace AUP_HA
 	}
 	void NumberGameStateNoNumber::render()
 	{
-		std::cout << "Ihre Eingabe war keine gültige Zahl: " << mGame->getLastInput() << std::endl;
+		std::cout << "Ihre Eingabe war keine gueltige Zahl: " << mGame->getLastInput() << std::endl;
 		std::cout << "Bitte geben Sie eine Zahl ein: ";
 	}
 	void NumberGameStateNoNumber::processEvents()
