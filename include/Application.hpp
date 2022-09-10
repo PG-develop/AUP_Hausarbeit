@@ -1,17 +1,19 @@
 #pragma once
-/*
-* @Title Application
-* 
-* @Description Anwendungseinstiegspunkt. Beherbergt den Statemanager und steuert den Programmfluss.
-*/
 
 #include <memory>
 
-#include "StateManager.hpp"
 #include "StatesIdentifier.hpp"
 
 namespace AUP_HA 
 {
+	// Vorwärtsdeklaration
+	class StateManager;
+
+	/**
+	* @class Application
+	* 
+	* Programmeinstieg, steuert den Grundlegenden Programmfluss
+	*/
 	class Application 
 	{
 	public:
@@ -27,6 +29,6 @@ namespace AUP_HA
 		void registerStates();
 
 	private:
-		std::unique_ptr<StateManager>	mStateManager;
+		std::unique_ptr<StateManager>	mStateManager;	/**< StateManager */
 	};
 }

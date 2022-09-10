@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AUP_HA: include/NumberGameState.hpp Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">AUP_HA
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">NumberGameState.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_number_game_state_8hpp.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;optional&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;../include/StatesIdentifier.hpp&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;../include/GameTransition.hpp&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;../include/Game.hpp&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_a_u_p___h_a.html">AUP_HA</a></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">class </span>NumberGameStateManager;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_a_u_p___h_a_1_1_number_game_state.html">   17</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_a_u_p___h_a_1_1_number_game_state.html">NumberGameState</a></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_a_u_p___h_a_1_1_number_game_state.html#a55a54265c98d8349461d00129b430392">   20</a></span>        <span class="keyword">typedef</span> std::unique_ptr&lt;NumberGameState&gt; <a class="code hl_typedef" href="class_a_u_p___h_a_1_1_number_game_state.html#a55a54265c98d8349461d00129b430392">Ptr</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_class" href="class_a_u_p___h_a_1_1_number_game_state.html">NumberGameState</a>(<a class="code hl_class" href="class_a_u_p___h_a_1_1_number_game_state_manager.html">NumberGameStateManager</a>&amp; manager);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keyword">virtual</span> <a class="code hl_function" href="class_a_u_p___h_a_1_1_number_game_state.html#a5c300563900b06b299be7db076f320e4">~NumberGameState</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_a_u_p___h_a_1_1_number_game_state.html#a95cec2b7b256fcc45f351f54e3639ec4">   26</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_u_p___h_a_1_1_number_game_state.html#a95cec2b7b256fcc45f351f54e3639ec4">render</a>() = 0;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_a_u_p___h_a_1_1_number_game_state.html#ad87306f8bc2a8954ede1e9a8b58687d3">   27</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_u_p___h_a_1_1_number_game_state.html#ad87306f8bc2a8954ede1e9a8b58687d3">processEvents</a>() = 0;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_a_u_p___h_a_1_1_number_game_state.html#a0d5252183a49fa614aefc1a43f6bd023">   28</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_u_p___h_a_1_1_number_game_state.html#a0d5252183a49fa614aefc1a43f6bd023">update</a>() = 0;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_u_p___h_a_1_1_number_game_state.html#ae53e8b9dab59a88c517051aa8809f6da">requestChange</a>(<a class="code hl_enumeration" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a> stateID);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_u_p___h_a_1_1_number_game_state.html#a587032423a1f61757378ce1b3d371b3c">checkTransitions</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="comment">//std::map&lt;GameStates::TRANSITION, GameTransition::Ptr&gt; mTransitionFacotry;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_a_u_p___h_a_1_1_number_game_state.html#a2f4d6605bc0b975e978bfff16c3aff2a">   37</a></span>        std::string <a class="code hl_variable" href="class_a_u_p___h_a_1_1_number_game_state.html#a2f4d6605bc0b975e978bfff16c3aff2a">mInputBuffer</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_a_u_p___h_a_1_1_number_game_state.html#a85a30b1aa3bc26dff6e0a5c64600789e">   38</a></span>        <a class="code hl_class" href="class_a_u_p___h_a_1_1_game.html">Game</a>* <a class="code hl_variable" href="class_a_u_p___h_a_1_1_number_game_state.html#a85a30b1aa3bc26dff6e0a5c64600789e">mGame</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="comment">// In dem Vector werden Funktionen gespeichert, in denen die Transitionbedingungen geprüft werden.</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_a_u_p___h_a_1_1_number_game_state.html#ae656cfa1c76fdaba12481f573ea32714">   41</a></span>        std::vector&lt;std::function&lt;std::optional&lt;GameStates::ID&gt;(<span class="keyword">const</span> std::string&amp;)&gt;&gt; <a class="code hl_variable" href="class_a_u_p___h_a_1_1_number_game_state.html#ae656cfa1c76fdaba12481f573ea32714">mTransitionList</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_a_u_p___h_a_1_1_number_game_state.html#a7a4453852f966ea62b46a9e3b9d9fa77">   44</a></span>        <a class="code hl_class" href="class_a_u_p___h_a_1_1_number_game_state_manager.html">NumberGameStateManager</a>* <a class="code hl_variable" href="class_a_u_p___h_a_1_1_number_game_state.html#a7a4453852f966ea62b46a9e3b9d9fa77">mManager</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    };</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_game_html"><div class="ttname"><a href="class_a_u_p___h_a_1_1_game.html">AUP_HA::Game</a></div><div class="ttdoc">Zahlenratespiel.</div><div class="ttdef"><b>Definition:</b> Game.hpp:21</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_number_game_state_html"><div class="ttname"><a href="class_a_u_p___h_a_1_1_number_game_state.html">AUP_HA::NumberGameState</a></div><div class="ttdef"><b>Definition:</b> NumberGameState.hpp:18</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_number_game_state_html_a0d5252183a49fa614aefc1a43f6bd023"><div class="ttname"><a href="class_a_u_p___h_a_1_1_number_game_state.html#a0d5252183a49fa614aefc1a43f6bd023">AUP_HA::NumberGameState::update</a></div><div class="ttdeci">virtual void update()=0</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_number_game_state_html_a2f4d6605bc0b975e978bfff16c3aff2a"><div class="ttname"><a href="class_a_u_p___h_a_1_1_number_game_state.html#a2f4d6605bc0b975e978bfff16c3aff2a">AUP_HA::NumberGameState::mInputBuffer</a></div><div class="ttdeci">std::string mInputBuffer</div><div class="ttdef"><b>Definition:</b> NumberGameState.hpp:37</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_number_game_state_html_a55a54265c98d8349461d00129b430392"><div class="ttname"><a href="class_a_u_p___h_a_1_1_number_game_state.html#a55a54265c98d8349461d00129b430392">AUP_HA::NumberGameState::Ptr</a></div><div class="ttdeci">std::unique_ptr&lt; NumberGameState &gt; Ptr</div><div class="ttdef"><b>Definition:</b> NumberGameState.hpp:20</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_number_game_state_html_a587032423a1f61757378ce1b3d371b3c"><div class="ttname"><a href="class_a_u_p___h_a_1_1_number_game_state.html#a587032423a1f61757378ce1b3d371b3c">AUP_HA::NumberGameState::checkTransitions</a></div><div class="ttdeci">void checkTransitions()</div><div class="ttdef"><b>Definition:</b> NumberGameState.cpp:18</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_number_game_state_html_a5c300563900b06b299be7db076f320e4"><div class="ttname"><a href="class_a_u_p___h_a_1_1_number_game_state.html#a5c300563900b06b299be7db076f320e4">AUP_HA::NumberGameState::~NumberGameState</a></div><div class="ttdeci">virtual ~NumberGameState()</div><div class="ttdef"><b>Definition:</b> NumberGameState.cpp:10</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_number_game_state_html_a7a4453852f966ea62b46a9e3b9d9fa77"><div class="ttname"><a href="class_a_u_p___h_a_1_1_number_game_state.html#a7a4453852f966ea62b46a9e3b9d9fa77">AUP_HA::NumberGameState::mManager</a></div><div class="ttdeci">NumberGameStateManager * mManager</div><div class="ttdef"><b>Definition:</b> NumberGameState.hpp:44</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_number_game_state_html_a85a30b1aa3bc26dff6e0a5c64600789e"><div class="ttname"><a href="class_a_u_p___h_a_1_1_number_game_state.html#a85a30b1aa3bc26dff6e0a5c64600789e">AUP_HA::NumberGameState::mGame</a></div><div class="ttdeci">Game * mGame</div><div class="ttdef"><b>Definition:</b> NumberGameState.hpp:38</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_number_game_state_html_a95cec2b7b256fcc45f351f54e3639ec4"><div class="ttname"><a href="class_a_u_p___h_a_1_1_number_game_state.html#a95cec2b7b256fcc45f351f54e3639ec4">AUP_HA::NumberGameState::render</a></div><div class="ttdeci">virtual void render()=0</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_number_game_state_html_ad87306f8bc2a8954ede1e9a8b58687d3"><div class="ttname"><a href="class_a_u_p___h_a_1_1_number_game_state.html#ad87306f8bc2a8954ede1e9a8b58687d3">AUP_HA::NumberGameState::processEvents</a></div><div class="ttdeci">virtual void processEvents()=0</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_number_game_state_html_ae53e8b9dab59a88c517051aa8809f6da"><div class="ttname"><a href="class_a_u_p___h_a_1_1_number_game_state.html#ae53e8b9dab59a88c517051aa8809f6da">AUP_HA::NumberGameState::requestChange</a></div><div class="ttdeci">void requestChange(GameStates::ID stateID)</div><div class="ttdef"><b>Definition:</b> NumberGameState.cpp:13</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_number_game_state_html_ae656cfa1c76fdaba12481f573ea32714"><div class="ttname"><a href="class_a_u_p___h_a_1_1_number_game_state.html#ae656cfa1c76fdaba12481f573ea32714">AUP_HA::NumberGameState::mTransitionList</a></div><div class="ttdeci">std::vector&lt; std::function&lt; std::optional&lt; GameStates::ID &gt;(const std::string &amp;)&gt; &gt; mTransitionList</div><div class="ttdef"><b>Definition:</b> NumberGameState.hpp:41</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_number_game_state_manager_html"><div class="ttname"><a href="class_a_u_p___h_a_1_1_number_game_state_manager.html">AUP_HA::NumberGameStateManager</a></div><div class="ttdef"><b>Definition:</b> NumberGameStateManager.hpp:16</div></div>
+<div class="ttc" id="anamespace_a_u_p___h_a_1_1_game_states_html_a1b17bc41f62783923ee390158b0ec673"><div class="ttname"><a href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">AUP_HA::GameStates::ID</a></div><div class="ttdeci">ID</div><div class="ttdef"><b>Definition:</b> StatesIdentifier.hpp:24</div></div>
+<div class="ttc" id="anamespace_a_u_p___h_a_html"><div class="ttname"><a href="namespace_a_u_p___h_a.html">AUP_HA</a></div><div class="ttdef"><b>Definition:</b> Application.hpp:8</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt von&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

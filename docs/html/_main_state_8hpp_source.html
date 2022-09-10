@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AUP_HA: include/MainState.hpp Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">AUP_HA
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">MainState.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_main_state_8hpp.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;../include/MenuManager.hpp&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;../include/MenuIdentifier.hpp&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;../include/State.hpp&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_a_u_p___h_a.html">AUP_HA</a> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_a_u_p___h_a_1_1_main_state.html">   15</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_a_u_p___h_a_1_1_main_state.html">MainState</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_u_p___h_a_1_1_state.html">State</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <a class="code hl_class" href="class_a_u_p___h_a_1_1_main_state.html">MainState</a>(<a class="code hl_class" href="class_a_u_p___h_a_1_1_state_manager.html">StateManager</a>&amp; stateManager);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <a class="code hl_function" href="class_a_u_p___h_a_1_1_main_state.html#aefc603b8276ee7598c9fd9efc96c20c2">~MainState</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_u_p___h_a_1_1_main_state.html#a38c98c37fba8ca48d8bc076485c1b9a1">render</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_u_p___h_a_1_1_main_state.html#ac6c0f0959681bc804110339bba993778">processEvents</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_u_p___h_a_1_1_main_state.html#a2ab34253a3e921f24ee170f2aa0248b1">update</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_u_p___h_a_1_1_main_state.html#aad12a134771c2e6dc08c5a3bab261e93">registerMenu</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_u_p___h_a_1_1_main_state.html#a569bfe5734c884abec17a912f087ee07">onGame</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_u_p___h_a_1_1_main_state.html#ad8889cd2a5a51c5a7549084da94accf3">onSetup</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_u_p___h_a_1_1_main_state.html#a123f1917dc0e542f6060372f96d95e70">onLeaderboard</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_u_p___h_a_1_1_main_state.html#aeb7ad0eabcd3c8c64bb607afb698867e">onExit</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_a_u_p___h_a_1_1_main_state.html#af7f1d5bb7aca133c3a7d19e2200aad9d">   34</a></span>        std::string                 <a class="code hl_variable" href="class_a_u_p___h_a_1_1_main_state.html#af7f1d5bb7aca133c3a7d19e2200aad9d">mUserinput</a>; <span class="comment">// Benutzereingabe</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_a_u_p___h_a_1_1_main_state.html#aec2e26a9e2b317a4a5228cd93e075783">   35</a></span>        std::pair&lt;int, int&gt;         <a class="code hl_variable" href="class_a_u_p___h_a_1_1_main_state.html#aec2e26a9e2b317a4a5228cd93e075783">mLimits</a>;    <span class="comment">// Grenzen für die Menüeingabe</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_a_u_p___h_a_1_1_main_state.html#a14029721af85b4b3ca88b3297f0a8248">   36</a></span>        <a class="code hl_class" href="class_a_u_p___h_a_1_1_menu_manager.html">MenuManager&lt;MainMenu::ID&gt;</a>   <a class="code hl_variable" href="class_a_u_p___h_a_1_1_main_state.html#a14029721af85b4b3ca88b3297f0a8248">mMenu</a>;      <span class="comment">// Menü</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    };</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>}</div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_main_state_html"><div class="ttname"><a href="class_a_u_p___h_a_1_1_main_state.html">AUP_HA::MainState</a></div><div class="ttdoc">Hauptabzweig für die verschiedene Programmflüsse.</div><div class="ttdef"><b>Definition:</b> MainState.hpp:16</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_main_state_html_a123f1917dc0e542f6060372f96d95e70"><div class="ttname"><a href="class_a_u_p___h_a_1_1_main_state.html#a123f1917dc0e542f6060372f96d95e70">AUP_HA::MainState::onLeaderboard</a></div><div class="ttdeci">void onLeaderboard()</div><div class="ttdoc">Handler für den Menüpunkt [3] Bestenliste.</div><div class="ttdef"><b>Definition:</b> MainState.cpp:89</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_main_state_html_a14029721af85b4b3ca88b3297f0a8248"><div class="ttname"><a href="class_a_u_p___h_a_1_1_main_state.html#a14029721af85b4b3ca88b3297f0a8248">AUP_HA::MainState::mMenu</a></div><div class="ttdeci">MenuManager&lt; MainMenu::ID &gt; mMenu</div><div class="ttdef"><b>Definition:</b> MainState.hpp:36</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_main_state_html_a2ab34253a3e921f24ee170f2aa0248b1"><div class="ttname"><a href="class_a_u_p___h_a_1_1_main_state.html#a2ab34253a3e921f24ee170f2aa0248b1">AUP_HA::MainState::update</a></div><div class="ttdeci">virtual void update()</div><div class="ttdef"><b>Definition:</b> MainState.cpp:38</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_main_state_html_a38c98c37fba8ca48d8bc076485c1b9a1"><div class="ttname"><a href="class_a_u_p___h_a_1_1_main_state.html#a38c98c37fba8ca48d8bc076485c1b9a1">AUP_HA::MainState::render</a></div><div class="ttdeci">virtual void render()</div><div class="ttdef"><b>Definition:</b> MainState.cpp:18</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_main_state_html_a569bfe5734c884abec17a912f087ee07"><div class="ttname"><a href="class_a_u_p___h_a_1_1_main_state.html#a569bfe5734c884abec17a912f087ee07">AUP_HA::MainState::onGame</a></div><div class="ttdeci">void onGame()</div><div class="ttdoc">Handler für den Menüpunkt [1] Spielen.</div><div class="ttdef"><b>Definition:</b> MainState.cpp:73</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_main_state_html_aad12a134771c2e6dc08c5a3bab261e93"><div class="ttname"><a href="class_a_u_p___h_a_1_1_main_state.html#aad12a134771c2e6dc08c5a3bab261e93">AUP_HA::MainState::registerMenu</a></div><div class="ttdeci">void registerMenu()</div><div class="ttdoc">Registrierung der Menühandlers.</div><div class="ttdef"><b>Definition:</b> MainState.cpp:62</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_main_state_html_ac6c0f0959681bc804110339bba993778"><div class="ttname"><a href="class_a_u_p___h_a_1_1_main_state.html#ac6c0f0959681bc804110339bba993778">AUP_HA::MainState::processEvents</a></div><div class="ttdeci">virtual void processEvents()</div><div class="ttdef"><b>Definition:</b> MainState.cpp:32</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_main_state_html_ad8889cd2a5a51c5a7549084da94accf3"><div class="ttname"><a href="class_a_u_p___h_a_1_1_main_state.html#ad8889cd2a5a51c5a7549084da94accf3">AUP_HA::MainState::onSetup</a></div><div class="ttdeci">void onSetup()</div><div class="ttdoc">Handler für den Menüpunkt [2] Einstellungen.</div><div class="ttdef"><b>Definition:</b> MainState.cpp:81</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_main_state_html_aeb7ad0eabcd3c8c64bb607afb698867e"><div class="ttname"><a href="class_a_u_p___h_a_1_1_main_state.html#aeb7ad0eabcd3c8c64bb607afb698867e">AUP_HA::MainState::onExit</a></div><div class="ttdeci">void onExit()</div><div class="ttdoc">Handler für den Menüpunkt [4] Beenden.</div><div class="ttdef"><b>Definition:</b> MainState.cpp:97</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_main_state_html_aec2e26a9e2b317a4a5228cd93e075783"><div class="ttname"><a href="class_a_u_p___h_a_1_1_main_state.html#aec2e26a9e2b317a4a5228cd93e075783">AUP_HA::MainState::mLimits</a></div><div class="ttdeci">std::pair&lt; int, int &gt; mLimits</div><div class="ttdef"><b>Definition:</b> MainState.hpp:35</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_main_state_html_aefc603b8276ee7598c9fd9efc96c20c2"><div class="ttname"><a href="class_a_u_p___h_a_1_1_main_state.html#aefc603b8276ee7598c9fd9efc96c20c2">AUP_HA::MainState::~MainState</a></div><div class="ttdeci">~MainState()</div><div class="ttdef"><b>Definition:</b> MainState.cpp:14</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_main_state_html_af7f1d5bb7aca133c3a7d19e2200aad9d"><div class="ttname"><a href="class_a_u_p___h_a_1_1_main_state.html#af7f1d5bb7aca133c3a7d19e2200aad9d">AUP_HA::MainState::mUserinput</a></div><div class="ttdeci">std::string mUserinput</div><div class="ttdef"><b>Definition:</b> MainState.hpp:34</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_menu_manager_html"><div class="ttname"><a href="class_a_u_p___h_a_1_1_menu_manager.html">AUP_HA::MenuManager</a></div><div class="ttdoc">Manager für numerische Menüs.</div><div class="ttdef"><b>Definition:</b> MenuManager.hpp:17</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_state_html"><div class="ttname"><a href="class_a_u_p___h_a_1_1_state.html">AUP_HA::State</a></div><div class="ttdef"><b>Definition:</b> State.hpp:12</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_state_manager_html"><div class="ttname"><a href="class_a_u_p___h_a_1_1_state_manager.html">AUP_HA::StateManager</a></div><div class="ttdef"><b>Definition:</b> StateManager.hpp:18</div></div>
+<div class="ttc" id="anamespace_a_u_p___h_a_html"><div class="ttname"><a href="namespace_a_u_p___h_a.html">AUP_HA</a></div><div class="ttdef"><b>Definition:</b> Application.hpp:8</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt von&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

@@ -1,0 +1,238 @@
+\hypertarget{class_a_u_p___h_a_1_1_game}{}\doxysection{AUP\+\_\+\+HA\+::Game Klassenreferenz}
+\label{class_a_u_p___h_a_1_1_game}\index{AUP\_HA::Game@{AUP\_HA::Game}}
+
+
+Zahlenratespiel.  
+
+
+
+
+{\ttfamily \#include $<$Game.\+hpp$>$}
+
+\doxysubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_game_a2865bb136b394421a3e842dd4da6f7fa}{Game}} ()
+\item 
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_game_a758a24b3407c3de8a3ffd16de07910e5}{$\sim$\+Game}} ()
+\item 
+bool \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_af060d7a68d552e61b9f168e832e13d37}{check}} (const std\+::int32\+\_\+t \&number)
+\begin{DoxyCompactList}\small\item\em Überprüfe Zahleneingabe. \end{DoxyCompactList}\item 
+const std\+::int32\+\_\+t \& \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_a45c43303c0b5de641059817c57526c4a}{get\+Min\+Border}} () const
+\item 
+const std\+::int32\+\_\+t \& \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_ab651cab8faf22b7e8df4578172308616}{get\+Max\+Border}} () const
+\item 
+const std\+::int32\+\_\+t \& \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_ac46cc7662c2215c2f6e8101a6540b02c}{get\+Searched\+Number}} () const
+\item 
+const std\+::int32\+\_\+t \& \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_abf353714d9efd183217d6f6f29d5cfa4}{get\+Tries}} () const
+\item 
+const std\+::uint32\+\_\+t \& \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_a9fac33ce0cc6dc1a1a951ff3a5e91443}{get\+Max\+Tries}} () const
+\item 
+const \mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}} \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_a7f44149f6fa8699031352f1276146b9f}{get\+User}} () const
+\item 
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_a328432d87c794edbc840a87300003c98}{set\+New\+Input}} (const std\+::string \&input)
+\item 
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_ad34329affad91f4e8c950c3d0ff35487}{set\+New\+Time}} (std\+::time\+\_\+t time)
+\item 
+const std\+::string \& \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_ac28fd2c051e9668899a1ecf47602135f}{get\+Last\+Input}} () const
+\item 
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_ae44128546af8d1376edee3dac11d0a42}{new\+Game}} (\mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}} \&user)
+\begin{DoxyCompactList}\small\item\em Initialisiert ein neues Spiel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_ac6cbcf64c0b9292ff17881694d367e05}{generate\+New\+Searched\+Number}} ()
+\begin{DoxyCompactList}\small\item\em Generiert eine neue zufällige gesuchte Zahl innerhalb der gesetzten Grenzen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_repository}{Setup\+Repository}} $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_a95ea36bf45d14eb0882e10be6bf9ec57}{m\+Setup\+Repository}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}} $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_a28cb9fb37f95967dca559c73ac40fb95}{m\+User}}
+\item 
+std\+::int32\+\_\+t \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_af4af27ce7849a5ce34174c3a4e6b4c5f}{m\+Min\+Boarder}}
+\item 
+std\+::int32\+\_\+t \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_a4f4add06435cafb853117d0456ee6637}{m\+Max\+Boarder}}
+\item 
+std\+::int32\+\_\+t \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_a5f8053e8c7744a41c20c64d554d1276f}{m\+Searched\+Number}}
+\item 
+std\+::int32\+\_\+t \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_a8f122e05d017459fda6aef0d94a554a5}{m\+Tries}}
+\item 
+std\+::uint32\+\_\+t \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_a156a4d94856da7fc8e0371e90a5e6d6f}{m\+Max\+Tries}}
+\item 
+std\+::string \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_a3d98e9036ea0bc96d7563355589a1348}{m\+Last\+Input}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Ausführliche Beschreibung}
+Zahlenratespiel. 
+
+Es wird eine Zahl generiert die ein Benutzer herausfinden muss.
+
+Um die Option mit begrenzter Anzahl an Versuchen zu aktiveren, m\+Max\+Tries mit einer anderen Zahl als 0 initialisieren. 
+
+\doxysubsection{Beschreibung der Konstruktoren und Destruktoren}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_a2865bb136b394421a3e842dd4da6f7fa}\label{class_a_u_p___h_a_1_1_game_a2865bb136b394421a3e842dd4da6f7fa}} 
+\index{AUP\_HA::Game@{AUP\_HA::Game}!Game@{Game}}
+\index{Game@{Game}!AUP\_HA::Game@{AUP\_HA::Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily AUP\+\_\+\+HA\+::\+Game\+::\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_a758a24b3407c3de8a3ffd16de07910e5}\label{class_a_u_p___h_a_1_1_game_a758a24b3407c3de8a3ffd16de07910e5}} 
+\index{AUP\_HA::Game@{AUP\_HA::Game}!````~Game@{$\sim$Game}}
+\index{````~Game@{$\sim$Game}!AUP\_HA::Game@{AUP\_HA::Game}}
+\doxysubsubsection{\texorpdfstring{$\sim$Game()}{~Game()}}
+{\footnotesize\ttfamily AUP\+\_\+\+HA\+::\+Game\+::$\sim$\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_af060d7a68d552e61b9f168e832e13d37}\label{class_a_u_p___h_a_1_1_game_af060d7a68d552e61b9f168e832e13d37}} 
+\index{AUP\_HA::Game@{AUP\_HA::Game}!check@{check}}
+\index{check@{check}!AUP\_HA::Game@{AUP\_HA::Game}}
+\doxysubsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily bool AUP\+\_\+\+HA\+::\+Game\+::check (\begin{DoxyParamCaption}\item[{const std\+::int32\+\_\+t \&}]{number }\end{DoxyParamCaption})}
+
+
+
+Überprüfe Zahleneingabe. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em number} & zu prüfende Zahl \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+true, wenn die Zahl gefunden wurde, andernfalls false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_ac6cbcf64c0b9292ff17881694d367e05}\label{class_a_u_p___h_a_1_1_game_ac6cbcf64c0b9292ff17881694d367e05}} 
+\index{AUP\_HA::Game@{AUP\_HA::Game}!generateNewSearchedNumber@{generateNewSearchedNumber}}
+\index{generateNewSearchedNumber@{generateNewSearchedNumber}!AUP\_HA::Game@{AUP\_HA::Game}}
+\doxysubsubsection{\texorpdfstring{generateNewSearchedNumber()}{generateNewSearchedNumber()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Game\+::generate\+New\+Searched\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Generiert eine neue zufällige gesuchte Zahl innerhalb der gesetzten Grenzen. 
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_ac28fd2c051e9668899a1ecf47602135f}\label{class_a_u_p___h_a_1_1_game_ac28fd2c051e9668899a1ecf47602135f}} 
+\index{AUP\_HA::Game@{AUP\_HA::Game}!getLastInput@{getLastInput}}
+\index{getLastInput@{getLastInput}!AUP\_HA::Game@{AUP\_HA::Game}}
+\doxysubsubsection{\texorpdfstring{getLastInput()}{getLastInput()}}
+{\footnotesize\ttfamily const std\+::string \& AUP\+\_\+\+HA\+::\+Game\+::get\+Last\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_ab651cab8faf22b7e8df4578172308616}\label{class_a_u_p___h_a_1_1_game_ab651cab8faf22b7e8df4578172308616}} 
+\index{AUP\_HA::Game@{AUP\_HA::Game}!getMaxBorder@{getMaxBorder}}
+\index{getMaxBorder@{getMaxBorder}!AUP\_HA::Game@{AUP\_HA::Game}}
+\doxysubsubsection{\texorpdfstring{getMaxBorder()}{getMaxBorder()}}
+{\footnotesize\ttfamily const std\+::int32\+\_\+t \& AUP\+\_\+\+HA\+::\+Game\+::get\+Max\+Border (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_a9fac33ce0cc6dc1a1a951ff3a5e91443}\label{class_a_u_p___h_a_1_1_game_a9fac33ce0cc6dc1a1a951ff3a5e91443}} 
+\index{AUP\_HA::Game@{AUP\_HA::Game}!getMaxTries@{getMaxTries}}
+\index{getMaxTries@{getMaxTries}!AUP\_HA::Game@{AUP\_HA::Game}}
+\doxysubsubsection{\texorpdfstring{getMaxTries()}{getMaxTries()}}
+{\footnotesize\ttfamily const std\+::uint32\+\_\+t \& AUP\+\_\+\+HA\+::\+Game\+::get\+Max\+Tries (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_a45c43303c0b5de641059817c57526c4a}\label{class_a_u_p___h_a_1_1_game_a45c43303c0b5de641059817c57526c4a}} 
+\index{AUP\_HA::Game@{AUP\_HA::Game}!getMinBorder@{getMinBorder}}
+\index{getMinBorder@{getMinBorder}!AUP\_HA::Game@{AUP\_HA::Game}}
+\doxysubsubsection{\texorpdfstring{getMinBorder()}{getMinBorder()}}
+{\footnotesize\ttfamily const std\+::int32\+\_\+t \& AUP\+\_\+\+HA\+::\+Game\+::get\+Min\+Border (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_ac46cc7662c2215c2f6e8101a6540b02c}\label{class_a_u_p___h_a_1_1_game_ac46cc7662c2215c2f6e8101a6540b02c}} 
+\index{AUP\_HA::Game@{AUP\_HA::Game}!getSearchedNumber@{getSearchedNumber}}
+\index{getSearchedNumber@{getSearchedNumber}!AUP\_HA::Game@{AUP\_HA::Game}}
+\doxysubsubsection{\texorpdfstring{getSearchedNumber()}{getSearchedNumber()}}
+{\footnotesize\ttfamily const std\+::int32\+\_\+t \& AUP\+\_\+\+HA\+::\+Game\+::get\+Searched\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_abf353714d9efd183217d6f6f29d5cfa4}\label{class_a_u_p___h_a_1_1_game_abf353714d9efd183217d6f6f29d5cfa4}} 
+\index{AUP\_HA::Game@{AUP\_HA::Game}!getTries@{getTries}}
+\index{getTries@{getTries}!AUP\_HA::Game@{AUP\_HA::Game}}
+\doxysubsubsection{\texorpdfstring{getTries()}{getTries()}}
+{\footnotesize\ttfamily const std\+::int32\+\_\+t \& AUP\+\_\+\+HA\+::\+Game\+::get\+Tries (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_a7f44149f6fa8699031352f1276146b9f}\label{class_a_u_p___h_a_1_1_game_a7f44149f6fa8699031352f1276146b9f}} 
+\index{AUP\_HA::Game@{AUP\_HA::Game}!getUser@{getUser}}
+\index{getUser@{getUser}!AUP\_HA::Game@{AUP\_HA::Game}}
+\doxysubsubsection{\texorpdfstring{getUser()}{getUser()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}} AUP\+\_\+\+HA\+::\+Game\+::get\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_ae44128546af8d1376edee3dac11d0a42}\label{class_a_u_p___h_a_1_1_game_ae44128546af8d1376edee3dac11d0a42}} 
+\index{AUP\_HA::Game@{AUP\_HA::Game}!newGame@{newGame}}
+\index{newGame@{newGame}!AUP\_HA::Game@{AUP\_HA::Game}}
+\doxysubsubsection{\texorpdfstring{newGame()}{newGame()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Game\+::new\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}} \&}]{user }\end{DoxyParamCaption})}
+
+
+
+Initialisiert ein neues Spiel. 
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_a328432d87c794edbc840a87300003c98}\label{class_a_u_p___h_a_1_1_game_a328432d87c794edbc840a87300003c98}} 
+\index{AUP\_HA::Game@{AUP\_HA::Game}!setNewInput@{setNewInput}}
+\index{setNewInput@{setNewInput}!AUP\_HA::Game@{AUP\_HA::Game}}
+\doxysubsubsection{\texorpdfstring{setNewInput()}{setNewInput()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Game\+::set\+New\+Input (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_ad34329affad91f4e8c950c3d0ff35487}\label{class_a_u_p___h_a_1_1_game_ad34329affad91f4e8c950c3d0ff35487}} 
+\index{AUP\_HA::Game@{AUP\_HA::Game}!setNewTime@{setNewTime}}
+\index{setNewTime@{setNewTime}!AUP\_HA::Game@{AUP\_HA::Game}}
+\doxysubsubsection{\texorpdfstring{setNewTime()}{setNewTime()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Game\+::set\+New\+Time (\begin{DoxyParamCaption}\item[{std\+::time\+\_\+t}]{time }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Dokumentation der Datenelemente}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_a3d98e9036ea0bc96d7563355589a1348}\label{class_a_u_p___h_a_1_1_game_a3d98e9036ea0bc96d7563355589a1348}} 
+\index{AUP\_HA::Game@{AUP\_HA::Game}!mLastInput@{mLastInput}}
+\index{mLastInput@{mLastInput}!AUP\_HA::Game@{AUP\_HA::Game}}
+\doxysubsubsection{\texorpdfstring{mLastInput}{mLastInput}}
+{\footnotesize\ttfamily std\+::string AUP\+\_\+\+HA\+::\+Game\+::m\+Last\+Input\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_a4f4add06435cafb853117d0456ee6637}\label{class_a_u_p___h_a_1_1_game_a4f4add06435cafb853117d0456ee6637}} 
+\index{AUP\_HA::Game@{AUP\_HA::Game}!mMaxBoarder@{mMaxBoarder}}
+\index{mMaxBoarder@{mMaxBoarder}!AUP\_HA::Game@{AUP\_HA::Game}}
+\doxysubsubsection{\texorpdfstring{mMaxBoarder}{mMaxBoarder}}
+{\footnotesize\ttfamily std\+::int32\+\_\+t AUP\+\_\+\+HA\+::\+Game\+::m\+Max\+Boarder\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_a156a4d94856da7fc8e0371e90a5e6d6f}\label{class_a_u_p___h_a_1_1_game_a156a4d94856da7fc8e0371e90a5e6d6f}} 
+\index{AUP\_HA::Game@{AUP\_HA::Game}!mMaxTries@{mMaxTries}}
+\index{mMaxTries@{mMaxTries}!AUP\_HA::Game@{AUP\_HA::Game}}
+\doxysubsubsection{\texorpdfstring{mMaxTries}{mMaxTries}}
+{\footnotesize\ttfamily std\+::uint32\+\_\+t AUP\+\_\+\+HA\+::\+Game\+::m\+Max\+Tries\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_af4af27ce7849a5ce34174c3a4e6b4c5f}\label{class_a_u_p___h_a_1_1_game_af4af27ce7849a5ce34174c3a4e6b4c5f}} 
+\index{AUP\_HA::Game@{AUP\_HA::Game}!mMinBoarder@{mMinBoarder}}
+\index{mMinBoarder@{mMinBoarder}!AUP\_HA::Game@{AUP\_HA::Game}}
+\doxysubsubsection{\texorpdfstring{mMinBoarder}{mMinBoarder}}
+{\footnotesize\ttfamily std\+::int32\+\_\+t AUP\+\_\+\+HA\+::\+Game\+::m\+Min\+Boarder\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_a5f8053e8c7744a41c20c64d554d1276f}\label{class_a_u_p___h_a_1_1_game_a5f8053e8c7744a41c20c64d554d1276f}} 
+\index{AUP\_HA::Game@{AUP\_HA::Game}!mSearchedNumber@{mSearchedNumber}}
+\index{mSearchedNumber@{mSearchedNumber}!AUP\_HA::Game@{AUP\_HA::Game}}
+\doxysubsubsection{\texorpdfstring{mSearchedNumber}{mSearchedNumber}}
+{\footnotesize\ttfamily std\+::int32\+\_\+t AUP\+\_\+\+HA\+::\+Game\+::m\+Searched\+Number\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_a95ea36bf45d14eb0882e10be6bf9ec57}\label{class_a_u_p___h_a_1_1_game_a95ea36bf45d14eb0882e10be6bf9ec57}} 
+\index{AUP\_HA::Game@{AUP\_HA::Game}!mSetupRepository@{mSetupRepository}}
+\index{mSetupRepository@{mSetupRepository}!AUP\_HA::Game@{AUP\_HA::Game}}
+\doxysubsubsection{\texorpdfstring{mSetupRepository}{mSetupRepository}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_repository}{Setup\+Repository}}$>$ AUP\+\_\+\+HA\+::\+Game\+::m\+Setup\+Repository\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_a8f122e05d017459fda6aef0d94a554a5}\label{class_a_u_p___h_a_1_1_game_a8f122e05d017459fda6aef0d94a554a5}} 
+\index{AUP\_HA::Game@{AUP\_HA::Game}!mTries@{mTries}}
+\index{mTries@{mTries}!AUP\_HA::Game@{AUP\_HA::Game}}
+\doxysubsubsection{\texorpdfstring{mTries}{mTries}}
+{\footnotesize\ttfamily std\+::int32\+\_\+t AUP\+\_\+\+HA\+::\+Game\+::m\+Tries\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_a28cb9fb37f95967dca559c73ac40fb95}\label{class_a_u_p___h_a_1_1_game_a28cb9fb37f95967dca559c73ac40fb95}} 
+\index{AUP\_HA::Game@{AUP\_HA::Game}!mUser@{mUser}}
+\index{mUser@{mUser}!AUP\_HA::Game@{AUP\_HA::Game}}
+\doxysubsubsection{\texorpdfstring{mUser}{mUser}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}}$>$ AUP\+\_\+\+HA\+::\+Game\+::m\+User\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_game_8hpp}{Game.\+hpp}}\item 
+src/\mbox{\hyperlink{_game_8cpp}{Game.\+cpp}}\end{DoxyCompactItemize}

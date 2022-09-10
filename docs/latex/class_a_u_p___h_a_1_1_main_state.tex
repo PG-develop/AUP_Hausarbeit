@@ -1,0 +1,181 @@
+\hypertarget{class_a_u_p___h_a_1_1_main_state}{}\doxysection{AUP\+\_\+\+HA\+::Main\+State Klassenreferenz}
+\label{class_a_u_p___h_a_1_1_main_state}\index{AUP\_HA::MainState@{AUP\_HA::MainState}}
+
+
+Hauptabzweig für die verschiedene Programmflüsse.  
+
+
+
+
+{\ttfamily \#include $<$Main\+State.\+hpp$>$}
+
+Klassendiagramm für AUP\+\_\+\+HA\+::Main\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_a_u_p___h_a_1_1_main_state}
+\end{center}
+\end{figure}
+\doxysubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_a4027b4f634b3130277dcbed8d88bd831}{Main\+State}} (\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} \&state\+Manager)
+\item 
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_aefc603b8276ee7598c9fd9efc96c20c2}{$\sim$\+Main\+State}} ()
+\item 
+virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_a38c98c37fba8ca48d8bc076485c1b9a1}{render}} ()
+\item 
+virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_ac6c0f0959681bc804110339bba993778}{process\+Events}} ()
+\item 
+virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_a2ab34253a3e921f24ee170f2aa0248b1}{update}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_aad12a134771c2e6dc08c5a3bab261e93}{register\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Registrierung der Menühandlers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_a569bfe5734c884abec17a912f087ee07}{on\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Handler für den Menüpunkt \mbox{[}1\mbox{]} Spielen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_ad8889cd2a5a51c5a7549084da94accf3}{on\+Setup}} ()
+\begin{DoxyCompactList}\small\item\em Handler für den Menüpunkt \mbox{[}2\mbox{]} Einstellungen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_a123f1917dc0e542f6060372f96d95e70}{on\+Leaderboard}} ()
+\begin{DoxyCompactList}\small\item\em Handler für den Menüpunkt \mbox{[}3\mbox{]} Bestenliste. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_aeb7ad0eabcd3c8c64bb607afb698867e}{on\+Exit}} ()
+\begin{DoxyCompactList}\small\item\em Handler für den Menüpunkt \mbox{[}4\mbox{]} Beenden. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_af7f1d5bb7aca133c3a7d19e2200aad9d}{m\+Userinput}}
+\item 
+std\+::pair$<$ int, int $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_aec2e26a9e2b317a4a5228cd93e075783}{m\+Limits}}
+\item 
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager}{Menu\+Manager}}$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_main_menu_a9b56d6d74ceda0a307a7dfe06a103167}{Main\+Menu\+::\+ID}} $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_a14029721af85b4b3ca88b3297f0a8248}{m\+Menu}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Weitere Geerbte Elemente}
+
+
+\doxysubsection{Ausführliche Beschreibung}
+Hauptabzweig für die verschiedene Programmflüsse. 
+
+\doxysubsection{Beschreibung der Konstruktoren und Destruktoren}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_main_state_a4027b4f634b3130277dcbed8d88bd831}\label{class_a_u_p___h_a_1_1_main_state_a4027b4f634b3130277dcbed8d88bd831}} 
+\index{AUP\_HA::MainState@{AUP\_HA::MainState}!MainState@{MainState}}
+\index{MainState@{MainState}!AUP\_HA::MainState@{AUP\_HA::MainState}}
+\doxysubsubsection{\texorpdfstring{MainState()}{MainState()}}
+{\footnotesize\ttfamily AUP\+\_\+\+HA\+::\+Main\+State\+::\+Main\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} \&}]{state\+Manager }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_main_state_aefc603b8276ee7598c9fd9efc96c20c2}\label{class_a_u_p___h_a_1_1_main_state_aefc603b8276ee7598c9fd9efc96c20c2}} 
+\index{AUP\_HA::MainState@{AUP\_HA::MainState}!````~MainState@{$\sim$MainState}}
+\index{````~MainState@{$\sim$MainState}!AUP\_HA::MainState@{AUP\_HA::MainState}}
+\doxysubsubsection{\texorpdfstring{$\sim$MainState()}{~MainState()}}
+{\footnotesize\ttfamily AUP\+\_\+\+HA\+::\+Main\+State\+::$\sim$\+Main\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_main_state_aeb7ad0eabcd3c8c64bb607afb698867e}\label{class_a_u_p___h_a_1_1_main_state_aeb7ad0eabcd3c8c64bb607afb698867e}} 
+\index{AUP\_HA::MainState@{AUP\_HA::MainState}!onExit@{onExit}}
+\index{onExit@{onExit}!AUP\_HA::MainState@{AUP\_HA::MainState}}
+\doxysubsubsection{\texorpdfstring{onExit()}{onExit()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Main\+State\+::on\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Handler für den Menüpunkt \mbox{[}4\mbox{]} Beenden. 
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_main_state_a569bfe5734c884abec17a912f087ee07}\label{class_a_u_p___h_a_1_1_main_state_a569bfe5734c884abec17a912f087ee07}} 
+\index{AUP\_HA::MainState@{AUP\_HA::MainState}!onGame@{onGame}}
+\index{onGame@{onGame}!AUP\_HA::MainState@{AUP\_HA::MainState}}
+\doxysubsubsection{\texorpdfstring{onGame()}{onGame()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Main\+State\+::on\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Handler für den Menüpunkt \mbox{[}1\mbox{]} Spielen. 
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_main_state_a123f1917dc0e542f6060372f96d95e70}\label{class_a_u_p___h_a_1_1_main_state_a123f1917dc0e542f6060372f96d95e70}} 
+\index{AUP\_HA::MainState@{AUP\_HA::MainState}!onLeaderboard@{onLeaderboard}}
+\index{onLeaderboard@{onLeaderboard}!AUP\_HA::MainState@{AUP\_HA::MainState}}
+\doxysubsubsection{\texorpdfstring{onLeaderboard()}{onLeaderboard()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Main\+State\+::on\+Leaderboard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Handler für den Menüpunkt \mbox{[}3\mbox{]} Bestenliste. 
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_main_state_ad8889cd2a5a51c5a7549084da94accf3}\label{class_a_u_p___h_a_1_1_main_state_ad8889cd2a5a51c5a7549084da94accf3}} 
+\index{AUP\_HA::MainState@{AUP\_HA::MainState}!onSetup@{onSetup}}
+\index{onSetup@{onSetup}!AUP\_HA::MainState@{AUP\_HA::MainState}}
+\doxysubsubsection{\texorpdfstring{onSetup()}{onSetup()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Main\+State\+::on\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Handler für den Menüpunkt \mbox{[}2\mbox{]} Einstellungen. 
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_main_state_ac6c0f0959681bc804110339bba993778}\label{class_a_u_p___h_a_1_1_main_state_ac6c0f0959681bc804110339bba993778}} 
+\index{AUP\_HA::MainState@{AUP\_HA::MainState}!processEvents@{processEvents}}
+\index{processEvents@{processEvents}!AUP\_HA::MainState@{AUP\_HA::MainState}}
+\doxysubsubsection{\texorpdfstring{processEvents()}{processEvents()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Main\+State\+::process\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a99807a79b6edfe4e4117b44e5144bb42}{AUP\+\_\+\+HA\+::\+State}}.
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_main_state_aad12a134771c2e6dc08c5a3bab261e93}\label{class_a_u_p___h_a_1_1_main_state_aad12a134771c2e6dc08c5a3bab261e93}} 
+\index{AUP\_HA::MainState@{AUP\_HA::MainState}!registerMenu@{registerMenu}}
+\index{registerMenu@{registerMenu}!AUP\_HA::MainState@{AUP\_HA::MainState}}
+\doxysubsubsection{\texorpdfstring{registerMenu()}{registerMenu()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Main\+State\+::register\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Registrierung der Menühandlers. 
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_main_state_a38c98c37fba8ca48d8bc076485c1b9a1}\label{class_a_u_p___h_a_1_1_main_state_a38c98c37fba8ca48d8bc076485c1b9a1}} 
+\index{AUP\_HA::MainState@{AUP\_HA::MainState}!render@{render}}
+\index{render@{render}!AUP\_HA::MainState@{AUP\_HA::MainState}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Main\+State\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_adc7ce183cd6dd5e24c1dd52839d0086e}{AUP\+\_\+\+HA\+::\+State}}.
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_main_state_a2ab34253a3e921f24ee170f2aa0248b1}\label{class_a_u_p___h_a_1_1_main_state_a2ab34253a3e921f24ee170f2aa0248b1}} 
+\index{AUP\_HA::MainState@{AUP\_HA::MainState}!update@{update}}
+\index{update@{update}!AUP\_HA::MainState@{AUP\_HA::MainState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Main\+State\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a7e5197b99088d8166fc499bd28d2b3d8}{AUP\+\_\+\+HA\+::\+State}}.
+
+
+
+\doxysubsection{Dokumentation der Datenelemente}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_main_state_aec2e26a9e2b317a4a5228cd93e075783}\label{class_a_u_p___h_a_1_1_main_state_aec2e26a9e2b317a4a5228cd93e075783}} 
+\index{AUP\_HA::MainState@{AUP\_HA::MainState}!mLimits@{mLimits}}
+\index{mLimits@{mLimits}!AUP\_HA::MainState@{AUP\_HA::MainState}}
+\doxysubsubsection{\texorpdfstring{mLimits}{mLimits}}
+{\footnotesize\ttfamily std\+::pair$<$int, int$>$ AUP\+\_\+\+HA\+::\+Main\+State\+::m\+Limits\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_main_state_a14029721af85b4b3ca88b3297f0a8248}\label{class_a_u_p___h_a_1_1_main_state_a14029721af85b4b3ca88b3297f0a8248}} 
+\index{AUP\_HA::MainState@{AUP\_HA::MainState}!mMenu@{mMenu}}
+\index{mMenu@{mMenu}!AUP\_HA::MainState@{AUP\_HA::MainState}}
+\doxysubsubsection{\texorpdfstring{mMenu}{mMenu}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager}{Menu\+Manager}}$<$\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_main_menu_a9b56d6d74ceda0a307a7dfe06a103167}{Main\+Menu\+::\+ID}}$>$ AUP\+\_\+\+HA\+::\+Main\+State\+::m\+Menu\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_main_state_af7f1d5bb7aca133c3a7d19e2200aad9d}\label{class_a_u_p___h_a_1_1_main_state_af7f1d5bb7aca133c3a7d19e2200aad9d}} 
+\index{AUP\_HA::MainState@{AUP\_HA::MainState}!mUserinput@{mUserinput}}
+\index{mUserinput@{mUserinput}!AUP\_HA::MainState@{AUP\_HA::MainState}}
+\doxysubsubsection{\texorpdfstring{mUserinput}{mUserinput}}
+{\footnotesize\ttfamily std\+::string AUP\+\_\+\+HA\+::\+Main\+State\+::m\+Userinput\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_main_state_8hpp}{Main\+State.\+hpp}}\item 
+src/\mbox{\hyperlink{_main_state_8cpp}{Main\+State.\+cpp}}\end{DoxyCompactItemize}

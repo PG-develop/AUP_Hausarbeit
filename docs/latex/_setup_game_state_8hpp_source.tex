@@ -1,0 +1,44 @@
+\hypertarget{_setup_game_state_8hpp_source}{}\doxysection{Setup\+Game\+State.\+hpp}
+\label{_setup_game_state_8hpp_source}\index{include/SetupGameState.hpp@{include/SetupGameState.hpp}}
+\mbox{\hyperlink{_setup_game_state_8hpp}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}../include/State.hpp"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}../include/MenuManager.hpp"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}../include/MenuIdentifier.hpp"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_a_u_p___h_a}{AUP\_HA}}}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12     \textcolor{comment}{// Vorwärtsdeklaration}}
+\DoxyCodeLine{13     \textcolor{keyword}{class }SetupRepository;}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{20     \textcolor{keyword}{class }\mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_game_state}{SetupGameState}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}}}
+\DoxyCodeLine{21     \{}
+\DoxyCodeLine{22     \textcolor{keyword}{public}:}
+\DoxyCodeLine{23         \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_game_state}{SetupGameState}}(\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{StateManager}}\& stateManager);}
+\DoxyCodeLine{24         \textcolor{keyword}{virtual} \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_game_state_a752f0adc3eb9e1d3cf3908ecba737112}{\string~SetupGameState}}();}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_game_state_a95ce9fb154b61a6a3391628a9ea0facb}{render}}();}
+\DoxyCodeLine{27         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_game_state_abece832133845210c16fb68b20dd4669}{processEvents}}();}
+\DoxyCodeLine{28         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_game_state_a7b3939e35289a3ebf60c4ed91fd21a93}{update}}();}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{keyword}{private}:}
+\DoxyCodeLine{31         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_game_state_a1617709ef0e904ed99e3b8c0b45b2001}{registerMenu}}();}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_game_state_a1dd4d19e7fcf559debe09adbaf83ece2}{onChangeAmountOfChoices}}();}
+\DoxyCodeLine{34         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_game_state_ae3ebebe9663c4fa6a4b19890642c2ad0}{onChangeMaxRange}}();}
+\DoxyCodeLine{35         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_game_state_ab6858b47b46f0683c39804cc07df2a27}{onExit}}();}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{keyword}{private}:}
+\DoxyCodeLine{38         std::string                         \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_game_state_a982c1a9c5a0d695267adae6d31342128}{mUserinput}};}
+\DoxyCodeLine{39         std::unique\_ptr<SetupRepository>    \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_game_state_aab98d6f56efc78099e206e03b25998f5}{mSetupRepository}};}
+\DoxyCodeLine{40         \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager}{MenuManager<SETUP\_GAMESETUP::ID>}}    \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_game_state_a146b687b4e5e2ed27b61d667ca686ffd}{mMenu}};}
+\DoxyCodeLine{41         std::pair<std::int32\_t, std::int32\_t> \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_game_state_af3d1c5bca093fe98c50f177f22cc2775}{mLimits}};}
+\DoxyCodeLine{42     \};}
+\DoxyCodeLine{43 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,38 @@
+\hypertarget{_persistence_list_service_8hpp_source}{}\doxysection{Persistence\+List\+Service.\+hpp}
+\label{_persistence_list_service_8hpp_source}\index{include/PersistenceListService.hpp@{include/PersistenceListService.hpp}}
+\mbox{\hyperlink{_persistence_list_service_8hpp}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_a_u_p___h_a}{AUP\_HA}}}
+\DoxyCodeLine{6 \{}
+\DoxyCodeLine{7     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{8     \textcolor{keyword}{class }\mbox{\hyperlink{class_a_u_p___h_a_1_1_persistence_list_service}{PersistenceListService}}}
+\DoxyCodeLine{9     \{}
+\DoxyCodeLine{10     \textcolor{keyword}{public}:}
+\DoxyCodeLine{11         \mbox{\hyperlink{class_a_u_p___h_a_1_1_persistence_list_service_a5815f561a52e5def6a90c1f7b03adb83}{PersistenceListService}}();}
+\DoxyCodeLine{12         \textcolor{keyword}{virtual} \mbox{\hyperlink{class_a_u_p___h_a_1_1_persistence_list_service_a12c4bc9fc8700cebba5bf9826dce16a1}{\string~PersistenceListService}}();}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void}            \mbox{\hyperlink{class_a_u_p___h_a_1_1_persistence_list_service_aa63ca9873a18070fc8f11a167d28bf03}{pushList}}(\textcolor{keyword}{const} std::vector<T>\& list) = 0;}
+\DoxyCodeLine{15         \textcolor{keyword}{virtual} std::vector<T>\& \mbox{\hyperlink{class_a_u_p___h_a_1_1_persistence_list_service_a09165931283da3eae9e1a6175576b9bf}{getList}}() = 0;}
+\DoxyCodeLine{16         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void}            \mbox{\hyperlink{class_a_u_p___h_a_1_1_persistence_list_service_ae5be2422f4cc60b48b48046b11258862}{clear}}() = 0;}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{19         std::vector<T>          \mbox{\hyperlink{class_a_u_p___h_a_1_1_persistence_list_service_abe9fb02077d9b647a13fbdbe94083534}{mList}};}
+\DoxyCodeLine{20     \};}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{23     \textcolor{keyword}{inline} \mbox{\hyperlink{class_a_u_p___h_a_1_1_persistence_list_service_a5815f561a52e5def6a90c1f7b03adb83}{PersistenceListService<T>::PersistenceListService}}()}
+\DoxyCodeLine{24     \{}
+\DoxyCodeLine{25     \}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{28     \textcolor{keyword}{inline} \mbox{\hyperlink{class_a_u_p___h_a_1_1_persistence_list_service_a12c4bc9fc8700cebba5bf9826dce16a1}{PersistenceListService<T>::\string~PersistenceListService}}()}
+\DoxyCodeLine{29     \{}
+\DoxyCodeLine{30     \}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \}}
+
+\end{DoxyCode}

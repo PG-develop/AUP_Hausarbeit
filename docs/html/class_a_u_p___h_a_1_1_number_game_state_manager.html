@@ -1,0 +1,871 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AUP_HA: AUP_HA::NumberGameStateManager Klassenreferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">AUP_HA
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_a_u_p___h_a.html">AUP_HA</a></li><li class="navelem"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html">NumberGameStateManager</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Öffentliche Typen</a> &#124;
+<a href="#pub-methods">Öffentliche Methoden</a> &#124;
+<a href="#pri-methods">Private Methoden</a> &#124;
+<a href="#pri-attribs">Private Attribute</a> &#124;
+<a href="class_a_u_p___h_a_1_1_number_game_state_manager-members.html">Aufstellung aller Elemente</a>  </div>
+  <div class="headertitle"><div class="title">AUP_HA::NumberGameStateManager Klassenreferenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_number_game_state_manager_8hpp_source.html">NumberGameStateManager.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Öffentliche Typen</h2></td></tr>
+<tr class="memitem:af971f2fe51fb775ce98be2b57a83a3f9"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; std::optional&lt; <a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a> &gt;(const std::string &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#af971f2fe51fb775ce98be2b57a83a3f9">TransitionHandler</a></td></tr>
+<tr class="separator:af971f2fe51fb775ce98be2b57a83a3f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Öffentliche Methoden</h2></td></tr>
+<tr class="memitem:af9e9a83070b16f7c90ec3c6b0053d6ea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#af9e9a83070b16f7c90ec3c6b0053d6ea">NumberGameStateManager</a> (<a class="el" href="class_a_u_p___h_a_1_1_user_repository.html">UserRepository</a> &amp;userRepository, <a class="el" href="class_a_u_p___h_a_1_1_game.html">Game</a> &amp;game)</td></tr>
+<tr class="separator:af9e9a83070b16f7c90ec3c6b0053d6ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a43eb777a4d2e1063ea0b13c30e3c56"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#a9a43eb777a4d2e1063ea0b13c30e3c56">~NumberGameStateManager</a> ()</td></tr>
+<tr class="separator:a9a43eb777a4d2e1063ea0b13c30e3c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d73c52c5d4943939c5aea5355112db2"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a3d73c52c5d4943939c5aea5355112db2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#a3d73c52c5d4943939c5aea5355112db2">registerStates</a> (<a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a> stateID)</td></tr>
+<tr class="separator:a3d73c52c5d4943939c5aea5355112db2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4fc2801e330d02c161afd0e48d941c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#ac4fc2801e330d02c161afd0e48d941c9">registerEndGameHandler</a> (std::function&lt; void()&gt; handler)</td></tr>
+<tr class="separator:ac4fc2801e330d02c161afd0e48d941c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7745fbe07547fcbd05f883a67b920f36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#a7745fbe07547fcbd05f883a67b920f36">render</a> ()</td></tr>
+<tr class="separator:a7745fbe07547fcbd05f883a67b920f36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32a583ba66dff12339254f862bb124bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#a32a583ba66dff12339254f862bb124bd">processEvents</a> ()</td></tr>
+<tr class="separator:a32a583ba66dff12339254f862bb124bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa99fb7c3c048044d74c56c60dc2d5aa9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#aa99fb7c3c048044d74c56c60dc2d5aa9">update</a> ()</td></tr>
+<tr class="separator:aa99fb7c3c048044d74c56c60dc2d5aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d66adb9da5ff06206b2688bf4554d20"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_a_u_p___h_a_1_1_game.html">Game</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#a0d66adb9da5ff06206b2688bf4554d20">getGame</a> ()</td></tr>
+<tr class="separator:a0d66adb9da5ff06206b2688bf4554d20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add262ded51c1994f2e1d40111510f5d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_a_u_p___h_a_1_1_user_repository.html">UserRepository</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#add262ded51c1994f2e1d40111510f5d9">getUserRepository</a> ()</td></tr>
+<tr class="separator:add262ded51c1994f2e1d40111510f5d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a715911c84c8efa9a0a9dc68d03f4d51c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#a715911c84c8efa9a0a9dc68d03f4d51c">changeState</a> (<a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a> stateID)</td></tr>
+<tr class="separator:a715911c84c8efa9a0a9dc68d03f4d51c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8299000f7092073f10db632afae5c23c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#af971f2fe51fb775ce98be2b57a83a3f9">TransitionHandler</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#a8299000f7092073f10db632afae5c23c">getTransition</a> (<a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#aad05c1c14b35369485097dff476c742a">GameStates::TRANSITION</a> transitionID)</td></tr>
+<tr class="separator:a8299000f7092073f10db632afae5c23c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Methoden</h2></td></tr>
+<tr class="memitem:acdbb708fd4a9f01116e9fb9106e98bc7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#acdbb708fd4a9f01116e9fb9106e98bc7">registerTransitions</a> ()</td></tr>
+<tr class="separator:acdbb708fd4a9f01116e9fb9106e98bc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a534e0b11e09c90c7c97b4267f0a77f47"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#a534e0b11e09c90c7c97b4267f0a77f47">onEmpty</a> (const std::string &amp;string)</td></tr>
+<tr class="separator:a534e0b11e09c90c7c97b4267f0a77f47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20a4d825b7c47a4689471d94e523c49b"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#a20a4d825b7c47a4689471d94e523c49b">onNoNumber</a> (const std::string &amp;string)</td></tr>
+<tr class="separator:a20a4d825b7c47a4689471d94e523c49b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f86737000028d309702da7423a6154f"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#a9f86737000028d309702da7423a6154f">onHitOrNoHit</a> (const std::string &amp;string)</td></tr>
+<tr class="separator:a9f86737000028d309702da7423a6154f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad21d9ec71067705985978436a852e50f"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#ad21d9ec71067705985978436a852e50f">onOutBorders</a> (const std::string &amp;string)</td></tr>
+<tr class="separator:ad21d9ec71067705985978436a852e50f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc4e535dfb10636e633289523fc387b6"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#abc4e535dfb10636e633289523fc387b6">onToLeaderboard</a> (const std::string &amp;string)</td></tr>
+<tr class="separator:abc4e535dfb10636e633289523fc387b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35841e75780fe3a5a3bfa746c71b9de4"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#a35841e75780fe3a5a3bfa746c71b9de4">onToIfNewGame</a> (const std::string &amp;string)</td></tr>
+<tr class="separator:a35841e75780fe3a5a3bfa746c71b9de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5363ac7776324d3ced32badbb96a9c0"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#ac5363ac7776324d3ced32badbb96a9c0">onNewGame</a> (const std::string &amp;string)</td></tr>
+<tr class="separator:ac5363ac7776324d3ced32badbb96a9c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a36eb2250cfcfb83b6e6749f8aa2156"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#a8a36eb2250cfcfb83b6e6749f8aa2156">onNegativ</a> (const std::string &amp;string)</td></tr>
+<tr class="separator:a8a36eb2250cfcfb83b6e6749f8aa2156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a422aca1631fa2989e8bc16db715e7a4a"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#a422aca1631fa2989e8bc16db715e7a4a">onWin</a> (const std::string &amp;string)</td></tr>
+<tr class="separator:a422aca1631fa2989e8bc16db715e7a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73e22c737e7faba1cbfe6db6ce8688fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#a73e22c737e7faba1cbfe6db6ce8688fe">registerCheatCodes</a> ()</td></tr>
+<tr class="separator:a73e22c737e7faba1cbfe6db6ce8688fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attribute</h2></td></tr>
+<tr class="memitem:a6177442c645337ecaa3d8a8455125df0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state.html#a55a54265c98d8349461d00129b430392">NumberGameState::Ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#a6177442c645337ecaa3d8a8455125df0">mActiveState</a></td></tr>
+<tr class="separator:a6177442c645337ecaa3d8a8455125df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a243035ede1d573f02140a340efa467d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#a243035ede1d573f02140a340efa467d2">mActiveID</a></td></tr>
+<tr class="separator:a243035ede1d573f02140a340efa467d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b081883e3885fc0ded2f17771ce031e"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a>, std::function&lt; <a class="el" href="class_a_u_p___h_a_1_1_number_game_state.html#a55a54265c98d8349461d00129b430392">NumberGameState::Ptr</a>()&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#a0b081883e3885fc0ded2f17771ce031e">mFactory</a></td></tr>
+<tr class="separator:a0b081883e3885fc0ded2f17771ce031e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acff390c196f87b6796eef0a4c98d71ed"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#aad05c1c14b35369485097dff476c742a">GameStates::TRANSITION</a>, std::function&lt; std::optional&lt; <a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a> &gt;(const std::string &amp;)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#acff390c196f87b6796eef0a4c98d71ed">mTransitionHandlers</a></td></tr>
+<tr class="separator:acff390c196f87b6796eef0a4c98d71ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e809a8b1bc6420634259daf3d8cd005"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::int64_t, <a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#a0e809a8b1bc6420634259daf3d8cd005">mCheatCodes</a></td></tr>
+<tr class="separator:a0e809a8b1bc6420634259daf3d8cd005"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba0f167479dfbebfce0c947507a666bf"><td class="memItemLeft" align="right" valign="top">std::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#aba0f167479dfbebfce0c947507a666bf">mEndGame</a></td></tr>
+<tr class="separator:aba0f167479dfbebfce0c947507a666bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a123f1463c331d3e6a9b9b2a1d0b6c5ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_a_u_p___h_a_1_1_user_repository.html">UserRepository</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#a123f1463c331d3e6a9b9b2a1d0b6c5ea">mUserRepository</a></td></tr>
+<tr class="separator:a123f1463c331d3e6a9b9b2a1d0b6c5ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70e5da137e32b9b89bdc31f89c66a3a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_a_u_p___h_a_1_1_game.html">Game</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#a70e5da137e32b9b89bdc31f89c66a3a6">mGame</a></td></tr>
+<tr class="separator:a70e5da137e32b9b89bdc31f89c66a3a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentation der benutzerdefinierten Datentypen</h2>
+<a id="af971f2fe51fb775ce98be2b57a83a3f9" name="af971f2fe51fb775ce98be2b57a83a3f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af971f2fe51fb775ce98be2b57a83a3f9">&#9670;&#160;</a></span>TransitionHandler</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::function&lt;std::optional&lt;<a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a>&gt;(const std::string&amp;)&gt; <a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#af971f2fe51fb775ce98be2b57a83a3f9">AUP_HA::NumberGameStateManager::TransitionHandler</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
+<a id="af9e9a83070b16f7c90ec3c6b0053d6ea" name="af9e9a83070b16f7c90ec3c6b0053d6ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9e9a83070b16f7c90ec3c6b0053d6ea">&#9670;&#160;</a></span>NumberGameStateManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AUP_HA::NumberGameStateManager::NumberGameStateManager </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_a_u_p___h_a_1_1_user_repository.html">UserRepository</a> &amp;&#160;</td>
+          <td class="paramname"><em>userRepository</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_a_u_p___h_a_1_1_game.html">Game</a> &amp;&#160;</td>
+          <td class="paramname"><em>game</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9a43eb777a4d2e1063ea0b13c30e3c56" name="a9a43eb777a4d2e1063ea0b13c30e3c56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a43eb777a4d2e1063ea0b13c30e3c56">&#9670;&#160;</a></span>~NumberGameStateManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AUP_HA::NumberGameStateManager::~NumberGameStateManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a id="a715911c84c8efa9a0a9dc68d03f4d51c" name="a715911c84c8efa9a0a9dc68d03f4d51c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a715911c84c8efa9a0a9dc68d03f4d51c">&#9670;&#160;</a></span>changeState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AUP_HA::NumberGameStateManager::changeState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a>&#160;</td>
+          <td class="paramname"><em>stateID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0d66adb9da5ff06206b2688bf4554d20" name="a0d66adb9da5ff06206b2688bf4554d20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d66adb9da5ff06206b2688bf4554d20">&#9670;&#160;</a></span>getGame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_a_u_p___h_a_1_1_game.html">Game</a> &amp; AUP_HA::NumberGameStateManager::getGame </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8299000f7092073f10db632afae5c23c" name="a8299000f7092073f10db632afae5c23c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8299000f7092073f10db632afae5c23c">&#9670;&#160;</a></span>getTransition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state_manager.html#af971f2fe51fb775ce98be2b57a83a3f9">NumberGameStateManager::TransitionHandler</a> &amp; AUP_HA::NumberGameStateManager::getTransition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#aad05c1c14b35369485097dff476c742a">GameStates::TRANSITION</a>&#160;</td>
+          <td class="paramname"><em>transitionID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="add262ded51c1994f2e1d40111510f5d9" name="add262ded51c1994f2e1d40111510f5d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add262ded51c1994f2e1d40111510f5d9">&#9670;&#160;</a></span>getUserRepository()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_a_u_p___h_a_1_1_user_repository.html">UserRepository</a> &amp; AUP_HA::NumberGameStateManager::getUserRepository </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a534e0b11e09c90c7c97b4267f0a77f47" name="a534e0b11e09c90c7c97b4267f0a77f47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a534e0b11e09c90c7c97b4267f0a77f47">&#9670;&#160;</a></span>onEmpty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; <a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a> &gt; AUP_HA::NumberGameStateManager::onEmpty </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9f86737000028d309702da7423a6154f" name="a9f86737000028d309702da7423a6154f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f86737000028d309702da7423a6154f">&#9670;&#160;</a></span>onHitOrNoHit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; <a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a> &gt; AUP_HA::NumberGameStateManager::onHitOrNoHit </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8a36eb2250cfcfb83b6e6749f8aa2156" name="a8a36eb2250cfcfb83b6e6749f8aa2156"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a36eb2250cfcfb83b6e6749f8aa2156">&#9670;&#160;</a></span>onNegativ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; <a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a> &gt; AUP_HA::NumberGameStateManager::onNegativ </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac5363ac7776324d3ced32badbb96a9c0" name="ac5363ac7776324d3ced32badbb96a9c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5363ac7776324d3ced32badbb96a9c0">&#9670;&#160;</a></span>onNewGame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; <a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a> &gt; AUP_HA::NumberGameStateManager::onNewGame </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a20a4d825b7c47a4689471d94e523c49b" name="a20a4d825b7c47a4689471d94e523c49b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20a4d825b7c47a4689471d94e523c49b">&#9670;&#160;</a></span>onNoNumber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; <a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a> &gt; AUP_HA::NumberGameStateManager::onNoNumber </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad21d9ec71067705985978436a852e50f" name="ad21d9ec71067705985978436a852e50f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad21d9ec71067705985978436a852e50f">&#9670;&#160;</a></span>onOutBorders()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; <a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a> &gt; AUP_HA::NumberGameStateManager::onOutBorders </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35841e75780fe3a5a3bfa746c71b9de4" name="a35841e75780fe3a5a3bfa746c71b9de4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35841e75780fe3a5a3bfa746c71b9de4">&#9670;&#160;</a></span>onToIfNewGame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; <a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a> &gt; AUP_HA::NumberGameStateManager::onToIfNewGame </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abc4e535dfb10636e633289523fc387b6" name="abc4e535dfb10636e633289523fc387b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc4e535dfb10636e633289523fc387b6">&#9670;&#160;</a></span>onToLeaderboard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; <a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a> &gt; AUP_HA::NumberGameStateManager::onToLeaderboard </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a422aca1631fa2989e8bc16db715e7a4a" name="a422aca1631fa2989e8bc16db715e7a4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a422aca1631fa2989e8bc16db715e7a4a">&#9670;&#160;</a></span>onWin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; <a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a> &gt; AUP_HA::NumberGameStateManager::onWin </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a32a583ba66dff12339254f862bb124bd" name="a32a583ba66dff12339254f862bb124bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32a583ba66dff12339254f862bb124bd">&#9670;&#160;</a></span>processEvents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AUP_HA::NumberGameStateManager::processEvents </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a73e22c737e7faba1cbfe6db6ce8688fe" name="a73e22c737e7faba1cbfe6db6ce8688fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73e22c737e7faba1cbfe6db6ce8688fe">&#9670;&#160;</a></span>registerCheatCodes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AUP_HA::NumberGameStateManager::registerCheatCodes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac4fc2801e330d02c161afd0e48d941c9" name="ac4fc2801e330d02c161afd0e48d941c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4fc2801e330d02c161afd0e48d941c9">&#9670;&#160;</a></span>registerEndGameHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AUP_HA::NumberGameStateManager::registerEndGameHandler </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void()&gt;&#160;</td>
+          <td class="paramname"><em>handler</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3d73c52c5d4943939c5aea5355112db2" name="a3d73c52c5d4943939c5aea5355112db2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d73c52c5d4943939c5aea5355112db2">&#9670;&#160;</a></span>registerStates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AUP_HA::NumberGameStateManager::registerStates </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a>&#160;</td>
+          <td class="paramname"><em>stateID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acdbb708fd4a9f01116e9fb9106e98bc7" name="acdbb708fd4a9f01116e9fb9106e98bc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdbb708fd4a9f01116e9fb9106e98bc7">&#9670;&#160;</a></span>registerTransitions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AUP_HA::NumberGameStateManager::registerTransitions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7745fbe07547fcbd05f883a67b920f36" name="a7745fbe07547fcbd05f883a67b920f36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7745fbe07547fcbd05f883a67b920f36">&#9670;&#160;</a></span>render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AUP_HA::NumberGameStateManager::render </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa99fb7c3c048044d74c56c60dc2d5aa9" name="aa99fb7c3c048044d74c56c60dc2d5aa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa99fb7c3c048044d74c56c60dc2d5aa9">&#9670;&#160;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AUP_HA::NumberGameStateManager::update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der Datenelemente</h2>
+<a id="a243035ede1d573f02140a340efa467d2" name="a243035ede1d573f02140a340efa467d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a243035ede1d573f02140a340efa467d2">&#9670;&#160;</a></span>mActiveID</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a> AUP_HA::NumberGameStateManager::mActiveID</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6177442c645337ecaa3d8a8455125df0" name="a6177442c645337ecaa3d8a8455125df0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6177442c645337ecaa3d8a8455125df0">&#9670;&#160;</a></span>mActiveState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_a_u_p___h_a_1_1_number_game_state.html#a55a54265c98d8349461d00129b430392">NumberGameState::Ptr</a> AUP_HA::NumberGameStateManager::mActiveState</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e809a8b1bc6420634259daf3d8cd005" name="a0e809a8b1bc6420634259daf3d8cd005"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e809a8b1bc6420634259daf3d8cd005">&#9670;&#160;</a></span>mCheatCodes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;std::int64_t, <a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a>&gt; AUP_HA::NumberGameStateManager::mCheatCodes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aba0f167479dfbebfce0c947507a666bf" name="aba0f167479dfbebfce0c947507a666bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba0f167479dfbebfce0c947507a666bf">&#9670;&#160;</a></span>mEndGame</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;void()&gt; AUP_HA::NumberGameStateManager::mEndGame</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b081883e3885fc0ded2f17771ce031e" name="a0b081883e3885fc0ded2f17771ce031e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b081883e3885fc0ded2f17771ce031e">&#9670;&#160;</a></span>mFactory</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;<a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a>, std::function&lt;<a class="el" href="class_a_u_p___h_a_1_1_number_game_state.html#a55a54265c98d8349461d00129b430392">NumberGameState::Ptr</a>()&gt; &gt; AUP_HA::NumberGameStateManager::mFactory</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a70e5da137e32b9b89bdc31f89c66a3a6" name="a70e5da137e32b9b89bdc31f89c66a3a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70e5da137e32b9b89bdc31f89c66a3a6">&#9670;&#160;</a></span>mGame</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_a_u_p___h_a_1_1_game.html">Game</a>* AUP_HA::NumberGameStateManager::mGame</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acff390c196f87b6796eef0a4c98d71ed" name="acff390c196f87b6796eef0a4c98d71ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acff390c196f87b6796eef0a4c98d71ed">&#9670;&#160;</a></span>mTransitionHandlers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;<a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#aad05c1c14b35369485097dff476c742a">GameStates::TRANSITION</a>, std::function&lt;std::optional&lt;<a class="el" href="namespace_a_u_p___h_a_1_1_game_states.html#a1b17bc41f62783923ee390158b0ec673">GameStates::ID</a>&gt;(const std::string&amp;)&gt; &gt; AUP_HA::NumberGameStateManager::mTransitionHandlers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a123f1463c331d3e6a9b9b2a1d0b6c5ea" name="a123f1463c331d3e6a9b9b2a1d0b6c5ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a123f1463c331d3e6a9b9b2a1d0b6c5ea">&#9670;&#160;</a></span>mUserRepository</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_a_u_p___h_a_1_1_user_repository.html">UserRepository</a>* AUP_HA::NumberGameStateManager::mUserRepository</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien:<ul>
+<li>include/<a class="el" href="_number_game_state_manager_8hpp_source.html">NumberGameStateManager.hpp</a></li>
+<li>src/<a class="el" href="_number_game_state_manager_8cpp.html">NumberGameStateManager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt von&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

@@ -1,0 +1,32 @@
+\hypertarget{_user_repository_8hpp_source}{}\doxysection{User\+Repository.\+hpp}
+\label{_user_repository_8hpp_source}\index{include/UserRepository.hpp@{include/UserRepository.hpp}}
+\mbox{\hyperlink{_user_repository_8hpp}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}../include/User.hpp"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}../include/PersistenceListService.hpp"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_a_u_p___h_a}{AUP\_HA}}}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{17     \textcolor{keyword}{class }\mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository}{UserRepository}}}
+\DoxyCodeLine{18     \{}
+\DoxyCodeLine{19     \textcolor{keyword}{public}:}
+\DoxyCodeLine{20         \mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository_ac3c77e847c087f197c184b011a136691}{UserRepository}}();}
+\DoxyCodeLine{21         \mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository_a4f537095a7b1065a83cd4035aab06c19}{\string~UserRepository}}();}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23         \textcolor{keyword}{const} std::vector<User>\& \mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository_ad5030ebe0017f0fa36f472db98245dbe}{GetUserSortedByRang}}();}
+\DoxyCodeLine{24         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository_a475687681d7de01eb997243eec6ca437}{SaveOrUpdate}}(\mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}} user);}
+\DoxyCodeLine{25         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository_ac98ca52660e757284a15e97a7d969bea}{ClearRepository}}();}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{keyword}{private}:}
+\DoxyCodeLine{28         std::unique\_ptr<PersistenceListService<User>> \mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository_ab73426869984dd25bc1e55862135b0c8}{mPersistenceUserList}};}
+\DoxyCodeLine{29         std::vector<User> \mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository_a420228483c9baf74ac350e30a296c9c4}{mUserList}};}
+\DoxyCodeLine{30     \};}
+\DoxyCodeLine{31 \}}
+
+\end{DoxyCode}

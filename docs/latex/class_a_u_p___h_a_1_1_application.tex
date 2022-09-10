@@ -1,0 +1,125 @@
+\hypertarget{class_a_u_p___h_a_1_1_application}{}\doxysection{AUP\+\_\+\+HA\+::Application Klassenreferenz}
+\label{class_a_u_p___h_a_1_1_application}\index{AUP\_HA::Application@{AUP\_HA::Application}}
+
+
+{\ttfamily \#include $<$Application.\+hpp$>$}
+
+\doxysubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_application_a84e9b582624794e1a68cb6b44b2297c3}{Application}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_application_ac8a8b8b6f54933776e944aec5fcdffae}{$\sim$\+Application}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_application_a44e245a54a2bcd4e90cca6d3c0e1120a}{run}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_steuerung}{Steuerung}} des Programmflusses. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_application_afb0b41f15c36fa01246bc56fa1ab78b1}{render}} ()
+\begin{DoxyCompactList}\small\item\em Darstellung. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_application_a4e5139e7400ee3e7202f330d3f9456f2}{process\+Events}} ()
+\begin{DoxyCompactList}\small\item\em Benutzer-\/ oder/und Eventeingabe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_application_a43e1d4f03c1ef0366d48c8f927e3c9fc}{update}} ()
+\begin{DoxyCompactList}\small\item\em Durchfühung der Logic. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_application_aa57bacab05982de71525deaeda19566d}{register\+States}} ()
+\begin{DoxyCompactList}\small\item\em Registriert \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states}{States}} in der Statefactory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_application_a64af53716d754a47a668170928e62c54}{m\+State\+Manager}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Ausführliche Beschreibung}
+Programmeinstieg, steuert den Grundlegenden Programmfluss 
+
+\doxysubsection{Beschreibung der Konstruktoren und Destruktoren}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_application_a84e9b582624794e1a68cb6b44b2297c3}\label{class_a_u_p___h_a_1_1_application_a84e9b582624794e1a68cb6b44b2297c3}} 
+\index{AUP\_HA::Application@{AUP\_HA::Application}!Application@{Application}}
+\index{Application@{Application}!AUP\_HA::Application@{AUP\_HA::Application}}
+\doxysubsubsection{\texorpdfstring{Application()}{Application()}}
+{\footnotesize\ttfamily AUP\+\_\+\+HA\+::\+Application\+::\+Application (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Konstruktor. 
+
+Instanz des \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} instanziieren und \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states}{States}} registrieren. \mbox{\Hypertarget{class_a_u_p___h_a_1_1_application_ac8a8b8b6f54933776e944aec5fcdffae}\label{class_a_u_p___h_a_1_1_application_ac8a8b8b6f54933776e944aec5fcdffae}} 
+\index{AUP\_HA::Application@{AUP\_HA::Application}!````~Application@{$\sim$Application}}
+\index{````~Application@{$\sim$Application}!AUP\_HA::Application@{AUP\_HA::Application}}
+\doxysubsubsection{\texorpdfstring{$\sim$Application()}{~Application()}}
+{\footnotesize\ttfamily AUP\+\_\+\+HA\+::\+Application\+::$\sim$\+Application (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destruktor. 
+
+
+
+\doxysubsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_application_a4e5139e7400ee3e7202f330d3f9456f2}\label{class_a_u_p___h_a_1_1_application_a4e5139e7400ee3e7202f330d3f9456f2}} 
+\index{AUP\_HA::Application@{AUP\_HA::Application}!processEvents@{processEvents}}
+\index{processEvents@{processEvents}!AUP\_HA::Application@{AUP\_HA::Application}}
+\doxysubsubsection{\texorpdfstring{processEvents()}{processEvents()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Application\+::process\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Benutzer-\/ oder/und Eventeingabe. 
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_application_aa57bacab05982de71525deaeda19566d}\label{class_a_u_p___h_a_1_1_application_aa57bacab05982de71525deaeda19566d}} 
+\index{AUP\_HA::Application@{AUP\_HA::Application}!registerStates@{registerStates}}
+\index{registerStates@{registerStates}!AUP\_HA::Application@{AUP\_HA::Application}}
+\doxysubsubsection{\texorpdfstring{registerStates()}{registerStates()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Application\+::register\+States (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Registriert \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states}{States}} in der Statefactory. 
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_application_afb0b41f15c36fa01246bc56fa1ab78b1}\label{class_a_u_p___h_a_1_1_application_afb0b41f15c36fa01246bc56fa1ab78b1}} 
+\index{AUP\_HA::Application@{AUP\_HA::Application}!render@{render}}
+\index{render@{render}!AUP\_HA::Application@{AUP\_HA::Application}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Application\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Darstellung. 
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_application_a44e245a54a2bcd4e90cca6d3c0e1120a}\label{class_a_u_p___h_a_1_1_application_a44e245a54a2bcd4e90cca6d3c0e1120a}} 
+\index{AUP\_HA::Application@{AUP\_HA::Application}!run@{run}}
+\index{run@{run}!AUP\_HA::Application@{AUP\_HA::Application}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Application\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_steuerung}{Steuerung}} des Programmflusses. 
+
+Solange ein \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}} aktiv ist, werden fortlaufend Ticks durchgeführt. \mbox{\Hypertarget{class_a_u_p___h_a_1_1_application_a43e1d4f03c1ef0366d48c8f927e3c9fc}\label{class_a_u_p___h_a_1_1_application_a43e1d4f03c1ef0366d48c8f927e3c9fc}} 
+\index{AUP\_HA::Application@{AUP\_HA::Application}!update@{update}}
+\index{update@{update}!AUP\_HA::Application@{AUP\_HA::Application}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Application\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Durchfühung der Logic. 
+
+
+
+\doxysubsection{Dokumentation der Datenelemente}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_application_a64af53716d754a47a668170928e62c54}\label{class_a_u_p___h_a_1_1_application_a64af53716d754a47a668170928e62c54}} 
+\index{AUP\_HA::Application@{AUP\_HA::Application}!mStateManager@{mStateManager}}
+\index{mStateManager@{mStateManager}!AUP\_HA::Application@{AUP\_HA::Application}}
+\doxysubsubsection{\texorpdfstring{mStateManager}{mStateManager}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}}$>$ AUP\+\_\+\+HA\+::\+Application\+::m\+State\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} 
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_application_8hpp}{Application.\+hpp}}\item 
+src/\mbox{\hyperlink{_application_8cpp}{Application.\+cpp}}\end{DoxyCompactItemize}

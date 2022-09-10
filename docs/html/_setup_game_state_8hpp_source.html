@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AUP_HA: include/SetupGameState.hpp Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">AUP_HA
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">SetupGameState.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_setup_game_state_8hpp.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;../include/State.hpp&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;../include/MenuManager.hpp&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;../include/MenuIdentifier.hpp&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_a_u_p___h_a.html">AUP_HA</a></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="comment">// Vorwärtsdeklaration</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">class </span>SetupRepository;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_a_u_p___h_a_1_1_setup_game_state.html">   20</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_a_u_p___h_a_1_1_setup_game_state.html">SetupGameState</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_u_p___h_a_1_1_state.html">State</a></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_class" href="class_a_u_p___h_a_1_1_setup_game_state.html">SetupGameState</a>(<a class="code hl_class" href="class_a_u_p___h_a_1_1_state_manager.html">StateManager</a>&amp; stateManager);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keyword">virtual</span> <a class="code hl_function" href="class_a_u_p___h_a_1_1_setup_game_state.html#a752f0adc3eb9e1d3cf3908ecba737112">~SetupGameState</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_u_p___h_a_1_1_setup_game_state.html#a95ce9fb154b61a6a3391628a9ea0facb">render</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_u_p___h_a_1_1_setup_game_state.html#abece832133845210c16fb68b20dd4669">processEvents</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_u_p___h_a_1_1_setup_game_state.html#a7b3939e35289a3ebf60c4ed91fd21a93">update</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_u_p___h_a_1_1_setup_game_state.html#a1617709ef0e904ed99e3b8c0b45b2001">registerMenu</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_u_p___h_a_1_1_setup_game_state.html#a1dd4d19e7fcf559debe09adbaf83ece2">onChangeAmountOfChoices</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_u_p___h_a_1_1_setup_game_state.html#ae3ebebe9663c4fa6a4b19890642c2ad0">onChangeMaxRange</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_u_p___h_a_1_1_setup_game_state.html#ab6858b47b46f0683c39804cc07df2a27">onExit</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_a_u_p___h_a_1_1_setup_game_state.html#a982c1a9c5a0d695267adae6d31342128">   38</a></span>        std::string                         <a class="code hl_variable" href="class_a_u_p___h_a_1_1_setup_game_state.html#a982c1a9c5a0d695267adae6d31342128">mUserinput</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_a_u_p___h_a_1_1_setup_game_state.html#aab98d6f56efc78099e206e03b25998f5">   39</a></span>        std::unique_ptr&lt;SetupRepository&gt;    <a class="code hl_variable" href="class_a_u_p___h_a_1_1_setup_game_state.html#aab98d6f56efc78099e206e03b25998f5">mSetupRepository</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_a_u_p___h_a_1_1_setup_game_state.html#a146b687b4e5e2ed27b61d667ca686ffd">   40</a></span>        <a class="code hl_class" href="class_a_u_p___h_a_1_1_menu_manager.html">MenuManager&lt;SETUP_GAMESETUP::ID&gt;</a>    <a class="code hl_variable" href="class_a_u_p___h_a_1_1_setup_game_state.html#a146b687b4e5e2ed27b61d667ca686ffd">mMenu</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_a_u_p___h_a_1_1_setup_game_state.html#af3d1c5bca093fe98c50f177f22cc2775">   41</a></span>        std::pair&lt;std::int32_t, std::int32_t&gt; <a class="code hl_variable" href="class_a_u_p___h_a_1_1_setup_game_state.html#af3d1c5bca093fe98c50f177f22cc2775">mLimits</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    };</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_menu_manager_html"><div class="ttname"><a href="class_a_u_p___h_a_1_1_menu_manager.html">AUP_HA::MenuManager</a></div><div class="ttdoc">Manager für numerische Menüs.</div><div class="ttdef"><b>Definition:</b> MenuManager.hpp:17</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_setup_game_state_html"><div class="ttname"><a href="class_a_u_p___h_a_1_1_setup_game_state.html">AUP_HA::SetupGameState</a></div><div class="ttdef"><b>Definition:</b> SetupGameState.hpp:21</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_setup_game_state_html_a146b687b4e5e2ed27b61d667ca686ffd"><div class="ttname"><a href="class_a_u_p___h_a_1_1_setup_game_state.html#a146b687b4e5e2ed27b61d667ca686ffd">AUP_HA::SetupGameState::mMenu</a></div><div class="ttdeci">MenuManager&lt; SETUP_GAMESETUP::ID &gt; mMenu</div><div class="ttdef"><b>Definition:</b> SetupGameState.hpp:40</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_setup_game_state_html_a1617709ef0e904ed99e3b8c0b45b2001"><div class="ttname"><a href="class_a_u_p___h_a_1_1_setup_game_state.html#a1617709ef0e904ed99e3b8c0b45b2001">AUP_HA::SetupGameState::registerMenu</a></div><div class="ttdeci">void registerMenu()</div><div class="ttdef"><b>Definition:</b> SetupGameState.cpp:53</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_setup_game_state_html_a1dd4d19e7fcf559debe09adbaf83ece2"><div class="ttname"><a href="class_a_u_p___h_a_1_1_setup_game_state.html#a1dd4d19e7fcf559debe09adbaf83ece2">AUP_HA::SetupGameState::onChangeAmountOfChoices</a></div><div class="ttdeci">void onChangeAmountOfChoices()</div><div class="ttdef"><b>Definition:</b> SetupGameState.cpp:65</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_setup_game_state_html_a752f0adc3eb9e1d3cf3908ecba737112"><div class="ttname"><a href="class_a_u_p___h_a_1_1_setup_game_state.html#a752f0adc3eb9e1d3cf3908ecba737112">AUP_HA::SetupGameState::~SetupGameState</a></div><div class="ttdeci">virtual ~SetupGameState()</div><div class="ttdef"><b>Definition:</b> SetupGameState.cpp:16</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_setup_game_state_html_a7b3939e35289a3ebf60c4ed91fd21a93"><div class="ttname"><a href="class_a_u_p___h_a_1_1_setup_game_state.html#a7b3939e35289a3ebf60c4ed91fd21a93">AUP_HA::SetupGameState::update</a></div><div class="ttdeci">virtual void update()</div><div class="ttdef"><b>Definition:</b> SetupGameState.cpp:36</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_setup_game_state_html_a95ce9fb154b61a6a3391628a9ea0facb"><div class="ttname"><a href="class_a_u_p___h_a_1_1_setup_game_state.html#a95ce9fb154b61a6a3391628a9ea0facb">AUP_HA::SetupGameState::render</a></div><div class="ttdeci">virtual void render()</div><div class="ttdef"><b>Definition:</b> SetupGameState.cpp:19</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_setup_game_state_html_a982c1a9c5a0d695267adae6d31342128"><div class="ttname"><a href="class_a_u_p___h_a_1_1_setup_game_state.html#a982c1a9c5a0d695267adae6d31342128">AUP_HA::SetupGameState::mUserinput</a></div><div class="ttdeci">std::string mUserinput</div><div class="ttdef"><b>Definition:</b> SetupGameState.hpp:38</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_setup_game_state_html_aab98d6f56efc78099e206e03b25998f5"><div class="ttname"><a href="class_a_u_p___h_a_1_1_setup_game_state.html#aab98d6f56efc78099e206e03b25998f5">AUP_HA::SetupGameState::mSetupRepository</a></div><div class="ttdeci">std::unique_ptr&lt; SetupRepository &gt; mSetupRepository</div><div class="ttdef"><b>Definition:</b> SetupGameState.hpp:39</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_setup_game_state_html_ab6858b47b46f0683c39804cc07df2a27"><div class="ttname"><a href="class_a_u_p___h_a_1_1_setup_game_state.html#ab6858b47b46f0683c39804cc07df2a27">AUP_HA::SetupGameState::onExit</a></div><div class="ttdeci">void onExit()</div><div class="ttdef"><b>Definition:</b> SetupGameState.cpp:111</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_setup_game_state_html_abece832133845210c16fb68b20dd4669"><div class="ttname"><a href="class_a_u_p___h_a_1_1_setup_game_state.html#abece832133845210c16fb68b20dd4669">AUP_HA::SetupGameState::processEvents</a></div><div class="ttdeci">virtual void processEvents()</div><div class="ttdef"><b>Definition:</b> SetupGameState.cpp:31</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_setup_game_state_html_ae3ebebe9663c4fa6a4b19890642c2ad0"><div class="ttname"><a href="class_a_u_p___h_a_1_1_setup_game_state.html#ae3ebebe9663c4fa6a4b19890642c2ad0">AUP_HA::SetupGameState::onChangeMaxRange</a></div><div class="ttdeci">void onChangeMaxRange()</div><div class="ttdef"><b>Definition:</b> SetupGameState.cpp:87</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_setup_game_state_html_af3d1c5bca093fe98c50f177f22cc2775"><div class="ttname"><a href="class_a_u_p___h_a_1_1_setup_game_state.html#af3d1c5bca093fe98c50f177f22cc2775">AUP_HA::SetupGameState::mLimits</a></div><div class="ttdeci">std::pair&lt; std::int32_t, std::int32_t &gt; mLimits</div><div class="ttdef"><b>Definition:</b> SetupGameState.hpp:41</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_state_html"><div class="ttname"><a href="class_a_u_p___h_a_1_1_state.html">AUP_HA::State</a></div><div class="ttdef"><b>Definition:</b> State.hpp:12</div></div>
+<div class="ttc" id="aclass_a_u_p___h_a_1_1_state_manager_html"><div class="ttname"><a href="class_a_u_p___h_a_1_1_state_manager.html">AUP_HA::StateManager</a></div><div class="ttdef"><b>Definition:</b> StateManager.hpp:18</div></div>
+<div class="ttc" id="anamespace_a_u_p___h_a_html"><div class="ttname"><a href="namespace_a_u_p___h_a.html">AUP_HA</a></div><div class="ttdef"><b>Definition:</b> Application.hpp:8</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt von&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

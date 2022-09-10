@@ -1,0 +1,153 @@
+\hypertarget{class_a_u_p___h_a_1_1_setup_state}{}\doxysection{AUP\+\_\+\+HA\+::Setup\+State Klassenreferenz}
+\label{class_a_u_p___h_a_1_1_setup_state}\index{AUP\_HA::SetupState@{AUP\_HA::SetupState}}
+
+
+{\ttfamily \#include $<$Setup\+State.\+hpp$>$}
+
+Klassendiagramm für AUP\+\_\+\+HA\+::Setup\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_a_u_p___h_a_1_1_setup_state}
+\end{center}
+\end{figure}
+\doxysubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_state_a0179cebf831fc689fb8820de8fa5b9ab}{Setup\+State}} (\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} \&state\+Manager)
+\item 
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_state_a9ed103b37b4eb89f02b87df314f906eb}{$\sim$\+Setup\+State}} ()
+\item 
+virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_state_a40c4c63fa44e4bf0b37bfaf85f7c8fad}{render}} ()
+\item 
+virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_state_aef3b3f647fc4f14e89e8e94a1c5ab003}{process\+Events}} ()
+\item 
+virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_state_aa2eef9019e058d71428e9c696c4febc7}{update}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_state_a365ecee6db700a80f78a92a6df51fa33}{register\+Menu}} ()
+\item 
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_state_a5c7ece0e7957963a2bf863fb1468a87b}{on\+Game\+Setup}} ()
+\item 
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_state_a47b1cddf5c8ea1a7f3dea706180fd630}{on\+Clear}} ()
+\item 
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_state_ac5b346e991ab69b608e8449eea3c7dbd}{on\+Exit}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_state_a220ec6963dd35e449b55de480ee5b86b}{m\+Userinput}}
+\item 
+std\+::pair$<$ int, int $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_state_a594e63c7e398164e1805b5d608978fdf}{m\+Limits}}
+\item 
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager}{Menu\+Manager}}$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_setup_menu_a4180816c97a061e74e2e08b459a111d6}{Setup\+Menu\+::\+ID}} $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_state_a6e024b14bcb3ba98db5259d0257e8f52}{m\+Menu}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository}{User\+Repository}} $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_state_aff3d14992cbfd9a24deab3a8e88df5ef}{m\+User\+Repository}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Weitere Geerbte Elemente}
+
+
+\doxysubsection{Beschreibung der Konstruktoren und Destruktoren}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_state_a0179cebf831fc689fb8820de8fa5b9ab}\label{class_a_u_p___h_a_1_1_setup_state_a0179cebf831fc689fb8820de8fa5b9ab}} 
+\index{AUP\_HA::SetupState@{AUP\_HA::SetupState}!SetupState@{SetupState}}
+\index{SetupState@{SetupState}!AUP\_HA::SetupState@{AUP\_HA::SetupState}}
+\doxysubsubsection{\texorpdfstring{SetupState()}{SetupState()}}
+{\footnotesize\ttfamily AUP\+\_\+\+HA\+::\+Setup\+State\+::\+Setup\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} \&}]{state\+Manager }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_state_a9ed103b37b4eb89f02b87df314f906eb}\label{class_a_u_p___h_a_1_1_setup_state_a9ed103b37b4eb89f02b87df314f906eb}} 
+\index{AUP\_HA::SetupState@{AUP\_HA::SetupState}!````~SetupState@{$\sim$SetupState}}
+\index{````~SetupState@{$\sim$SetupState}!AUP\_HA::SetupState@{AUP\_HA::SetupState}}
+\doxysubsubsection{\texorpdfstring{$\sim$SetupState()}{~SetupState()}}
+{\footnotesize\ttfamily AUP\+\_\+\+HA\+::\+Setup\+State\+::$\sim$\+Setup\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_state_a47b1cddf5c8ea1a7f3dea706180fd630}\label{class_a_u_p___h_a_1_1_setup_state_a47b1cddf5c8ea1a7f3dea706180fd630}} 
+\index{AUP\_HA::SetupState@{AUP\_HA::SetupState}!onClear@{onClear}}
+\index{onClear@{onClear}!AUP\_HA::SetupState@{AUP\_HA::SetupState}}
+\doxysubsubsection{\texorpdfstring{onClear()}{onClear()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Setup\+State\+::on\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_state_ac5b346e991ab69b608e8449eea3c7dbd}\label{class_a_u_p___h_a_1_1_setup_state_ac5b346e991ab69b608e8449eea3c7dbd}} 
+\index{AUP\_HA::SetupState@{AUP\_HA::SetupState}!onExit@{onExit}}
+\index{onExit@{onExit}!AUP\_HA::SetupState@{AUP\_HA::SetupState}}
+\doxysubsubsection{\texorpdfstring{onExit()}{onExit()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Setup\+State\+::on\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_state_a5c7ece0e7957963a2bf863fb1468a87b}\label{class_a_u_p___h_a_1_1_setup_state_a5c7ece0e7957963a2bf863fb1468a87b}} 
+\index{AUP\_HA::SetupState@{AUP\_HA::SetupState}!onGameSetup@{onGameSetup}}
+\index{onGameSetup@{onGameSetup}!AUP\_HA::SetupState@{AUP\_HA::SetupState}}
+\doxysubsubsection{\texorpdfstring{onGameSetup()}{onGameSetup()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Setup\+State\+::on\+Game\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_state_aef3b3f647fc4f14e89e8e94a1c5ab003}\label{class_a_u_p___h_a_1_1_setup_state_aef3b3f647fc4f14e89e8e94a1c5ab003}} 
+\index{AUP\_HA::SetupState@{AUP\_HA::SetupState}!processEvents@{processEvents}}
+\index{processEvents@{processEvents}!AUP\_HA::SetupState@{AUP\_HA::SetupState}}
+\doxysubsubsection{\texorpdfstring{processEvents()}{processEvents()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Setup\+State\+::process\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a99807a79b6edfe4e4117b44e5144bb42}{AUP\+\_\+\+HA\+::\+State}}.
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_state_a365ecee6db700a80f78a92a6df51fa33}\label{class_a_u_p___h_a_1_1_setup_state_a365ecee6db700a80f78a92a6df51fa33}} 
+\index{AUP\_HA::SetupState@{AUP\_HA::SetupState}!registerMenu@{registerMenu}}
+\index{registerMenu@{registerMenu}!AUP\_HA::SetupState@{AUP\_HA::SetupState}}
+\doxysubsubsection{\texorpdfstring{registerMenu()}{registerMenu()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Setup\+State\+::register\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_state_a40c4c63fa44e4bf0b37bfaf85f7c8fad}\label{class_a_u_p___h_a_1_1_setup_state_a40c4c63fa44e4bf0b37bfaf85f7c8fad}} 
+\index{AUP\_HA::SetupState@{AUP\_HA::SetupState}!render@{render}}
+\index{render@{render}!AUP\_HA::SetupState@{AUP\_HA::SetupState}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Setup\+State\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_adc7ce183cd6dd5e24c1dd52839d0086e}{AUP\+\_\+\+HA\+::\+State}}.
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_state_aa2eef9019e058d71428e9c696c4febc7}\label{class_a_u_p___h_a_1_1_setup_state_aa2eef9019e058d71428e9c696c4febc7}} 
+\index{AUP\_HA::SetupState@{AUP\_HA::SetupState}!update@{update}}
+\index{update@{update}!AUP\_HA::SetupState@{AUP\_HA::SetupState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Setup\+State\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a7e5197b99088d8166fc499bd28d2b3d8}{AUP\+\_\+\+HA\+::\+State}}.
+
+
+
+\doxysubsection{Dokumentation der Datenelemente}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_state_a594e63c7e398164e1805b5d608978fdf}\label{class_a_u_p___h_a_1_1_setup_state_a594e63c7e398164e1805b5d608978fdf}} 
+\index{AUP\_HA::SetupState@{AUP\_HA::SetupState}!mLimits@{mLimits}}
+\index{mLimits@{mLimits}!AUP\_HA::SetupState@{AUP\_HA::SetupState}}
+\doxysubsubsection{\texorpdfstring{mLimits}{mLimits}}
+{\footnotesize\ttfamily std\+::pair$<$int, int$>$ AUP\+\_\+\+HA\+::\+Setup\+State\+::m\+Limits\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_state_a6e024b14bcb3ba98db5259d0257e8f52}\label{class_a_u_p___h_a_1_1_setup_state_a6e024b14bcb3ba98db5259d0257e8f52}} 
+\index{AUP\_HA::SetupState@{AUP\_HA::SetupState}!mMenu@{mMenu}}
+\index{mMenu@{mMenu}!AUP\_HA::SetupState@{AUP\_HA::SetupState}}
+\doxysubsubsection{\texorpdfstring{mMenu}{mMenu}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager}{Menu\+Manager}}$<$\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_setup_menu_a4180816c97a061e74e2e08b459a111d6}{Setup\+Menu\+::\+ID}}$>$ AUP\+\_\+\+HA\+::\+Setup\+State\+::m\+Menu\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_state_a220ec6963dd35e449b55de480ee5b86b}\label{class_a_u_p___h_a_1_1_setup_state_a220ec6963dd35e449b55de480ee5b86b}} 
+\index{AUP\_HA::SetupState@{AUP\_HA::SetupState}!mUserinput@{mUserinput}}
+\index{mUserinput@{mUserinput}!AUP\_HA::SetupState@{AUP\_HA::SetupState}}
+\doxysubsubsection{\texorpdfstring{mUserinput}{mUserinput}}
+{\footnotesize\ttfamily std\+::string AUP\+\_\+\+HA\+::\+Setup\+State\+::m\+Userinput\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_state_aff3d14992cbfd9a24deab3a8e88df5ef}\label{class_a_u_p___h_a_1_1_setup_state_aff3d14992cbfd9a24deab3a8e88df5ef}} 
+\index{AUP\_HA::SetupState@{AUP\_HA::SetupState}!mUserRepository@{mUserRepository}}
+\index{mUserRepository@{mUserRepository}!AUP\_HA::SetupState@{AUP\_HA::SetupState}}
+\doxysubsubsection{\texorpdfstring{mUserRepository}{mUserRepository}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository}{User\+Repository}}$>$ AUP\+\_\+\+HA\+::\+Setup\+State\+::m\+User\+Repository\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_setup_state_8hpp}{Setup\+State.\+hpp}}\item 
+src/\mbox{\hyperlink{_setup_state_8cpp}{Setup\+State.\+cpp}}\end{DoxyCompactItemize}

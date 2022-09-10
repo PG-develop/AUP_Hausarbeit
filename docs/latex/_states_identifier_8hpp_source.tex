@@ -1,0 +1,60 @@
+\hypertarget{_states_identifier_8hpp_source}{}\doxysection{States\+Identifier.\+hpp}
+\label{_states_identifier_8hpp_source}\index{include/StatesIdentifier.hpp@{include/StatesIdentifier.hpp}}
+\mbox{\hyperlink{_states_identifier_8hpp}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_a_u_p___h_a}{AUP\_HA}}}
+\DoxyCodeLine{4 \{}
+\DoxyCodeLine{5     \textcolor{keyword}{namespace }States}
+\DoxyCodeLine{6     \{}
+\DoxyCodeLine{7         \textcolor{keyword}{enum} \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711}{ID}}}
+\DoxyCodeLine{8         \{}
+\DoxyCodeLine{9             \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711a3618a329870f8c662a34cd9b4045cacc}{NONE}},}
+\DoxyCodeLine{10             \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711a0437b8e50e7583536e0c14b5a01615a3}{INTRO}},}
+\DoxyCodeLine{11             \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711ae1df79a0932957180f7d9255b06286ab}{MAIN}},}
+\DoxyCodeLine{12             \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711a47b57ef49c725ce6ca4e3f74105ac168}{GAME}},}
+\DoxyCodeLine{13             \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711a500c0c25179529a538d6c08f83c5f3ac}{LEADERBOARD}},}
+\DoxyCodeLine{14             \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711a7159379e23f2a822732d4c615bd1dc57}{SETUP}},}
+\DoxyCodeLine{15             \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711a2994a3e5e74fab38710557ae51cdb262}{GAMESETUP\_GAME}},}
+\DoxyCodeLine{16             \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711ab8615f5103bc46e959e2e6037162ea2c}{GAMESETUP\_CLEAR}}}
+\DoxyCodeLine{17         \};}
+\DoxyCodeLine{18     \}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{keyword}{namespace }GameStates}
+\DoxyCodeLine{21     \{}
+\DoxyCodeLine{22         \textcolor{comment}{//TODO: Namen der IDs müssen noch angepasst werden}}
+\DoxyCodeLine{23         \textcolor{keyword}{enum} \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{ID}}}
+\DoxyCodeLine{24         \{}
+\DoxyCodeLine{25             \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673a345ad2feb958fac76ff03b57bf23b221}{NONE}},}
+\DoxyCodeLine{26             \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673a95d5d90e944d9806798913609e82296c}{FIRST}},}
+\DoxyCodeLine{27             \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673aed85ddaa76102422fa20469e26a00d2a}{STATE\_2}},}
+\DoxyCodeLine{28             \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673a0133b0d46d935092fcdbb377a0871842}{STATE\_3}},}
+\DoxyCodeLine{29             \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673ae99da2ac0c64aee63eec1d400fa3e7f3}{STATE\_4}},}
+\DoxyCodeLine{30             \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673ab92358718cdf486211ed8def65a29446}{STATE\_5}},}
+\DoxyCodeLine{31             \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673a5f9e84a3eec66f3ca185f0ae51bb3d13}{STATE\_6}},}
+\DoxyCodeLine{32             \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673a47945db20696e8a5e18474168e991e1d}{STATE\_7}},}
+\DoxyCodeLine{33             \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673a3d5e7989ad2cbe08fc93bf657625696f}{STATE\_8}}, \textcolor{comment}{// Negative Zahl ohne Sonderfunktion}}
+\DoxyCodeLine{34             \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673ab764241e94f8f7dd8674b95266b7b1e6}{STATE\_9}}, \textcolor{comment}{// CheatState -\/123}}
+\DoxyCodeLine{35             \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673ad27e524a1c0966cdbfddb99de20556d3}{STATE\_10}},   \textcolor{comment}{// CheatState -\/456}}
+\DoxyCodeLine{36             \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673ab85f4e717e5e329329e353b666c4dad7}{END}}}
+\DoxyCodeLine{37         \};}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39         \textcolor{keyword}{enum} \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_aad05c1c14b35369485097dff476c742a}{TRANSITION}}}
+\DoxyCodeLine{40         \{}
+\DoxyCodeLine{41             \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_aad05c1c14b35369485097dff476c742aa2eb104d7d9a56b686f4509b6d8c99eac}{EMPTY}},}
+\DoxyCodeLine{42             \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_aad05c1c14b35369485097dff476c742aae5def84fdc84be1698476c35e1c2a0a7}{N\_EMPTY}},}
+\DoxyCodeLine{43             \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_aad05c1c14b35369485097dff476c742aa45bf4d7ca7e2dba090656e538188b7f0}{NH}},}
+\DoxyCodeLine{44             \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_aad05c1c14b35369485097dff476c742aa80a1e1d8d1176a33f213b1c34f69874f}{NN}},}
+\DoxyCodeLine{45             \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_aad05c1c14b35369485097dff476c742aa6a5e6104e0d50712d076ef6cc6b9bb2e}{OB}},}
+\DoxyCodeLine{46             \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_aad05c1c14b35369485097dff476c742aaa7a47e58a886795c8a948377e6708ec3}{L}},}
+\DoxyCodeLine{47             \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_aad05c1c14b35369485097dff476c742aa93f860ed0ad23d516c79fddcbaaf08d7}{I}},         \textcolor{comment}{// }}
+\DoxyCodeLine{48             \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_aad05c1c14b35369485097dff476c742aa02c3ca815eef889d3d5db6902b6f87ed}{NG}},           \textcolor{comment}{// Neues Spiel}}
+\DoxyCodeLine{49             \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_aad05c1c14b35369485097dff476c742aa3b04139acc654eea41889053fd4fb5a9}{E}},         \textcolor{comment}{// Exit}}
+\DoxyCodeLine{50             \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_aad05c1c14b35369485097dff476c742aa3ddbe605064bce7395f44931242f3f88}{C}},         \textcolor{comment}{// Sonderfunktionen}}
+\DoxyCodeLine{51             \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_aad05c1c14b35369485097dff476c742aa8cd42878b7a6a4525928e033f8a74d99}{W}}}
+\DoxyCodeLine{52         \};}
+\DoxyCodeLine{53     \}}
+\DoxyCodeLine{54 \}}
+
+\end{DoxyCode}

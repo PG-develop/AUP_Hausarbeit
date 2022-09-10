@@ -1,0 +1,50 @@
+\hypertarget{_state_manager_8hpp_source}{}\doxysection{State\+Manager.\+hpp}
+\label{_state_manager_8hpp_source}\index{include/StateManager.hpp@{include/StateManager.hpp}}
+\mbox{\hyperlink{_state_manager_8hpp}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <functional>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <cassert>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_states_identifier_8hpp}{StatesIdentifier.hpp}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_state_8hpp}{State.hpp}}"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_a_u_p___h_a}{AUP\_HA}} }
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{17     \textcolor{keyword}{class }\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{StateManager}} }
+\DoxyCodeLine{18     \{}
+\DoxyCodeLine{19     \textcolor{keyword}{public}:}
+\DoxyCodeLine{20         \textcolor{keyword}{explicit} \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager_a7896a906b03c72d32dc5d312a7a1c768}{StateManager}}();}
+\DoxyCodeLine{21         \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager_ac32b45daea1b906d8569a64149716097}{\string~StateManager}}();}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23         \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{24         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager_a83219986d153ef27e0c8947b79a6c7e5}{registerStates}}(\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711}{States::ID}} stateID);}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager_a927febaa7666347e8de56a22fdb4b29b}{render}}();}
+\DoxyCodeLine{27         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager_a4b1c53f4f3cd28ed99f6c0fd161bb182}{processEvents}}();}
+\DoxyCodeLine{28         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager_a96534cdc4ca9b0b870511d48213a0f16}{update}}();}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager_a094bcc54d7f5a587bb95967889af3a06}{changeState}}(\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711}{States::ID}} stateID);}
+\DoxyCodeLine{32         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager_a344b3865242f3a2b3da6d1e2b6c9e3e1}{hasActiveState}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     \textcolor{keyword}{private}:}
+\DoxyCodeLine{35         \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a2886a8eec41a10ee511b7d23376bc55c}{State::Ptr}}                                            \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager_a72b0c9ded33636c3e951a289d11fcf4a}{mActiveState}};       }
+\DoxyCodeLine{36         std::map<\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711}{States::ID}}, std::function<\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a2886a8eec41a10ee511b7d23376bc55c}{State::Ptr}}()>>   \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager_a9198518c52baf4fc08e5175eb79c622c}{mStateFactories}}; }
+\DoxyCodeLine{37     \};}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{50     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{51     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager_a83219986d153ef27e0c8947b79a6c7e5}{StateManager::registerStates}}(\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711}{States::ID}} stateID)}
+\DoxyCodeLine{52     \{}
+\DoxyCodeLine{53         \textcolor{comment}{// Füge der Fabrik eine neue Funktion hinzu, die als Rückgabewert einen neue State instanziiert.}}
+\DoxyCodeLine{54         \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager_a9198518c52baf4fc08e5175eb79c622c}{mStateFactories}}[stateID] =}
+\DoxyCodeLine{55             [\textcolor{keyword}{this}]()}
+\DoxyCodeLine{56         \{}
+\DoxyCodeLine{57             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a2886a8eec41a10ee511b7d23376bc55c}{State::Ptr}}(\textcolor{keyword}{new} T(*\textcolor{keyword}{this}));}
+\DoxyCodeLine{58         \};}
+\DoxyCodeLine{59     \}}
+\DoxyCodeLine{60 \}}
+
+\end{DoxyCode}

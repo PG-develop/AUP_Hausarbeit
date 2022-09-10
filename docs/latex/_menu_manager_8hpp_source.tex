@@ -1,0 +1,84 @@
+\hypertarget{_menu_manager_8hpp_source}{}\doxysection{Menu\+Manager.\+hpp}
+\label{_menu_manager_8hpp_source}\index{include/MenuManager.hpp@{include/MenuManager.hpp}}
+\mbox{\hyperlink{_menu_manager_8hpp}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <cassert>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <functional>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_a_u_p___h_a}{AUP\_HA}}}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{15     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{16     \textcolor{keyword}{class }\mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager}{MenuManager}}}
+\DoxyCodeLine{17     \{}
+\DoxyCodeLine{18     \textcolor{keyword}{public}:}
+\DoxyCodeLine{19         \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager_addb5e89721c22217c83916565036872a}{MenuManager}}();}
+\DoxyCodeLine{20         \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager_aef91586329f835c2885cd3ee0f8c0ed4}{\string~MenuManager}}();}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager_aad940fb8196adab2d38763bf8c8323f2}{registerMenu}}(T menuID, std::function<\textcolor{keywordtype}{void}()> handler);}
+\DoxyCodeLine{23         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager_aed8484038f7a31ee8146048b6aacdf25}{selectMenuItem}}(T menuID);}
+\DoxyCodeLine{24         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager_ad787febff50428752fe79f6a18539256}{selectMenuItem}}(\textcolor{keywordtype}{int} menuIntID);}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager_a82057d7788ba1fcebbcdcc81ac3656a9}{count}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     \textcolor{keyword}{private}:}
+\DoxyCodeLine{29         std::map<T, std::function<void()>>  \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager_a9ebd74ac9206fb71b81a0b45745afc9d}{mRegisteredHandlers}};}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{34     \textcolor{keyword}{inline} \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager_addb5e89721c22217c83916565036872a}{MenuManager<T>::MenuManager}}()}
+\DoxyCodeLine{35     \{}
+\DoxyCodeLine{36     \}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{39     \textcolor{keyword}{inline} \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager_aef91586329f835c2885cd3ee0f8c0ed4}{MenuManager<T>::\string~MenuManager}}()}
+\DoxyCodeLine{40     \{}
+\DoxyCodeLine{41     \}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{49     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{50     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager_aad940fb8196adab2d38763bf8c8323f2}{MenuManager<T>::registerMenu}}(T menuID, std::function<\textcolor{keywordtype}{void}()> handler)}
+\DoxyCodeLine{51     \{}
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#ifdef \_DEBUG}}
+\DoxyCodeLine{53         \textcolor{keyword}{auto} found = mRegisteredHandlers.find(menuID);}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55         \textcolor{comment}{// Prüfe, ob die ID bereits vergeben wurde}}
+\DoxyCodeLine{56         \textcolor{keywordflow}{if} (found != mRegisteredHandlers.end()) }
+\DoxyCodeLine{57         \{}
+\DoxyCodeLine{58             assert(\textcolor{stringliteral}{"{}ID wurde bereits registriert!"{}});}
+\DoxyCodeLine{59         \}}
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{61         mRegisteredHandlers[menuID] = handler;}
+\DoxyCodeLine{62     \}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{69     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{70     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager_aed8484038f7a31ee8146048b6aacdf25}{MenuManager<T>::selectMenuItem}}(T menuID)}
+\DoxyCodeLine{71     \{}
+\DoxyCodeLine{72         \textcolor{keyword}{auto} found = mRegisteredHandlers.find(menuID);}
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#ifdef \_DEBUG}}
+\DoxyCodeLine{74         \textcolor{comment}{// Prüfe, ob die ID vorhanden ist}}
+\DoxyCodeLine{75         \textcolor{keywordflow}{if} (found == mRegisteredHandlers.end())}
+\DoxyCodeLine{76         \{}
+\DoxyCodeLine{77             assert(\textcolor{stringliteral}{"{}Die ID wurde nicht gefunden. Gehen Sie sicher, dass die ID korrekt registriert wurde."{}});}
+\DoxyCodeLine{78         \}}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{80         \textcolor{comment}{// Handleraufruf}}
+\DoxyCodeLine{81         found-\/>second();}
+\DoxyCodeLine{82     \}}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{90     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{91     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager_aed8484038f7a31ee8146048b6aacdf25}{MenuManager<T>::selectMenuItem}}(\textcolor{keywordtype}{int} menuIntID)}
+\DoxyCodeLine{92     \{}
+\DoxyCodeLine{93         selectMenuItem(\textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(menuIntID));}
+\DoxyCodeLine{94     \}}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{99     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{100     \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager_a82057d7788ba1fcebbcdcc81ac3656a9}{MenuManager<T>::count}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{101 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{102         \textcolor{keywordflow}{return} mRegisteredHandlers.size();}
+\DoxyCodeLine{103     \}}
+\DoxyCodeLine{104 \}}
+
+\end{DoxyCode}

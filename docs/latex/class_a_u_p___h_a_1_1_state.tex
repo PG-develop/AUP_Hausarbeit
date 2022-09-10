@@ -1,0 +1,118 @@
+\hypertarget{class_a_u_p___h_a_1_1_state}{}\doxysection{AUP\+\_\+\+HA\+::State Klassenreferenz}
+\label{class_a_u_p___h_a_1_1_state}\index{AUP\_HA::State@{AUP\_HA::State}}
+
+
+{\ttfamily \#include $<$State.\+hpp$>$}
+
+Klassendiagramm für AUP\+\_\+\+HA\+::State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.054614cm]{class_a_u_p___h_a_1_1_state}
+\end{center}
+\end{figure}
+\doxysubsection*{Öffentliche Typen}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}} $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a2886a8eec41a10ee511b7d23376bc55c}{Ptr}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_abc6da0b8d836768761682bb29b8c69b7}{State}} (\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} \&state\+Manager)
+\item 
+virtual \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a4f4cd6f3771adfc6bff7daa76b4270d1}{$\sim$\+State}} ()
+\item 
+virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_adc7ce183cd6dd5e24c1dd52839d0086e}{render}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a99807a79b6edfe4e4117b44e5144bb42}{process\+Events}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a7e5197b99088d8166fc499bd28d2b3d8}{update}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Geschützte Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_ad606ceeeca891b2bb21d040114cf3f2a}{request\+Change}} (\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711}{States\+::\+ID}} state\+ID)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} $\ast$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_af0c780677d0d692492425005a58e5d4b}{m\+State\+Manager}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentation der benutzerdefinierten Datentypen}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_state_a2886a8eec41a10ee511b7d23376bc55c}\label{class_a_u_p___h_a_1_1_state_a2886a8eec41a10ee511b7d23376bc55c}} 
+\index{AUP\_HA::State@{AUP\_HA::State}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!AUP\_HA::State@{AUP\_HA::State}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily typedef std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}}$>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a2886a8eec41a10ee511b7d23376bc55c}{AUP\+\_\+\+HA\+::\+State\+::\+Ptr}}}
+
+
+
+\doxysubsection{Beschreibung der Konstruktoren und Destruktoren}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_state_abc6da0b8d836768761682bb29b8c69b7}\label{class_a_u_p___h_a_1_1_state_abc6da0b8d836768761682bb29b8c69b7}} 
+\index{AUP\_HA::State@{AUP\_HA::State}!State@{State}}
+\index{State@{State}!AUP\_HA::State@{AUP\_HA::State}}
+\doxysubsubsection{\texorpdfstring{State()}{State()}}
+{\footnotesize\ttfamily AUP\+\_\+\+HA\+::\+State\+::\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} \&}]{state\+Manager }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_state_a4f4cd6f3771adfc6bff7daa76b4270d1}\label{class_a_u_p___h_a_1_1_state_a4f4cd6f3771adfc6bff7daa76b4270d1}} 
+\index{AUP\_HA::State@{AUP\_HA::State}!````~State@{$\sim$State}}
+\index{````~State@{$\sim$State}!AUP\_HA::State@{AUP\_HA::State}}
+\doxysubsubsection{\texorpdfstring{$\sim$State()}{~State()}}
+{\footnotesize\ttfamily AUP\+\_\+\+HA\+::\+State\+::$\sim$\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_state_a99807a79b6edfe4e4117b44e5144bb42}\label{class_a_u_p___h_a_1_1_state_a99807a79b6edfe4e4117b44e5144bb42}} 
+\index{AUP\_HA::State@{AUP\_HA::State}!processEvents@{processEvents}}
+\index{processEvents@{processEvents}!AUP\_HA::State@{AUP\_HA::State}}
+\doxysubsubsection{\texorpdfstring{processEvents()}{processEvents()}}
+{\footnotesize\ttfamily virtual void AUP\+\_\+\+HA\+::\+State\+::process\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implementiert in \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_state_a5d51131fdc347e465948839b3a6bd443}{AUP\+\_\+\+HA\+::\+Game\+State}}, \mbox{\hyperlink{class_a_u_p___h_a_1_1_intro_state_a0c32b8dca9a92860f287ba05618f47ae}{AUP\+\_\+\+HA\+::\+Intro\+State}}, \mbox{\hyperlink{class_a_u_p___h_a_1_1_leaderboard_state_af70e731722a5082cc34bfd572a6e5773}{AUP\+\_\+\+HA\+::\+Leaderboard\+State}}, \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_ac6c0f0959681bc804110339bba993778}{AUP\+\_\+\+HA\+::\+Main\+State}}, \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_game_state_abece832133845210c16fb68b20dd4669}{AUP\+\_\+\+HA\+::\+Setup\+Game\+State}} und \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_state_aef3b3f647fc4f14e89e8e94a1c5ab003}{AUP\+\_\+\+HA\+::\+Setup\+State}}.
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_state_adc7ce183cd6dd5e24c1dd52839d0086e}\label{class_a_u_p___h_a_1_1_state_adc7ce183cd6dd5e24c1dd52839d0086e}} 
+\index{AUP\_HA::State@{AUP\_HA::State}!render@{render}}
+\index{render@{render}!AUP\_HA::State@{AUP\_HA::State}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily virtual void AUP\+\_\+\+HA\+::\+State\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implementiert in \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_state_af2cb2297cf068b0fa387b7841bbe8c69}{AUP\+\_\+\+HA\+::\+Game\+State}}, \mbox{\hyperlink{class_a_u_p___h_a_1_1_intro_state_a06ade41f9689b809b75ed2e572056914}{AUP\+\_\+\+HA\+::\+Intro\+State}}, \mbox{\hyperlink{class_a_u_p___h_a_1_1_leaderboard_state_ad080e6748fe9e3136e2c5b74597e6488}{AUP\+\_\+\+HA\+::\+Leaderboard\+State}}, \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_a38c98c37fba8ca48d8bc076485c1b9a1}{AUP\+\_\+\+HA\+::\+Main\+State}}, \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_game_state_a95ce9fb154b61a6a3391628a9ea0facb}{AUP\+\_\+\+HA\+::\+Setup\+Game\+State}} und \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_state_a40c4c63fa44e4bf0b37bfaf85f7c8fad}{AUP\+\_\+\+HA\+::\+Setup\+State}}.
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_state_ad606ceeeca891b2bb21d040114cf3f2a}\label{class_a_u_p___h_a_1_1_state_ad606ceeeca891b2bb21d040114cf3f2a}} 
+\index{AUP\_HA::State@{AUP\_HA::State}!requestChange@{requestChange}}
+\index{requestChange@{requestChange}!AUP\_HA::State@{AUP\_HA::State}}
+\doxysubsubsection{\texorpdfstring{requestChange()}{requestChange()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+State\+::request\+Change (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711}{States\+::\+ID}}}]{state\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_state_a7e5197b99088d8166fc499bd28d2b3d8}\label{class_a_u_p___h_a_1_1_state_a7e5197b99088d8166fc499bd28d2b3d8}} 
+\index{AUP\_HA::State@{AUP\_HA::State}!update@{update}}
+\index{update@{update}!AUP\_HA::State@{AUP\_HA::State}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void AUP\+\_\+\+HA\+::\+State\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implementiert in \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_state_a17c1ab109a5baa413731d62c4e8d3163}{AUP\+\_\+\+HA\+::\+Game\+State}}, \mbox{\hyperlink{class_a_u_p___h_a_1_1_intro_state_a4d038c2dabc708f4301dc6b04445ec03}{AUP\+\_\+\+HA\+::\+Intro\+State}}, \mbox{\hyperlink{class_a_u_p___h_a_1_1_leaderboard_state_a6fa48941f41cee105163de2f3de3ed48}{AUP\+\_\+\+HA\+::\+Leaderboard\+State}}, \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_a2ab34253a3e921f24ee170f2aa0248b1}{AUP\+\_\+\+HA\+::\+Main\+State}}, \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_game_state_a7b3939e35289a3ebf60c4ed91fd21a93}{AUP\+\_\+\+HA\+::\+Setup\+Game\+State}} und \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_state_aa2eef9019e058d71428e9c696c4febc7}{AUP\+\_\+\+HA\+::\+Setup\+State}}.
+
+
+
+\doxysubsection{Dokumentation der Datenelemente}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_state_af0c780677d0d692492425005a58e5d4b}\label{class_a_u_p___h_a_1_1_state_af0c780677d0d692492425005a58e5d4b}} 
+\index{AUP\_HA::State@{AUP\_HA::State}!mStateManager@{mStateManager}}
+\index{mStateManager@{mStateManager}!AUP\_HA::State@{AUP\_HA::State}}
+\doxysubsubsection{\texorpdfstring{mStateManager}{mStateManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}}$\ast$ AUP\+\_\+\+HA\+::\+State\+::m\+State\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_state_8hpp}{State.\+hpp}}\item 
+src/\mbox{\hyperlink{_state_8cpp}{State.\+cpp}}\end{DoxyCompactItemize}

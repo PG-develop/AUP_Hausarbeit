@@ -1,4 +1,5 @@
 #include "../include/Application.hpp"
+#include "../include/StateManager.hpp"
 
 // States
 #include "../include/IntroState.hpp"
@@ -11,7 +12,9 @@
 namespace AUP_HA 
 {
 	/**
-	* @brief Instanz des StateManager instanziieren und States registrieren
+	* @brief Konstruktor
+	* 
+	* Instanz des StateManager instanziieren und States registrieren.
 	*/
 	Application::Application()
 	{
@@ -27,15 +30,16 @@ namespace AUP_HA
 	}
 
 	/**
-	* @Destructor
+	* @brief Destruktor
 	*/
 	Application::~Application()
 	{
 	}
 
 	/**
-	* @bief Steuerung des Programmflusses (Ticks),
-	*		jeder Durchgang ist ein Tick.
+	* @brief Steuerung des Programmflusses
+	* 
+	* Solange ein State aktiv ist, werden fortlaufend Ticks durchgeführt.
 	*/
 	void Application::run()
 	{

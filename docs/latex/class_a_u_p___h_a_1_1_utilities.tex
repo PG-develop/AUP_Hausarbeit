@@ -1,0 +1,84 @@
+\hypertarget{class_a_u_p___h_a_1_1_utilities}{}\doxysection{AUP\+\_\+\+HA\+::Utilities Klassenreferenz}
+\label{class_a_u_p___h_a_1_1_utilities}\index{AUP\_HA::Utilities@{AUP\_HA::Utilities}}
+
+
+Allgemeine Funktionen.  
+
+
+
+
+{\ttfamily \#include $<$Utilities.\+hpp$>$}
+
+\doxysubsection*{Öffentliche, statische Methoden}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_a_u_p___h_a_1_1_utilities_a1164ec870c8f0a02143be9fcd9f7f342}{Clear\+Input\+Stream}} () noexcept
+\begin{DoxyCompactList}\small\item\em Leert den Inputstream. \end{DoxyCompactList}\item 
+static std\+::optional$<$ int $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_utilities_a2b903fd6b96ccd5decc60c2a43cafb08}{Parse\+String\+To\+Int}} (const std\+::string \&string) noexcept
+\begin{DoxyCompactList}\small\item\em Konvertiert einen String zu einer Ganzzahl (int) \end{DoxyCompactList}\item 
+static std\+::optional$<$ int $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_utilities_a06cbf5041e1b061dc1fbfca87e2bf928}{Parse\+String\+To\+Int\+With\+Limits}} (const std\+::string \&string, std\+::pair$<$ int, int $>$ limits) noexcept
+\begin{DoxyCompactList}\small\item\em Konvertiert einen String zu einer Ganzzahl (int) und prüft angegebene Grenzen (inlusiv) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Ausführliche Beschreibung}
+Allgemeine Funktionen. 
+
+\doxysubsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_utilities_a1164ec870c8f0a02143be9fcd9f7f342}\label{class_a_u_p___h_a_1_1_utilities_a1164ec870c8f0a02143be9fcd9f7f342}} 
+\index{AUP\_HA::Utilities@{AUP\_HA::Utilities}!ClearInputStream@{ClearInputStream}}
+\index{ClearInputStream@{ClearInputStream}!AUP\_HA::Utilities@{AUP\_HA::Utilities}}
+\doxysubsubsection{\texorpdfstring{ClearInputStream()}{ClearInputStream()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Utilities\+::\+Clear\+Input\+Stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Leert den Inputstream. 
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_utilities_a2b903fd6b96ccd5decc60c2a43cafb08}\label{class_a_u_p___h_a_1_1_utilities_a2b903fd6b96ccd5decc60c2a43cafb08}} 
+\index{AUP\_HA::Utilities@{AUP\_HA::Utilities}!ParseStringToInt@{ParseStringToInt}}
+\index{ParseStringToInt@{ParseStringToInt}!AUP\_HA::Utilities@{AUP\_HA::Utilities}}
+\doxysubsubsection{\texorpdfstring{ParseStringToInt()}{ParseStringToInt()}}
+{\footnotesize\ttfamily std\+::optional$<$ int $>$ AUP\+\_\+\+HA\+::\+Utilities\+::\+Parse\+String\+To\+Int (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Konvertiert einen String zu einer Ganzzahl (int) 
+
+
+\begin{DoxyParams}{Parameter}
+{\em string} & String, der zu einer Ganzzahl konvertiert werden soll.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+std\+::optional$<$int$>$ mit geparsten String, wenn erfolgreich gewesen. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_utilities_a06cbf5041e1b061dc1fbfca87e2bf928}\label{class_a_u_p___h_a_1_1_utilities_a06cbf5041e1b061dc1fbfca87e2bf928}} 
+\index{AUP\_HA::Utilities@{AUP\_HA::Utilities}!ParseStringToIntWithLimits@{ParseStringToIntWithLimits}}
+\index{ParseStringToIntWithLimits@{ParseStringToIntWithLimits}!AUP\_HA::Utilities@{AUP\_HA::Utilities}}
+\doxysubsubsection{\texorpdfstring{ParseStringToIntWithLimits()}{ParseStringToIntWithLimits()}}
+{\footnotesize\ttfamily std\+::optional$<$ int $>$ AUP\+\_\+\+HA\+::\+Utilities\+::\+Parse\+String\+To\+Int\+With\+Limits (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string,  }\item[{std\+::pair$<$ int, int $>$}]{limits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Konvertiert einen String zu einer Ganzzahl (int) und prüft angegebene Grenzen (inlusiv) 
+
+
+\begin{DoxyParams}{Parameter}
+{\em string} & String, der zu einer Ganzzahl konvertiert werden soll. \\
+\hline
+{\em limits} & zu prüfende Grenzen
+\begin{DoxyItemize}
+\item Pair.\+First stellt die untere Grenze dar (inklusiv)
+\item Pair.\+Second stellt die obere Grenze dar (inklusiv)
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+std\+::optional$<$int$>$ mit geparsten String, wenn erfolgreich gewesen. 
+\end{DoxyReturn}
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_utilities_8hpp}{Utilities.\+hpp}}\item 
+src/\mbox{\hyperlink{_utilities_8cpp}{Utilities.\+cpp}}\end{DoxyCompactItemize}

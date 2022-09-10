@@ -1,0 +1,41 @@
+\hypertarget{_main_state_8hpp_source}{}\doxysection{Main\+State.\+hpp}
+\label{_main_state_8hpp_source}\index{include/MainState.hpp@{include/MainState.hpp}}
+\mbox{\hyperlink{_main_state_8hpp}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}../include/MenuManager.hpp"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}../include/MenuIdentifier.hpp"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}../include/State.hpp"{}}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_a_u_p___h_a}{AUP\_HA}} }
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{15     \textcolor{keyword}{class }\mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state}{MainState}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}}}
+\DoxyCodeLine{16     \{}
+\DoxyCodeLine{17     \textcolor{keyword}{public}:}
+\DoxyCodeLine{18         \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state}{MainState}}(\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{StateManager}}\& stateManager);}
+\DoxyCodeLine{19         \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_aefc603b8276ee7598c9fd9efc96c20c2}{\string~MainState}}();}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_a38c98c37fba8ca48d8bc076485c1b9a1}{render}}();}
+\DoxyCodeLine{22         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_ac6c0f0959681bc804110339bba993778}{processEvents}}();}
+\DoxyCodeLine{23         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_a2ab34253a3e921f24ee170f2aa0248b1}{update}}();}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \textcolor{keyword}{private}:}
+\DoxyCodeLine{26         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_aad12a134771c2e6dc08c5a3bab261e93}{registerMenu}}();}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_a569bfe5734c884abec17a912f087ee07}{onGame}}();}
+\DoxyCodeLine{29         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_ad8889cd2a5a51c5a7549084da94accf3}{onSetup}}();}
+\DoxyCodeLine{30         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_a123f1917dc0e542f6060372f96d95e70}{onLeaderboard}}();}
+\DoxyCodeLine{31         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_aeb7ad0eabcd3c8c64bb607afb698867e}{onExit}}();}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{keyword}{private}:}
+\DoxyCodeLine{34         std::string                 \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_af7f1d5bb7aca133c3a7d19e2200aad9d}{mUserinput}};   \textcolor{comment}{// Benutzereingabe}}
+\DoxyCodeLine{35         std::pair<int, int>         \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_aec2e26a9e2b317a4a5228cd93e075783}{mLimits}}; \textcolor{comment}{// Grenzen für die Menüeingabe}}
+\DoxyCodeLine{36         \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager}{MenuManager<MainMenu::ID>}}  \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_a14029721af85b4b3ca88b3297f0a8248}{mMenu}};     \textcolor{comment}{// Menü}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \};}
+\DoxyCodeLine{39 \}}
+
+\end{DoxyCode}

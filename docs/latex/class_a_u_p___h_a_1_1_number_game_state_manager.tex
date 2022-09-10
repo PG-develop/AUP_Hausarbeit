@@ -1,0 +1,285 @@
+\hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager}{}\doxysection{AUP\+\_\+\+HA\+::Number\+Game\+State\+Manager Klassenreferenz}
+\label{class_a_u_p___h_a_1_1_number_game_state_manager}\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+
+
+{\ttfamily \#include $<$Number\+Game\+State\+Manager.\+hpp$>$}
+
+\doxysubsection*{Öffentliche Typen}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::function$<$ std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$(const std\+::string \&)$>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_af971f2fe51fb775ce98be2b57a83a3f9}{Transition\+Handler}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_af9e9a83070b16f7c90ec3c6b0053d6ea}{Number\+Game\+State\+Manager}} (\mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository}{User\+Repository}} \&user\+Repository, \mbox{\hyperlink{class_a_u_p___h_a_1_1_game}{Game}} \&game)
+\item 
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a9a43eb777a4d2e1063ea0b13c30e3c56}{$\sim$\+Number\+Game\+State\+Manager}} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a3d73c52c5d4943939c5aea5355112db2}{register\+States}} (\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} state\+ID)
+\item 
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_ac4fc2801e330d02c161afd0e48d941c9}{register\+End\+Game\+Handler}} (std\+::function$<$ void()$>$ handler)
+\item 
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a7745fbe07547fcbd05f883a67b920f36}{render}} ()
+\item 
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a32a583ba66dff12339254f862bb124bd}{process\+Events}} ()
+\item 
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_aa99fb7c3c048044d74c56c60dc2d5aa9}{update}} ()
+\item 
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_game}{Game}} \& \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a0d66adb9da5ff06206b2688bf4554d20}{get\+Game}} ()
+\item 
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository}{User\+Repository}} \& \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_add262ded51c1994f2e1d40111510f5d9}{get\+User\+Repository}} ()
+\item 
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a715911c84c8efa9a0a9dc68d03f4d51c}{change\+State}} (\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} state\+ID)
+\item 
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_af971f2fe51fb775ce98be2b57a83a3f9}{Transition\+Handler}} \& \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a8299000f7092073f10db632afae5c23c}{get\+Transition}} (\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_aad05c1c14b35369485097dff476c742a}{Game\+States\+::\+TRANSITION}} transition\+ID)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_acdbb708fd4a9f01116e9fb9106e98bc7}{register\+Transitions}} ()
+\item 
+std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a534e0b11e09c90c7c97b4267f0a77f47}{on\+Empty}} (const std\+::string \&string)
+\item 
+std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a20a4d825b7c47a4689471d94e523c49b}{on\+No\+Number}} (const std\+::string \&string)
+\item 
+std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a9f86737000028d309702da7423a6154f}{on\+Hit\+Or\+No\+Hit}} (const std\+::string \&string)
+\item 
+std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_ad21d9ec71067705985978436a852e50f}{on\+Out\+Borders}} (const std\+::string \&string)
+\item 
+std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_abc4e535dfb10636e633289523fc387b6}{on\+To\+Leaderboard}} (const std\+::string \&string)
+\item 
+std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a35841e75780fe3a5a3bfa746c71b9de4}{on\+To\+If\+New\+Game}} (const std\+::string \&string)
+\item 
+std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_ac5363ac7776324d3ced32badbb96a9c0}{on\+New\+Game}} (const std\+::string \&string)
+\item 
+std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a8a36eb2250cfcfb83b6e6749f8aa2156}{on\+Negativ}} (const std\+::string \&string)
+\item 
+std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a422aca1631fa2989e8bc16db715e7a4a}{on\+Win}} (const std\+::string \&string)
+\item 
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a73e22c737e7faba1cbfe6db6ce8688fe}{register\+Cheat\+Codes}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a55a54265c98d8349461d00129b430392}{Number\+Game\+State\+::\+Ptr}} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a6177442c645337ecaa3d8a8455125df0}{m\+Active\+State}}
+\item 
+\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a243035ede1d573f02140a340efa467d2}{m\+Active\+ID}}
+\item 
+std\+::map$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}}, std\+::function$<$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a55a54265c98d8349461d00129b430392}{Number\+Game\+State\+::\+Ptr}}()$>$ $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a0b081883e3885fc0ded2f17771ce031e}{m\+Factory}}
+\item 
+std\+::map$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_aad05c1c14b35369485097dff476c742a}{Game\+States\+::\+TRANSITION}}, std\+::function$<$ std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$(const std\+::string \&)$>$ $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_acff390c196f87b6796eef0a4c98d71ed}{m\+Transition\+Handlers}}
+\item 
+std\+::map$<$ std\+::int64\+\_\+t, \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a0e809a8b1bc6420634259daf3d8cd005}{m\+Cheat\+Codes}}
+\item 
+std\+::function$<$ void()$>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_aba0f167479dfbebfce0c947507a666bf}{m\+End\+Game}}
+\item 
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository}{User\+Repository}} $\ast$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a123f1463c331d3e6a9b9b2a1d0b6c5ea}{m\+User\+Repository}}
+\item 
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_game}{Game}} $\ast$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a70e5da137e32b9b89bdc31f89c66a3a6}{m\+Game}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentation der benutzerdefinierten Datentypen}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_af971f2fe51fb775ce98be2b57a83a3f9}\label{class_a_u_p___h_a_1_1_number_game_state_manager_af971f2fe51fb775ce98be2b57a83a3f9}} 
+\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!TransitionHandler@{TransitionHandler}}
+\index{TransitionHandler@{TransitionHandler}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+\doxysubsubsection{\texorpdfstring{TransitionHandler}{TransitionHandler}}
+{\footnotesize\ttfamily typedef std\+::function$<$std\+::optional$<$\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}}$>$(const std\+::string\&)$>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_af971f2fe51fb775ce98be2b57a83a3f9}{AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::\+Transition\+Handler}}}
+
+
+
+\doxysubsection{Beschreibung der Konstruktoren und Destruktoren}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_af9e9a83070b16f7c90ec3c6b0053d6ea}\label{class_a_u_p___h_a_1_1_number_game_state_manager_af9e9a83070b16f7c90ec3c6b0053d6ea}} 
+\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!NumberGameStateManager@{NumberGameStateManager}}
+\index{NumberGameStateManager@{NumberGameStateManager}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+\doxysubsubsection{\texorpdfstring{NumberGameStateManager()}{NumberGameStateManager()}}
+{\footnotesize\ttfamily AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::\+Number\+Game\+State\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository}{User\+Repository}} \&}]{user\+Repository,  }\item[{\mbox{\hyperlink{class_a_u_p___h_a_1_1_game}{Game}} \&}]{game }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_a9a43eb777a4d2e1063ea0b13c30e3c56}\label{class_a_u_p___h_a_1_1_number_game_state_manager_a9a43eb777a4d2e1063ea0b13c30e3c56}} 
+\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!````~NumberGameStateManager@{$\sim$NumberGameStateManager}}
+\index{````~NumberGameStateManager@{$\sim$NumberGameStateManager}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$NumberGameStateManager()}{~NumberGameStateManager()}}
+{\footnotesize\ttfamily AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::$\sim$\+Number\+Game\+State\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_a715911c84c8efa9a0a9dc68d03f4d51c}\label{class_a_u_p___h_a_1_1_number_game_state_manager_a715911c84c8efa9a0a9dc68d03f4d51c}} 
+\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!changeState@{changeState}}
+\index{changeState@{changeState}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+\doxysubsubsection{\texorpdfstring{changeState()}{changeState()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::change\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}}}]{state\+ID }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_a0d66adb9da5ff06206b2688bf4554d20}\label{class_a_u_p___h_a_1_1_number_game_state_manager_a0d66adb9da5ff06206b2688bf4554d20}} 
+\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!getGame@{getGame}}
+\index{getGame@{getGame}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+\doxysubsubsection{\texorpdfstring{getGame()}{getGame()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_a_u_p___h_a_1_1_game}{Game}} \& AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::get\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_a8299000f7092073f10db632afae5c23c}\label{class_a_u_p___h_a_1_1_number_game_state_manager_a8299000f7092073f10db632afae5c23c}} 
+\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!getTransition@{getTransition}}
+\index{getTransition@{getTransition}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+\doxysubsubsection{\texorpdfstring{getTransition()}{getTransition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_af971f2fe51fb775ce98be2b57a83a3f9}{Number\+Game\+State\+Manager\+::\+Transition\+Handler}} \& AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::get\+Transition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_aad05c1c14b35369485097dff476c742a}{Game\+States\+::\+TRANSITION}}}]{transition\+ID }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_add262ded51c1994f2e1d40111510f5d9}\label{class_a_u_p___h_a_1_1_number_game_state_manager_add262ded51c1994f2e1d40111510f5d9}} 
+\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!getUserRepository@{getUserRepository}}
+\index{getUserRepository@{getUserRepository}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+\doxysubsubsection{\texorpdfstring{getUserRepository()}{getUserRepository()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository}{User\+Repository}} \& AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::get\+User\+Repository (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_a534e0b11e09c90c7c97b4267f0a77f47}\label{class_a_u_p___h_a_1_1_number_game_state_manager_a534e0b11e09c90c7c97b4267f0a77f47}} 
+\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!onEmpty@{onEmpty}}
+\index{onEmpty@{onEmpty}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+\doxysubsubsection{\texorpdfstring{onEmpty()}{onEmpty()}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$ AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::on\+Empty (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_a9f86737000028d309702da7423a6154f}\label{class_a_u_p___h_a_1_1_number_game_state_manager_a9f86737000028d309702da7423a6154f}} 
+\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!onHitOrNoHit@{onHitOrNoHit}}
+\index{onHitOrNoHit@{onHitOrNoHit}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+\doxysubsubsection{\texorpdfstring{onHitOrNoHit()}{onHitOrNoHit()}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$ AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::on\+Hit\+Or\+No\+Hit (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_a8a36eb2250cfcfb83b6e6749f8aa2156}\label{class_a_u_p___h_a_1_1_number_game_state_manager_a8a36eb2250cfcfb83b6e6749f8aa2156}} 
+\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!onNegativ@{onNegativ}}
+\index{onNegativ@{onNegativ}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+\doxysubsubsection{\texorpdfstring{onNegativ()}{onNegativ()}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$ AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::on\+Negativ (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_ac5363ac7776324d3ced32badbb96a9c0}\label{class_a_u_p___h_a_1_1_number_game_state_manager_ac5363ac7776324d3ced32badbb96a9c0}} 
+\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!onNewGame@{onNewGame}}
+\index{onNewGame@{onNewGame}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+\doxysubsubsection{\texorpdfstring{onNewGame()}{onNewGame()}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$ AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::on\+New\+Game (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_a20a4d825b7c47a4689471d94e523c49b}\label{class_a_u_p___h_a_1_1_number_game_state_manager_a20a4d825b7c47a4689471d94e523c49b}} 
+\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!onNoNumber@{onNoNumber}}
+\index{onNoNumber@{onNoNumber}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+\doxysubsubsection{\texorpdfstring{onNoNumber()}{onNoNumber()}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$ AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::on\+No\+Number (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_ad21d9ec71067705985978436a852e50f}\label{class_a_u_p___h_a_1_1_number_game_state_manager_ad21d9ec71067705985978436a852e50f}} 
+\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!onOutBorders@{onOutBorders}}
+\index{onOutBorders@{onOutBorders}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+\doxysubsubsection{\texorpdfstring{onOutBorders()}{onOutBorders()}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$ AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::on\+Out\+Borders (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_a35841e75780fe3a5a3bfa746c71b9de4}\label{class_a_u_p___h_a_1_1_number_game_state_manager_a35841e75780fe3a5a3bfa746c71b9de4}} 
+\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!onToIfNewGame@{onToIfNewGame}}
+\index{onToIfNewGame@{onToIfNewGame}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+\doxysubsubsection{\texorpdfstring{onToIfNewGame()}{onToIfNewGame()}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$ AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::on\+To\+If\+New\+Game (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_abc4e535dfb10636e633289523fc387b6}\label{class_a_u_p___h_a_1_1_number_game_state_manager_abc4e535dfb10636e633289523fc387b6}} 
+\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!onToLeaderboard@{onToLeaderboard}}
+\index{onToLeaderboard@{onToLeaderboard}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+\doxysubsubsection{\texorpdfstring{onToLeaderboard()}{onToLeaderboard()}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$ AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::on\+To\+Leaderboard (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_a422aca1631fa2989e8bc16db715e7a4a}\label{class_a_u_p___h_a_1_1_number_game_state_manager_a422aca1631fa2989e8bc16db715e7a4a}} 
+\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!onWin@{onWin}}
+\index{onWin@{onWin}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+\doxysubsubsection{\texorpdfstring{onWin()}{onWin()}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$ AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::on\+Win (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_a32a583ba66dff12339254f862bb124bd}\label{class_a_u_p___h_a_1_1_number_game_state_manager_a32a583ba66dff12339254f862bb124bd}} 
+\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!processEvents@{processEvents}}
+\index{processEvents@{processEvents}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+\doxysubsubsection{\texorpdfstring{processEvents()}{processEvents()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::process\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_a73e22c737e7faba1cbfe6db6ce8688fe}\label{class_a_u_p___h_a_1_1_number_game_state_manager_a73e22c737e7faba1cbfe6db6ce8688fe}} 
+\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!registerCheatCodes@{registerCheatCodes}}
+\index{registerCheatCodes@{registerCheatCodes}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+\doxysubsubsection{\texorpdfstring{registerCheatCodes()}{registerCheatCodes()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::register\+Cheat\+Codes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_ac4fc2801e330d02c161afd0e48d941c9}\label{class_a_u_p___h_a_1_1_number_game_state_manager_ac4fc2801e330d02c161afd0e48d941c9}} 
+\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!registerEndGameHandler@{registerEndGameHandler}}
+\index{registerEndGameHandler@{registerEndGameHandler}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+\doxysubsubsection{\texorpdfstring{registerEndGameHandler()}{registerEndGameHandler()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::register\+End\+Game\+Handler (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{handler }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_a3d73c52c5d4943939c5aea5355112db2}\label{class_a_u_p___h_a_1_1_number_game_state_manager_a3d73c52c5d4943939c5aea5355112db2}} 
+\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!registerStates@{registerStates}}
+\index{registerStates@{registerStates}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+\doxysubsubsection{\texorpdfstring{registerStates()}{registerStates()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::register\+States (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}}}]{state\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_acdbb708fd4a9f01116e9fb9106e98bc7}\label{class_a_u_p___h_a_1_1_number_game_state_manager_acdbb708fd4a9f01116e9fb9106e98bc7}} 
+\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!registerTransitions@{registerTransitions}}
+\index{registerTransitions@{registerTransitions}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+\doxysubsubsection{\texorpdfstring{registerTransitions()}{registerTransitions()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::register\+Transitions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_a7745fbe07547fcbd05f883a67b920f36}\label{class_a_u_p___h_a_1_1_number_game_state_manager_a7745fbe07547fcbd05f883a67b920f36}} 
+\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!render@{render}}
+\index{render@{render}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_aa99fb7c3c048044d74c56c60dc2d5aa9}\label{class_a_u_p___h_a_1_1_number_game_state_manager_aa99fb7c3c048044d74c56c60dc2d5aa9}} 
+\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!update@{update}}
+\index{update@{update}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Dokumentation der Datenelemente}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_a243035ede1d573f02140a340efa467d2}\label{class_a_u_p___h_a_1_1_number_game_state_manager_a243035ede1d573f02140a340efa467d2}} 
+\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!mActiveID@{mActiveID}}
+\index{mActiveID@{mActiveID}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+\doxysubsubsection{\texorpdfstring{mActiveID}{mActiveID}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::m\+Active\+ID\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_a6177442c645337ecaa3d8a8455125df0}\label{class_a_u_p___h_a_1_1_number_game_state_manager_a6177442c645337ecaa3d8a8455125df0}} 
+\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!mActiveState@{mActiveState}}
+\index{mActiveState@{mActiveState}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+\doxysubsubsection{\texorpdfstring{mActiveState}{mActiveState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a55a54265c98d8349461d00129b430392}{Number\+Game\+State\+::\+Ptr}} AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::m\+Active\+State\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_a0e809a8b1bc6420634259daf3d8cd005}\label{class_a_u_p___h_a_1_1_number_game_state_manager_a0e809a8b1bc6420634259daf3d8cd005}} 
+\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!mCheatCodes@{mCheatCodes}}
+\index{mCheatCodes@{mCheatCodes}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+\doxysubsubsection{\texorpdfstring{mCheatCodes}{mCheatCodes}}
+{\footnotesize\ttfamily std\+::map$<$std\+::int64\+\_\+t, \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}}$>$ AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::m\+Cheat\+Codes\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_aba0f167479dfbebfce0c947507a666bf}\label{class_a_u_p___h_a_1_1_number_game_state_manager_aba0f167479dfbebfce0c947507a666bf}} 
+\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!mEndGame@{mEndGame}}
+\index{mEndGame@{mEndGame}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+\doxysubsubsection{\texorpdfstring{mEndGame}{mEndGame}}
+{\footnotesize\ttfamily std\+::function$<$void()$>$ AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::m\+End\+Game\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_a0b081883e3885fc0ded2f17771ce031e}\label{class_a_u_p___h_a_1_1_number_game_state_manager_a0b081883e3885fc0ded2f17771ce031e}} 
+\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!mFactory@{mFactory}}
+\index{mFactory@{mFactory}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+\doxysubsubsection{\texorpdfstring{mFactory}{mFactory}}
+{\footnotesize\ttfamily std\+::map$<$\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}}, std\+::function$<$\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a55a54265c98d8349461d00129b430392}{Number\+Game\+State\+::\+Ptr}}()$>$ $>$ AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::m\+Factory\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_a70e5da137e32b9b89bdc31f89c66a3a6}\label{class_a_u_p___h_a_1_1_number_game_state_manager_a70e5da137e32b9b89bdc31f89c66a3a6}} 
+\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!mGame@{mGame}}
+\index{mGame@{mGame}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+\doxysubsubsection{\texorpdfstring{mGame}{mGame}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_a_u_p___h_a_1_1_game}{Game}}$\ast$ AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::m\+Game\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_acff390c196f87b6796eef0a4c98d71ed}\label{class_a_u_p___h_a_1_1_number_game_state_manager_acff390c196f87b6796eef0a4c98d71ed}} 
+\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!mTransitionHandlers@{mTransitionHandlers}}
+\index{mTransitionHandlers@{mTransitionHandlers}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+\doxysubsubsection{\texorpdfstring{mTransitionHandlers}{mTransitionHandlers}}
+{\footnotesize\ttfamily std\+::map$<$\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_aad05c1c14b35369485097dff476c742a}{Game\+States\+::\+TRANSITION}}, std\+::function$<$std\+::optional$<$\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}}$>$(const std\+::string\&)$>$ $>$ AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::m\+Transition\+Handlers\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_a123f1463c331d3e6a9b9b2a1d0b6c5ea}\label{class_a_u_p___h_a_1_1_number_game_state_manager_a123f1463c331d3e6a9b9b2a1d0b6c5ea}} 
+\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!mUserRepository@{mUserRepository}}
+\index{mUserRepository@{mUserRepository}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
+\doxysubsubsection{\texorpdfstring{mUserRepository}{mUserRepository}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository}{User\+Repository}}$\ast$ AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::m\+User\+Repository\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_number_game_state_manager_8hpp}{Number\+Game\+State\+Manager.\+hpp}}\item 
+src/\mbox{\hyperlink{_number_game_state_manager_8cpp}{Number\+Game\+State\+Manager.\+cpp}}\end{DoxyCompactItemize}

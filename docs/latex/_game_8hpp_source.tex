@@ -1,0 +1,56 @@
+\hypertarget{_game_8hpp_source}{}\doxysection{Game.\+hpp}
+\label{_game_8hpp_source}\index{include/Game.hpp@{include/Game.hpp}}
+\mbox{\hyperlink{_game_8hpp}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}../include/User.hpp"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_a_u_p___h_a}{AUP\_HA}}}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9     \textcolor{comment}{// Vorwärts Deklaration}}
+\DoxyCodeLine{10     \textcolor{keyword}{class }SetupRepository;}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{20     \textcolor{keyword}{class }\mbox{\hyperlink{class_a_u_p___h_a_1_1_game}{Game}}}
+\DoxyCodeLine{21     \{}
+\DoxyCodeLine{22     \textcolor{keyword}{public}:}
+\DoxyCodeLine{23     \textcolor{keyword}{public}:}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25         \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_a2865bb136b394421a3e842dd4da6f7fa}{Game}}();}
+\DoxyCodeLine{26         \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_a758a24b3407c3de8a3ffd16de07910e5}{\string~Game}}();}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_af060d7a68d552e61b9f168e832e13d37}{check}}(\textcolor{keyword}{const} std::int32\_t\& number);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30         \textcolor{keyword}{const} std::int32\_t\& \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_a45c43303c0b5de641059817c57526c4a}{getMinBorder}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{31         \textcolor{keyword}{const} std::int32\_t\& \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_ab651cab8faf22b7e8df4578172308616}{getMaxBorder}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{32         \textcolor{keyword}{const} std::int32\_t\& \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_ac46cc7662c2215c2f6e8101a6540b02c}{getSearchedNumber}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{33         \textcolor{keyword}{const} std::int32\_t\& \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_abf353714d9efd183217d6f6f29d5cfa4}{getTries}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{34         \textcolor{keyword}{const} std::uint32\_t\& \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_a9fac33ce0cc6dc1a1a951ff3a5e91443}{getMaxTries}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{35         \textcolor{keyword}{const} \mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}} \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_a7f44149f6fa8699031352f1276146b9f}{getUser}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_a328432d87c794edbc840a87300003c98}{setNewInput}}(\textcolor{keyword}{const} std::string\& input);}
+\DoxyCodeLine{38         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_ad34329affad91f4e8c950c3d0ff35487}{setNewTime}}(std::time\_t time);}
+\DoxyCodeLine{39         \textcolor{keyword}{const} std::string\& \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_ac28fd2c051e9668899a1ecf47602135f}{getLastInput}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_ae44128546af8d1376edee3dac11d0a42}{newGame}}(\mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}}\& user);}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43     \textcolor{keyword}{private}:}
+\DoxyCodeLine{44         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_ac6cbcf64c0b9292ff17881694d367e05}{generateNewSearchedNumber}}();}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \textcolor{keyword}{private}:}
+\DoxyCodeLine{47         std::unique\_ptr<SetupRepository>    \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_a95ea36bf45d14eb0882e10be6bf9ec57}{mSetupRepository}};}
+\DoxyCodeLine{48         std::unique\_ptr<User>               \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_a28cb9fb37f95967dca559c73ac40fb95}{mUser}};}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50         std::int32\_t \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_af4af27ce7849a5ce34174c3a4e6b4c5f}{mMinBoarder}};}
+\DoxyCodeLine{51         std::int32\_t \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_a4f4add06435cafb853117d0456ee6637}{mMaxBoarder}};}
+\DoxyCodeLine{52         std::int32\_t \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_a5f8053e8c7744a41c20c64d554d1276f}{mSearchedNumber}};}
+\DoxyCodeLine{53         std::int32\_t \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_a8f122e05d017459fda6aef0d94a554a5}{mTries}};}
+\DoxyCodeLine{54         std::uint32\_t \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_a156a4d94856da7fc8e0371e90a5e6d6f}{mMaxTries}};}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56         std::string \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_a3d98e9036ea0bc96d7563355589a1348}{mLastInput}};}
+\DoxyCodeLine{57     \};}
+\DoxyCodeLine{58 \}}
+
+\end{DoxyCode}
