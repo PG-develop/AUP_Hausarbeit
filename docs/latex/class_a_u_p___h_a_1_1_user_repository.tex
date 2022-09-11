@@ -2,6 +2,11 @@
 \label{class_a_u_p___h_a_1_1_user_repository}\index{AUP\_HA::UserRepository@{AUP\_HA::UserRepository}}
 
 
+Repository für Userdaten.  
+
+
+
+
 {\ttfamily \#include $<$User\+Repository.\+hpp$>$}
 
 \doxysubsection*{Öffentliche Methoden}
@@ -14,9 +19,9 @@
 const std\+::vector$<$ \mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}} $>$ \& \mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository_ad5030ebe0017f0fa36f472db98245dbe}{Get\+User\+Sorted\+By\+Rang}} ()
 \begin{DoxyCompactList}\small\item\em Gibt das aktuelle \mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository}{User\+Repository}} zurück. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository_a475687681d7de01eb997243eec6ca437}{Save\+Or\+Update}} (\mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}} user)
-\begin{DoxyCompactList}\small\item\em Versucht einen \mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}} ins Leaderboard hinzuzufügen. Dabei wird geprüft, ob der neue \mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}} berechtigt ist, in die Bestenliste mit aufgenommen zu werden. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Versucht einen \mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}} ins Leaderboard hinzuzufügen. Dabei wird geprüft, ob der neue \mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}} berechtigt ist, in die Bestenliste mit aufgenommen zu werden (max. 20 Benutzer). \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository_ac98ca52660e757284a15e97a7d969bea}{Clear\+Repository}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Löschen des Repositories. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attribute}
 \begin{DoxyCompactItemize}
 \item 
@@ -24,6 +29,11 @@ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_persistence_lis
 \item 
 std\+::vector$<$ \mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}} $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository_a420228483c9baf74ac350e30a296c9c4}{m\+User\+List}}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Ausführliche Beschreibung}
+Repository für Userdaten. 
+
 
 
 \doxysubsection{Beschreibung der Konstruktoren und Destruktoren}
@@ -37,7 +47,7 @@ std\+::vector$<$ \mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}} $>$ \mbox{
 
 Konstruktor. 
 
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_user_repository_a4f537095a7b1065a83cd4035aab06c19}\label{class_a_u_p___h_a_1_1_user_repository_a4f537095a7b1065a83cd4035aab06c19}} 
+Initialisierung \mbox{\Hypertarget{class_a_u_p___h_a_1_1_user_repository_a4f537095a7b1065a83cd4035aab06c19}\label{class_a_u_p___h_a_1_1_user_repository_a4f537095a7b1065a83cd4035aab06c19}} 
 \index{AUP\_HA::UserRepository@{AUP\_HA::UserRepository}!````~UserRepository@{$\sim$UserRepository}}
 \index{````~UserRepository@{$\sim$UserRepository}!AUP\_HA::UserRepository@{AUP\_HA::UserRepository}}
 \doxysubsubsection{\texorpdfstring{$\sim$UserRepository()}{~UserRepository()}}
@@ -47,7 +57,7 @@ Konstruktor.
 
 Destruktor. 
 
-
+Keien Funktion 
 
 \doxysubsection{Dokumentation der Elementfunktionen}
 \mbox{\Hypertarget{class_a_u_p___h_a_1_1_user_repository_ac98ca52660e757284a15e97a7d969bea}\label{class_a_u_p___h_a_1_1_user_repository_ac98ca52660e757284a15e97a7d969bea}} 
@@ -55,6 +65,10 @@ Destruktor.
 \index{ClearRepository@{ClearRepository}!AUP\_HA::UserRepository@{AUP\_HA::UserRepository}}
 \doxysubsubsection{\texorpdfstring{ClearRepository()}{ClearRepository()}}
 {\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+User\+Repository\+::\+Clear\+Repository (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Löschen des Repositories. 
 
 \mbox{\Hypertarget{class_a_u_p___h_a_1_1_user_repository_ad5030ebe0017f0fa36f472db98245dbe}\label{class_a_u_p___h_a_1_1_user_repository_ad5030ebe0017f0fa36f472db98245dbe}} 
 \index{AUP\_HA::UserRepository@{AUP\_HA::UserRepository}!GetUserSortedByRang@{GetUserSortedByRang}}
@@ -66,6 +80,9 @@ Destruktor.
 
 Gibt das aktuelle \mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository}{User\+Repository}} zurück. 
 
+\begin{DoxyReturn}{Rückgabe}
+Referenz auf die Benutzerliste in sortierter Reihenfolge 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_a_u_p___h_a_1_1_user_repository_a475687681d7de01eb997243eec6ca437}\label{class_a_u_p___h_a_1_1_user_repository_a475687681d7de01eb997243eec6ca437}} 
 \index{AUP\_HA::UserRepository@{AUP\_HA::UserRepository}!SaveOrUpdate@{SaveOrUpdate}}
 \index{SaveOrUpdate@{SaveOrUpdate}!AUP\_HA::UserRepository@{AUP\_HA::UserRepository}}
@@ -74,8 +91,13 @@ Gibt das aktuelle \mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository}{User\+
 
 
 
-Versucht einen \mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}} ins Leaderboard hinzuzufügen. Dabei wird geprüft, ob der neue \mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}} berechtigt ist, in die Bestenliste mit aufgenommen zu werden. 
+Versucht einen \mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}} ins Leaderboard hinzuzufügen. Dabei wird geprüft, ob der neue \mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}} berechtigt ist, in die Bestenliste mit aufgenommen zu werden (max. 20 Benutzer). 
 
+
+\begin{DoxyParams}{Parameter}
+{\em \mbox{[}user\mbox{]}} & \mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}} Benutzer der zum Repository hinzugefügt werden soll \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Dokumentation der Datenelemente}
@@ -85,13 +107,13 @@ Versucht einen \mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}} ins Leaderbo
 \doxysubsubsection{\texorpdfstring{mPersistenceUserList}{mPersistenceUserList}}
 {\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_a_u_p___h_a_1_1_persistence_list_service}{Persistence\+List\+Service}}$<$\mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}}$>$ $>$ AUP\+\_\+\+HA\+::\+User\+Repository\+::m\+Persistence\+User\+List\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_user_repository_a420228483c9baf74ac350e30a296c9c4}\label{class_a_u_p___h_a_1_1_user_repository_a420228483c9baf74ac350e30a296c9c4}} 
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_persistence_list_service}{Persistence\+List\+Service}} \mbox{\Hypertarget{class_a_u_p___h_a_1_1_user_repository_a420228483c9baf74ac350e30a296c9c4}\label{class_a_u_p___h_a_1_1_user_repository_a420228483c9baf74ac350e30a296c9c4}} 
 \index{AUP\_HA::UserRepository@{AUP\_HA::UserRepository}!mUserList@{mUserList}}
 \index{mUserList@{mUserList}!AUP\_HA::UserRepository@{AUP\_HA::UserRepository}}
 \doxysubsubsection{\texorpdfstring{mUserList}{mUserList}}
 {\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}}$>$ AUP\+\_\+\+HA\+::\+User\+Repository\+::m\+User\+List\hspace{0.3cm}{\ttfamily [private]}}
 
-
+Benutzerliste 
 
 Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
 \item 

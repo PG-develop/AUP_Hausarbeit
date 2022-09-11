@@ -1,7 +1,7 @@
 var searchData=
 [
   ['saveorupdate_0',['SaveOrUpdate',['../class_a_u_p___h_a_1_1_user_repository.html#a475687681d7de01eb997243eec6ca437',1,'AUP_HA::UserRepository']]],
-  ['selectmenuitem_1',['selectMenuItem',['../class_a_u_p___h_a_1_1_menu_manager.html#aed8484038f7a31ee8146048b6aacdf25',1,'AUP_HA::MenuManager::selectMenuItem(T menuID)'],['../class_a_u_p___h_a_1_1_menu_manager.html#ad787febff50428752fe79f6a18539256',1,'AUP_HA::MenuManager::selectMenuItem(int menuIntID)']]],
+  ['selectmenuitem_1',['selectMenuItem',['../class_a_u_p___h_a_1_1_menu_manager.html#aed8484038f7a31ee8146048b6aacdf25',1,'AUP_HA::MenuManager::selectMenuItem(T menuID)'],['../class_a_u_p___h_a_1_1_menu_manager.html#aa65c1f18e5776b410a0c63e36d766660',1,'AUP_HA::MenuManager::selectMenuItem(std::int32_t menuIntID)']]],
   ['setamountofchoices_2',['setAmountOfChoices',['../class_a_u_p___h_a_1_1_setup_repository.html#a8fef6c1b5289ffe566d3466873bbbf2e',1,'AUP_HA::SetupRepository']]],
   ['setmaxrange_3',['setMaxRange',['../class_a_u_p___h_a_1_1_setup_repository.html#aa3a5ff99136ab296c3f59af2c5688b70',1,'AUP_HA::SetupRepository']]],
   ['setnewinput_4',['setNewInput',['../class_a_u_p___h_a_1_1_game.html#a328432d87c794edbc840a87300003c98',1,'AUP_HA::Game']]],

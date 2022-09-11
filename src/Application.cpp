@@ -31,6 +31,8 @@ namespace AUP_HA
 
 	/**
 	* @brief Destruktor
+	* 
+	* Keine Funktion
 	*/
 	Application::~Application()
 	{

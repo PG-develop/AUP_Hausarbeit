@@ -8,9 +8,11 @@ namespace AUP_HA
 {
 	/**
 	* @class MenuManager
-	* @brief Manager für numerische Menüs.
 	* 
-	* Für den generischen Typen T muss der verwendete Identifiziertyp angegeben werden.
+	* Manager für numerische Menüstrukturen\n
+	* Für den generischen Typen T muss der verwendete Menu-Identifiziertyp angegeben werden.
+	* 
+	* @tparam [T] Menu-Identifiziierer aus der Datei MenuIdentifier.hpp
 	*/
 	template<typename T>
 	class MenuManager
@@ -21,20 +23,34 @@ namespace AUP_HA
 
 		void registerMenu(T menuID, std::function<void()> handler);
 		void selectMenuItem(T menuID);
-		void selectMenuItem(int menuIntID);
+		void selectMenuItem(std::int32_t menuIntID);
 
 		int count() const;
 
 	private:
-		std::map<T, std::function<void()>>	mRegisteredHandlers;
+		std::map<T, std::function<void()>>	mRegisteredHandlers; /**< Funktionshandlerregister */
 
 	};
 
+	/**
+	* @brief Konstruktor
+	* 
+	* Keine Funktion
+	* 
+	* @tparam [T] siehe Klassenbeschreibung
+	*/
 	template<typename T>
 	inline MenuManager<T>::MenuManager()
 	{
 	}
 
+	/**
+	* @brief Destruktor
+	*
+	* Keine Funktion
+	*
+	* @tparam [T] siehe Klassenbeschreibung
+	*/
 	template<typename T>
 	inline MenuManager<T>::~MenuManager()
 	{
@@ -43,40 +59,40 @@ namespace AUP_HA
 	/**
 	* @brief Registriert EventHandler für das Menü.
 	* 
-	* @param menuID	Identifizierer für den Handler
-	* @param handler Zu registrierender Handler
+	* @param [menuID] T Identifizierer für den FunktionsHandler
+	* @param [handler] std::function<void()> Zu registrierender Handler
+	* @tparam [T] siehe Klassenbeschreibung
 	*/
 	template<typename T>
 	inline void MenuManager<T>::registerMenu(T menuID, std::function<void()> handler)
 	{
+		// Nur im DEBUG-Build prüfe, ob Identifizierer bereits registriert wurde.
 #ifdef _DEBUG
 		auto found = mRegisteredHandlers.find(menuID);
 
-		// Prüfe, ob die ID bereits vergeben wurde
-		if (found != mRegisteredHandlers.end()) 
-		{
-			assert("ID wurde bereits registriert!");
-		}
+		// Prüfe, ob die ID bereits vergeben wurde (nur DEBUG)
+		assert(found == mRegisteredHandlers.end());
 #endif
+
+		// Füge den Handler dem Handlerregister hinzu
 		mRegisteredHandlers[menuID] = handler;
 	}
 
 	/**
 	* @brief Ruft den Handler von dem registriertem Identifizierer auf
 	* 
-	* @param menuID Identifizierer
+	* @param [menuID] T Identifizierer
+	* @tparam [T] siehe Klassenbeschreibung
 	*/
 	template<typename T>
 	inline void MenuManager<T>::selectMenuItem(T menuID)
 	{
-		auto found = mRegisteredHandlers.find(menuID);
-#ifdef _DEBUG
 		// Prüfe, ob die ID vorhanden ist
-		if (found == mRegisteredHandlers.end())
-		{
-			assert("Die ID wurde nicht gefunden. Gehen Sie sicher, dass die ID korrekt registriert wurde.");
-		}
-#endif
+		auto found = mRegisteredHandlers.find(menuID);
+
+		// Wenn kein Identifiziierer gefunden wurde, gebe Programmfehler aus (nur DEBUG)
+		assert(found != mRegisteredHandlers.end());
+
 		// Handleraufruf
 		found->second();
 	}
@@ -85,16 +101,20 @@ namespace AUP_HA
 	* @brief Ruft den Handler von dem registriertem Identifizierer auf.
 	* Es erfolgt keine Prüfung, ob der Identifizierer auch tatsächlich existiert
 	* 
-	* @param menuID Identifizierer als Int
+	* @param [menuID] std::int32_t Identifizierer als Int
+	* @tparam [T] siehe Klassenbeschreibung
 	*/
 	template<typename T>
-	inline void MenuManager<T>::selectMenuItem(int menuIntID)
+	inline void MenuManager<T>::selectMenuItem(std::int32_t menuIntID)
 	{
+		// Cast int zu Identifiziierer EnumID und rufe Funktion void MenuManager<T>::selectMenuItem(T menuID) auf
 		selectMenuItem(static_cast<T>(menuIntID));
 	}
 
 	/**
 	* @brief Gibt die Anzahl der registrierten Handlers zurück.
+	* 
+	* @tparam [T] siehe Klassenbeschreibung
 	*/
 	template<typename T>
 	inline int MenuManager<T>::count() const

@@ -8,6 +8,10 @@
 
 namespace AUP_HA
 {
+
+	/**
+	* @brief State für die Bestenliste
+	*/
 	class LeaderboardState : public State
 	{
 	public:
@@ -19,6 +23,6 @@ namespace AUP_HA
 		virtual void update();
 
 	private:
-		std::unique_ptr<UserRepository> mUserRepository;
+		std::unique_ptr<UserRepository> mUserRepository; /**< UserRepository */
 	};
 }

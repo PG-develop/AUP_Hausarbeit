@@ -6,14 +6,13 @@ namespace AUP_HA
 	{
 		enum ID
 		{
-			NONE,
-			INTRO,
-			MAIN,
-			GAME,
-			LEADERBOARD,
-			SETUP,
-			GAMESETUP_GAME,
-			GAMESETUP_CLEAR
+			NONE,			/**< Kein aktiver State */
+			INTRO,			/**< IntroState */
+			MAIN,			/**< MainState */
+			GAME,			/**< GameState */
+			LEADERBOARD,	/**< LeaderboardState */
+			SETUP,			/**< SetupState */
+			GAMESETUP_GAME	/**< SetupGameState */
 		};
 	}
 

@@ -6,8 +6,12 @@
 
 namespace AUP_HA
 {
+	// Vorwärtsdeklaration
 	class StateManager;
 
+	/**
+	* @class Virtuelle Basisklasse für alle States
+	*/
 	class State 
 	{
 	public:
@@ -25,6 +29,6 @@ namespace AUP_HA
 		void requestChange(States::ID stateID);
 
 	private:
-		StateManager* mStateManager;
+		StateManager* mStateManager;	/**< Pointer auf seinen StateManager */
 	};
 }

@@ -10,27 +10,28 @@
 \DoxyCodeLine{6 }
 \DoxyCodeLine{7 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_a_u_p___h_a}{AUP\_HA}}}
 \DoxyCodeLine{8 \{}
-\DoxyCodeLine{9     \textcolor{keyword}{class }StateManager;}
-\DoxyCodeLine{10 }
-\DoxyCodeLine{11     \textcolor{keyword}{class }\mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}} }
-\DoxyCodeLine{12     \{}
-\DoxyCodeLine{13     \textcolor{keyword}{public}:}
-\DoxyCodeLine{14         \textcolor{keyword}{typedef} std::unique\_ptr<State> \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a2886a8eec41a10ee511b7d23376bc55c}{Ptr}};}
-\DoxyCodeLine{15 }
-\DoxyCodeLine{16     \textcolor{keyword}{public}:}
-\DoxyCodeLine{17         \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}}(\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{StateManager}}\& stateManager);}
-\DoxyCodeLine{18         \textcolor{keyword}{virtual} \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a4f4cd6f3771adfc6bff7daa76b4270d1}{\string~State}}();}
+\DoxyCodeLine{9     \textcolor{comment}{// Vorwärtsdeklaration}}
+\DoxyCodeLine{10     \textcolor{keyword}{class }StateManager;}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{15     \textcolor{keyword}{class }\mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}} }
+\DoxyCodeLine{16     \{}
+\DoxyCodeLine{17     \textcolor{keyword}{public}:}
+\DoxyCodeLine{18         \textcolor{keyword}{typedef} std::unique\_ptr<State> \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a2886a8eec41a10ee511b7d23376bc55c}{Ptr}};}
 \DoxyCodeLine{19 }
-\DoxyCodeLine{20         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_adc7ce183cd6dd5e24c1dd52839d0086e}{render}}() = 0;}
-\DoxyCodeLine{21         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a99807a79b6edfe4e4117b44e5144bb42}{processEvents}}() = 0;}
-\DoxyCodeLine{22         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a7e5197b99088d8166fc499bd28d2b3d8}{update}}() = 0;}
+\DoxyCodeLine{20     \textcolor{keyword}{public}:}
+\DoxyCodeLine{21         \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}}(\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{StateManager}}\& stateManager);}
+\DoxyCodeLine{22         \textcolor{keyword}{virtual} \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a4f4cd6f3771adfc6bff7daa76b4270d1}{\string~State}}();}
 \DoxyCodeLine{23 }
-\DoxyCodeLine{24     \textcolor{keyword}{protected}:}
-\DoxyCodeLine{25         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_ad606ceeeca891b2bb21d040114cf3f2a}{requestChange}}(\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711}{States::ID}} stateID);}
-\DoxyCodeLine{26 }
-\DoxyCodeLine{27     \textcolor{keyword}{private}:}
-\DoxyCodeLine{28         \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{StateManager}}* \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_af0c780677d0d692492425005a58e5d4b}{mStateManager}};}
-\DoxyCodeLine{29     \};}
-\DoxyCodeLine{30 \}}
+\DoxyCodeLine{24         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_adc7ce183cd6dd5e24c1dd52839d0086e}{render}}() = 0;}
+\DoxyCodeLine{25         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a99807a79b6edfe4e4117b44e5144bb42}{processEvents}}() = 0;}
+\DoxyCodeLine{26         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a7e5197b99088d8166fc499bd28d2b3d8}{update}}() = 0;}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{29         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_ad606ceeeca891b2bb21d040114cf3f2a}{requestChange}}(\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711}{States::ID}} stateID);}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \textcolor{keyword}{private}:}
+\DoxyCodeLine{32         \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{StateManager}}* \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_af0c780677d0d692492425005a58e5d4b}{mStateManager}};   }
+\DoxyCodeLine{33     \};}
+\DoxyCodeLine{34 \}}
 
 \end{DoxyCode}

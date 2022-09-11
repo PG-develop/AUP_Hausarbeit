@@ -108,6 +108,7 @@ $(function() {
 <tr class="memdesc:a094bcc54d7f5a587bb95967889af3a06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wechsel zu einem anderen <a class="el" href="class_a_u_p___h_a_1_1_state.html">State</a>.  <a href="class_a_u_p___h_a_1_1_state_manager.html#a094bcc54d7f5a587bb95967889af3a06">Mehr ...</a><br /></td></tr>
 <tr class="separator:a094bcc54d7f5a587bb95967889af3a06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a344b3865242f3a2b3da6d1e2b6c9e3e1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_state_manager.html#a344b3865242f3a2b3da6d1e2b6c9e3e1">hasActiveState</a> () const</td></tr>
+<tr class="memdesc:a344b3865242f3a2b3da6d1e2b6c9e3e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prüfung, ob ein <a class="el" href="class_a_u_p___h_a_1_1_state.html">State</a> in diesem Tick aktiv ist.  <a href="class_a_u_p___h_a_1_1_state_manager.html#a344b3865242f3a2b3da6d1e2b6c9e3e1">Mehr ...</a><br /></td></tr>
 <tr class="separator:a344b3865242f3a2b3da6d1e2b6c9e3e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
@@ -185,7 +186,7 @@ Private Attribute</h2></td></tr>
 
 <p>Wechsel zu einem anderen <a class="el" href="class_a_u_p___h_a_1_1_state.html">State</a>. </p>
 <p >Wechselt auf den neuen <a class="el" href="class_a_u_p___h_a_1_1_state.html">State</a>, der mit dem angegeben Zustandsidentifiziierer registriert wurde. Der gewünschte <a class="el" href="class_a_u_p___h_a_1_1_state.html">State</a> muss vorher registriert worden sein. Ansonsten kommt es zu einem Programmfehler.</p>
-<p >Wenn der gewünschte <a class="el" href="class_a_u_p___h_a_1_1_state.html">State</a> bereits aktiv ist, wird dieser nicht erneut instanziiert.</p>
+<p >Der aktive <a class="el" href="class_a_u_p___h_a_1_1_state.html">State</a> wird gelöscht und der geforderte <a class="el" href="class_a_u_p___h_a_1_1_state.html">State</a> wird durch die Zustandsfabrik instanziiert. Wenn das Programm beendet werden soll muss der Zustandsidentifiziierer <a class="el" href="namespace_a_u_p___h_a_1_1_states.html#aba7518c4c9fcad80b303d82603931711a3618a329870f8c662a34cd9b4045cacc">States::NONE</a> ausgewählt werden.</p>
 <dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
     <tr><td class="paramname">[stateID]</td><td><a class="el" href="namespace_a_u_p___h_a_1_1_states.html#aba7518c4c9fcad80b303d82603931711">States::ID</a> Zustandsidentifiziierer </td></tr>
@@ -209,6 +210,10 @@ Private Attribute</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Prüfung, ob ein <a class="el" href="class_a_u_p___h_a_1_1_state.html">State</a> in diesem Tick aktiv ist. </p>
+<dl class="section return"><dt>Rückgabe</dt><dd>TRUE, wenn ein <a class="el" href="class_a_u_p___h_a_1_1_state.html">State</a> aktiv ist.<br  />
+ FALSE wenn kein <a class="el" href="class_a_u_p___h_a_1_1_state.html">State</a> aktiv ist. </dd></dl>
 
 </div>
 </div>

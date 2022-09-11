@@ -93,9 +93,9 @@ $(function() {
 <tr class="memitem:a2b903fd6b96ccd5decc60c2a43cafb08"><td class="memItemLeft" align="right" valign="top">static std::optional&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_utilities.html#a2b903fd6b96ccd5decc60c2a43cafb08">ParseStringToInt</a> (const std::string &amp;string) noexcept</td></tr>
 <tr class="memdesc:a2b903fd6b96ccd5decc60c2a43cafb08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konvertiert einen String zu einer Ganzzahl (int)  <a href="class_a_u_p___h_a_1_1_utilities.html#a2b903fd6b96ccd5decc60c2a43cafb08">Mehr ...</a><br /></td></tr>
 <tr class="separator:a2b903fd6b96ccd5decc60c2a43cafb08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06cbf5041e1b061dc1fbfca87e2bf928"><td class="memItemLeft" align="right" valign="top">static std::optional&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_utilities.html#a06cbf5041e1b061dc1fbfca87e2bf928">ParseStringToIntWithLimits</a> (const std::string &amp;string, std::pair&lt; int, int &gt; limits) noexcept</td></tr>
-<tr class="memdesc:a06cbf5041e1b061dc1fbfca87e2bf928"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konvertiert einen String zu einer Ganzzahl (int) und prüft angegebene Grenzen (inlusiv)  <a href="class_a_u_p___h_a_1_1_utilities.html#a06cbf5041e1b061dc1fbfca87e2bf928">Mehr ...</a><br /></td></tr>
-<tr class="separator:a06cbf5041e1b061dc1fbfca87e2bf928"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13bcccb7b3043b5069e54afb2074294b"><td class="memItemLeft" align="right" valign="top">static std::optional&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_utilities.html#a13bcccb7b3043b5069e54afb2074294b">ParseStringToIntWithLimits</a> (const std::string &amp;string, std::pair&lt; int, int &gt; limits) noexcept</td></tr>
+<tr class="memdesc:a13bcccb7b3043b5069e54afb2074294b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konvertiert einen String zu einer Ganzzahl (int) und prüft angegebene Grenzen (inlusiv)  <a href="class_a_u_p___h_a_1_1_utilities.html#a13bcccb7b3043b5069e54afb2074294b">Mehr ...</a><br /></td></tr>
+<tr class="separator:a13bcccb7b3043b5069e54afb2074294b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
 <div class="textblock"><p >Allgemeine Funktionen. </p>
@@ -154,7 +154,7 @@ $(function() {
 <p>Konvertiert einen String zu einer Ganzzahl (int) </p>
 <dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
-    <tr><td class="paramname">string</td><td>String, der zu einer Ganzzahl konvertiert werden soll.</td></tr>
+    <tr><td class="paramname">[string]</td><td>std::string String, der zu einer Ganzzahl konvertiert werden soll.</td></tr>
   </table>
   </dd>
 </dl>
@@ -162,8 +162,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a06cbf5041e1b061dc1fbfca87e2bf928" name="a06cbf5041e1b061dc1fbfca87e2bf928"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06cbf5041e1b061dc1fbfca87e2bf928">&#9670;&#160;</a></span>ParseStringToIntWithLimits()</h2>
+<a id="a13bcccb7b3043b5069e54afb2074294b" name="a13bcccb7b3043b5069e54afb2074294b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13bcccb7b3043b5069e54afb2074294b">&#9670;&#160;</a></span>ParseStringToIntWithLimits()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -172,7 +172,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt; int &gt; AUP_HA::Utilities::ParseStringToIntWithLimits </td>
+          <td class="memname">std::optional&lt; std::int32_t &gt; AUP_HA::Utilities::ParseStringToIntWithLimits </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>string</em>, </td>
@@ -199,9 +199,11 @@ $(function() {
 <p>Konvertiert einen String zu einer Ganzzahl (int) und prüft angegebene Grenzen (inlusiv) </p>
 <dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
-    <tr><td class="paramname">string</td><td>String, der zu einer Ganzzahl konvertiert werden soll. </td></tr>
-    <tr><td class="paramname">limits</td><td>zu prüfende Grenzen<ul>
-<li>Pair.First stellt die untere Grenze dar (inklusiv)</li>
+    <tr><td class="paramname">[string]</td><td>std::string String, der zu einer Ganzzahl konvertiert werden soll. </td></tr>
+    <tr><td class="paramname">[limits]</td><td>std::pair&lt;std::int32_t zu prüfende Grenzen<br  />
+<ul>
+<li>Pair.First stellt die untere Grenze dar (inklusiv)<br  />
+</li>
 <li>Pair.Second stellt die obere Grenze dar (inklusiv)</li>
 </ul>
 </td></tr>

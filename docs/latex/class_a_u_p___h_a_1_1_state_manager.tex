@@ -22,7 +22,7 @@ void \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager_a96534cdc4ca9b0b870511
 void \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager_a094bcc54d7f5a587bb95967889af3a06}{change\+State}} (\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711}{States\+::\+ID}} state\+ID)
 \begin{DoxyCompactList}\small\item\em Wechsel zu einem anderen \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}}. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager_a344b3865242f3a2b3da6d1e2b6c9e3e1}{has\+Active\+State}} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Prüfung, ob ein \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}} in diesem Tick aktiv ist. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attribute}
 \begin{DoxyCompactItemize}
 \item 
@@ -68,7 +68,7 @@ Wechsel zu einem anderen \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}}.
 
 Wechselt auf den neuen \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}}, der mit dem angegeben Zustandsidentifiziierer registriert wurde. Der gewünschte \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}} muss vorher registriert worden sein. Ansonsten kommt es zu einem Programmfehler.
 
-Wenn der gewünschte \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}} bereits aktiv ist, wird dieser nicht erneut instanziiert.
+Der aktive \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}} wird gelöscht und der geforderte \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}} wird durch die Zustandsfabrik instanziiert. Wenn das Programm beendet werden soll muss der Zustandsidentifiziierer \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711a3618a329870f8c662a34cd9b4045cacc}{States\+::\+NONE}} ausgewählt werden.
 
 
 \begin{DoxyParams}{Parameter}
@@ -81,6 +81,14 @@ Wenn der gewünschte \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}} berei
 \doxysubsubsection{\texorpdfstring{hasActiveState()}{hasActiveState()}}
 {\footnotesize\ttfamily bool AUP\+\_\+\+HA\+::\+State\+Manager\+::has\+Active\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Prüfung, ob ein \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}} in diesem Tick aktiv ist. 
+
+\begin{DoxyReturn}{Rückgabe}
+TRUE, wenn ein \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}} aktiv ist.~\newline
+ FALSE wenn kein \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}} aktiv ist. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_a_u_p___h_a_1_1_state_manager_a4b1c53f4f3cd28ed99f6c0fd161bb182}\label{class_a_u_p___h_a_1_1_state_manager_a4b1c53f4f3cd28ed99f6c0fd161bb182}} 
 \index{AUP\_HA::StateManager@{AUP\_HA::StateManager}!processEvents@{processEvents}}
 \index{processEvents@{processEvents}!AUP\_HA::StateManager@{AUP\_HA::StateManager}}

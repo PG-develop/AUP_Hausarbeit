@@ -5,6 +5,8 @@ namespace AUP_HA
 {
 	/**
 	* @brief Konstruktor
+	* 
+	* Initialisierung
 	*/
 	UserRepository::UserRepository() : mUserList()
 	{
@@ -14,6 +16,8 @@ namespace AUP_HA
 
 	/**
 	* @brief Destruktor
+	* 
+	* Keien Funktion
 	*/
 	UserRepository::~UserRepository()
 	{
@@ -21,6 +25,8 @@ namespace AUP_HA
 
 	/**
 	* @brief Gibt das aktuelle UserRepository zurück.
+	* 
+	* @return Referenz auf die Benutzerliste in sortierter Reihenfolge
 	*/
 	const std::vector<User>& UserRepository::GetUserSortedByRang()
 	{
@@ -30,7 +36,9 @@ namespace AUP_HA
 	/**
 	* @brief Versucht einen User ins Leaderboard hinzuzufügen.
 	*		 Dabei wird geprüft, ob der neue User berechtigt ist,
-	*		 in die Bestenliste mit aufgenommen zu werden.
+	*		 in die Bestenliste mit aufgenommen zu werden (max. 20 Benutzer).
+	* 
+	* @param [user] User Benutzer der zum Repository hinzugefügt werden soll
 	*/
 	void UserRepository::SaveOrUpdate(User user)
 	{
@@ -54,6 +62,9 @@ namespace AUP_HA
 		mPersistenceUserList->pushList(mUserList);
 	}
 
+	/**
+	* @brief Löschen des Repositories
+	*/
 	void UserRepository::ClearRepository()
 	{
 		mPersistenceUserList->clear();

@@ -92,7 +92,7 @@ Klassendiagramm für AUP_HA::State:</div>
   <map id="AUP_5FHA::State_map" name="AUP_5FHA::State_map">
 <area href="class_a_u_p___h_a_1_1_game_state.html" alt="AUP_HA::GameState" shape="rect" coords="0,56,169,80"/>
 <area href="class_a_u_p___h_a_1_1_intro_state.html" alt="AUP_HA::IntroState" shape="rect" coords="179,56,348,80"/>
-<area href="class_a_u_p___h_a_1_1_leaderboard_state.html" alt="AUP_HA::LeaderboardState" shape="rect" coords="358,56,527,80"/>
+<area href="class_a_u_p___h_a_1_1_leaderboard_state.html" title="State für die Bestenliste." alt="AUP_HA::LeaderboardState" shape="rect" coords="358,56,527,80"/>
 <area href="class_a_u_p___h_a_1_1_main_state.html" title="Hauptabzweig für die verschiedene Programmflüsse." alt="AUP_HA::MainState" shape="rect" coords="537,56,706,80"/>
 <area href="class_a_u_p___h_a_1_1_setup_game_state.html" alt="AUP_HA::SetupGameState" shape="rect" coords="716,56,885,80"/>
 <area href="class_a_u_p___h_a_1_1_setup_state.html" alt="AUP_HA::SetupState" shape="rect" coords="895,56,1064,80"/>
@@ -107,8 +107,10 @@ Klassendiagramm für AUP_HA::State:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Öffentliche Methoden</h2></td></tr>
 <tr class="memitem:abc6da0b8d836768761682bb29b8c69b7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_state.html#abc6da0b8d836768761682bb29b8c69b7">State</a> (<a class="el" href="class_a_u_p___h_a_1_1_state_manager.html">StateManager</a> &amp;stateManager)</td></tr>
+<tr class="memdesc:abc6da0b8d836768761682bb29b8c69b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor.  <a href="class_a_u_p___h_a_1_1_state.html#abc6da0b8d836768761682bb29b8c69b7">Mehr ...</a><br /></td></tr>
 <tr class="separator:abc6da0b8d836768761682bb29b8c69b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f4cd6f3771adfc6bff7daa76b4270d1"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_state.html#a4f4cd6f3771adfc6bff7daa76b4270d1">~State</a> ()</td></tr>
+<tr class="memdesc:a4f4cd6f3771adfc6bff7daa76b4270d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruktor.  <a href="class_a_u_p___h_a_1_1_state.html#a4f4cd6f3771adfc6bff7daa76b4270d1">Mehr ...</a><br /></td></tr>
 <tr class="separator:a4f4cd6f3771adfc6bff7daa76b4270d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc7ce183cd6dd5e24c1dd52839d0086e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_state.html#adc7ce183cd6dd5e24c1dd52839d0086e">render</a> ()=0</td></tr>
 <tr class="separator:adc7ce183cd6dd5e24c1dd52839d0086e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -120,6 +122,7 @@ Klassendiagramm für AUP_HA::State:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Geschützte Methoden</h2></td></tr>
 <tr class="memitem:ad606ceeeca891b2bb21d040114cf3f2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_state.html#ad606ceeeca891b2bb21d040114cf3f2a">requestChange</a> (<a class="el" href="namespace_a_u_p___h_a_1_1_states.html#aba7518c4c9fcad80b303d82603931711">States::ID</a> stateID)</td></tr>
+<tr class="memdesc:ad606ceeeca891b2bb21d040114cf3f2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Anfrage nach einem Zustandswechsel.  <a href="class_a_u_p___h_a_1_1_state.html#ad606ceeeca891b2bb21d040114cf3f2a">Mehr ...</a><br /></td></tr>
 <tr class="separator:ad606ceeeca891b2bb21d040114cf3f2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
@@ -159,6 +162,9 @@ Private Attribute</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Konstruktor. </p>
+<p >Übergabe des StateManagers </p>
+
 </div>
 </div>
 <a id="a4f4cd6f3771adfc6bff7daa76b4270d1" name="a4f4cd6f3771adfc6bff7daa76b4270d1"></a>
@@ -183,6 +189,9 @@ Private Attribute</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Destruktor. </p>
+<p >Keine Funktion </p>
 
 </div>
 </div>
@@ -265,6 +274,15 @@ Private Attribute</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Anfrage nach einem Zustandswechsel. </p>
+<p ><a class="el" href="class_a_u_p___h_a_1_1_state.html">State</a> fragt nach einem Zustandswechsel zu den angegebenen Zustandsidentifiziierer. Zustandsidentifiziierer muss vorher registriert worden sein.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">[stateID]</td><td><a class="el" href="namespace_a_u_p___h_a_1_1_states.html#aba7518c4c9fcad80b303d82603931711">States::ID</a> Zustandsidentifiziierer </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a7e5197b99088d8166fc499bd28d2b3d8" name="a7e5197b99088d8166fc499bd28d2b3d8"></a>
@@ -314,6 +332,7 @@ Private Attribute</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >Pointer auf seinen <a class="el" href="class_a_u_p___h_a_1_1_state_manager.html">StateManager</a> </p>
 
 </div>
 </div>

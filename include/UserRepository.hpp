@@ -10,8 +10,7 @@
 namespace AUP_HA
 {
 	/**
-	* @class UserRepository
-	* 
+	* @brief Repository für Userdaten 
 	* 
 	*/
 	class UserRepository
@@ -25,7 +24,7 @@ namespace AUP_HA
 		void ClearRepository();
 
 	private:
-		std::unique_ptr<PersistenceListService<User>> mPersistenceUserList;
-		std::vector<User> mUserList;
+		std::unique_ptr<PersistenceListService<User>> mPersistenceUserList; /**< PersistenceListService */
+		std::vector<User> mUserList;	/**< Benutzerliste */
 	};
 }

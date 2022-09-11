@@ -3,18 +3,36 @@
 
 namespace AUP_HA
 {
+	/**
+	* @brief Konstruktor
+	* 
+	* Instanziierung des Menu
+	*/
 	MainState::MainState(StateManager& stateManager)
 		: State(stateManager)
 		, mMenu()
 	{
+		// Menüregistrierung
 		registerMenu();
+
+		// Limitierung für die Menüeingabe
 		mLimits = std::make_pair(1, mMenu.count());
 	}
 
+	/**
+	* @brief Destruktor
+	* 
+	* Keine Funktion
+	*/
 	MainState::~MainState()
 	{
 	}
 
+	/**
+	* @brief Anzeige des States
+	* 
+	* Gibt die Menüstruktor aus.
+	*/
 	void MainState::render()
 	{
 		std::cout << "Zahlenratespiel" << std::endl;
@@ -29,18 +47,21 @@ namespace AUP_HA
 		std::cout << "Auswahl: ";
 	}
 
+	/**
+	* @brief Benutztereingabe
+	*/
 	void MainState::processEvents()
 	{
 		std::cin >> mUserinput;
 		Utilities::ClearInputStream();
 	}
 
+	/**
+	* @brief Ausführung der Statelogic
+	*/
 	void MainState::update()
 	{
-		// Limits für die Menueingabe für Menuitem 1 - 4
-		//auto limits = std::make_pair(1, 4);
-
-		// Eingabe des Benutzers parsen
+		// Eingabe des Benutzers parsen mit Grenzen
 		auto userInput = Utilities::ParseStringToIntWithLimits(mUserinput, mLimits);
 
 		// Prüfe auf valide Benutzereingabe
@@ -49,9 +70,10 @@ namespace AUP_HA
 			// Wähle Menüpunkt aus
 			mMenu.selectMenuItem(*userInput);
 		}
+
+		// Benutzereingabe war nicht korrekt
 		else
 		{
-			// TODO: Eingabe inkorrekt, Nachricht an den Benutzer und nächster TIK
 			std::cout << "Invalide Eingabe. " << std::endl;
 		}
 	}
@@ -61,14 +83,35 @@ namespace AUP_HA
 	*/
 	void MainState::registerMenu()
 	{
-		mMenu.registerMenu(MainMenu::GAME, std::bind(&MainState::onGame, this));
-		mMenu.registerMenu(MainMenu::SETUP, std::bind(&MainState::onSetup, this));
-		mMenu.registerMenu(MainMenu::LEADERBOARD, std::bind(&MainState::onLeaderboard, this));
-		mMenu.registerMenu(MainMenu::EXIT, std::bind(&MainState::onExit, this));	
+		mMenu.registerMenu(MainMenu::GAME, 
+			[&]() 
+			{
+				onGame(); 
+			}); 
+
+		mMenu.registerMenu(MainMenu::SETUP, 
+			[&]() 
+			{
+				onSetup(); 
+			});
+
+		mMenu.registerMenu(MainMenu::LEADERBOARD,
+			[&]()
+			{
+				onLeaderboard();
+			});
+
+		mMenu.registerMenu(MainMenu::EXIT,
+			[&]()
+			{
+				onExit();
+			});
 	}
 
 	/**
 	* @brief Handler für den Menüpunkt [1] Spielen
+	* 
+	* Wechsel zum GameState
 	*/
 	void MainState::onGame()
 	{
@@ -77,6 +120,8 @@ namespace AUP_HA
 
 	/**
 	* @brief Handler für den Menüpunkt [2] Einstellungen
+	* 
+	* Wechsel zum SetupState
 	*/
 	void MainState::onSetup()
 	{
@@ -85,6 +130,8 @@ namespace AUP_HA
 
 	/**
 	* @brief Handler für den Menüpunkt [3] Bestenliste
+	* 
+	* Wechsel zum LeaderboardState
 	*/
 	void MainState::onLeaderboard()
 	{
@@ -93,6 +140,8 @@ namespace AUP_HA
 
 	/**
 	* @brief Handler für den Menüpunkt [4] Beenden
+	* 
+	* Anwendung wird beendet
 	*/
 	void MainState::onExit()
 	{

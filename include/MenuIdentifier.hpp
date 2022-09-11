@@ -6,10 +6,10 @@ namespace AUP_HA
 	{
 		enum ID
 		{
-			GAME = 1,
-			SETUP,
-			LEADERBOARD,
-			EXIT
+			GAME = 1,		/**< Wechsel zum GameState */
+			SETUP,			/**< Wechsel zum SetupState */
+			LEADERBOARD,	/**< Wechsel zum LeaderboardState */
+			EXIT			/**< Programmende */
 		};
 	}
 
