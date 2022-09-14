@@ -105,8 +105,6 @@ namespace AUP_HA
 		mSetupRepository->setMaxRange(*input);
 
 		requestChange(States::GAMESETUP_GAME);
-
-		requestChange(States::GAMESETUP_GAME);
 	}
 	void SetupGameState::onExit()
 	{
