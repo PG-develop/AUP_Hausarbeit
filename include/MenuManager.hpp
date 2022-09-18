@@ -59,6 +59,9 @@ namespace AUP_HA
 	/**
 	* @brief Registriert EventHandler für das Menü.
 	* 
+	* Die Handler müssen in der gleichen Reihenfolge wie die zugehörigen
+	* Aufrufzahlen registriert werden.
+	* 
 	* @param [menuID] T Identifizierer für den FunktionsHandler
 	* @param [handler] std::function<void()> Zu registrierender Handler
 	* @tparam [T] siehe Klassenbeschreibung
