@@ -10,8 +10,8 @@ namespace AUP_HA
 		NumberGameStateNormal(NumberGameStateManager& manager);
 		virtual ~NumberGameStateNormal();
 
-		virtual void render();
-		virtual void processEvents();
-		virtual void update();
+		virtual void Render();
+		virtual void ProcessEvents();
+		virtual void Update();
 	};
 }

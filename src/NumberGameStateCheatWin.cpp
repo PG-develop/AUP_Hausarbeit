@@ -7,37 +7,79 @@
 
 namespace AUP_HA
 {
-	NumberGameStateCheatWin::NumberGameStateCheatWin(NumberGameStateManager& manager) : NumberGameState(manager)
+	/**
+	* @brief Konstruktor
+	*
+	* Laden der Übergangsbedingungen: W
+	*/
+	NumberGameStateCheatWin::NumberGameStateCheatWin(NumberGameStateManager& manager_p) : NumberGameState(manager_p)
 	{
-		mTransitionList.push_back(manager.getTransition(GameStates::TRANSITION::W));
-		mUserRepository = &manager.getUserRepository();
+		mTransitionList.push_back(manager_p.GetTransition(GameStates::TRANSITION::W));
+
+		// Hole eine Referenz auf das UserRepository vom NumberGameStateManager
+		mUserRepository = &manager_p.GetUserRepository();
 	}
+
+	/**
+	* @Destruktor
+	*
+	* Keine Funktion
+	*/
 	NumberGameStateCheatWin::~NumberGameStateCheatWin()
 	{
 	}
-	void NumberGameStateCheatWin::render()
+
+	/**
+	* @brief Spielanzeige
+	*
+	* Es wird gefragt, wie viele Rateversuche für die Bestenliste aufgenommen werden soll
+	*/
+	void NumberGameStateCheatWin::Render()
 	{
 		std::cout << "Gewonnen!" << std::endl;
 		std::cout << "Wie viele Versuche sollen eingetragen werden? ";
 
 	}
-	void NumberGameStateCheatWin::processEvents()
+
+	/**
+	* @brief Benutzereingabe
+	*/
+	void NumberGameStateCheatWin::ProcessEvents()
 	{
 		std::cin >> mInputBuffer;
 		
 	}
-	void NumberGameStateCheatWin::update()
+
+	/**
+	* @brief Ausführung der Logik
+	*
+	* Benuzereingabe wird geparst\n
+	* Usermodel wird für das Spiel mit Daten belegt
+	*/
+	void NumberGameStateCheatWin::Update()
 	{
 		auto parsedString = Utilities::ParseStringToInt(mInputBuffer);
 
+		// Wenn der String in Ordnung ist, wird das Usermodel mit den Daten parametriert.
+		// Wenn der String nicht geparst werden konnte, erfolgt keine Transition
 		if (parsedString)
 		{
-			User user = mGame->getUser();
+			// User aus dem Spiel anfragen
+			User user = mGame->GetUser();
+			
+			// Versuchsanzahl ans Usermodel übergeben 
 			user.Tries = *parsedString;
+
+			// Zeit muss kohärent behandelt werden, daher eine eingabe an das Usermodel und an das Spiel
+			// Das Spiel muss für die Bestenliste die Zeit kennen
 			user.Date = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
-			mGame->setNewTime(user.Date);
+			mGame->SetNewTime(user.Date);
+
+			// Usermodel an das UserRepository übergeben
 			mUserRepository->SaveOrUpdate(user);
 		}
+
+		// prüft Übergangsbedingungen
 		checkTransitions();
 	}
 }

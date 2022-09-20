@@ -13,21 +13,21 @@ Klassendiagramm für AUP\+\_\+\+HA\+::Game\+State\+:\begin{figure}[H]
 \doxysubsection*{Öffentliche Methoden}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_a_u_p___h_a_1_1_game_state_abdcb3893af3adcf398cd24ed02bc92de}{Game\+State}} (\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} \&state\+Manager)
-\item 
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_game_state_adefb16fcf4f3e86473b99a8463f35acf}{Game\+State}} (\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} \&state\+Manager\+\_\+p)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_state_a8d3b4624df7a0a8590cb5a7cc1f5ad17}{$\sim$\+Game\+State}} ()
-\item 
-virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_state_af2cb2297cf068b0fa387b7841bbe8c69}{render}} ()
-\item 
-virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_state_a5d51131fdc347e465948839b3a6bd443}{process\+Events}} ()
-\item 
-virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_state_a17c1ab109a5baa413731d62c4e8d3163}{update}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Destruktor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_state_a2f54f7a2c8161b22a7ed9fc01ac92359}{Render}} ()
+\begin{DoxyCompactList}\small\item\em Darstellungsmethode. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_state_a49bda9ddd1a92d4ff8ed70c40ab69305}{Process\+Events}} ()
+\begin{DoxyCompactList}\small\item\em Benutzer-\/ oder/und Eventeingabe. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_state_a5baa949f60fafe6806aa4f589041e094}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Benutzer-\/ oder/und Eventeingabe. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Methoden}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_state_a46534d4f9bcdafe1b4b2360e52758ad1}{register\+States}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Registrierung der Number\+Game\+States. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attribute}
 \begin{DoxyCompactItemize}
 \item 
@@ -41,13 +41,18 @@ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_game}{Game}} $>
 
 
 \doxysubsection{Beschreibung der Konstruktoren und Destruktoren}
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_state_abdcb3893af3adcf398cd24ed02bc92de}\label{class_a_u_p___h_a_1_1_game_state_abdcb3893af3adcf398cd24ed02bc92de}} 
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_state_adefb16fcf4f3e86473b99a8463f35acf}\label{class_a_u_p___h_a_1_1_game_state_adefb16fcf4f3e86473b99a8463f35acf}} 
 \index{AUP\_HA::GameState@{AUP\_HA::GameState}!GameState@{GameState}}
 \index{GameState@{GameState}!AUP\_HA::GameState@{AUP\_HA::GameState}}
 \doxysubsubsection{\texorpdfstring{GameState()}{GameState()}}
 {\footnotesize\ttfamily AUP\+\_\+\+HA\+::\+Game\+State\+::\+Game\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} \&}]{state\+Manager }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_state_a8d3b4624df7a0a8590cb5a7cc1f5ad17}\label{class_a_u_p___h_a_1_1_game_state_a8d3b4624df7a0a8590cb5a7cc1f5ad17}} 
+
+
+Konstruktor. 
+
+Initialsisierung der Member~\newline
+Registrierung der Spielstates \mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_state_a8d3b4624df7a0a8590cb5a7cc1f5ad17}\label{class_a_u_p___h_a_1_1_game_state_a8d3b4624df7a0a8590cb5a7cc1f5ad17}} 
 \index{AUP\_HA::GameState@{AUP\_HA::GameState}!````~GameState@{$\sim$GameState}}
 \index{````~GameState@{$\sim$GameState}!AUP\_HA::GameState@{AUP\_HA::GameState}}
 \doxysubsubsection{\texorpdfstring{$\sim$GameState()}{~GameState()}}
@@ -55,16 +60,24 @@ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_game}{Game}} $>
 
 
 
+Destruktor. 
+
+Keine Funktion 
+
 \doxysubsection{Dokumentation der Elementfunktionen}
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_state_a5d51131fdc347e465948839b3a6bd443}\label{class_a_u_p___h_a_1_1_game_state_a5d51131fdc347e465948839b3a6bd443}} 
-\index{AUP\_HA::GameState@{AUP\_HA::GameState}!processEvents@{processEvents}}
-\index{processEvents@{processEvents}!AUP\_HA::GameState@{AUP\_HA::GameState}}
-\doxysubsubsection{\texorpdfstring{processEvents()}{processEvents()}}
-{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Game\+State\+::process\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_state_a49bda9ddd1a92d4ff8ed70c40ab69305}\label{class_a_u_p___h_a_1_1_game_state_a49bda9ddd1a92d4ff8ed70c40ab69305}} 
+\index{AUP\_HA::GameState@{AUP\_HA::GameState}!ProcessEvents@{ProcessEvents}}
+\index{ProcessEvents@{ProcessEvents}!AUP\_HA::GameState@{AUP\_HA::GameState}}
+\doxysubsubsection{\texorpdfstring{ProcessEvents()}{ProcessEvents()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Game\+State\+::\+Process\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a99807a79b6edfe4e4117b44e5144bb42}{AUP\+\_\+\+HA\+::\+State}}.
+Benutzer-\/ oder/und Eventeingabe. 
+
+Führt die Process\+Eventsmethode des Number\+Game\+State\+Managers aus 
+
+Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a8de555f139a20f120ace3613f725a558}{AUP\+\_\+\+HA\+::\+State}}.
 
 \mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_state_a46534d4f9bcdafe1b4b2360e52758ad1}\label{class_a_u_p___h_a_1_1_game_state_a46534d4f9bcdafe1b4b2360e52758ad1}} 
 \index{AUP\_HA::GameState@{AUP\_HA::GameState}!registerStates@{registerStates}}
@@ -72,25 +85,37 @@ Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a99807a79b6edfe4e4117
 \doxysubsubsection{\texorpdfstring{registerStates()}{registerStates()}}
 {\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Game\+State\+::register\+States (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_state_af2cb2297cf068b0fa387b7841bbe8c69}\label{class_a_u_p___h_a_1_1_game_state_af2cb2297cf068b0fa387b7841bbe8c69}} 
-\index{AUP\_HA::GameState@{AUP\_HA::GameState}!render@{render}}
-\index{render@{render}!AUP\_HA::GameState@{AUP\_HA::GameState}}
-\doxysubsubsection{\texorpdfstring{render()}{render()}}
-{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Game\+State\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+Registrierung der Number\+Game\+States. 
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_state_a2f54f7a2c8161b22a7ed9fc01ac92359}\label{class_a_u_p___h_a_1_1_game_state_a2f54f7a2c8161b22a7ed9fc01ac92359}} 
+\index{AUP\_HA::GameState@{AUP\_HA::GameState}!Render@{Render}}
+\index{Render@{Render}!AUP\_HA::GameState@{AUP\_HA::GameState}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Game\+State\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_adc7ce183cd6dd5e24c1dd52839d0086e}{AUP\+\_\+\+HA\+::\+State}}.
+Darstellungsmethode. 
 
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_state_a17c1ab109a5baa413731d62c4e8d3163}\label{class_a_u_p___h_a_1_1_game_state_a17c1ab109a5baa413731d62c4e8d3163}} 
-\index{AUP\_HA::GameState@{AUP\_HA::GameState}!update@{update}}
-\index{update@{update}!AUP\_HA::GameState@{AUP\_HA::GameState}}
-\doxysubsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Game\+State\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+Führt die Rendermethoden des Number\+Game\+State\+Managers aus 
+
+Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a828f0dad7106f8de0236146ce86aff85}{AUP\+\_\+\+HA\+::\+State}}.
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_state_a5baa949f60fafe6806aa4f589041e094}\label{class_a_u_p___h_a_1_1_game_state_a5baa949f60fafe6806aa4f589041e094}} 
+\index{AUP\_HA::GameState@{AUP\_HA::GameState}!Update@{Update}}
+\index{Update@{Update}!AUP\_HA::GameState@{AUP\_HA::GameState}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Game\+State\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a7e5197b99088d8166fc499bd28d2b3d8}{AUP\+\_\+\+HA\+::\+State}}.
+Benutzer-\/ oder/und Eventeingabe. 
+
+Führt die Updatemethode des Number\+Game\+State\+Managers aus 
+
+Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_abead46b048770dc17d4edab5e490c092}{AUP\+\_\+\+HA\+::\+State}}.
 
 
 
@@ -101,19 +126,19 @@ Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a7e5197b99088d8166fc4
 \doxysubsubsection{\texorpdfstring{mGame}{mGame}}
 {\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_a_u_p___h_a_1_1_game}{Game}}$>$ AUP\+\_\+\+HA\+::\+Game\+State\+::m\+Game\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_state_aaae1566e272723f27d60d55eae6cc0ec}\label{class_a_u_p___h_a_1_1_game_state_aaae1566e272723f27d60d55eae6cc0ec}} 
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_game}{Game}} \mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_state_aaae1566e272723f27d60d55eae6cc0ec}\label{class_a_u_p___h_a_1_1_game_state_aaae1566e272723f27d60d55eae6cc0ec}} 
 \index{AUP\_HA::GameState@{AUP\_HA::GameState}!mGameStateManager@{mGameStateManager}}
 \index{mGameStateManager@{mGameStateManager}!AUP\_HA::GameState@{AUP\_HA::GameState}}
 \doxysubsubsection{\texorpdfstring{mGameStateManager}{mGameStateManager}}
 {\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager}{Number\+Game\+State\+Manager}}$>$ AUP\+\_\+\+HA\+::\+Game\+State\+::m\+Game\+State\+Manager\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_state_af7a979767b76880fbd43ed6b05f8fe68}\label{class_a_u_p___h_a_1_1_game_state_af7a979767b76880fbd43ed6b05f8fe68}} 
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager}{Number\+Game\+State\+Manager}} \mbox{\Hypertarget{class_a_u_p___h_a_1_1_game_state_af7a979767b76880fbd43ed6b05f8fe68}\label{class_a_u_p___h_a_1_1_game_state_af7a979767b76880fbd43ed6b05f8fe68}} 
 \index{AUP\_HA::GameState@{AUP\_HA::GameState}!mUserRepository@{mUserRepository}}
 \index{mUserRepository@{mUserRepository}!AUP\_HA::GameState@{AUP\_HA::GameState}}
 \doxysubsubsection{\texorpdfstring{mUserRepository}{mUserRepository}}
 {\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository}{User\+Repository}}$>$ AUP\+\_\+\+HA\+::\+Game\+State\+::m\+User\+Repository\hspace{0.3cm}{\ttfamily [private]}}
 
-
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository}{User\+Repository}} 
 
 Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
 \item 

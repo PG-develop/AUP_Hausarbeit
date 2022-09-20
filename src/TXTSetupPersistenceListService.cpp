@@ -24,22 +24,31 @@ namespace AUP_HA
 	{
 	}
 
+	/**
+	* @brief Datensatz speichern
+	* 
+	* Der Datensatz wird in einem String vorbereitet und in die Datei setup.txt gespeichert.
+	* 
+	* @param [list] const std::vector<Setup>& zu speichernde Liste
+	*/
 	void TXTSetupPersistenceListService::pushList(const std::vector<Setup>& list)
 	{
 		mList = list;
 		std::ofstream stream(mFileName, std::ios_base::trunc);
 
+		// alle Listenelemente durchgehen und speichern
 		for (const auto& item : mList) {
-			std::string line;
 			std::stringstream ss;
 
 			// String für die Datenbank bauen
 			// Carry return sorgt beim einlesen für einen weiteren durchlauf, wird jedoch durch die Abfrage des Inhalts abgebrochen.
 			ss << std::to_string(item.AmmountOfChoices) << "," << std::to_string(item.MaxRange) << "\n";
-			line = ss.str();
-
-			stream.write(line.c_str(), line.size());
+			
+			// Datensatz in die Datei schreiben
+			stream.write(ss.str().c_str(), ss.str().size());
 		}
+
+		// Filestream schließen
 		stream.close();
 	}
 

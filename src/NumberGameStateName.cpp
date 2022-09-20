@@ -8,20 +8,20 @@ namespace AUP_HA
 {
 	NumberGameStateName::NumberGameStateName(NumberGameStateManager& manager) : NumberGameState(manager)
 	{
-		mTransitionList.push_back(manager.getTransition(GameStates::EMPTY));
+		mTransitionList.push_back(manager.GetTransition(GameStates::EMPTY));
 	}
 	NumberGameStateName::~NumberGameStateName()
 	{
 	}
-	void NumberGameStateName::render()
+	void NumberGameStateName::Render()
 	{
 		std::cout << "Bitte geben Sie Ihren Namen ein: ";
 	}
-	void NumberGameStateName::processEvents()
+	void NumberGameStateName::ProcessEvents()
 	{
 		std::cin >> mInputBuffer;
 	}
-	void NumberGameStateName::update()
+	void NumberGameStateName::Update()
 	{
 		checkTransitions();
 	}

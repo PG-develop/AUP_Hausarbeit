@@ -2,6 +2,11 @@
 \label{class_a_u_p___h_a_1_1_number_game_state_ask_new_game}\index{AUP\_HA::NumberGameStateAskNewGame@{AUP\_HA::NumberGameStateAskNewGame}}
 
 
+STATE\+\_\+7.  
+
+
+
+
 {\ttfamily \#include $<$Number\+Game\+State\+Ask\+New\+Game.\+hpp$>$}
 
 Klassendiagramm für AUP\+\_\+\+HA\+::Number\+Game\+State\+Ask\+New\+Game\+:\begin{figure}[H]
@@ -13,64 +18,87 @@ Klassendiagramm für AUP\+\_\+\+HA\+::Number\+Game\+State\+Ask\+New\+Game\+:\beg
 \doxysubsection*{Öffentliche Methoden}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_ask_new_game_ae1f88819ec4be94537b211f25fcb0c9d}{Number\+Game\+State\+Ask\+New\+Game}} (\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager}{Number\+Game\+State\+Manager}} \&manager)
-\item 
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_ask_new_game_a1c63827bdaee8c0baccbe0548c74a2d9}{Number\+Game\+State\+Ask\+New\+Game}} (\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager}{Number\+Game\+State\+Manager}} \&manager\+\_\+p)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_ask_new_game_a43f86cfec0215efee179646c42cd476b}{$\sim$\+Number\+Game\+State\+Ask\+New\+Game}} ()
 \item 
-virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_ask_new_game_a7fa596f9dde9adb0547ad0b457067016}{render}} ()
-\item 
-virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_ask_new_game_aa7addc24e1d634328d41cdb84ad0da5a}{process\+Events}} ()
-\item 
-virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_ask_new_game_a52bd84494b67365e770dbdb835353005}{update}} ()
-\end{DoxyCompactItemize}
+virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_ask_new_game_ad26a0060550430a8cdfaf03ca64f32ab}{Render}} ()
+\begin{DoxyCompactList}\small\item\em Spielanzeige. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_ask_new_game_a11a87c4a128346d36ce516604066976d}{Process\+Events}} ()
+\begin{DoxyCompactList}\small\item\em Benutzereingabe. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_ask_new_game_a4bbf6e72a497dc9bfab6f8ac2b2c0740}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Ausführung der Logik. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Weitere Geerbte Elemente}
 
 
+\doxysubsection{Ausführliche Beschreibung}
+STATE\+\_\+7. 
+
+Abfrage, ob ein neues Spiel gestartet werden soll. 
+
 \doxysubsection{Beschreibung der Konstruktoren und Destruktoren}
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_ask_new_game_ae1f88819ec4be94537b211f25fcb0c9d}\label{class_a_u_p___h_a_1_1_number_game_state_ask_new_game_ae1f88819ec4be94537b211f25fcb0c9d}} 
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_ask_new_game_a1c63827bdaee8c0baccbe0548c74a2d9}\label{class_a_u_p___h_a_1_1_number_game_state_ask_new_game_a1c63827bdaee8c0baccbe0548c74a2d9}} 
 \index{AUP\_HA::NumberGameStateAskNewGame@{AUP\_HA::NumberGameStateAskNewGame}!NumberGameStateAskNewGame@{NumberGameStateAskNewGame}}
 \index{NumberGameStateAskNewGame@{NumberGameStateAskNewGame}!AUP\_HA::NumberGameStateAskNewGame@{AUP\_HA::NumberGameStateAskNewGame}}
 \doxysubsubsection{\texorpdfstring{NumberGameStateAskNewGame()}{NumberGameStateAskNewGame()}}
-{\footnotesize\ttfamily AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Ask\+New\+Game\+::\+Number\+Game\+State\+Ask\+New\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager}{Number\+Game\+State\+Manager}} \&}]{manager }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Ask\+New\+Game\+::\+Number\+Game\+State\+Ask\+New\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager}{Number\+Game\+State\+Manager}} \&}]{manager\+\_\+p }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_ask_new_game_a43f86cfec0215efee179646c42cd476b}\label{class_a_u_p___h_a_1_1_number_game_state_ask_new_game_a43f86cfec0215efee179646c42cd476b}} 
+
+
+Konstruktor. 
+
+Laden der Übergangsbedingungen\+: NG \mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_ask_new_game_a43f86cfec0215efee179646c42cd476b}\label{class_a_u_p___h_a_1_1_number_game_state_ask_new_game_a43f86cfec0215efee179646c42cd476b}} 
 \index{AUP\_HA::NumberGameStateAskNewGame@{AUP\_HA::NumberGameStateAskNewGame}!````~NumberGameStateAskNewGame@{$\sim$NumberGameStateAskNewGame}}
 \index{````~NumberGameStateAskNewGame@{$\sim$NumberGameStateAskNewGame}!AUP\_HA::NumberGameStateAskNewGame@{AUP\_HA::NumberGameStateAskNewGame}}
 \doxysubsubsection{\texorpdfstring{$\sim$NumberGameStateAskNewGame()}{~NumberGameStateAskNewGame()}}
 {\footnotesize\ttfamily AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Ask\+New\+Game\+::$\sim$\+Number\+Game\+State\+Ask\+New\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
+@\+Destruktor
 
+Keine Funktion 
 
 \doxysubsection{Dokumentation der Elementfunktionen}
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_ask_new_game_aa7addc24e1d634328d41cdb84ad0da5a}\label{class_a_u_p___h_a_1_1_number_game_state_ask_new_game_aa7addc24e1d634328d41cdb84ad0da5a}} 
-\index{AUP\_HA::NumberGameStateAskNewGame@{AUP\_HA::NumberGameStateAskNewGame}!processEvents@{processEvents}}
-\index{processEvents@{processEvents}!AUP\_HA::NumberGameStateAskNewGame@{AUP\_HA::NumberGameStateAskNewGame}}
-\doxysubsubsection{\texorpdfstring{processEvents()}{processEvents()}}
-{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Ask\+New\+Game\+::process\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_ask_new_game_a11a87c4a128346d36ce516604066976d}\label{class_a_u_p___h_a_1_1_number_game_state_ask_new_game_a11a87c4a128346d36ce516604066976d}} 
+\index{AUP\_HA::NumberGameStateAskNewGame@{AUP\_HA::NumberGameStateAskNewGame}!ProcessEvents@{ProcessEvents}}
+\index{ProcessEvents@{ProcessEvents}!AUP\_HA::NumberGameStateAskNewGame@{AUP\_HA::NumberGameStateAskNewGame}}
+\doxysubsubsection{\texorpdfstring{ProcessEvents()}{ProcessEvents()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Ask\+New\+Game\+::\+Process\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_ad87306f8bc2a8954ede1e9a8b58687d3}{AUP\+\_\+\+HA\+::\+Number\+Game\+State}}.
-
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_ask_new_game_a7fa596f9dde9adb0547ad0b457067016}\label{class_a_u_p___h_a_1_1_number_game_state_ask_new_game_a7fa596f9dde9adb0547ad0b457067016}} 
-\index{AUP\_HA::NumberGameStateAskNewGame@{AUP\_HA::NumberGameStateAskNewGame}!render@{render}}
-\index{render@{render}!AUP\_HA::NumberGameStateAskNewGame@{AUP\_HA::NumberGameStateAskNewGame}}
-\doxysubsubsection{\texorpdfstring{render()}{render()}}
-{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Ask\+New\+Game\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+Benutzereingabe. 
 
 
 
-Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a95cec2b7b256fcc45f351f54e3639ec4}{AUP\+\_\+\+HA\+::\+Number\+Game\+State}}.
+Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a3f654578466f2979ad50eb9035314c5c}{AUP\+\_\+\+HA\+::\+Number\+Game\+State}}.
 
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_ask_new_game_a52bd84494b67365e770dbdb835353005}\label{class_a_u_p___h_a_1_1_number_game_state_ask_new_game_a52bd84494b67365e770dbdb835353005}} 
-\index{AUP\_HA::NumberGameStateAskNewGame@{AUP\_HA::NumberGameStateAskNewGame}!update@{update}}
-\index{update@{update}!AUP\_HA::NumberGameStateAskNewGame@{AUP\_HA::NumberGameStateAskNewGame}}
-\doxysubsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Ask\+New\+Game\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_ask_new_game_ad26a0060550430a8cdfaf03ca64f32ab}\label{class_a_u_p___h_a_1_1_number_game_state_ask_new_game_ad26a0060550430a8cdfaf03ca64f32ab}} 
+\index{AUP\_HA::NumberGameStateAskNewGame@{AUP\_HA::NumberGameStateAskNewGame}!Render@{Render}}
+\index{Render@{Render}!AUP\_HA::NumberGameStateAskNewGame@{AUP\_HA::NumberGameStateAskNewGame}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Ask\+New\+Game\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a0d5252183a49fa614aefc1a43f6bd023}{AUP\+\_\+\+HA\+::\+Number\+Game\+State}}.
+Spielanzeige. 
+
+Es wird gefragt, ob ein neues Spiel gestartet werden soll 
+
+Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a8f62b5f4f58638f10f87a09c7d327b5b}{AUP\+\_\+\+HA\+::\+Number\+Game\+State}}.
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_ask_new_game_a4bbf6e72a497dc9bfab6f8ac2b2c0740}\label{class_a_u_p___h_a_1_1_number_game_state_ask_new_game_a4bbf6e72a497dc9bfab6f8ac2b2c0740}} 
+\index{AUP\_HA::NumberGameStateAskNewGame@{AUP\_HA::NumberGameStateAskNewGame}!Update@{Update}}
+\index{Update@{Update}!AUP\_HA::NumberGameStateAskNewGame@{AUP\_HA::NumberGameStateAskNewGame}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Ask\+New\+Game\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Ausführung der Logik. 
+
+Es werden nur die Übergangsbedingungen geprüft 
+
+Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a5faf1006bb8cf84925ba7bae48473786}{AUP\+\_\+\+HA\+::\+Number\+Game\+State}}.
 
 
 

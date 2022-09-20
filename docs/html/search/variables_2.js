@@ -27,7 +27,7 @@ var searchData=
   ['msetuprepository_24',['mSetupRepository',['../class_a_u_p___h_a_1_1_game.html#a95ea36bf45d14eb0882e10be6bf9ec57',1,'AUP_HA::Game::mSetupRepository()'],['../class_a_u_p___h_a_1_1_setup_game_state.html#aab98d6f56efc78099e206e03b25998f5',1,'AUP_HA::SetupGameState::mSetupRepository()']]],
   ['mstatefactories_25',['mStateFactories',['../class_a_u_p___h_a_1_1_state_manager.html#a9198518c52baf4fc08e5175eb79c622c',1,'AUP_HA::StateManager']]],
   ['mstatemanager_26',['mStateManager',['../class_a_u_p___h_a_1_1_application.html#a64af53716d754a47a668170928e62c54',1,'AUP_HA::Application::mStateManager()'],['../class_a_u_p___h_a_1_1_state.html#af0c780677d0d692492425005a58e5d4b',1,'AUP_HA::State::mStateManager()']]],
-  ['mtransitionhandlers_27',['mTransitionHandlers',['../class_a_u_p___h_a_1_1_number_game_state_manager.html#acff390c196f87b6796eef0a4c98d71ed',1,'AUP_HA::NumberGameStateManager']]],
+  ['mtransitionhandlers_27',['mTransitionHandlers',['../class_a_u_p___h_a_1_1_number_game_state_manager.html#aa27171be90c0bfbd081f0c1f83987adc',1,'AUP_HA::NumberGameStateManager']]],
   ['mtransitionlist_28',['mTransitionList',['../class_a_u_p___h_a_1_1_number_game_state.html#ae656cfa1c76fdaba12481f573ea32714',1,'AUP_HA::NumberGameState']]],
   ['mtries_29',['mTries',['../class_a_u_p___h_a_1_1_game.html#a8f122e05d017459fda6aef0d94a554a5',1,'AUP_HA::Game']]],
   ['muser_30',['mUser',['../class_a_u_p___h_a_1_1_game.html#a28cb9fb37f95967dca559c73ac40fb95',1,'AUP_HA::Game']]],

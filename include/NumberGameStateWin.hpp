@@ -12,9 +12,9 @@ namespace AUP_HA
 		NumberGameStateWin(NumberGameStateManager& manager);
 		virtual ~NumberGameStateWin();
 
-		virtual void render();
-		virtual void processEvents();
-		virtual void update();
+		virtual void Render();
+		virtual void ProcessEvents();
+		virtual void Update();
 
 	private:
 		std::vector<User> mCurrentLeaderboard;

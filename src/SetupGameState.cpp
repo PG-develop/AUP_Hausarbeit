@@ -16,7 +16,7 @@ namespace AUP_HA
 	SetupGameState::~SetupGameState()
 	{
 	}
-	void SetupGameState::render()
+	void SetupGameState::Render()
 	{
 		std::cout << "Zahlenratespiel" << std::endl;
 		std::cout << "===============" << std::endl << std::endl;
@@ -28,12 +28,12 @@ namespace AUP_HA
 
 		std::cout << "Auswahl: ";
 	}
-	void SetupGameState::processEvents()
+	void SetupGameState::ProcessEvents()
 	{
 		std::cin >> mUserinput;
 		Utilities::ClearInputStream();
 	}
-	void SetupGameState::update()
+	void SetupGameState::Update()
 	{
 		// Eingabe des Benutzers parsen
 		auto userInput = Utilities::ParseStringToIntWithLimits(mUserinput, mLimits);

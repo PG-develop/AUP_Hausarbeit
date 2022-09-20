@@ -21,9 +21,9 @@ namespace AUP_HA
 		State(StateManager& stateManager);
 		virtual ~State();
 
-		virtual void render() = 0;
-		virtual void processEvents() = 0;
-		virtual void update() = 0;
+		virtual void Render() = 0;
+		virtual void ProcessEvents() = 0;
+		virtual void Update() = 0;
 
 	protected:
 		void requestChange(States::ID stateID);

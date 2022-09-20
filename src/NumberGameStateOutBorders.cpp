@@ -6,28 +6,28 @@ namespace AUP_HA
 {
 	NumberGameStateOutBorders::NumberGameStateOutBorders(NumberGameStateManager& manager) : NumberGameState(manager)
 	{
-		mTransitionList.push_back(manager.getTransition(GameStates::TRANSITION::NN));
-		mTransitionList.push_back(manager.getTransition(GameStates::TRANSITION::C));
-		mTransitionList.push_back(manager.getTransition(GameStates::TRANSITION::OB));
-		mTransitionList.push_back(manager.getTransition(GameStates::TRANSITION::NH));
+		mTransitionList.push_back(manager.GetTransition(GameStates::TRANSITION::NN));
+		mTransitionList.push_back(manager.GetTransition(GameStates::TRANSITION::C));
+		mTransitionList.push_back(manager.GetTransition(GameStates::TRANSITION::OB));
+		mTransitionList.push_back(manager.GetTransition(GameStates::TRANSITION::NH));
 	}
 
 	NumberGameStateOutBorders::~NumberGameStateOutBorders()
 	{
 	}
 
-	void NumberGameStateOutBorders::render()
+	void NumberGameStateOutBorders::Render()
 	{
-		std::cout << "Ihre Eingabe war ausserhalb der gueltigen Grenzen [" << mGame->getMinBorder() << "|" << mGame->getMaxBorder() << "] : " << mGame->getLastInput() << std::endl;
+		std::cout << "Ihre Eingabe war ausserhalb der gueltigen Grenzen [" << mGame->GetMinBorder() << "|" << mGame->GetMaxBorder() << "] : " << mGame->GetLastInput() << std::endl;
 		std::cout << "Bitte geben Sie eine Zahl ein: ";
 	}
 
-	void NumberGameStateOutBorders::processEvents()
+	void NumberGameStateOutBorders::ProcessEvents()
 	{
 		std::cin >> mInputBuffer;
 	}
 
-	void NumberGameStateOutBorders::update()
+	void NumberGameStateOutBorders::Update()
 	{
 		checkTransitions();
 	}

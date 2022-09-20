@@ -7,40 +7,41 @@
 #include <functional>
 
 #include "../include/StatesIdentifier.hpp"
-#include "../include/GameTransition.hpp"
 #include "../include/Game.hpp"
 
 namespace AUP_HA
 {
+	// Vorwärtsdeklaration
 	class NumberGameStateManager;
 
+	/**
+	* @class Basisklasse für NumberGameStates
+	*/
 	class NumberGameState
 	{
 	public:
 		typedef std::unique_ptr<NumberGameState> Ptr;
 
 	public:
-		NumberGameState(NumberGameStateManager& manager);
+		NumberGameState(NumberGameStateManager& manager_p);
 		virtual ~NumberGameState();
 
-		virtual void render() = 0;
-		virtual void processEvents() = 0;
-		virtual void update() = 0;
+		virtual void Render() = 0;
+		virtual void ProcessEvents() = 0;
+		virtual void Update() = 0;
 
 	protected:
-		void requestChange(GameStates::ID stateID);
+		void requestChange(GameStates::ID stateID_p);
 		void checkTransitions();
 
-		//std::map<GameStates::TRANSITION, GameTransition::Ptr> mTransitionFacotry;
-
 	protected:
-		std::string mInputBuffer;
-		Game* mGame;
+		std::string mInputBuffer;	/**< Eingabepuffer */
+		Game* mGame;				/**< Referenz auf Spieleinstanz */
 
 		// In dem Vector werden Funktionen gespeichert, in denen die Transitionbedingungen geprüft werden.
-		std::vector<std::function<std::optional<GameStates::ID>(const std::string&)>> mTransitionList;
+		std::vector<std::function<std::optional<GameStates::ID>(const std::string&)>> mTransitionList; /**< Übergangsbedingungsliste */
 
 	private:
-		NumberGameStateManager* mManager;
+		NumberGameStateManager* mManager;	/**< Referenz auf den NumberGameStateManager */
 	};
 }

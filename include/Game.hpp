@@ -11,10 +11,9 @@ namespace AUP_HA
 
 	/**
 	* @class Game
-	* @brief Zahlenratespiel
 	* 
-	* Es wird eine Zahl generiert die ein Benutzer herausfinden muss. 
-	* 
+	* Zahlenratespiel\n
+	* Es wird eine Zahl generiert die ein Benutzer herausfinden muss.\n
 	* Um die Option mit begrenzter Anzahl an Versuchen zu aktiveren, mMaxTries mit einer anderen Zahl als 0 initialisieren.
 	*/
 	class Game
@@ -25,34 +24,34 @@ namespace AUP_HA
 		Game();
 		~Game();
 
-		bool check(const std::int32_t& number);
+		bool Check(const std::int32_t& number_p);
 
-		const std::int32_t& getMinBorder() const;
-		const std::int32_t& getMaxBorder() const;
-		const std::int32_t& getSearchedNumber() const;
-		const std::int32_t& getTries() const;
-		const std::uint32_t& getMaxTries() const;
-		const User getUser() const;
+		const std::int32_t& GetMinBorder() const;
+		const std::int32_t& GetMaxBorder() const;
+		const std::int32_t& GetSearchedNumber() const;
+		const std::int32_t& GetTries() const;
+		const std::uint32_t& GetMaxTries() const;
+		const User GetUser() const;
 
-		void setNewInput(const std::string& input);
-		void setNewTime(std::time_t time);
-		const std::string& getLastInput() const;
+		void SetNewInput(const std::string& input_p);
+		void SetNewTime(std::time_t time_p);
+		const std::string& GetLastInput() const;
 
-		void newGame(User& user);
+		void NewGame(User& user_p);
 
 	private:
 		void generateNewSearchedNumber();
 
 	private:
-		std::unique_ptr<SetupRepository>	mSetupRepository;
-		std::unique_ptr<User>				mUser;
+		std::unique_ptr<SetupRepository>	mSetupRepository; /**< UserRepository */
+		std::unique_ptr<User>				mUser;			  /**< Usermodel*/
 
-		std::int32_t mMinBoarder;
-		std::int32_t mMaxBoarder;
-		std::int32_t mSearchedNumber;
-		std::int32_t mTries;
-		std::uint32_t mMaxTries;
+		std::int32_t mMinBoarder;		/**< Untere Grenze */
+		std::int32_t mMaxBoarder;		/**< Obere Grenze */
+		std::int32_t mSearchedNumber;	/**< Gesuchte Zufallszahl */
+		std::int32_t mTries;			/**< Anzahl von Versuchen */
+		std::uint32_t mMaxTries;		/**< Maximale Anzahl von Versuchen (0 = unendlich)*/
 
-		std::string mLastInput;
+		std::string mLastInput;			/**< Letzte Benutzereingabe */
 	};
 }

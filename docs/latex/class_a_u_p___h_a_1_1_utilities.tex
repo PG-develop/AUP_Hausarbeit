@@ -14,9 +14,9 @@ Allgemeine Funktionen.
 \item 
 static void \mbox{\hyperlink{class_a_u_p___h_a_1_1_utilities_a1164ec870c8f0a02143be9fcd9f7f342}{Clear\+Input\+Stream}} () noexcept
 \begin{DoxyCompactList}\small\item\em Leert den Inputstream. \end{DoxyCompactList}\item 
-static std\+::optional$<$ int $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_utilities_a2b903fd6b96ccd5decc60c2a43cafb08}{Parse\+String\+To\+Int}} (const std\+::string \&string) noexcept
+static std\+::optional$<$ std\+::int32\+\_\+t $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_utilities_a4a481692583379921e2bc78a95d7ed1d}{Parse\+String\+To\+Int}} (const std\+::string \&string) noexcept
 \begin{DoxyCompactList}\small\item\em Konvertiert einen String zu einer Ganzzahl (int) \end{DoxyCompactList}\item 
-static std\+::optional$<$ int $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_utilities_a13bcccb7b3043b5069e54afb2074294b}{Parse\+String\+To\+Int\+With\+Limits}} (const std\+::string \&string, std\+::pair$<$ int, int $>$ limits) noexcept
+static std\+::optional$<$ std\+::int32\+\_\+t $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_utilities_a40f2b9db3908590e09c1d25124371f2a}{Parse\+String\+To\+Int\+With\+Limits}} (const std\+::string \&string, std\+::pair$<$ std\+::int32\+\_\+t, std\+::int32\+\_\+t $>$ limits) noexcept
 \begin{DoxyCompactList}\small\item\em Konvertiert einen String zu einer Ganzzahl (int) und prüft angegebene Grenzen (inlusiv) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -34,11 +34,11 @@ Allgemeine Funktionen.
 
 Leert den Inputstream. 
 
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_utilities_a2b903fd6b96ccd5decc60c2a43cafb08}\label{class_a_u_p___h_a_1_1_utilities_a2b903fd6b96ccd5decc60c2a43cafb08}} 
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_utilities_a4a481692583379921e2bc78a95d7ed1d}\label{class_a_u_p___h_a_1_1_utilities_a4a481692583379921e2bc78a95d7ed1d}} 
 \index{AUP\_HA::Utilities@{AUP\_HA::Utilities}!ParseStringToInt@{ParseStringToInt}}
 \index{ParseStringToInt@{ParseStringToInt}!AUP\_HA::Utilities@{AUP\_HA::Utilities}}
 \doxysubsubsection{\texorpdfstring{ParseStringToInt()}{ParseStringToInt()}}
-{\footnotesize\ttfamily std\+::optional$<$ int $>$ AUP\+\_\+\+HA\+::\+Utilities\+::\+Parse\+String\+To\+Int (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+{\footnotesize\ttfamily std\+::optional$<$ std\+::int32\+\_\+t $>$ AUP\+\_\+\+HA\+::\+Utilities\+::\+Parse\+String\+To\+Int (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
 
 
 
@@ -52,11 +52,11 @@ Konvertiert einen String zu einer Ganzzahl (int)
 \begin{DoxyReturn}{Rückgabe}
 std\+::optional$<$int$>$ mit geparsten String, wenn erfolgreich gewesen. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_utilities_a13bcccb7b3043b5069e54afb2074294b}\label{class_a_u_p___h_a_1_1_utilities_a13bcccb7b3043b5069e54afb2074294b}} 
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_utilities_a40f2b9db3908590e09c1d25124371f2a}\label{class_a_u_p___h_a_1_1_utilities_a40f2b9db3908590e09c1d25124371f2a}} 
 \index{AUP\_HA::Utilities@{AUP\_HA::Utilities}!ParseStringToIntWithLimits@{ParseStringToIntWithLimits}}
 \index{ParseStringToIntWithLimits@{ParseStringToIntWithLimits}!AUP\_HA::Utilities@{AUP\_HA::Utilities}}
 \doxysubsubsection{\texorpdfstring{ParseStringToIntWithLimits()}{ParseStringToIntWithLimits()}}
-{\footnotesize\ttfamily std\+::optional$<$ std\+::int32\+\_\+t $>$ AUP\+\_\+\+HA\+::\+Utilities\+::\+Parse\+String\+To\+Int\+With\+Limits (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string,  }\item[{std\+::pair$<$ int, int $>$}]{limits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+{\footnotesize\ttfamily std\+::optional$<$ std\+::int32\+\_\+t $>$ AUP\+\_\+\+HA\+::\+Utilities\+::\+Parse\+String\+To\+Int\+With\+Limits (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string,  }\item[{std\+::pair$<$ std\+::int32\+\_\+t, std\+::int32\+\_\+t $>$}]{limits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
 
 
 
@@ -66,7 +66,7 @@ Konvertiert einen String zu einer Ganzzahl (int) und prüft angegebene Grenzen (
 \begin{DoxyParams}{Parameter}
 {\em \mbox{[}string\mbox{]}} & std\+::string String, der zu einer Ganzzahl konvertiert werden soll. \\
 \hline
-{\em \mbox{[}limits\mbox{]}} & std\+::pair\texorpdfstring{$<$}{<}std\+::int32\+\_\+t zu prüfende Grenzen~\newline
+{\em \mbox{[}limits\mbox{]}} & std\+::pair$<$std\+::int32\+\_\+t, std\+::int32\+\_\+t$>$ zu prüfende Grenzen~\newline
 
 \begin{DoxyItemize}
 \item Pair.\+First stellt die untere Grenze dar (inklusiv)~\newline

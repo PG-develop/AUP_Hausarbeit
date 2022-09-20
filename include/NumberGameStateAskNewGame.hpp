@@ -4,14 +4,19 @@
 
 namespace AUP_HA
 {
+	/**
+	* @brief STATE_7
+	* 
+	* Abfrage, ob ein neues Spiel gestartet werden soll.
+	*/
 	class NumberGameStateAskNewGame : public NumberGameState
 	{
 	public:
-		NumberGameStateAskNewGame(NumberGameStateManager& manager);
+		NumberGameStateAskNewGame(NumberGameStateManager& manager_p);
 		virtual ~NumberGameStateAskNewGame();
 
-		virtual void render();
-		virtual void processEvents();
-		virtual void update();
+		virtual void Render();
+		virtual void ProcessEvents();
+		virtual void Update();
 	};
 }

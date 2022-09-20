@@ -20,7 +20,7 @@ namespace AUP_HA
 	{
 	}
 
-	void SetupState::render()
+	void SetupState::Render()
 	{
 		std::cout << "Zahlenratespiel" << std::endl;
 		std::cout << "===============" << std::endl << std::endl;
@@ -35,13 +35,13 @@ namespace AUP_HA
 		// TODO: Mehrere Einstellmöglichkeiten überprüfen
 	}
 
-	void SetupState::processEvents()
+	void SetupState::ProcessEvents()
 	{
 		std::cin >> mUserinput;
 		Utilities::ClearInputStream();
 	}
 
-	void SetupState::update()
+	void SetupState::Update()
 	{
 		// Eingabe des Benutzers parsen
 		auto userInput = Utilities::ParseStringToIntWithLimits(mUserinput, mLimits);

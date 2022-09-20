@@ -33,7 +33,7 @@ namespace AUP_HA
 	* 
 	* Gibt die Bestenliste aus
 	*/
-	void LeaderboardState::render()
+	void LeaderboardState::Render()
 	{
 		//TODO: Wenn keine Benutzer in der Bestenliste gespeichert sind, nur ein Hinweis ausgeben.
 		// 
@@ -69,7 +69,7 @@ namespace AUP_HA
 	/**
 	* @brief Benutzereingabe
 	*/
-	void LeaderboardState::processEvents()
+	void LeaderboardState::ProcessEvents()
 	{
 		// Wartet so lange, bis der Benutzer eine Taste gedrückt hat.
 		while (!_kbhit());
@@ -79,7 +79,7 @@ namespace AUP_HA
 	/**
 	* @brief Ausführung der Statelogic
 	*/
-	void LeaderboardState::update()
+	void LeaderboardState::Update()
 	{
 		// Wechsel zurück zum MainState
 		requestChange(States::MAIN);

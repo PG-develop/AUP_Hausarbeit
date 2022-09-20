@@ -23,9 +23,9 @@ namespace AUP_HA
 		SetupGameState(StateManager& stateManager);
 		virtual ~SetupGameState();
 
-		virtual void render();
-		virtual void processEvents();
-		virtual void update();
+		virtual void Render();
+		virtual void ProcessEvents();
+		virtual void Update();
 
 	private:
 		void registerMenu();

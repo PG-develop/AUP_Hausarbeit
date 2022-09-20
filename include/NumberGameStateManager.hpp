@@ -12,62 +12,74 @@
 
 namespace AUP_HA
 {
+	/**
+	* @class StateManager für die Spiellogik
+	*/
 	class NumberGameStateManager
 	{
 	public:
 		typedef std::function<std::optional<GameStates::ID>(const std::string&)> TransitionHandler;
 
 	public:
-		explicit NumberGameStateManager(UserRepository& userRepository, Game& game);
+		explicit NumberGameStateManager(UserRepository& userRepository_p, Game& game_p);
 		~NumberGameStateManager();
 
 		template <typename T>
-		void registerStates(GameStates::ID stateID);
-		void registerEndGameHandler(std::function<void()> handler);
+		void RegisterStates(GameStates::ID stateID_p);
+		void RegisterEndGameHandler(std::function<void()> handler_p);
 		
-		void render();
-		void processEvents();
-		void update();
+		void Render();
+		void ProcessEvents();
+		void Update();
 
-		Game& getGame();
-		UserRepository& getUserRepository();
+		Game& GetGame();
+		UserRepository& GetUserRepository();
 
-		void changeState(GameStates::ID stateID);
-		TransitionHandler& getTransition(GameStates::TRANSITION transitionID);
+		void ChangeState(GameStates::ID stateID_p);
+		TransitionHandler& GetTransition(GameStates::TRANSITION transitionID_p);
 
 	private:
 		//TODO:: Funktionsobjekte erstellen
 		void registerTransitions();
-		std::optional<GameStates::ID> onEmpty(const std::string& string);
-		std::optional<GameStates::ID> onNoNumber(const std::string& string);
-		std::optional<GameStates::ID> onHitOrNoHit(const std::string& string);
-		std::optional<GameStates::ID> onOutBorders(const std::string& string);
-		std::optional<GameStates::ID> onToLeaderboard(const std::string& string);
-		std::optional<GameStates::ID> onToIfNewGame(const std::string& string);
-		std::optional<GameStates::ID> onNewGame(const std::string& string);
-		std::optional<GameStates::ID> onNegativ(const std::string& string);
-		std::optional<GameStates::ID> onWin(const std::string& string);
+		std::optional<GameStates::ID> onEmpty(const std::string& string_p);
+		std::optional<GameStates::ID> onNoNumber(const std::string& string_p);
+		std::optional<GameStates::ID> onHitOrNoHit(const std::string& string_p);
+		std::optional<GameStates::ID> onOutBorders(const std::string& string_p);
+		std::optional<GameStates::ID> onToLeaderboard(const std::string& string_p);
+		std::optional<GameStates::ID> onToIfNewGame(const std::string& string_p);
+		std::optional<GameStates::ID> onNewGame(const std::string& string_p);
+		std::optional<GameStates::ID> onNegativ(const std::string& string_p);
+		std::optional<GameStates::ID> onWin(const std::string& string_p);
 
 		void registerCheatCodes();
 
 	private:
-		NumberGameState::Ptr	mActiveState;
-		GameStates::ID			mActiveID;
-		std::map<GameStates::ID, std::function<NumberGameState::Ptr()>> mFactory;
-		std::map<GameStates::TRANSITION, std::function<std::optional<GameStates::ID>(const std::string&)>> mTransitionHandlers;
-		std::map<std::int64_t, GameStates::ID>	mCheatCodes;
-		std::function<void()>	mEndGame;
+		NumberGameState::Ptr	mActiveState;		/**< Aktiver State */
+		GameStates::ID			mActiveID;			/**< Aktiver Stateidentifikator */
+		std::map<GameStates::ID, std::function<NumberGameState::Ptr()>> mFactory;	/**< Fabrik für die States */
+		std::map<GameStates::TRANSITION, TransitionHandler> mTransitionHandlers;	/**< Übergangsbedingungsmap */
+		std::map<std::int64_t, GameStates::ID>	mCheatCodes;	/**< Sonderfunktionsmap */
+		std::function<void()>	mEndGame;						/**< Callback für Spielende */
 
-		UserRepository* mUserRepository;
-		Game* mGame;
-
-
+		UserRepository* mUserRepository;			/**< Referenz auf das UserRepository */
+		Game* mGame;								/**< Referenz auf die Spielinstanz */
 	};
 
+	/**
+	* @brief Registriert der Zustände in der Zustandsfabrik
+	* 
+	* Mithilfe eines Identifikators werden die Zustände registriert. Es wird jedoch keine Instanz erstellt.
+	* Die Registrierten Zustände können mithilfe der Methode "ChangeState" instantiiert werden.
+	* Mithilfe des Template-Parameters wird festgelegt, welcher State instanziiert werden soll. Die Klasse muss
+	* von State erben.
+	* 
+	* @tparam [T] State Geerbte Klasse von NumberGameState
+	* @param [stateID_p] GameStates::ID Zustandsidentifikator 
+	*/
 	template<typename T>
-	inline void NumberGameStateManager::registerStates(GameStates::ID stateID)
+	inline void NumberGameStateManager::RegisterStates(GameStates::ID stateID_p)
 	{
-		mFactory[stateID] =
+		mFactory[stateID_p] =
 			[this]()
 		{
 			return NumberGameState::Ptr(new T(*this));

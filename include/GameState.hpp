@@ -10,22 +10,25 @@
 
 namespace AUP_HA
 {
+	/**
+	* @class State für die Spielsession
+	*/
 	class GameState : public State
 	{
 	public:
-		GameState(StateManager& stateManager);
+		GameState(StateManager& stateManager_p);
 		~GameState();
 
-		virtual void render();
-		virtual void processEvents();
-		virtual void update();
+		virtual void Render();
+		virtual void ProcessEvents();
+		virtual void Update();
 
 	private:
 		void registerStates();
 
 	private:
-		std::unique_ptr<UserRepository>			mUserRepository;
-		std::unique_ptr<NumberGameStateManager> mGameStateManager;
-		std::unique_ptr<Game>					mGame;
+		std::unique_ptr<UserRepository>			mUserRepository;	/**< UserRepository */
+		std::unique_ptr<NumberGameStateManager> mGameStateManager;	/**< NumberGameStateManager */
+		std::unique_ptr<Game>					mGame;				/**< Game */
 	};
 }

@@ -23,12 +23,12 @@ namespace AUP_HA
 		template<typename T>
 		void registerStates(States::ID stateID);
 
-		void render();
-		void processEvents();
-		void update();
+		void Render();
+		void ProcessEvents();
+		void Update();
 
 
-		void changeState(States::ID stateID);
+		void changeState(States::ID stateID_p);
 		bool hasActiveState() const;
 
 	private:
@@ -39,19 +39,19 @@ namespace AUP_HA
 	/**
 	* @brief Registriert der Zustände in der Zustandsfabrik
 	* 
-	* Mithilfe eines Identifizieres werden die Zustände registriert. Es wird jedoch keine Instanz erstellt.
-	* Die Registrierten Zustände können mithilfe der Methode "changeState" instantiiert werden.
+	* Mithilfe eines Identifikators werden die Zustände registriert. Es wird jedoch keine Instanz erstellt.
+	* Die Registrierten Zustände können mithilfe der Methode "ChangeState" instantiiert werden.
 	* Mithilfe des Template-Parameters wird festgelegt, welcher State instanziiert werden soll. Die Klasse muss
 	* von State erben.
 	* 
 	* @tparam [T] State Geerbte Klasse von State
-	* @param [stateID] States::ID Zustandsidentifizierer 
+	* @param [stateID_p] States::ID Zustandsidentifikator 
 	*/
 	template<typename T>
-	inline void StateManager::registerStates(States::ID stateID)
+	inline void StateManager::registerStates(States::ID stateID_p)
 	{
 		// Füge der Fabrik eine neue Funktion hinzu, die als Rückgabewert einen neue State instanziiert.
-		mStateFactories[stateID] =
+		mStateFactories[stateID_p] =
 			[this]()
 		{
 			return State::Ptr(new T(*this));

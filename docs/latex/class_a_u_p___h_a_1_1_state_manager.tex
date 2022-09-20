@@ -13,13 +13,13 @@
 \begin{DoxyCompactList}\small\item\em Destruktor. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager_a83219986d153ef27e0c8947b79a6c7e5}{register\+States}} (\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711}{States\+::\+ID}} state\+ID)
 \begin{DoxyCompactList}\small\item\em Registriert der Zustände in der Zustandsfabrik. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager_a927febaa7666347e8de56a22fdb4b29b}{render}} ()
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager_a439ffd28d35e90eb12e2507c44678442}{Render}} ()
 \begin{DoxyCompactList}\small\item\em Darstellung des \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states}{States}}. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager_a4b1c53f4f3cd28ed99f6c0fd161bb182}{process\+Events}} ()
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager_acd111eeec6a518e9aeb1ad180b9b66aa}{Process\+Events}} ()
 \begin{DoxyCompactList}\small\item\em Behandlung der Eingabestreams / Events. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager_a96534cdc4ca9b0b870511d48213a0f16}{update}} ()
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager_abe7805b1b21cbc9c39558ac34e8fe7e4}{Update}} ()
 \begin{DoxyCompactList}\small\item\em Behandlung der Programmlogik. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager_a094bcc54d7f5a587bb95967889af3a06}{change\+State}} (\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711}{States\+::\+ID}} state\+ID)
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager_a2d39390216020c56933f371fe2880e43}{change\+State}} (\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711}{States\+::\+ID}} state\+ID\+\_\+p)
 \begin{DoxyCompactList}\small\item\em Wechsel zu einem anderen \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}}. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager_a344b3865242f3a2b3da6d1e2b6c9e3e1}{has\+Active\+State}} () const
 \begin{DoxyCompactList}\small\item\em Prüfung, ob ein \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}} in diesem Tick aktiv ist. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -31,6 +31,9 @@ bool \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager_a344b3865242f3a2b3da6d
 std\+::map$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711}{States\+::\+ID}}, std\+::function$<$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a2886a8eec41a10ee511b7d23376bc55c}{State\+::\+Ptr}}()$>$ $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager_a9198518c52baf4fc08e5175eb79c622c}{m\+State\+Factories}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Ausführliche Beschreibung}
+Spiellogik 
 
 \doxysubsection{Beschreibung der Konstruktoren und Destruktoren}
 \mbox{\Hypertarget{class_a_u_p___h_a_1_1_state_manager_a7896a906b03c72d32dc5d312a7a1c768}\label{class_a_u_p___h_a_1_1_state_manager_a7896a906b03c72d32dc5d312a7a1c768}} 
@@ -56,7 +59,7 @@ Destruktor.
 Keine Funktion 
 
 \doxysubsection{Dokumentation der Elementfunktionen}
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_state_manager_a094bcc54d7f5a587bb95967889af3a06}\label{class_a_u_p___h_a_1_1_state_manager_a094bcc54d7f5a587bb95967889af3a06}} 
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_state_manager_a2d39390216020c56933f371fe2880e43}\label{class_a_u_p___h_a_1_1_state_manager_a2d39390216020c56933f371fe2880e43}} 
 \index{AUP\_HA::StateManager@{AUP\_HA::StateManager}!changeState@{changeState}}
 \index{changeState@{changeState}!AUP\_HA::StateManager@{AUP\_HA::StateManager}}
 \doxysubsubsection{\texorpdfstring{changeState()}{changeState()}}
@@ -89,11 +92,11 @@ Prüfung, ob ein \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}} in diesem
 TRUE, wenn ein \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}} aktiv ist.~\newline
  FALSE wenn kein \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}} aktiv ist. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_state_manager_a4b1c53f4f3cd28ed99f6c0fd161bb182}\label{class_a_u_p___h_a_1_1_state_manager_a4b1c53f4f3cd28ed99f6c0fd161bb182}} 
-\index{AUP\_HA::StateManager@{AUP\_HA::StateManager}!processEvents@{processEvents}}
-\index{processEvents@{processEvents}!AUP\_HA::StateManager@{AUP\_HA::StateManager}}
-\doxysubsubsection{\texorpdfstring{processEvents()}{processEvents()}}
-{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+State\+Manager\+::process\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_state_manager_acd111eeec6a518e9aeb1ad180b9b66aa}\label{class_a_u_p___h_a_1_1_state_manager_acd111eeec6a518e9aeb1ad180b9b66aa}} 
+\index{AUP\_HA::StateManager@{AUP\_HA::StateManager}!ProcessEvents@{ProcessEvents}}
+\index{ProcessEvents@{ProcessEvents}!AUP\_HA::StateManager@{AUP\_HA::StateManager}}
+\doxysubsubsection{\texorpdfstring{ProcessEvents()}{ProcessEvents()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+State\+Manager\+::\+Process\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -104,13 +107,13 @@ Behandlung der Eingabestreams / Events.
 \index{registerStates@{registerStates}!AUP\_HA::StateManager@{AUP\_HA::StateManager}}
 \doxysubsubsection{\texorpdfstring{registerStates()}{registerStates()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-void AUP\+\_\+\+HA\+::\+State\+Manager\+::register\+States (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711}{States\+::\+ID}}}]{state\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void AUP\+\_\+\+HA\+::\+State\+Manager\+::register\+States (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711}{States\+::\+ID}}}]{state\+ID\+\_\+p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Registriert der Zustände in der Zustandsfabrik. 
 
-Mithilfe eines Identifizieres werden die Zustände registriert. Es wird jedoch keine Instanz erstellt. Die Registrierten Zustände können mithilfe der Methode \char`\"{}change\+State\char`\"{} instantiiert werden. Mithilfe des Template-\/\+Parameters wird festgelegt, welcher \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}} instanziiert werden soll. Die Klasse muss von \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}} erben.
+Mithilfe eines Identifikators werden die Zustände registriert. Es wird jedoch keine Instanz erstellt. Die Registrierten Zustände können mithilfe der Methode \char`\"{}\+Change\+State\char`\"{} instantiiert werden. Mithilfe des Template-\/\+Parameters wird festgelegt, welcher \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}} instanziiert werden soll. Die Klasse muss von \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}} erben.
 
 
 \begin{DoxyTemplParams}{Template-\/\+Parameter}
@@ -119,24 +122,24 @@ Mithilfe eines Identifizieres werden die Zustände registriert. Es wird jedoch k
 \end{DoxyTemplParams}
 
 \begin{DoxyParams}{Parameter}
-{\em \mbox{[}state\+ID\mbox{]}} & \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711}{States\+::\+ID}} Zustandsidentifizierer \\
+{\em \mbox{[}state\+ID\+\_\+p\mbox{]}} & \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711}{States\+::\+ID}} Zustandsidentifikator \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_state_manager_a927febaa7666347e8de56a22fdb4b29b}\label{class_a_u_p___h_a_1_1_state_manager_a927febaa7666347e8de56a22fdb4b29b}} 
-\index{AUP\_HA::StateManager@{AUP\_HA::StateManager}!render@{render}}
-\index{render@{render}!AUP\_HA::StateManager@{AUP\_HA::StateManager}}
-\doxysubsubsection{\texorpdfstring{render()}{render()}}
-{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+State\+Manager\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_state_manager_a439ffd28d35e90eb12e2507c44678442}\label{class_a_u_p___h_a_1_1_state_manager_a439ffd28d35e90eb12e2507c44678442}} 
+\index{AUP\_HA::StateManager@{AUP\_HA::StateManager}!Render@{Render}}
+\index{Render@{Render}!AUP\_HA::StateManager@{AUP\_HA::StateManager}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+State\+Manager\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Darstellung des \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states}{States}}. 
 
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_state_manager_a96534cdc4ca9b0b870511d48213a0f16}\label{class_a_u_p___h_a_1_1_state_manager_a96534cdc4ca9b0b870511d48213a0f16}} 
-\index{AUP\_HA::StateManager@{AUP\_HA::StateManager}!update@{update}}
-\index{update@{update}!AUP\_HA::StateManager@{AUP\_HA::StateManager}}
-\doxysubsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+State\+Manager\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_state_manager_abe7805b1b21cbc9c39558ac34e8fe7e4}\label{class_a_u_p___h_a_1_1_state_manager_abe7805b1b21cbc9c39558ac34e8fe7e4}} 
+\index{AUP\_HA::StateManager@{AUP\_HA::StateManager}!Update@{Update}}
+\index{Update@{Update}!AUP\_HA::StateManager@{AUP\_HA::StateManager}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+State\+Manager\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 

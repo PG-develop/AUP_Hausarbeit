@@ -11,9 +11,9 @@ namespace AUP_HA
 		NumberGameStateShowLeaderboard(NumberGameStateManager& manager);
 		virtual ~NumberGameStateShowLeaderboard();
 
-		virtual void render();
-		virtual void processEvents();
-		virtual void update();
+		virtual void Render();
+		virtual void ProcessEvents();
+		virtual void Update();
 
 	private:
 		UserRepository* mUserRepository;

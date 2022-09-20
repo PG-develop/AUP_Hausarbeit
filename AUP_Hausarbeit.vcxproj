@@ -168,7 +168,6 @@
     <ClInclude Include="include\Application.hpp" />
     <ClInclude Include="include\Game.hpp" />
     <ClInclude Include="include\GameState.hpp" />
-    <ClInclude Include="include\GameTransition.hpp" />
     <ClInclude Include="include\IntroState.hpp" />
     <ClInclude Include="include\LeaderboardState.hpp" />
     <ClInclude Include="include\MenuIdentifier.hpp" />

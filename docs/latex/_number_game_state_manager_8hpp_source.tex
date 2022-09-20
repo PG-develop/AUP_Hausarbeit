@@ -16,67 +16,64 @@
 \DoxyCodeLine{12 }
 \DoxyCodeLine{13 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_a_u_p___h_a}{AUP\_HA}}}
 \DoxyCodeLine{14 \{}
-\DoxyCodeLine{15     \textcolor{keyword}{class }\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager}{NumberGameStateManager}}}
-\DoxyCodeLine{16     \{}
-\DoxyCodeLine{17     \textcolor{keyword}{public}:}
-\DoxyCodeLine{18         \textcolor{keyword}{typedef} std::function<std::optional<GameStates::ID>(\textcolor{keyword}{const} std::string\&)> \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_af971f2fe51fb775ce98be2b57a83a3f9}{TransitionHandler}};}
-\DoxyCodeLine{19 }
+\DoxyCodeLine{18     \textcolor{keyword}{class }\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager}{NumberGameStateManager}}}
+\DoxyCodeLine{19     \{}
 \DoxyCodeLine{20     \textcolor{keyword}{public}:}
-\DoxyCodeLine{21         \textcolor{keyword}{explicit} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager}{NumberGameStateManager}}(\mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository}{UserRepository}}\& userRepository, \mbox{\hyperlink{class_a_u_p___h_a_1_1_game}{Game}}\& game);}
-\DoxyCodeLine{22         \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a9a43eb777a4d2e1063ea0b13c30e3c56}{\string~NumberGameStateManager}}();}
-\DoxyCodeLine{23 }
-\DoxyCodeLine{24         \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
-\DoxyCodeLine{25         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a3d73c52c5d4943939c5aea5355112db2}{registerStates}}(\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{GameStates::ID}} stateID);}
-\DoxyCodeLine{26         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_ac4fc2801e330d02c161afd0e48d941c9}{registerEndGameHandler}}(std::function<\textcolor{keywordtype}{void}()> handler);}
-\DoxyCodeLine{27         }
-\DoxyCodeLine{28         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a7745fbe07547fcbd05f883a67b920f36}{render}}();}
-\DoxyCodeLine{29         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a32a583ba66dff12339254f862bb124bd}{processEvents}}();}
-\DoxyCodeLine{30         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_aa99fb7c3c048044d74c56c60dc2d5aa9}{update}}();}
-\DoxyCodeLine{31 }
-\DoxyCodeLine{32         \mbox{\hyperlink{class_a_u_p___h_a_1_1_game}{Game}}\& \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a0d66adb9da5ff06206b2688bf4554d20}{getGame}}();}
-\DoxyCodeLine{33         \mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository}{UserRepository}}\& \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_add262ded51c1994f2e1d40111510f5d9}{getUserRepository}}();}
+\DoxyCodeLine{21         \textcolor{keyword}{typedef} std::function<std::optional<GameStates::ID>(\textcolor{keyword}{const} std::string\&)> \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_af971f2fe51fb775ce98be2b57a83a3f9}{TransitionHandler}};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{keyword}{public}:}
+\DoxyCodeLine{24         \textcolor{keyword}{explicit} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager}{NumberGameStateManager}}(\mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository}{UserRepository}}\& userRepository\_p, \mbox{\hyperlink{class_a_u_p___h_a_1_1_game}{Game}}\& game\_p);}
+\DoxyCodeLine{25         \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a9a43eb777a4d2e1063ea0b13c30e3c56}{\string~NumberGameStateManager}}();}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27         \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{28         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a01d68990f3aff15f1ff282f759994293}{RegisterStates}}(\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{GameStates::ID}} stateID\_p);}
+\DoxyCodeLine{29         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a30e7a78e2b5a80aa8e0bb97c3f548adf}{RegisterEndGameHandler}}(std::function<\textcolor{keywordtype}{void}()> handler\_p);}
+\DoxyCodeLine{30         }
+\DoxyCodeLine{31         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_af0d038ea696c383f4cf3a074411bb1be}{Render}}();}
+\DoxyCodeLine{32         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a98ac7763bccace052fab13778341732b}{ProcessEvents}}();}
+\DoxyCodeLine{33         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_ae54e48761ccac29fd5fc74b028bd6c63}{Update}}();}
 \DoxyCodeLine{34 }
-\DoxyCodeLine{35         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a715911c84c8efa9a0a9dc68d03f4d51c}{changeState}}(\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{GameStates::ID}} stateID);}
-\DoxyCodeLine{36         \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_af971f2fe51fb775ce98be2b57a83a3f9}{TransitionHandler}}\& \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a8299000f7092073f10db632afae5c23c}{getTransition}}(\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_aad05c1c14b35369485097dff476c742a}{GameStates::TRANSITION}} transitionID);}
+\DoxyCodeLine{35         \mbox{\hyperlink{class_a_u_p___h_a_1_1_game}{Game}}\& \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_addd9848a721b4860bf9f62b57b579bcc}{GetGame}}();}
+\DoxyCodeLine{36         \mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository}{UserRepository}}\& \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_ace83e07c5ecb139a5e724165f5bd5f2b}{GetUserRepository}}();}
 \DoxyCodeLine{37 }
-\DoxyCodeLine{38     \textcolor{keyword}{private}:}
-\DoxyCodeLine{39         \textcolor{comment}{//TODO:: Funktionsobjekte erstellen}}
-\DoxyCodeLine{40         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_acdbb708fd4a9f01116e9fb9106e98bc7}{registerTransitions}}();}
-\DoxyCodeLine{41         std::optional<GameStates::ID> \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a534e0b11e09c90c7c97b4267f0a77f47}{onEmpty}}(\textcolor{keyword}{const} std::string\& \textcolor{keywordtype}{string});}
-\DoxyCodeLine{42         std::optional<GameStates::ID> \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a20a4d825b7c47a4689471d94e523c49b}{onNoNumber}}(\textcolor{keyword}{const} std::string\& \textcolor{keywordtype}{string});}
-\DoxyCodeLine{43         std::optional<GameStates::ID> \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a9f86737000028d309702da7423a6154f}{onHitOrNoHit}}(\textcolor{keyword}{const} std::string\& \textcolor{keywordtype}{string});}
-\DoxyCodeLine{44         std::optional<GameStates::ID> \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_ad21d9ec71067705985978436a852e50f}{onOutBorders}}(\textcolor{keyword}{const} std::string\& \textcolor{keywordtype}{string});}
-\DoxyCodeLine{45         std::optional<GameStates::ID> \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_abc4e535dfb10636e633289523fc387b6}{onToLeaderboard}}(\textcolor{keyword}{const} std::string\& \textcolor{keywordtype}{string});}
-\DoxyCodeLine{46         std::optional<GameStates::ID> \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a35841e75780fe3a5a3bfa746c71b9de4}{onToIfNewGame}}(\textcolor{keyword}{const} std::string\& \textcolor{keywordtype}{string});}
-\DoxyCodeLine{47         std::optional<GameStates::ID> \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_ac5363ac7776324d3ced32badbb96a9c0}{onNewGame}}(\textcolor{keyword}{const} std::string\& \textcolor{keywordtype}{string});}
-\DoxyCodeLine{48         std::optional<GameStates::ID> \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a8a36eb2250cfcfb83b6e6749f8aa2156}{onNegativ}}(\textcolor{keyword}{const} std::string\& \textcolor{keywordtype}{string});}
-\DoxyCodeLine{49         std::optional<GameStates::ID> \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a422aca1631fa2989e8bc16db715e7a4a}{onWin}}(\textcolor{keyword}{const} std::string\& \textcolor{keywordtype}{string});}
-\DoxyCodeLine{50 }
-\DoxyCodeLine{51         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a73e22c737e7faba1cbfe6db6ce8688fe}{registerCheatCodes}}();}
-\DoxyCodeLine{52 }
-\DoxyCodeLine{53     \textcolor{keyword}{private}:}
-\DoxyCodeLine{54         \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a55a54265c98d8349461d00129b430392}{NumberGameState::Ptr}}    \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a6177442c645337ecaa3d8a8455125df0}{mActiveState}};}
-\DoxyCodeLine{55         \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{GameStates::ID}}            \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a243035ede1d573f02140a340efa467d2}{mActiveID}};}
-\DoxyCodeLine{56         std::map<\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{GameStates::ID}}, std::function<\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a55a54265c98d8349461d00129b430392}{NumberGameState::Ptr}}()>> \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a0b081883e3885fc0ded2f17771ce031e}{mFactory}};}
-\DoxyCodeLine{57         std::map<GameStates::TRANSITION, std::function<std::optional<GameStates::ID>(\textcolor{keyword}{const} std::string\&)>> \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_acff390c196f87b6796eef0a4c98d71ed}{mTransitionHandlers}};}
-\DoxyCodeLine{58         std::map<std::int64\_t, GameStates::ID>  \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a0e809a8b1bc6420634259daf3d8cd005}{mCheatCodes}};}
-\DoxyCodeLine{59         std::function<void()>   \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_aba0f167479dfbebfce0c947507a666bf}{mEndGame}};}
-\DoxyCodeLine{60 }
-\DoxyCodeLine{61         \mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository}{UserRepository}}* \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a123f1463c331d3e6a9b9b2a1d0b6c5ea}{mUserRepository}};}
-\DoxyCodeLine{62         \mbox{\hyperlink{class_a_u_p___h_a_1_1_game}{Game}}* \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a70e5da137e32b9b89bdc31f89c66a3a6}{mGame}};}
-\DoxyCodeLine{63 }
-\DoxyCodeLine{64 }
-\DoxyCodeLine{65     \};}
-\DoxyCodeLine{66 }
-\DoxyCodeLine{67     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
-\DoxyCodeLine{68     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a3d73c52c5d4943939c5aea5355112db2}{NumberGameStateManager::registerStates}}(\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{GameStates::ID}} stateID)}
-\DoxyCodeLine{69     \{}
-\DoxyCodeLine{70         \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a0b081883e3885fc0ded2f17771ce031e}{mFactory}}[stateID] =}
-\DoxyCodeLine{71             [\textcolor{keyword}{this}]()}
-\DoxyCodeLine{72         \{}
-\DoxyCodeLine{73             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a55a54265c98d8349461d00129b430392}{NumberGameState::Ptr}}(\textcolor{keyword}{new} T(*\textcolor{keyword}{this}));}
-\DoxyCodeLine{74         \};}
-\DoxyCodeLine{75     \}}
-\DoxyCodeLine{76 \}}
+\DoxyCodeLine{38         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a2207b0087f4a5d42a63607c3edfa0ad8}{ChangeState}}(\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{GameStates::ID}} stateID\_p);}
+\DoxyCodeLine{39         \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_af971f2fe51fb775ce98be2b57a83a3f9}{TransitionHandler}}\& \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a0d02146315279b0b0255b79eb66b6570}{GetTransition}}(\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_aad05c1c14b35369485097dff476c742a}{GameStates::TRANSITION}} transitionID\_p);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{keyword}{private}:}
+\DoxyCodeLine{42         \textcolor{comment}{//TODO:: Funktionsobjekte erstellen}}
+\DoxyCodeLine{43         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_acdbb708fd4a9f01116e9fb9106e98bc7}{registerTransitions}}();}
+\DoxyCodeLine{44         std::optional<GameStates::ID> \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a075b6ca510caa850a1f2ea953b9acbd8}{onEmpty}}(\textcolor{keyword}{const} std::string\& string\_p);}
+\DoxyCodeLine{45         std::optional<GameStates::ID> \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a5d72a0b209361191da311b11f7eef949}{onNoNumber}}(\textcolor{keyword}{const} std::string\& string\_p);}
+\DoxyCodeLine{46         std::optional<GameStates::ID> \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a58a19e1223a2ec288c7641a85274e792}{onHitOrNoHit}}(\textcolor{keyword}{const} std::string\& string\_p);}
+\DoxyCodeLine{47         std::optional<GameStates::ID> \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_aed070d80dab8c59ffe7f395ed8f5cb37}{onOutBorders}}(\textcolor{keyword}{const} std::string\& string\_p);}
+\DoxyCodeLine{48         std::optional<GameStates::ID> \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a30de6a80ffe9cbe23450a15e82af9768}{onToLeaderboard}}(\textcolor{keyword}{const} std::string\& string\_p);}
+\DoxyCodeLine{49         std::optional<GameStates::ID> \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a045fe922bd75d71d715764c7c9528b76}{onToIfNewGame}}(\textcolor{keyword}{const} std::string\& string\_p);}
+\DoxyCodeLine{50         std::optional<GameStates::ID> \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a9dd037688b3da2dc2f936dae65eedfe9}{onNewGame}}(\textcolor{keyword}{const} std::string\& string\_p);}
+\DoxyCodeLine{51         std::optional<GameStates::ID> \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_ae727b47dededadabae2b49de09b84681}{onNegativ}}(\textcolor{keyword}{const} std::string\& string\_p);}
+\DoxyCodeLine{52         std::optional<GameStates::ID> \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a8f3d41ebe154db6e4fb6de61a588aa8f}{onWin}}(\textcolor{keyword}{const} std::string\& string\_p);}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a73e22c737e7faba1cbfe6db6ce8688fe}{registerCheatCodes}}();}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56     \textcolor{keyword}{private}:}
+\DoxyCodeLine{57         \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a55a54265c98d8349461d00129b430392}{NumberGameState::Ptr}}    \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a6177442c645337ecaa3d8a8455125df0}{mActiveState}};       }
+\DoxyCodeLine{58         \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{GameStates::ID}}            \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a243035ede1d573f02140a340efa467d2}{mActiveID}};         }
+\DoxyCodeLine{59         std::map<\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{GameStates::ID}}, std::function<\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a55a54265c98d8349461d00129b430392}{NumberGameState::Ptr}}()>> \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a0b081883e3885fc0ded2f17771ce031e}{mFactory}}; }
+\DoxyCodeLine{60         std::map<GameStates::TRANSITION, TransitionHandler> \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_aa27171be90c0bfbd081f0c1f83987adc}{mTransitionHandlers}}; }
+\DoxyCodeLine{61         std::map<std::int64\_t, GameStates::ID>  \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a0e809a8b1bc6420634259daf3d8cd005}{mCheatCodes}}; }
+\DoxyCodeLine{62         std::function<void()>   \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_aba0f167479dfbebfce0c947507a666bf}{mEndGame}};                       }
+\DoxyCodeLine{64         \mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository}{UserRepository}}* \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a123f1463c331d3e6a9b9b2a1d0b6c5ea}{mUserRepository}};           }
+\DoxyCodeLine{65         \mbox{\hyperlink{class_a_u_p___h_a_1_1_game}{Game}}* \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a70e5da137e32b9b89bdc31f89c66a3a6}{mGame}};                               }
+\DoxyCodeLine{66     \};}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{79     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{80     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a01d68990f3aff15f1ff282f759994293}{NumberGameStateManager::RegisterStates}}(\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{GameStates::ID}} stateID\_p)}
+\DoxyCodeLine{81     \{}
+\DoxyCodeLine{82         \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager_a0b081883e3885fc0ded2f17771ce031e}{mFactory}}[stateID\_p] =}
+\DoxyCodeLine{83             [\textcolor{keyword}{this}]()}
+\DoxyCodeLine{84         \{}
+\DoxyCodeLine{85             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a55a54265c98d8349461d00129b430392}{NumberGameState::Ptr}}(\textcolor{keyword}{new} T(*\textcolor{keyword}{this}));}
+\DoxyCodeLine{86         \};}
+\DoxyCodeLine{87     \}}
+\DoxyCodeLine{88 \}}
 
 \end{DoxyCode}

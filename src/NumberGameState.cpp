@@ -3,18 +3,45 @@
 
 namespace AUP_HA
 {
-	NumberGameState::NumberGameState(NumberGameStateManager& manager) : mInputBuffer(), mManager{&manager}
+	/**
+	* @brief Konstruktor
+	* 
+	* Referenzübergabe von der Spielinstanz
+	*/
+	NumberGameState::NumberGameState(NumberGameStateManager& manager_p) : mInputBuffer(), mManager{&manager_p}
 	{
-		mGame = &(mManager->getGame());
+		mGame = &(mManager->GetGame());
 	}
+
+	/**
+	* Destruktor
+	* 
+	* Keine Funktion
+	*/
 	NumberGameState::~NumberGameState()
 	{
 	}
-	void NumberGameState::requestChange(GameStates::ID stateID)
+
+	/**
+	* @brief Statewechselanfrage
+	*/
+	void NumberGameState::requestChange(GameStates::ID stateID_p)
 	{
-		mGame->setNewInput(mInputBuffer);
-		mManager->changeState(stateID);
+		// Weil die Instanz nach einem Statewechsel nicht mehr existiert,
+		// wird die letzte Benutzereingabe im Manager abgespeichert.
+		mGame->SetNewInput(mInputBuffer);
+
+		// Statewechsel
+		mManager->ChangeState(stateID_p);
 	}
+
+	/**
+	* @brief Überprüfung der Übergangsbedingungen
+	* 
+	* Geht alle registrierten Übergangsbedinungen durch. Sobald eine Bedingung
+	* erfüllt ist, wird der Durchlauf unterbrochen und ein Statewechsel 
+	* auf den in der Übergangsbedingung mitgegebenen Identifikator durchgeführt.
+	*/
 	void NumberGameState::checkTransitions()
 	{
 		for (const auto& item : mTransitionList)

@@ -161,9 +161,6 @@
     <ClInclude Include="include\NumberGameState.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\GameTransition.hpp">
-      <Filter>include</Filter>
-    </ClInclude>
     <ClInclude Include="include\NumberGameStateName.hpp">
       <Filter>include</Filter>
     </ClInclude>

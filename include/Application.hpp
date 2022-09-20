@@ -19,7 +19,7 @@ namespace AUP_HA
 	public:
 		explicit Application();
 		~Application();
-		void run();
+		void Run();
 
 	private:
 		void render();

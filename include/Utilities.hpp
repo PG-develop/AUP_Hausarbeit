@@ -14,7 +14,11 @@ namespace AUP_HA
 	{
 	public:
 		static void ClearInputStream() noexcept;
-		static std::optional<int> ParseStringToInt(const std::string& string) noexcept;
-		static std::optional<int> ParseStringToIntWithLimits(const std::string& string, std::pair<int, int> limits) noexcept;
+		static std::optional<std::int32_t> ParseStringToInt(const std::string& string) noexcept;
+		static std::optional<std::int32_t> ParseStringToIntWithLimits(
+			const std::string& string, 
+			std::pair<std::int32_t, 
+			std::int32_t> limits
+		) noexcept;
 	};
 }

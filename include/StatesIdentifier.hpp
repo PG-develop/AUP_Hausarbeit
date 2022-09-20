@@ -22,8 +22,8 @@ namespace AUP_HA
 		enum ID
 		{
 			NONE,
-			FIRST,
-			STATE_2,
+			STATE_1,	/**< NumberGameStateName: Name eingeben */
+			STATE_2,	/**< NumberGameState */
 			STATE_3,
 			STATE_4,
 			STATE_5,
@@ -38,7 +38,6 @@ namespace AUP_HA
 		enum TRANSITION
 		{
 			EMPTY,
-			N_EMPTY,
 			NH,
 			NN,
 			OB,

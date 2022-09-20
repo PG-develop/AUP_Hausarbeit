@@ -43,7 +43,7 @@ namespace AUP_HA
 	* 
 	* Solange ein State aktiv ist, werden fortlaufend Ticks durchgeführt.
 	*/
-	void Application::run()
+	void Application::Run()
 	{
 		// Solange ein State aktiv ist, bleibt der 
 		// Programmfluss erhalten und es kommt zum nächsten Tick.
@@ -60,7 +60,7 @@ namespace AUP_HA
 	*/
 	void Application::render()
 	{
-		mStateManager->render();
+		mStateManager->Render();
 	}
 
 	/**
@@ -68,7 +68,7 @@ namespace AUP_HA
 	*/
 	void Application::processEvents()
 	{
-		mStateManager->processEvents();
+		mStateManager->ProcessEvents();
 	}
 
 	/**
@@ -76,7 +76,7 @@ namespace AUP_HA
 	*/
 	void Application::update()
 	{
-		mStateManager->update();
+		mStateManager->Update();
 	}
 
 	/**

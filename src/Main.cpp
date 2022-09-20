@@ -26,7 +26,7 @@ int main() {
 	{
 		// Instanz - Anwendung instanziieren und ausführen
 		std::unique_ptr<AUP_HA::Application> app(new AUP_HA::Application);
-		app->run();
+		app->Run();
 	}
 
 	// Wenn einer unbehandelter Fehler auftritt, wird dieser hier bearbeitet.

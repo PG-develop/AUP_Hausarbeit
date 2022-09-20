@@ -33,7 +33,7 @@ namespace AUP_HA
 	* 
 	* Gibt die Menüstruktor aus.
 	*/
-	void MainState::render()
+	void MainState::Render()
 	{
 		std::cout << "Zahlenratespiel" << std::endl;
 		std::cout << "===============" << std::endl << std::endl;
@@ -50,7 +50,7 @@ namespace AUP_HA
 	/**
 	* @brief Benutztereingabe
 	*/
-	void MainState::processEvents()
+	void MainState::ProcessEvents()
 	{
 		std::cin >> mUserinput;
 		Utilities::ClearInputStream();
@@ -59,7 +59,7 @@ namespace AUP_HA
 	/**
 	* @brief Ausführung der Statelogic
 	*/
-	void MainState::update()
+	void MainState::Update()
 	{
 		// Eingabe des Benutzers parsen mit Grenzen
 		auto userInput = Utilities::ParseStringToIntWithLimits(mUserinput, mLimits);

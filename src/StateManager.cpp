@@ -23,7 +23,7 @@ namespace AUP_HA
 	/**
 	* @brief Darstellung des States
 	*/
-	void StateManager::render()
+	void StateManager::Render()
 	{
 		// Wenn ein aktiver State vorhanden ist, dann rufe die Darstellungsfunktion des aktiven States auf.
 		if (mActiveState)
@@ -34,31 +34,31 @@ namespace AUP_HA
 #ifndef _DEBUG
 			system("cls");
 #endif
-			mActiveState->render();
+			mActiveState->Render();
 		}
 	}
 
 	/**
 	* @brief Behandlung der Eingabestreams / Events.
 	*/
-	void StateManager::processEvents()
+	void StateManager::ProcessEvents()
 	{
 		// Wenn ein aktiver State vorhanden ist, nehme die Benutzereingabe entgegen.
 		if (mActiveState)
 		{
-			mActiveState->processEvents();
+			mActiveState->ProcessEvents();
 		}
 	}
 
 	/**
 	* @brief Behandlung der Programmlogik.
 	*/
-	void StateManager::update()
+	void StateManager::Update()
 	{
 		// Wenn ein aktiver State vorhanden ist, führe die Programmlogik aus.
 		if (mActiveState)
 		{
-			mActiveState->update();
+			mActiveState->Update();
 		}
 	}
 

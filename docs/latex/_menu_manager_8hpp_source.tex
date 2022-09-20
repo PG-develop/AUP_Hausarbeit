@@ -37,46 +37,46 @@
 \DoxyCodeLine{56     \{}
 \DoxyCodeLine{57     \}}
 \DoxyCodeLine{58 }
-\DoxyCodeLine{66     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
-\DoxyCodeLine{67     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager_aad940fb8196adab2d38763bf8c8323f2}{MenuManager<T>::registerMenu}}(T menuID, std::function<\textcolor{keywordtype}{void}()> handler)}
-\DoxyCodeLine{68     \{}
-\DoxyCodeLine{69         \textcolor{comment}{// Nur im DEBUG-\/Build prüfe, ob Identifizierer bereits registriert wurde.}}
-\DoxyCodeLine{70 \textcolor{preprocessor}{\#ifdef \_DEBUG}}
-\DoxyCodeLine{71         \textcolor{keyword}{auto} found = mRegisteredHandlers.find(menuID);}
-\DoxyCodeLine{72 }
-\DoxyCodeLine{73         \textcolor{comment}{// Prüfe, ob die ID bereits vergeben wurde (nur DEBUG)}}
-\DoxyCodeLine{74         assert(found == mRegisteredHandlers.end());}
-\DoxyCodeLine{75 \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{76 }
-\DoxyCodeLine{77         \textcolor{comment}{// Füge den Handler dem Handlerregister hinzu}}
-\DoxyCodeLine{78         mRegisteredHandlers[menuID] = handler;}
-\DoxyCodeLine{79     \}}
-\DoxyCodeLine{80 }
-\DoxyCodeLine{87     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
-\DoxyCodeLine{88     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager_aed8484038f7a31ee8146048b6aacdf25}{MenuManager<T>::selectMenuItem}}(T menuID)}
-\DoxyCodeLine{89     \{}
-\DoxyCodeLine{90         \textcolor{comment}{// Prüfe, ob die ID vorhanden ist}}
-\DoxyCodeLine{91         \textcolor{keyword}{auto} found = mRegisteredHandlers.find(menuID);}
-\DoxyCodeLine{92 }
-\DoxyCodeLine{93         \textcolor{comment}{// Wenn kein Identifiziierer gefunden wurde, gebe Programmfehler aus (nur DEBUG)}}
-\DoxyCodeLine{94         assert(found != mRegisteredHandlers.end());}
+\DoxyCodeLine{69     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{70     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager_aad940fb8196adab2d38763bf8c8323f2}{MenuManager<T>::registerMenu}}(T menuID, std::function<\textcolor{keywordtype}{void}()> handler)}
+\DoxyCodeLine{71     \{}
+\DoxyCodeLine{72         \textcolor{comment}{// Nur im DEBUG-\/Build prüfe, ob Identifizierer bereits registriert wurde.}}
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#ifdef \_DEBUG}}
+\DoxyCodeLine{74         \textcolor{keyword}{auto} found = mRegisteredHandlers.find(menuID);}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76         \textcolor{comment}{// Prüfe, ob die ID bereits vergeben wurde (nur DEBUG)}}
+\DoxyCodeLine{77         assert(found == mRegisteredHandlers.end());}
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80         \textcolor{comment}{// Füge den Handler dem Handlerregister hinzu}}
+\DoxyCodeLine{81         mRegisteredHandlers[menuID] = handler;}
+\DoxyCodeLine{82     \}}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{90     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{91     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager_aed8484038f7a31ee8146048b6aacdf25}{MenuManager<T>::selectMenuItem}}(T menuID)}
+\DoxyCodeLine{92     \{}
+\DoxyCodeLine{93         \textcolor{comment}{// Prüfe, ob die ID vorhanden ist}}
+\DoxyCodeLine{94         \textcolor{keyword}{auto} found = mRegisteredHandlers.find(menuID);}
 \DoxyCodeLine{95 }
-\DoxyCodeLine{96         \textcolor{comment}{// Handleraufruf}}
-\DoxyCodeLine{97         found-\/>second();}
-\DoxyCodeLine{98     \}}
-\DoxyCodeLine{99 }
-\DoxyCodeLine{107     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
-\DoxyCodeLine{108     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager_aed8484038f7a31ee8146048b6aacdf25}{MenuManager<T>::selectMenuItem}}(std::int32\_t menuIntID)}
-\DoxyCodeLine{109     \{}
-\DoxyCodeLine{110         \textcolor{comment}{// Cast int zu Identifiziierer EnumID und rufe Funktion void MenuManager<T>::selectMenuItem(T menuID) auf}}
-\DoxyCodeLine{111         selectMenuItem(\textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(menuIntID));}
-\DoxyCodeLine{112     \}}
-\DoxyCodeLine{113 }
-\DoxyCodeLine{119     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
-\DoxyCodeLine{120     \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager_a82057d7788ba1fcebbcdcc81ac3656a9}{MenuManager<T>::count}}()\textcolor{keyword}{ const}}
-\DoxyCodeLine{121 \textcolor{keyword}{    }\{}
-\DoxyCodeLine{122         \textcolor{keywordflow}{return} mRegisteredHandlers.size();}
-\DoxyCodeLine{123     \}}
-\DoxyCodeLine{124 \}}
+\DoxyCodeLine{96         \textcolor{comment}{// Wenn kein Identifiziierer gefunden wurde, gebe Programmfehler aus (nur DEBUG)}}
+\DoxyCodeLine{97         assert(found != mRegisteredHandlers.end());}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99         \textcolor{comment}{// Handleraufruf}}
+\DoxyCodeLine{100         found-\/>second();}
+\DoxyCodeLine{101     \}}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{110     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{111     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager_aed8484038f7a31ee8146048b6aacdf25}{MenuManager<T>::selectMenuItem}}(std::int32\_t menuIntID)}
+\DoxyCodeLine{112     \{}
+\DoxyCodeLine{113         \textcolor{comment}{// Cast int zu Identifiziierer EnumID und rufe Funktion void MenuManager<T>::selectMenuItem(T menuID) auf}}
+\DoxyCodeLine{114         selectMenuItem(\textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(menuIntID));}
+\DoxyCodeLine{115     \}}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{122     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{123     \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager_a82057d7788ba1fcebbcdcc81ac3656a9}{MenuManager<T>::count}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{124 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{125         \textcolor{keywordflow}{return} mRegisteredHandlers.size();}
+\DoxyCodeLine{126     \}}
+\DoxyCodeLine{127 \}}
 
 \end{DoxyCode}

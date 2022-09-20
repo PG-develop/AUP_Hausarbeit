@@ -11,42 +11,38 @@
 \DoxyCodeLine{7 \textcolor{preprocessor}{\#include <functional>}}
 \DoxyCodeLine{8 }
 \DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}../include/StatesIdentifier.hpp"{}}}
-\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}../include/GameTransition.hpp"{}}}
-\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}../include/Game.hpp"{}}}
-\DoxyCodeLine{12 }
-\DoxyCodeLine{13 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_a_u_p___h_a}{AUP\_HA}}}
-\DoxyCodeLine{14 \{}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}../include/Game.hpp"{}}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_a_u_p___h_a}{AUP\_HA}}}
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14     \textcolor{comment}{// Vorwärtsdeklaration}}
 \DoxyCodeLine{15     \textcolor{keyword}{class }NumberGameStateManager;}
 \DoxyCodeLine{16 }
-\DoxyCodeLine{17     \textcolor{keyword}{class }\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state}{NumberGameState}}}
-\DoxyCodeLine{18     \{}
-\DoxyCodeLine{19     \textcolor{keyword}{public}:}
-\DoxyCodeLine{20         \textcolor{keyword}{typedef} std::unique\_ptr<NumberGameState> \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a55a54265c98d8349461d00129b430392}{Ptr}};}
-\DoxyCodeLine{21 }
+\DoxyCodeLine{20     \textcolor{keyword}{class }\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state}{NumberGameState}}}
+\DoxyCodeLine{21     \{}
 \DoxyCodeLine{22     \textcolor{keyword}{public}:}
-\DoxyCodeLine{23         \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state}{NumberGameState}}(\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager}{NumberGameStateManager}}\& manager);}
-\DoxyCodeLine{24         \textcolor{keyword}{virtual} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a5c300563900b06b299be7db076f320e4}{\string~NumberGameState}}();}
-\DoxyCodeLine{25 }
-\DoxyCodeLine{26         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a95cec2b7b256fcc45f351f54e3639ec4}{render}}() = 0;}
-\DoxyCodeLine{27         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_ad87306f8bc2a8954ede1e9a8b58687d3}{processEvents}}() = 0;}
-\DoxyCodeLine{28         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a0d5252183a49fa614aefc1a43f6bd023}{update}}() = 0;}
-\DoxyCodeLine{29 }
-\DoxyCodeLine{30     \textcolor{keyword}{protected}:}
-\DoxyCodeLine{31         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_ae53e8b9dab59a88c517051aa8809f6da}{requestChange}}(\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{GameStates::ID}} stateID);}
-\DoxyCodeLine{32         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a587032423a1f61757378ce1b3d371b3c}{checkTransitions}}();}
-\DoxyCodeLine{33 }
-\DoxyCodeLine{34         \textcolor{comment}{//std::map<GameStates::TRANSITION, GameTransition::Ptr> mTransitionFacotry;}}
-\DoxyCodeLine{35 }
-\DoxyCodeLine{36     \textcolor{keyword}{protected}:}
-\DoxyCodeLine{37         std::string \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a2f4d6605bc0b975e978bfff16c3aff2a}{mInputBuffer}};}
-\DoxyCodeLine{38         \mbox{\hyperlink{class_a_u_p___h_a_1_1_game}{Game}}* \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a85a30b1aa3bc26dff6e0a5c64600789e}{mGame}};}
-\DoxyCodeLine{39 }
-\DoxyCodeLine{40         \textcolor{comment}{// In dem Vector werden Funktionen gespeichert, in denen die Transitionbedingungen geprüft werden.}}
-\DoxyCodeLine{41         std::vector<std::function<std::optional<GameStates::ID>(\textcolor{keyword}{const} std::string\&)>> \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_ae656cfa1c76fdaba12481f573ea32714}{mTransitionList}};}
-\DoxyCodeLine{42 }
-\DoxyCodeLine{43     \textcolor{keyword}{private}:}
-\DoxyCodeLine{44         \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager}{NumberGameStateManager}}* \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a7a4453852f966ea62b46a9e3b9d9fa77}{mManager}};}
-\DoxyCodeLine{45     \};}
-\DoxyCodeLine{46 \}}
+\DoxyCodeLine{23         \textcolor{keyword}{typedef} std::unique\_ptr<NumberGameState> \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a55a54265c98d8349461d00129b430392}{Ptr}};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \textcolor{keyword}{public}:}
+\DoxyCodeLine{26         \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state}{NumberGameState}}(\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager}{NumberGameStateManager}}\& manager\_p);}
+\DoxyCodeLine{27         \textcolor{keyword}{virtual} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a5c300563900b06b299be7db076f320e4}{\string~NumberGameState}}();}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a8f62b5f4f58638f10f87a09c7d327b5b}{Render}}() = 0;}
+\DoxyCodeLine{30         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a3f654578466f2979ad50eb9035314c5c}{ProcessEvents}}() = 0;}
+\DoxyCodeLine{31         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a5faf1006bb8cf84925ba7bae48473786}{Update}}() = 0;}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{34         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_afd8e45dc1861a030f89bd585ee036484}{requestChange}}(\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{GameStates::ID}} stateID\_p);}
+\DoxyCodeLine{35         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a587032423a1f61757378ce1b3d371b3c}{checkTransitions}}();}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{38         std::string \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a2f4d6605bc0b975e978bfff16c3aff2a}{mInputBuffer}};   }
+\DoxyCodeLine{39         \mbox{\hyperlink{class_a_u_p___h_a_1_1_game}{Game}}* \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a85a30b1aa3bc26dff6e0a5c64600789e}{mGame}};               }
+\DoxyCodeLine{41         \textcolor{comment}{// In dem Vector werden Funktionen gespeichert, in denen die Transitionbedingungen geprüft werden.}}
+\DoxyCodeLine{42         std::vector<std::function<std::optional<GameStates::ID>(\textcolor{keyword}{const} std::string\&)>> \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_ae656cfa1c76fdaba12481f573ea32714}{mTransitionList}}; }
+\DoxyCodeLine{44     \textcolor{keyword}{private}:}
+\DoxyCodeLine{45         \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager}{NumberGameStateManager}}* \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a7a4453852f966ea62b46a9e3b9d9fa77}{mManager}}; }
+\DoxyCodeLine{46     \};}
+\DoxyCodeLine{47 \}}
 
 \end{DoxyCode}

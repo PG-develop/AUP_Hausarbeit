@@ -6,14 +6,17 @@
 
 namespace AUP_HA 
 {
+	/**
+	* @class State für die Introanzeige
+	*/
 	class IntroState : public State
 	{
 	public:
-		IntroState(StateManager& stateManager);
+		IntroState(StateManager& stateManager_p);
 		~IntroState();
 
-		virtual void render();
-		virtual void processEvents();
-		virtual void update();
+		virtual void Render();
+		virtual void ProcessEvents();
+		virtual void Update();
 	};
 }

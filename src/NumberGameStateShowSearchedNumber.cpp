@@ -6,29 +6,29 @@ namespace AUP_HA
 {
 	NumberGameStateShowSearchedNumber::NumberGameStateShowSearchedNumber(NumberGameStateManager& manager) : NumberGameState(manager)
 	{
-		mTransitionList.push_back(manager.getTransition(GameStates::TRANSITION::NN));
-		mTransitionList.push_back(manager.getTransition(GameStates::TRANSITION::C));
-		mTransitionList.push_back(manager.getTransition(GameStates::TRANSITION::OB));
-		mTransitionList.push_back(manager.getTransition(GameStates::TRANSITION::NH));
+		mTransitionList.push_back(manager.GetTransition(GameStates::TRANSITION::NN));
+		mTransitionList.push_back(manager.GetTransition(GameStates::TRANSITION::C));
+		mTransitionList.push_back(manager.GetTransition(GameStates::TRANSITION::OB));
+		mTransitionList.push_back(manager.GetTransition(GameStates::TRANSITION::NH));
 
-		auto lastInput = Utilities::ParseStringToInt(mGame->getLastInput());
+		auto lastInput = Utilities::ParseStringToInt(mGame->GetLastInput());
 	}
 	NumberGameStateShowSearchedNumber::~NumberGameStateShowSearchedNumber()
 	{
 	}
-	void NumberGameStateShowSearchedNumber::render()
+	void NumberGameStateShowSearchedNumber::Render()
 	{
-		std::cout << "Die gesuchte Zahl ist " << mGame->getSearchedNumber() << std::endl << std::endl;
+		std::cout << "Die gesuchte Zahl ist " << mGame->GetSearchedNumber() << std::endl << std::endl;
 
-		std::cout << mGame->getTries() + 1 << ". Versuche - " << mGame->getUser().Name << std::endl;
-		std::cout << "Finde die Zahl! Geben Sie eine Zahl zwischen " << mGame->getMinBorder() << " und " << mGame->getMaxBorder() << " ein: ";
+		std::cout << mGame->GetTries() + 1 << ". Versuche - " << mGame->GetUser().Name << std::endl;
+		std::cout << "Finde die Zahl! Geben Sie eine Zahl zwischen " << mGame->GetMinBorder() << " und " << mGame->GetMaxBorder() << " ein: ";
 
 	}
-	void NumberGameStateShowSearchedNumber::processEvents()
+	void NumberGameStateShowSearchedNumber::ProcessEvents()
 	{
 		std::cin >> mInputBuffer;
 	}
-	void NumberGameStateShowSearchedNumber::update()
+	void NumberGameStateShowSearchedNumber::Update()
 	{
 		checkTransitions();
 	}

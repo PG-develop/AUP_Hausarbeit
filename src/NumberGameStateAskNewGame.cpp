@@ -3,24 +3,50 @@
 
 namespace AUP_HA
 {
-	NumberGameStateAskNewGame::NumberGameStateAskNewGame(NumberGameStateManager& manager) : NumberGameState(manager)
+	/**
+	* @brief Konstruktor
+	* 
+	* Laden der Übergangsbedingungen: NG
+	*/
+	NumberGameStateAskNewGame::NumberGameStateAskNewGame(NumberGameStateManager& manager_p) : NumberGameState(manager_p)
 	{
-		mTransitionList.push_back(manager.getTransition(GameStates::TRANSITION::NG));
-		mTransitionList.push_back(manager.getTransition(GameStates::TRANSITION::I));
+		mTransitionList.push_back(manager_p.GetTransition(GameStates::TRANSITION::NG));
 	}
+
+	/**
+	* @Destruktor
+	* 
+	* Keine Funktion
+	*/
 	NumberGameStateAskNewGame::~NumberGameStateAskNewGame()
 	{
 	}
-	void NumberGameStateAskNewGame::render()
+
+	/**
+	* @brief Spielanzeige
+	* 
+	* Es wird gefragt, ob ein neues Spiel gestartet werden soll
+	*/
+	void NumberGameStateAskNewGame::Render()
 	{
 		std::cout << "Moechten Sie ein neues Spiel starten? [J]a oder [N]ein?" << std::endl;
 		std::cout << "Auswahl: ";
 	}
-	void NumberGameStateAskNewGame::processEvents()
+
+	/**
+	* @brief Benutzereingabe
+	*/
+	void NumberGameStateAskNewGame::ProcessEvents()
 	{
 		std::cin >> mInputBuffer;
 	}
-	void NumberGameStateAskNewGame::update()
+
+	/**
+	* @brief Ausführung der Logik
+	* 
+	* Es werden nur die Übergangsbedingungen geprüft
+	*/
+	void NumberGameStateAskNewGame::Update()
 	{
 		checkTransitions();
 	}

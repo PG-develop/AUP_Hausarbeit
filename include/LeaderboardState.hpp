@@ -15,12 +15,12 @@ namespace AUP_HA
 	class LeaderboardState : public State
 	{
 	public:
-		LeaderboardState(StateManager& stateManager);
+		LeaderboardState(StateManager& stateManager_p);
 		~LeaderboardState();
 
-		virtual void render();
-		virtual void processEvents();
-		virtual void update();
+		virtual void Render();
+		virtual void ProcessEvents();
+		virtual void Update();
 
 	private:
 		std::unique_ptr<UserRepository> mUserRepository; /**< UserRepository */

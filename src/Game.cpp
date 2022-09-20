@@ -6,6 +6,11 @@
 
 namespace AUP_HA
 {
+	/**
+	* @brief Konstruktor
+	* 
+	* Parameter werden initialisiert
+	*/
 	Game::Game()
 		: mMinBoarder{ }
 		, mMaxBoarder{ }
@@ -16,102 +21,162 @@ namespace AUP_HA
 		mSetupRepository = std::make_unique<SetupRepository>();
 	}
 
+	/**
+	* @brief Destruktor
+	* 
+	* Keine Funktion
+	*/
 	Game::~Game()
 	{
 	}
 
 	/**
-	* @brief Überprüfe Zahleneingabe
+	* @brief Zahleneingabeprüfung
 	* 
-	* @param number zu prüfende Zahl
+	* @param [number_p] std::int32_t zu prüfende Zahl
 	* @return true, wenn die Zahl gefunden wurde, andernfalls false
 	*/
-	bool Game::check(const std::int32_t& number)
+	bool Game::Check(const std::int32_t& number_p)
 	{
 		// Erhöhe die Versuchsanzahl um eins
 		mTries++;
 
 		// Prüfe, ob die gesuchte Zahl gefunden wurde
-		if (number == mSearchedNumber)
+		if (number_p == mSearchedNumber)
 		{
+			// Usermodel mit Daten für das Spiel füllen
 			mUser->Tries = mTries;
 			mUser->Date = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
 			return true;
 		}
+
+		// gesuchte Zahl wurde nicht gefunden
 		else
 		{
 			// Wenn die geprüfte Zahl nicht gefunden wurde, setze die Grenzen neu auf die angegebene Zahl:
 			// wenn die Zahl kleiner als die gesuchte Zahl ist, dann wird die untere Grenze neu gesetzt,
-			if (number < mSearchedNumber)
+			if (number_p < mSearchedNumber)
 			{
-				mMinBoarder = number;
+				mMinBoarder = number_p;
 			}
 			// wenn die Zahl größer als die geesuchte Zahl ist, dann wird die obere Grenze neu gesetzt.
 			else
 			{
-				mMaxBoarder = number;
+				mMaxBoarder = number_p;
 			}
 			return false;
 		}
 	}
 
-	const std::int32_t& Game::getMinBorder() const
+	/**
+	* @brief Gibt die aktuelle untere Grenze zurück
+	* 
+	* @return std::int32_t untere Grenze
+	*/
+	const std::int32_t& Game::GetMinBorder() const
 	{
 		return mMinBoarder;
 	}
 
-	const std::int32_t& Game::getMaxBorder() const
+	/**
+	* @brief Gibt die aktuelle obere Grenze zurück
+	*
+	* @return std::int32_t obere Grenze
+	*/
+	const std::int32_t& Game::GetMaxBorder() const
 	{
 		return mMaxBoarder;
 	}
 
-	const std::int32_t& Game::getSearchedNumber() const
+	/**
+	* @brief Gibt die aktuelle gesuchte Nummer zurück
+	*
+	* @return std::int32_t gesuchte Nummer
+	*/
+	const std::int32_t& Game::GetSearchedNumber() const
 	{
 		return mSearchedNumber;
 	}
 
-	const std::int32_t& Game::getTries() const
+	/**
+	* @brief Gibt die Anzahl von bereits durchgeführten Versuchen zurück
+	*
+	* @return std::int32_t Anzahl von Versuchen
+	*/
+	const std::int32_t& Game::GetTries() const
 	{
 		return mTries;
 	}
 
-	const std::uint32_t& Game::getMaxTries() const
+	/**
+	* @brief Gibt die maximale Anzahl von Versuchen zurück
+	* 
+	* Wenn die Grenze überschritten wird, wird das Spiel beendet
+	*
+	* @return std::int32_t Maximale Anzahl an Versuchen
+	*/
+	const std::uint32_t& Game::GetMaxTries() const
 	{
 		return mMaxTries;
 	}
 
-	const User Game::getUser() const
+	/**
+	* @brief Gibt eine Referenz auf das aktuelle Usermodel zurück
+	* 
+	* @return User Usermodel
+	*/
+	const User Game::GetUser() const
 	{
 		return *mUser;
 	}
 
-	void Game::setNewInput(const std::string& input)
+	/**
+	* @brief Übernimmt eine neue Benutzereingabe
+	* 
+	* @param [input_p] std::string Benutzereingabe
+	*/
+	void Game::SetNewInput(const std::string& input_p)
 	{
-		mLastInput = input;
+		mLastInput = input_p;
 	}
 
-	void Game::setNewTime(std::time_t time)
+	/**
+	* @brief Zeitübergabe an das Usermodel
+	* 
+	* @param [time_p] std::time_t Zeitstempel
+	*/
+	void Game::SetNewTime(std::time_t time_p)
 	{
-		mUser->Date = time;
+		mUser->Date = time_p;
 	}
 
-	const std::string& Game::getLastInput() const
+	/**
+	* @brief Gibt letzte Benutzereingabe zurück
+	* 
+	* @return std::string letzte Benutzereingabe
+	*/
+	const std::string& Game::GetLastInput() const
 	{
 		return mLastInput;
 	}
 
 	/**
 	* @brief Initialisiert ein neues Spiel
+	* 
+	* @param [user_p] User Usermodel
 	*/
-	void Game::newGame(User& user)
+	void Game::NewGame(User& user_p)
 	{
-		mUser = std::make_unique<User>(user);
+		// Erstelle ein neues Usermodel
+		mUser = std::make_unique<User>(user_p);
 
-		// TODO: Daten aus einer Configdatei einlesen
+		// Lade Initialisierungsdaten für das neue Spiel
 		mTries = 0;
 		mMaxTries = mSetupRepository->getAmountOfChoices();
 		mMinBoarder = 1;
 		mMaxBoarder = mSetupRepository->getMaxRange();
+
+		// Erstelle neue Zufallszahl
 		generateNewSearchedNumber();
 	}
 

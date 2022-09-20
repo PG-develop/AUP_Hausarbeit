@@ -10,7 +10,7 @@ namespace AUP_HA
 	void Utilities::ClearInputStream() noexcept 
     {
         std::cin.clear();
-        std::cin.ignore(std::numeric_limits<int>::max(), '\n');
+        std::cin.ignore(std::numeric_limits<std::int32_t>::max(), '\n');
     }
 
     /**
@@ -20,7 +20,7 @@ namespace AUP_HA
     * 
     * @return std::optional<int> mit geparsten String, wenn erfolgreich gewesen.
     */
-    std::optional<int> Utilities::ParseStringToInt(const std::string& string) noexcept
+    std::optional<std::int32_t> Utilities::ParseStringToInt(const std::string& string) noexcept
     {
         int parseValue;
         try {
@@ -44,7 +44,7 @@ namespace AUP_HA
     * @brief Konvertiert einen String zu einer Ganzzahl (int) und prüft angegebene Grenzen (inlusiv)
     * 
     * @param [string] std::string String, der zu einer Ganzzahl konvertiert werden soll.
-    * @param [limits] std::pair<std::int32_t zu prüfende Grenzen\n
+    * @param [limits] std::pair<std::int32_t, std::int32_t> zu prüfende Grenzen\n
     *   * Pair.First stellt die untere Grenze dar (inklusiv)\n
     *   * Pair.Second stellt die obere Grenze dar (inklusiv)
     * 

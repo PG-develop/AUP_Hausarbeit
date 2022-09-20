@@ -4,20 +4,26 @@
 
 namespace AUP_HA
 {
-
+	// Vorwärtsdeklaration
 	class UserRepository;
 
+
+	/**
+	* @class STATE_9
+	* 
+	* Das Spiel wird sofort gewonnen.
+	*/
 	class NumberGameStateCheatWin : public NumberGameState
 	{
 	public:
-		NumberGameStateCheatWin(NumberGameStateManager& manager);
+		NumberGameStateCheatWin(NumberGameStateManager& manager_p);
 		virtual ~NumberGameStateCheatWin();
 
-		virtual void render();
-		virtual void processEvents();
-		virtual void update();
+		virtual void Render();
+		virtual void ProcessEvents();
+		virtual void Update();
 
 	private:
-		UserRepository* mUserRepository;
+		UserRepository* mUserRepository; /**< Referenz auf das UserRepository */
 	};
 }

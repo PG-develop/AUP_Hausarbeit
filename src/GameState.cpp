@@ -13,6 +13,12 @@
 
 namespace AUP_HA
 {
+	/**
+	* @brief Konstruktor
+	* 
+	* Initialsisierung der Member\n
+	* Registrierung der Spielstates
+	*/
 	GameState::GameState(StateManager& stateManager) : State(stateManager)
 	{
 		mUserRepository = std::make_unique<UserRepository>();
@@ -22,43 +28,67 @@ namespace AUP_HA
 		registerStates();
 
 		// Handler für das Spielende definieren
-		mGameStateManager->registerEndGameHandler([&]() {
+		mGameStateManager->RegisterEndGameHandler([&]() {
 			requestChange(States::MAIN);
 		});
 
-		mGameStateManager->changeState(GameStates::ID::FIRST);
+		// Ersten Spielstate definieren
+		mGameStateManager->ChangeState(GameStates::ID::STATE_1);
 	}
 
+	/**
+	* @brief Destruktor
+	* 
+	* Keine Funktion
+	*/
 	GameState::~GameState()
 	{
 	}
 
-	void GameState::render()
+	/**
+	* @brief Darstellungsmethode
+	* 
+	* Führt die Rendermethoden des NumberGameStateManagers aus
+	*/
+	void GameState::Render()
 	{
 		std::cout << "Zahlenratespiel" << std::endl;
-		mGameStateManager->render();
+		mGameStateManager->Render();
 	}
 
-	void GameState::processEvents()
+	/**
+	* @brief Benutzer- oder/und Eventeingabe
+	*
+	* Führt die ProcessEventsmethode des NumberGameStateManagers aus
+	*/
+	void GameState::ProcessEvents()
 	{
-		mGameStateManager->processEvents();
+		mGameStateManager->ProcessEvents();
 	}
 
-	void GameState::update()
+	/**
+	* @brief Benutzer- oder/und Eventeingabe
+	*
+	* Führt die Updatemethode des NumberGameStateManagers aus
+	*/
+	void GameState::Update()
 	{
-		mGameStateManager->update();
+		mGameStateManager->Update();
 	}
 
+	/**
+	* @brief Registrierung der NumberGameStates
+	*/
 	void GameState::registerStates()
 	{
-		mGameStateManager->registerStates<NumberGameStateName>(GameStates::FIRST);
-		mGameStateManager->registerStates<NumberGameStateNormal>(GameStates::STATE_2);
-		mGameStateManager->registerStates<NumberGameStateNoNumber>(GameStates::STATE_3);
-		mGameStateManager->registerStates<NumberGameStateOutBorders>(GameStates::STATE_4);
-		mGameStateManager->registerStates<NumberGameStateWin>(GameStates::STATE_5);
-		mGameStateManager->registerStates<NumberGameStateShowLeaderboard>(GameStates::STATE_6);
-		mGameStateManager->registerStates<NumberGameStateAskNewGame>(GameStates::STATE_7);
-		mGameStateManager->registerStates<NumberGameStateShowSearchedNumber>(GameStates::STATE_8);
-		mGameStateManager->registerStates<NumberGameStateCheatWin>(GameStates::STATE_9);
+		mGameStateManager->RegisterStates<NumberGameStateName>(GameStates::STATE_1);
+		mGameStateManager->RegisterStates<NumberGameStateNormal>(GameStates::STATE_2);
+		mGameStateManager->RegisterStates<NumberGameStateNoNumber>(GameStates::STATE_3);
+		mGameStateManager->RegisterStates<NumberGameStateOutBorders>(GameStates::STATE_4);
+		mGameStateManager->RegisterStates<NumberGameStateWin>(GameStates::STATE_5);
+		mGameStateManager->RegisterStates<NumberGameStateShowLeaderboard>(GameStates::STATE_6);
+		mGameStateManager->RegisterStates<NumberGameStateAskNewGame>(GameStates::STATE_7);
+		mGameStateManager->RegisterStates<NumberGameStateShowSearchedNumber>(GameStates::STATE_8);
+		mGameStateManager->RegisterStates<NumberGameStateCheatWin>(GameStates::STATE_9);
 	}
 }

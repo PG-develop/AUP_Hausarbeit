@@ -8,27 +8,27 @@ namespace AUP_HA
 {
 	NumberGameStateWin::NumberGameStateWin(NumberGameStateManager& manager) : NumberGameState(manager)
 	{
-		mTransitionList.push_back(manager.getTransition(GameStates::TRANSITION::L));
+		mTransitionList.push_back(manager.GetTransition(GameStates::TRANSITION::L));
 
 		// Update der Bestenliste
-		manager.getUserRepository().SaveOrUpdate(manager.getGame().getUser());
+		manager.GetUserRepository().SaveOrUpdate(manager.GetGame().GetUser());
 	}
 
 	NumberGameStateWin::~NumberGameStateWin()
 	{
 	}
 
-	void NumberGameStateWin::render()
+	void NumberGameStateWin::Render()
 	{
-		std::cout << "Gewonnen! " << mGame->getSearchedNumber() << std::endl;
+		std::cout << "Gewonnen! " << mGame->GetSearchedNumber() << std::endl;
 		std::cout << "Weiter mit einer beliebigen Taste...";
 	}
 
-	void NumberGameStateWin::processEvents()
+	void NumberGameStateWin::ProcessEvents()
 	{
 	}
 
-	void NumberGameStateWin::update()
+	void NumberGameStateWin::Update()
 	{
 		checkTransitions();
 	}

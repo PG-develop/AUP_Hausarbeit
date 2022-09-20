@@ -10,8 +10,8 @@ namespace AUP_HA
 		NumberGameStateShowSearchedNumber(NumberGameStateManager& manager);
 		virtual ~NumberGameStateShowSearchedNumber();
 
-		virtual void render();
-		virtual void processEvents();
-		virtual void update();
+		virtual void Render();
+		virtual void ProcessEvents();
+		virtual void Update();
 	};
 }

@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['setup_0',['Setup',['../struct_a_u_p___h_a_1_1_setup.html',1,'AUP_HA']]],
-  ['setupgamestate_1',['SetupGameState',['../class_a_u_p___h_a_1_1_setup_game_state.html',1,'AUP_HA']]],
-  ['setuprepository_2',['SetupRepository',['../class_a_u_p___h_a_1_1_setup_repository.html',1,'AUP_HA']]],
-  ['setupstate_3',['SetupState',['../class_a_u_p___h_a_1_1_setup_state.html',1,'AUP_HA']]],
-  ['state_4',['State',['../class_a_u_p___h_a_1_1_state.html',1,'AUP_HA']]],
-  ['statemanager_5',['StateManager',['../class_a_u_p___h_a_1_1_state_manager.html',1,'AUP_HA']]],
-  ['steuerung_6',['Steuerung',['../class_steuerung.html',1,'']]]
+  ['persistencelistservice_0',['PersistenceListService',['../class_a_u_p___h_a_1_1_persistence_list_service.html',1,'AUP_HA']]],
+  ['persistencelistservice_3c_20setup_20_3e_1',['PersistenceListService&lt; Setup &gt;',['../class_a_u_p___h_a_1_1_persistence_list_service.html',1,'AUP_HA']]],
+  ['persistencelistservice_3c_20user_20_3e_2',['PersistenceListService&lt; User &gt;',['../class_a_u_p___h_a_1_1_persistence_list_service.html',1,'AUP_HA']]]
 ];

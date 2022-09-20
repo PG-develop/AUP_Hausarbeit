@@ -30,7 +30,6 @@ var menudata={children:[
 {text:"Alle",url:"namespacemembers.html",children:[
 {text:"c",url:"namespacemembers.html#index_c"},
 {text:"e",url:"namespacemembers.html#index_e"},
-{text:"f",url:"namespacemembers.html#index_f"},
 {text:"g",url:"namespacemembers.html#index_g"},
 {text:"i",url:"namespacemembers.html#index_i"},
 {text:"l",url:"namespacemembers.html#index_l"},
@@ -44,7 +43,6 @@ var menudata={children:[
 {text:"Aufzählungswerte",url:"namespacemembers_eval.html",children:[
 {text:"c",url:"namespacemembers_eval.html#index_c"},
 {text:"e",url:"namespacemembers_eval.html#index_e"},
-{text:"f",url:"namespacemembers_eval.html#index_f"},
 {text:"g",url:"namespacemembers_eval.html#index_g"},
 {text:"i",url:"namespacemembers_eval.html#index_i"},
 {text:"l",url:"namespacemembers_eval.html#index_l"},
