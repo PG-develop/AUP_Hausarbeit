@@ -4,6 +4,14 @@
 
 namespace AUP_HA
 {
+	/**
+	* @class PersistenceListService
+	* 
+	* Abstrakte Klasse\n
+	* Basisklasse für die PersistenceListServices
+	* 
+	* @tparam [T] Model für den Service
+	*/
 	template <typename T>
 	class PersistenceListService
 	{
@@ -11,19 +19,29 @@ namespace AUP_HA
 		PersistenceListService();
 		virtual ~PersistenceListService();
 
-		virtual void			pushList(const std::vector<T>& list) = 0;
-		virtual std::vector<T>& getList() = 0;
-		virtual void			clear() = 0;
+		virtual void			PushList(const std::vector<T>& list_p) = 0;
+		virtual std::vector<T>& GetList() = 0;
+		virtual void			Clear() = 0;
 
 	protected:
-		std::vector<T>			mList;
+		std::vector<T>			mList;	/**< Listenhalter */
 	};
 
+	/**
+	* @brief Konstruktor
+	* 
+	* Keine Funktion
+	*/
 	template<typename T>
 	inline PersistenceListService<T>::PersistenceListService()
 	{
 	}
 
+	/**
+	* @brief Destruktor
+	* 
+	* Keine Funktion
+	*/
 	template<typename T>
 	inline PersistenceListService<T>::~PersistenceListService()
 	{

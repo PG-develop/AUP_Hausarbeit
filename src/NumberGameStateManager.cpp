@@ -102,7 +102,7 @@ namespace AUP_HA
 		if (stateID_p == GameStates::END)
 		{
 			// Handler muss vorab registriert werden.
-			assert(mEndGame == nullptr);
+			assert(mEndGame != nullptr);
 			mEndGame();
 		}
 

@@ -7,6 +7,12 @@
 
 namespace AUP_HA
 {
+	/**
+	* @brief Konstruktor
+	*
+	* Prüft, ob die Datei für die Datenspeicherung bereits existiert.
+	* Wenn nicht, wird eine Datei erstellt.
+	*/
 	TXTSetupPersistenceListService::TXTSetupPersistenceListService() 
 		: PersistenceListService()
 		, mFileName("setup.txt")
@@ -20,6 +26,11 @@ namespace AUP_HA
 		}
 	}
 
+	/**
+	* @brief Destruktor
+	* 
+	* Keine Funktion
+	*/
 	TXTSetupPersistenceListService::~TXTSetupPersistenceListService()
 	{
 	}
@@ -31,9 +42,12 @@ namespace AUP_HA
 	* 
 	* @param [list] const std::vector<Setup>& zu speichernde Liste
 	*/
-	void TXTSetupPersistenceListService::pushList(const std::vector<Setup>& list)
+	void TXTSetupPersistenceListService::PushList(const std::vector<Setup>& list_p)
 	{
-		mList = list;
+		// Speichere Liste im Service ab
+		mList = list_p;
+
+		// öffne Datei, die Liste wird immer beim öffnen gelöscht und mit der neuen Liste überschrieben
 		std::ofstream stream(mFileName, std::ios_base::trunc);
 
 		// alle Listenelemente durchgehen und speichern
@@ -52,7 +66,12 @@ namespace AUP_HA
 		stream.close();
 	}
 
-	std::vector<Setup>& TXTSetupPersistenceListService::getList()
+	/**
+	* @brief Liest die aktuelle Leaderboarddatei ein.
+	*
+	* @return std::vector<Setup> Referenz auf die aktuelle Liste
+	*/
+	std::vector<Setup>& TXTSetupPersistenceListService::GetList()
 	{
 		std::ifstream stream(mFileName, std::ios_base::in);
 		std::string line;
@@ -69,7 +88,7 @@ namespace AUP_HA
 			}
 
 			// Spalten aus dem Zeilenstring parsen
-			// 1. Spalte Datum
+			// 1. Spalte Versuchsanzahl
 			Setup temp;
 			std::size_t first = 0;
 			// suche Spaltenseperatur für 1. Spalte
@@ -88,7 +107,7 @@ namespace AUP_HA
 			// + 1 um das Komma zu überspringen und zum ersten Char der neuen Spalte zu springen
 			first = found + 1;
 
-			// 3. Spalte Anzahl der Versuche
+			// 2. Spalte Streureichweite
 			strNumber = line.substr(first, found - first);
 
 			intNumber = Utilities::ParseStringToInt(strNumber);
@@ -113,7 +132,7 @@ namespace AUP_HA
 	*		 Wird nicht benötigt und daher nicht implementiert
 	*		 Kann eventuell für das Zurücksetzen auf Werkseinstellungen benutzt werden.
 	*/
-	void TXTSetupPersistenceListService::clear()
+	void TXTSetupPersistenceListService::Clear()
 	{
 		// Auslösung einer Exception, falls Funktion benutzt werden sollte.
 		throw std::logic_error("function not yet implemented!");

@@ -6,20 +6,35 @@
 
 namespace AUP_HA
 {
-	SetupState::SetupState(StateManager& stateManager) 
-		: State(stateManager)
+	/**
+	* @brief Konstruktor
+	*
+	* Erstelle das SetupRepository und initialisiere Menü für die Auswahl
+	*/
+	SetupState::SetupState(StateManager& stateManager_p) 
+		: State(stateManager_p)
 		, mMenu( )
 	{
 		// Menü initialisieren
 		registerMenu();
-		mLimits = std::make_pair(1, mMenu.count());
+		mLimits = std::make_pair(1, mMenu.Count());
 		mUserRepository = std::make_unique<UserRepository>();
 	}
 
+	/**
+	* brief Destruktor
+	* 
+	* Keine Funktion
+	*/
 	SetupState::~SetupState()
 	{
 	}
 
+	/**
+	* @brief Anzeige des States
+	*
+	* Gibt die Menüstruktur aus.
+	*/
 	void SetupState::Render()
 	{
 		std::cout << "Zahlenratespiel" << std::endl;
@@ -35,12 +50,18 @@ namespace AUP_HA
 		// TODO: Mehrere Einstellmöglichkeiten überprüfen
 	}
 
+	/**
+	* @brief Benutztereingabe
+	*/
 	void SetupState::ProcessEvents()
 	{
 		std::cin >> mUserinput;
 		Utilities::ClearInputStream();
 	}
 
+	/**
+	* @brief Ausführung der Statelogic
+	*/
 	void SetupState::Update()
 	{
 		// Eingabe des Benutzers parsen
@@ -50,7 +71,7 @@ namespace AUP_HA
 		if (userInput)
 		{
 			// Wähle Menüpunkt aus
-			mMenu.selectMenuItem(*userInput);
+			mMenu.SelectMenuItem(*userInput);
 		}
 		else
 		{
@@ -59,22 +80,33 @@ namespace AUP_HA
 		}
 	}
 
+	/**
+	* @brief Registrierung der Menühandlers
+	*/
 	void SetupState::registerMenu()
 	{
-		mMenu.registerMenu(SetupMenu::GAMESETUP, [&]() {
+		mMenu.RegisterMenu(SetupMenu::GAMESETUP, [&]() {
 			onGameSetup();
 			});
-		mMenu.registerMenu(SetupMenu::CLEAR, [&]() {
+		mMenu.RegisterMenu(SetupMenu::CLEAR, [&]() {
 			onClear();
 			});
-		mMenu.registerMenu(SetupMenu::EXIT, [&]() {
+		mMenu.RegisterMenu(SetupMenu::EXIT, [&]() {
 			onExit();
 			});
 	}
+
+	/**
+	* @brief Handler für den Menüpunkt [1] Wechsel zu den Spieleinstellungen
+	*/
 	void SetupState::onGameSetup()
 	{
 		requestChange(States::GAMESETUP_GAME);
 	}
+
+	/**
+	* @brief Handler für den Menüpunkt [2] Bestenliste löschen
+	*/
 	void SetupState::onClear()
 	{
 		// Abfrage, ob Benutzer Sicher ist
@@ -92,6 +124,10 @@ namespace AUP_HA
 			mUserRepository->ClearRepository();
 		}
 	}
+
+	/**
+	* @brief Handler für den Menüpunkt [3] Wechsel zum MAIN State
+	*/
 	void SetupState::onExit()
 	{
 		requestChange(States::MAIN);

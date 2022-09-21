@@ -4,10 +4,16 @@
 
 namespace AUP_HA
 {
+	/**
+	* @class STATE_3
+	*
+	* Der Benutzer hat keine gültige Nummer eingetippt.
+	* Der Benutzer wird aufgefordert, eine Nummer einzugeben.
+	*/
 	class NumberGameStateNoNumber : public NumberGameState
 	{
 	public:
-		NumberGameStateNoNumber(NumberGameStateManager& manager);
+		NumberGameStateNoNumber(NumberGameStateManager& manager_p);
 		virtual ~NumberGameStateNoNumber();
 
 		virtual void Render();

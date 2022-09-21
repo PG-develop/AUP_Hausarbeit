@@ -11,10 +11,16 @@ namespace AUP_HA
 	// Vorwärtsdeklaration
 	class UserRepository;
 
+	/**
+	* @class SetupState
+	*
+	* 1. Ebene der Einstellungen\n
+	* Weiter zur Ebenene der Spieleinstellungen oder Reset der Bestenliste
+	*/
 	class SetupState : public State
 	{
 	public:
-		SetupState(StateManager& stateManager);
+		SetupState(StateManager& stateManager_p);
 		~SetupState();
 
 		virtual void Render();

@@ -20,7 +20,7 @@ namespace AUP_HA
 	class SetupGameState : public State
 	{
 	public:
-		SetupGameState(StateManager& stateManager);
+		SetupGameState(StateManager& stateManager_p);
 		virtual ~SetupGameState();
 
 		virtual void Render();
@@ -35,9 +35,9 @@ namespace AUP_HA
 		void onExit();
 
 	private:
-		std::string							mUserinput;
-		std::unique_ptr<SetupRepository>	mSetupRepository;
-		MenuManager<SETUP_GAMESETUP::ID>	mMenu;
-		std::pair<std::int32_t, std::int32_t> mLimits;
+		std::string							mUserinput;			/**< Eingabe des Benutzers */
+		std::unique_ptr<SetupRepository>	mSetupRepository;	/**< SetupRepository */
+		MenuManager<SETUP_GAMESETUP::ID>	mMenu;				/**< Menustruktur */
+		std::pair<std::int32_t, std::int32_t> mLimits;			/**< Limitierung für das Menu */
 	};
 }

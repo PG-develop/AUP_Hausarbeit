@@ -8,7 +8,7 @@ namespace AUP_HA
 	* 
 	* Übergabe des StateManagers
 	*/
-	State::State(StateManager& stateManager) : mStateManager(&stateManager)
+	State::State(StateManager& stateManager_p) : mStateManager(&stateManager_p)
 	{
 	}
 
@@ -29,8 +29,8 @@ namespace AUP_HA
 	* 
 	* @param[stateID] States::ID Zustandsidentifiziierer
 	*/
-	void State::requestChange(States::ID stateID)
+	void State::requestChange(States::ID stateID_p)
 	{
-		mStateManager->changeState(stateID);
+		mStateManager->changeState(stateID_p);
 	}
 }

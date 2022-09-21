@@ -18,7 +18,7 @@ namespace AUP_HA
 		typedef std::unique_ptr<State> Ptr;
 
 	public:
-		State(StateManager& stateManager);
+		State(StateManager& stateManager_p);
 		virtual ~State();
 
 		virtual void Render() = 0;
@@ -26,7 +26,7 @@ namespace AUP_HA
 		virtual void Update() = 0;
 
 	protected:
-		void requestChange(States::ID stateID);
+		void requestChange(States::ID stateID_p);
 
 	private:
 		StateManager* mStateManager;	/**< Pointer auf seinen StateManager */

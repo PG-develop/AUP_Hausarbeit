@@ -172,9 +172,9 @@ namespace AUP_HA
 
 		// Lade Initialisierungsdaten für das neue Spiel
 		mTries = 0;
-		mMaxTries = mSetupRepository->getAmountOfChoices();
+		mMaxTries = mSetupRepository->GetAmountOfChoices();
 		mMinBoarder = 1;
-		mMaxBoarder = mSetupRepository->getMaxRange();
+		mMaxBoarder = mSetupRepository->GetMaxRange();
 
 		// Erstelle neue Zufallszahl
 		generateNewSearchedNumber();

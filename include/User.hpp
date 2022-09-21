@@ -5,7 +5,12 @@
 namespace AUP_HA
 {
 	/**
-	* @brief Model für User
+	* @struct Model User
+	*
+	* Speichert Daten für den Benutzer\n
+	* Name des Benutzers\n
+	* Spielzeitpunkt\n
+	* benötigte Versuchsanzahl
 	*/
 	struct User
 	{

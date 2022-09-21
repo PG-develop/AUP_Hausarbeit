@@ -71,12 +71,12 @@ namespace AUP_HA
 	* Der aktive State wird gelöscht und der geforderte State wird durch die Zustandsfabrik instanziiert.
 	* Wenn das Programm beendet werden soll muss der Zustandsidentifiziierer States::NONE ausgewählt werden.
 	* 
-	* @param [stateID] States::ID Zustandsidentifiziierer
+	* @param [stateID_p] States::ID Zustandsidentifiziierer
 	*/
-	void StateManager::changeState(States::ID stateID)
+	void StateManager::changeState(States::ID stateID_p)
 	{
 		// Wenn States::NONE gefordert ist, lösche nur den aktiven State
-		if (stateID == States::NONE)
+		if (stateID_p == States::NONE)
 		{
 			mActiveState.reset();
 		}
@@ -84,7 +84,7 @@ namespace AUP_HA
 		// Ansonsten suche nach den Registrierten Identifiziierer
 		else
 		{
-			auto found = mStateFactories.find(stateID);
+			auto found = mStateFactories.find(stateID_p);
 
 			// Wenn kein Identifiziierer gefunden wurde, gebe Programmfehler aus (nur DEBUG)
 			assert(found != mStateFactories.end());

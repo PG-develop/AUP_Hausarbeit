@@ -21,11 +21,11 @@ namespace AUP_HA
 		MenuManager();
 		~MenuManager();
 
-		void registerMenu(T menuID, std::function<void()> handler);
-		void selectMenuItem(T menuID);
-		void selectMenuItem(std::int32_t menuIntID);
+		void RegisterMenu(T menuID_p, std::function<void()> handler_p);
+		void SelectMenuItem(T menuID_p);
+		void SelectMenuItem(std::int32_t menuIntID);
 
-		int count() const;
+		std::int32_t Count() const;
 
 	private:
 		std::map<T, std::function<void()>>	mRegisteredHandlers; /**< Funktionshandlerregister */
@@ -62,23 +62,23 @@ namespace AUP_HA
 	* Die Handler müssen in der gleichen Reihenfolge wie die zugehörigen
 	* Aufrufzahlen registriert werden.
 	* 
-	* @param [menuID] T Identifizierer für den FunktionsHandler
-	* @param [handler] std::function<void()> Zu registrierender Handler
+	* @param [menuID_p] T Identifizierer für den FunktionsHandler
+	* @param [handler_p] std::function<void()> Zu registrierender Handler
 	* @tparam [T] siehe Klassenbeschreibung
 	*/
 	template<typename T>
-	inline void MenuManager<T>::registerMenu(T menuID, std::function<void()> handler)
+	inline void MenuManager<T>::RegisterMenu(T menuID_p, std::function<void()> handler_p)
 	{
 		// Nur im DEBUG-Build prüfe, ob Identifizierer bereits registriert wurde.
 #ifdef _DEBUG
-		auto found = mRegisteredHandlers.find(menuID);
+		auto found = mRegisteredHandlers.find(menuID_p);
 
 		// Prüfe, ob die ID bereits vergeben wurde (nur DEBUG)
 		assert(found == mRegisteredHandlers.end());
 #endif
 
 		// Füge den Handler dem Handlerregister hinzu
-		mRegisteredHandlers[menuID] = handler;
+		mRegisteredHandlers[menuID_p] = handler_p;
 	}
 
 	/**
@@ -88,10 +88,10 @@ namespace AUP_HA
 	* @tparam [T] siehe Klassenbeschreibung
 	*/
 	template<typename T>
-	inline void MenuManager<T>::selectMenuItem(T menuID)
+	inline void MenuManager<T>::SelectMenuItem(T menuID_p)
 	{
 		// Prüfe, ob die ID vorhanden ist
-		auto found = mRegisteredHandlers.find(menuID);
+		auto found = mRegisteredHandlers.find(menuID_p);
 
 		// Wenn kein Identifiziierer gefunden wurde, gebe Programmfehler aus (nur DEBUG)
 		assert(found != mRegisteredHandlers.end());
@@ -108,10 +108,10 @@ namespace AUP_HA
 	* @tparam [T] siehe Klassenbeschreibung
 	*/
 	template<typename T>
-	inline void MenuManager<T>::selectMenuItem(std::int32_t menuIntID)
+	inline void MenuManager<T>::SelectMenuItem(std::int32_t menuIntID_p)
 	{
 		// Cast int zu Identifiziierer EnumID und rufe Funktion void MenuManager<T>::selectMenuItem(T menuID) auf
-		selectMenuItem(static_cast<T>(menuIntID));
+		SelectMenuItem(static_cast<T>(menuIntID_p));
 	}
 
 	/**
@@ -120,7 +120,7 @@ namespace AUP_HA
 	* @tparam [T] siehe Klassenbeschreibung
 	*/
 	template<typename T>
-	inline int MenuManager<T>::count() const
+	inline std::int32_t MenuManager<T>::Count() const
 	{
 		return mRegisteredHandlers.size();
 	}

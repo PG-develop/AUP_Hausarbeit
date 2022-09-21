@@ -16,7 +16,7 @@ namespace AUP_HA
 		registerMenu();
 
 		// Limitierung für die Menüeingabe
-		mLimits = std::make_pair(1, mMenu.count());
+		mLimits = std::make_pair(1, mMenu.Count());
 	}
 
 	/**
@@ -31,7 +31,7 @@ namespace AUP_HA
 	/**
 	* @brief Anzeige des States
 	* 
-	* Gibt die Menüstruktor aus.
+	* Gibt die Menüstruktur aus.
 	*/
 	void MainState::Render()
 	{
@@ -68,7 +68,7 @@ namespace AUP_HA
 		if (userInput)
 		{
 			// Wähle Menüpunkt aus
-			mMenu.selectMenuItem(*userInput);
+			mMenu.SelectMenuItem(*userInput);
 		}
 
 		// Benutzereingabe war nicht korrekt
@@ -83,25 +83,25 @@ namespace AUP_HA
 	*/
 	void MainState::registerMenu()
 	{
-		mMenu.registerMenu(MainMenu::GAME, 
+		mMenu.RegisterMenu(MainMenu::GAME, 
 			[&]() 
 			{
 				onGame(); 
 			}); 
 
-		mMenu.registerMenu(MainMenu::SETUP, 
+		mMenu.RegisterMenu(MainMenu::SETUP, 
 			[&]() 
 			{
 				onSetup(); 
 			});
 
-		mMenu.registerMenu(MainMenu::LEADERBOARD,
+		mMenu.RegisterMenu(MainMenu::LEADERBOARD,
 			[&]()
 			{
 				onLeaderboard();
 			});
 
-		mMenu.registerMenu(MainMenu::EXIT,
+		mMenu.RegisterMenu(MainMenu::EXIT,
 			[&]()
 			{
 				onExit();

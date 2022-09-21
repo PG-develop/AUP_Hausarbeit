@@ -21,7 +21,7 @@ namespace AUP_HA
 		~StateManager();
 
 		template<typename T>
-		void registerStates(States::ID stateID);
+		void registerStates(States::ID stateID_p);
 
 		void Render();
 		void ProcessEvents();

@@ -5,6 +5,12 @@
 
 namespace AUP_HA
 {
+	/**
+	* @class STATE_3
+	*
+	* Der Benutzer hat keine gültige Nummer eingetippt.
+	* Der Benutzer wird aufgefordert, eine Nummer einzugeben.
+	*/
 	class NumberGameStateShowLeaderboard : public NumberGameState
 	{
 	public:
@@ -16,6 +22,6 @@ namespace AUP_HA
 		virtual void Update();
 
 	private:
-		UserRepository* mUserRepository;
+		UserRepository* mUserRepository;	/**< Referenz auf das UserRepository */
 	};
 }

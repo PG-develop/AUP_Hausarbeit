@@ -7,16 +7,34 @@
 
 namespace AUP_HA
 {
-	NumberGameStateShowLeaderboard::NumberGameStateShowLeaderboard(NumberGameStateManager& manager) : NumberGameState(manager)
+	/**
+	* @brief Konstruktor
+	*
+	* Laden der Übergangsbedingungen: I
+	*/
+	NumberGameStateShowLeaderboard::NumberGameStateShowLeaderboard(NumberGameStateManager& manager_p) : NumberGameState(manager_p)
 	{
-		mTransitionList.push_back(manager.GetTransition(GameStates::TRANSITION::I));
-		mUserRepository = &manager.GetUserRepository();
+		mTransitionList.push_back(manager_p.GetTransition(GameStates::TRANSITION::I));
+		
+		// Referenz auf das UserRepository speichern
+		mUserRepository = &manager_p.GetUserRepository();
 	}
 
+	/**
+	* @Destruktor
+	*
+	* Keine Funktion
+	*/
 	NumberGameStateShowLeaderboard::~NumberGameStateShowLeaderboard()
 	{
 	}
 
+	/**
+	* @brief Spielanzeige
+	*
+	* Anzeige der aktuellen Bestenliste
+	* Der Benutzer wird aufgefordert, eine beliebige Taste zu drücken.
+	*/
 	void NumberGameStateShowLeaderboard::Render()
 	{
 		// Kopf
@@ -53,10 +71,20 @@ namespace AUP_HA
 		std::cout << "Weiter mit einer beliebigen Taste...";
 	}
 
+	/**
+	* @brief Benutzereingabe
+	* 
+	* Ohne Funktion
+	*/
 	void NumberGameStateShowLeaderboard::ProcessEvents()
 	{
 	}
 
+	/**
+	* @brief Ausführung der Logik
+	*
+	* Es werden nur die Übergangsbedingungen geprüft
+	*/
 	void NumberGameStateShowLeaderboard::Update()
 	{
 		checkTransitions();

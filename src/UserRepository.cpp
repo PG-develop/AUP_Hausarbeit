@@ -11,7 +11,7 @@ namespace AUP_HA
 	UserRepository::UserRepository() : mUserList()
 	{
 		mPersistenceUserList = std::make_unique<TXTUserPersistenceListService>();
-		mUserList = mPersistenceUserList->getList();
+		mUserList = mPersistenceUserList->GetList();
 	}
 
 	/**
@@ -26,7 +26,7 @@ namespace AUP_HA
 	/**
 	* @brief Gibt das aktuelle UserRepository zurück.
 	* 
-	* @return Referenz auf die Benutzerliste in sortierter Reihenfolge
+	* @return std::vector<User> Referenz auf die Benutzerliste in sortierter Reihenfolge
 	*/
 	const std::vector<User>& UserRepository::GetUserSortedByRang()
 	{
@@ -38,28 +38,28 @@ namespace AUP_HA
 	*		 Dabei wird geprüft, ob der neue User berechtigt ist,
 	*		 in die Bestenliste mit aufgenommen zu werden (max. 20 Benutzer).
 	* 
-	* @param [user] User Benutzer der zum Repository hinzugefügt werden soll
+	* @param [user_p] User Benutzer der zum Repository hinzugefügt werden soll
 	*/
-	void UserRepository::SaveOrUpdate(User user)
+	void UserRepository::SaveOrUpdate(User user_p)
 	{
 		// Prüfe, ob bereits 20 User im Leaderbord eingetragen sind
 		if (mUserList.size() >= 19) {
 
 			// Prüfe, ob der neue User weniger Versuche als der letzte User hat.
 			// Wenn dieser weniger versuche hat, entferne den letzten User.
-			if (user.Tries < mUserList.back().Tries) {
+			if (user_p.Tries < mUserList.back().Tries) {
 				mUserList.pop_back();
 			}
 		}
 
 		// Füge den neuen User in das Leaderbord hinzu und sortiere die Liste neu.
-		mUserList.push_back(user);
+		mUserList.push_back(user_p);
 		std::sort(mUserList.begin(), mUserList.end(), [](User& x, User& y) {
 			return x.Tries < y.Tries;
 			});
 
 		// Übergebe das UserRepository an den PersistenceListService
-		mPersistenceUserList->pushList(mUserList);
+		mPersistenceUserList->PushList(mUserList);
 	}
 
 	/**
@@ -67,7 +67,7 @@ namespace AUP_HA
 	*/
 	void UserRepository::ClearRepository()
 	{
-		mPersistenceUserList->clear();
+		mPersistenceUserList->Clear();
 		mUserList.clear();
 	}
 

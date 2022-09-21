@@ -4,10 +4,17 @@
 
 namespace AUP_HA
 {
+	/**
+	* @class STATE_8
+	*
+	* Sonderfunktion
+	* Dem Benutzer wird die gesuchte Zahl angezeigt.
+	* Der Spielfluss geht normal weiter.
+	*/
 	class NumberGameStateShowSearchedNumber : public NumberGameState
 	{
 	public:
-		NumberGameStateShowSearchedNumber(NumberGameStateManager& manager);
+		NumberGameStateShowSearchedNumber(NumberGameStateManager& manager_p);
 		virtual ~NumberGameStateShowSearchedNumber();
 
 		virtual void Render();

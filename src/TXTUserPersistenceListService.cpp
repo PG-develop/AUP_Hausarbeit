@@ -8,6 +8,12 @@
 
 namespace AUP_HA
 {
+	/**
+	* @brief Konstruktor
+	* 
+	* Prüft, ob die Datei für die Datenspeicherung bereits existiert.
+	* Wenn nicht, wird eine Datei erstellt.
+	*/
 	TXTUserPersistenceListService::TXTUserPersistenceListService() : PersistenceListService(), mFileName("leaderboard.txt")
 	{
 		// Prüfen, ob die Datei bereits existiert
@@ -19,19 +25,29 @@ namespace AUP_HA
 		}
 	}
 
+	/**
+	* @brief Destruktor
+	* 
+	* Keine Funktion
+	*/
 	TXTUserPersistenceListService::~TXTUserPersistenceListService()
 	{
 	}
+
 	/**
 	* @brief Speichert die Bestenliste in die Datenbank.
 	*
-	* @param Speichert die Liste in der Datei
+	* @param [list_p] const std::vector<User> Speichert die Liste in der Datei
 	*/
-	void TXTUserPersistenceListService::pushList(const std::vector<User>& list)
+	void TXTUserPersistenceListService::PushList(const std::vector<User>& list_p)
 	{
-		mList = list;
+		// Speichere Liste im Service ab
+		mList = list_p;
+
+		// öffne Datei, die Liste wird immer beim öffnen gelöscht und mit der neuen Liste überschrieben
 		std::ofstream stream(mFileName, std::ios_base::trunc);
 
+		// gehe alle Listenelemente durch
 		for (const auto& item : mList) {
 			std::string line;
 			std::stringstream ss;
@@ -41,6 +57,7 @@ namespace AUP_HA
 			ss << std::to_string(item.Date) << "," << item.Name << "," << std::to_string(item.Tries) << "\n";
 			line = ss.str();
 
+			// In die Datei schreiben
 			stream.write(line.c_str(), line.size());
 		}
 		stream.close();
@@ -48,8 +65,10 @@ namespace AUP_HA
 
 	/**
 	* @brief Liest die aktuelle Leaderboarddatei ein.
+	* 
+	* @return std::vector<User> Referenz auf die aktuelle Liste
 	*/
-	std::vector<User>& TXTUserPersistenceListService::getList()
+	std::vector<User>& TXTUserPersistenceListService::GetList()
 	{
 		std::ifstream stream(mFileName, std::ios_base::in);
 		std::string line;
@@ -110,14 +129,13 @@ namespace AUP_HA
 		stream.close();
 
 		// Auf eine Sortierung wird verzichtet. Die Datei darf nicht manuell bearbeitet werden. Daher muss auch die Reihenfolge stimmen.
-
 		return mList;
 	}
 
 	/**
 	* @brief Löscht die gesamte Bestenliste.
 	*/
-	void TXTUserPersistenceListService::clear()
+	void TXTUserPersistenceListService::Clear()
 	{
 		mList.clear();
 		std::ofstream stream(mFileName, std::ios_base::trunc);

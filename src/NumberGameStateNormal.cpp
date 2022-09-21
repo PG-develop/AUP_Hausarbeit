@@ -4,23 +4,39 @@
 
 namespace AUP_HA
 {
-	NumberGameStateNormal::NumberGameStateNormal(NumberGameStateManager& manager) : NumberGameState(manager)
+	/**
+	* @brief Konstruktor
+	*
+	* Laden der Übergangsbedingungen: NN, C, OB, NH
+	*/
+	NumberGameStateNormal::NumberGameStateNormal(NumberGameStateManager& manager_p) : NumberGameState(manager_p)
 	{
-		mTransitionList.push_back(manager.GetTransition(GameStates::TRANSITION::NN));
-		mTransitionList.push_back(manager.GetTransition(GameStates::TRANSITION::C));
-		mTransitionList.push_back(manager.GetTransition(GameStates::TRANSITION::OB));
-		mTransitionList.push_back(manager.GetTransition(GameStates::TRANSITION::NH));
+		mTransitionList.push_back(manager_p.GetTransition(GameStates::TRANSITION::NN));
+		mTransitionList.push_back(manager_p.GetTransition(GameStates::TRANSITION::C));
+		mTransitionList.push_back(manager_p.GetTransition(GameStates::TRANSITION::OB));
+		mTransitionList.push_back(manager_p.GetTransition(GameStates::TRANSITION::NH));
 	}
 
+	/**
+	* @Destruktor
+	*
+	* Keine Funktion
+	*/
 	NumberGameStateNormal::~NumberGameStateNormal()
 	{
 	}
 
+	/**
+	* @brief Spielanzeige
+	*
+	* Die Benutzereingabe war korrekt.
+	* Er wird aufgefordert, eine gültige Nummer anzugeben.
+	*/
 	void NumberGameStateNormal::Render()
 	{
 		auto lastInput = Utilities::ParseStringToInt(mGame->GetLastInput());
 
-		// Im State_1 (Name eingeben) wurde keine Zahl eingegeben.
+		// Im STATE_1 (Name eingeben) wurde keine Zahl eingegeben.
 		// Wenn als letzter Input der Name eingegeben wurde, wird hier die Ausgabe für die letzte Ausgabe herausgefiltert.
 		if (lastInput)
 		{
@@ -30,11 +46,19 @@ namespace AUP_HA
 		std::cout << "Finde die Zahl! Geben Sie eine Zahl zwischen " << mGame->GetMinBorder() << " und " << mGame->GetMaxBorder() << " ein: ";
 	}
 
+	/**
+	* @brief Benutzereingabe
+	*/
 	void NumberGameStateNormal::ProcessEvents()
 	{
 		std::cin >> mInputBuffer;
 	}
 
+	/**
+	* @brief Ausführung der Logik
+	*
+	* Es werden nur die Übergangsbedingungen geprüft
+	*/
 	void NumberGameStateNormal::Update()
 	{
 		checkTransitions();

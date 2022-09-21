@@ -5,22 +5,26 @@
 
 namespace AUP_HA
 {
+	/**
+	* @brief Repository für Einstellungen
+	*
+	*/
 	class SetupRepository
 	{
 	public:
 		SetupRepository();
 		~SetupRepository();
 
-		void setAmountOfChoices(std::int32_t p_value);
-		void setMaxRange(std::int32_t p_value);
-		void setSetup(Setup p_setup);
-		void setSetup(std::int32_t p_amountOfChoices, std::int32_t p_maxAmount);
+		void SetAmountOfChoices(std::int32_t value_p);
+		void SetMaxRange(std::int32_t value_p);
+		void SetSetup(Setup setup_p);
+		void SetSetup(std::int32_t amountOfChoices_p, std::int32_t maxAmount_p);
 
-		std::int32_t getAmountOfChoices() const;
-		std::int32_t getMaxRange() const;
+		std::int32_t GetAmountOfChoices() const;
+		std::int32_t GetMaxRange() const;
 
 	private:
-		std::unique_ptr<PersistenceListService<Setup>> mPersitenceSetupList;
-		Setup	mSetup;
+		std::unique_ptr<PersistenceListService<Setup>> mPersitenceSetupList; /**< PersistenceListService */
+		Setup	mSetup;	/**< Setupdaten (Model) */
 	};
 }

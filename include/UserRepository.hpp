@@ -20,7 +20,7 @@ namespace AUP_HA
 		~UserRepository();
 
 		const std::vector<User>& GetUserSortedByRang();
-		void SaveOrUpdate(User user);
+		void SaveOrUpdate(User user_p);
 		void ClearRepository();
 
 	private:

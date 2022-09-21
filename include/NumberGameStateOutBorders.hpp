@@ -4,10 +4,16 @@
 
 namespace AUP_HA
 {
+	/**
+	* @class STATE_4
+	*
+	* Die Eingabe des Benutzers war auﬂerhalb der Grenzen.
+	* Der Benutzer wird aufgefordert, eine Nummer einzugeben.
+	*/
 	class NumberGameStateOutBorders : public NumberGameState
 	{
 	public:
-		NumberGameStateOutBorders(NumberGameStateManager& manager);
+		NumberGameStateOutBorders(NumberGameStateManager& manager_p);
 		virtual ~NumberGameStateOutBorders();
 
 		virtual void Render();
