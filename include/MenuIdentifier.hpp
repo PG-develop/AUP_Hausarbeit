@@ -27,9 +27,9 @@ namespace AUP_HA
 	{
 		enum ID
 		{
-			GAMESETUP_CHANGE_AMOUNT_OF_CHOICES = 1,
-			GAMESETUP_CHANGE_MAX_RANGE,
-			EXIT
+			GAMESETUP_CHANGE_AMOUNT_OF_CHOICES = 1,	/**< Versuchsanzahl */
+			GAMESETUP_CHANGE_MAX_RANGE,				/**< Streureichweite */
+			EXIT									/**< Zurück zum Setup-State */
 		};
 	}
 }

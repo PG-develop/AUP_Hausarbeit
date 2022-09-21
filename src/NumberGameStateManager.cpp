@@ -42,6 +42,8 @@ namespace AUP_HA
 	* @brief Übergabe des Spielende-Handlers
 	* 
 	* Handler wird aufgerufen, sobald das Spiel beendet werden soll.
+	* 
+	* @param [handler_p] std::function<void()> Handler für Spielende
 	*/
 	void NumberGameStateManager::RegisterEndGameHandler(std::function<void()> handler_p)
 	{
@@ -275,6 +277,8 @@ namespace AUP_HA
 		{
 			return GameStates::ID::STATE_2;
 		}
+
+		// Wenn eine Beschränkung gesetzt ist -->
 		else
 		{
 			// Wenn die maximale Anzahl an Versuchen erreicht ist, beende das Spiel
@@ -303,9 +307,9 @@ namespace AUP_HA
 	* @return std::optional<GameState::ID> Identifikator für nächsten GameState\n
 	* ansonsten optional-Falg false
 	*/
-	std::optional<GameStates::ID> NumberGameStateManager::onWin(const std::string& string)
+	std::optional<GameStates::ID> NumberGameStateManager::onWin(const std::string& string_p)
 	{
-		auto parsedString = Utilities::ParseStringToInt(string);
+		auto parsedString = Utilities::ParseStringToInt(string_p);
 
 		// Ist die Eingabe eine Zahl
 		if (parsedString)
@@ -332,13 +336,13 @@ namespace AUP_HA
 	* @return std::optional<GameState::ID> Identifikator für nächsten GameState\n
 	* ansonsten optional-Falg false
 	*/
-	std::optional<GameStates::ID> NumberGameStateManager::onOutBorders(const std::string& string)
+	std::optional<GameStates::ID> NumberGameStateManager::onOutBorders(const std::string& string_p)
 	{
 		// Hole die Grenzen aus der Spieleinstanz
 		auto limits = std::make_pair<const std::int32_t&, const std::int32_t&>(mGame->GetMinBorder(), mGame->GetMaxBorder());
 
 		// parse die Eingabe mit den Grenzen
-		auto parsedString = Utilities::ParseStringToIntWithLimits(string, limits);
+		auto parsedString = Utilities::ParseStringToIntWithLimits(string_p, limits);
 
 		// Prüfe, ob die Grenzen nicht eingehalten wurden
 		// !!! Die Prüfung, ob es eine Zahl ist muss in einer Übergangsbedingung davor bereits geprüft sein.
@@ -359,7 +363,7 @@ namespace AUP_HA
 	* @return std::optional<GameState::ID> Identifikator für nächsten GameState\n
 	* ansonsten optional-Falg false
 	*/
-	std::optional<GameStates::ID> NumberGameStateManager::onToLeaderboard(const std::string& string)
+	std::optional<GameStates::ID> NumberGameStateManager::onToLeaderboard(const std::string& string_p)
 	{
 		return GameStates::STATE_6;
 	}
@@ -375,7 +379,7 @@ namespace AUP_HA
 	* @return std::optional<GameState::ID> Identifikator für nächsten GameState\n
 	* ansonsten optional-Falg false
 	*/
-	std::optional<GameStates::ID> NumberGameStateManager::onToIfNewGame(const std::string& string)
+	std::optional<GameStates::ID> NumberGameStateManager::onToIfNewGame(const std::string& string_p)
 	{
 		return GameStates::STATE_7;
 	}
@@ -393,16 +397,16 @@ namespace AUP_HA
 	* @return std::optional<GameState::ID> Identifikator für nächsten GameState\n
 	* ansonsten optional-Falg false
 	*/
-	std::optional<GameStates::ID> NumberGameStateManager::onNewGame(const std::string& string)
+	std::optional<GameStates::ID> NumberGameStateManager::onNewGame(const std::string& string_p)
 	{
 		// prüfe, ob der String ein 'j' ist
-		if (string.compare("j") == 0)
+		if (string_p.compare("j") == 0)
 		{
 			return GameStates::STATE_1;
 		}
 		
 		// prüfe, ob der String ein 'n' ist
-		if (string.compare("n") == 0)
+		if (string_p.compare("n") == 0)
 		{
 			return GameStates::END;
 		}
@@ -422,9 +426,9 @@ namespace AUP_HA
 	* @return std::optional<GameState::ID> Identifikator für nächsten GameState\n
 	* ansonsten optional-Falg false
 	*/
-	std::optional<GameStates::ID> NumberGameStateManager::onNegativ(const std::string& string)
+	std::optional<GameStates::ID> NumberGameStateManager::onNegativ(const std::string& string_p)
 	{
-		auto parsedString = Utilities::ParseStringToInt(string);
+		auto parsedString = Utilities::ParseStringToInt(string_p);
 
 		// prüfe, ob die Eingabe eine negative Zahl ist
 		if (*parsedString < 0)

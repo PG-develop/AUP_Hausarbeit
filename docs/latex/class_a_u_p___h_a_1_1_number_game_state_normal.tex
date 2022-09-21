@@ -2,6 +2,11 @@
 \label{class_a_u_p___h_a_1_1_number_game_state_normal}\index{AUP\_HA::NumberGameStateNormal@{AUP\_HA::NumberGameStateNormal}}
 
 
+STATE\+\_\+2.  
+
+
+
+
 {\ttfamily \#include $<$Number\+Game\+State\+Normal.\+hpp$>$}
 
 Klassendiagramm für AUP\+\_\+\+HA\+::Number\+Game\+State\+Normal\+:\begin{figure}[H]
@@ -13,26 +18,42 @@ Klassendiagramm für AUP\+\_\+\+HA\+::Number\+Game\+State\+Normal\+:\begin{figur
 \doxysubsection*{Öffentliche Methoden}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_normal_ad25a937fdd6d36a76c5fc74097688d53}{Number\+Game\+State\+Normal}} (\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager}{Number\+Game\+State\+Manager}} \&manager)
-\item 
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_normal_ac94a93cd47e707fa5a03a7dd4a292665}{Number\+Game\+State\+Normal}} (\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager}{Number\+Game\+State\+Manager}} \&manager\+\_\+p)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_normal_afeb6562e95d4d98380165fbf166020ec}{$\sim$\+Number\+Game\+State\+Normal}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Destruktor. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_normal_abce51cc01517fe8c6149c5faaee3e6bf}{Render}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Spielanzeige. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_normal_a25360ff3bc574d7713f992eff3e80a45}{Process\+Events}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Benutzereingabe. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_normal_a8261837969a6131db812e1fce11dcbd5}{Update}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Ausführung der Logik. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Weitere Geerbte Elemente}
 
 
+\doxysubsection{Ausführliche Beschreibung}
+STATE\+\_\+2. 
+
+Vorherige Eingabe war korrekt. Der Benutzer wird aufgefordert, eine Nummer einzugeben. 
+
 \doxysubsection{Beschreibung der Konstruktoren und Destruktoren}
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_normal_ad25a937fdd6d36a76c5fc74097688d53}\label{class_a_u_p___h_a_1_1_number_game_state_normal_ad25a937fdd6d36a76c5fc74097688d53}} 
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_normal_ac94a93cd47e707fa5a03a7dd4a292665}\label{class_a_u_p___h_a_1_1_number_game_state_normal_ac94a93cd47e707fa5a03a7dd4a292665}} 
 \index{AUP\_HA::NumberGameStateNormal@{AUP\_HA::NumberGameStateNormal}!NumberGameStateNormal@{NumberGameStateNormal}}
 \index{NumberGameStateNormal@{NumberGameStateNormal}!AUP\_HA::NumberGameStateNormal@{AUP\_HA::NumberGameStateNormal}}
 \doxysubsubsection{\texorpdfstring{NumberGameStateNormal()}{NumberGameStateNormal()}}
-{\footnotesize\ttfamily AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Normal\+::\+Number\+Game\+State\+Normal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager}{Number\+Game\+State\+Manager}} \&}]{manager }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Normal\+::\+Number\+Game\+State\+Normal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager}{Number\+Game\+State\+Manager}} \&}]{manager\+\_\+p }\end{DoxyParamCaption})}
 
+
+
+Konstruktor. 
+
+Laden der Übergangsbedingungen\+: NN, C, OB, NH
+
+
+\begin{DoxyParams}{Parameter}
+{\em \mbox{[}manager\+\_\+p\mbox{]}} & \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager}{Number\+Game\+State\+Manager}} \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_normal_afeb6562e95d4d98380165fbf166020ec}\label{class_a_u_p___h_a_1_1_number_game_state_normal_afeb6562e95d4d98380165fbf166020ec}} 
 \index{AUP\_HA::NumberGameStateNormal@{AUP\_HA::NumberGameStateNormal}!````~NumberGameStateNormal@{$\sim$NumberGameStateNormal}}
 \index{````~NumberGameStateNormal@{$\sim$NumberGameStateNormal}!AUP\_HA::NumberGameStateNormal@{AUP\_HA::NumberGameStateNormal}}
@@ -41,12 +62,20 @@ virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_normal_a82
 
 
 
+Destruktor. 
+
+Keine Funktion 
+
 \doxysubsection{Dokumentation der Elementfunktionen}
 \mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_normal_a25360ff3bc574d7713f992eff3e80a45}\label{class_a_u_p___h_a_1_1_number_game_state_normal_a25360ff3bc574d7713f992eff3e80a45}} 
 \index{AUP\_HA::NumberGameStateNormal@{AUP\_HA::NumberGameStateNormal}!ProcessEvents@{ProcessEvents}}
 \index{ProcessEvents@{ProcessEvents}!AUP\_HA::NumberGameStateNormal@{AUP\_HA::NumberGameStateNormal}}
 \doxysubsubsection{\texorpdfstring{ProcessEvents()}{ProcessEvents()}}
 {\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Normal\+::\+Process\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Benutzereingabe. 
 
 
 
@@ -60,6 +89,10 @@ Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a3f654578
 
 
 
+Spielanzeige. 
+
+Die Benutzereingabe war korrekt. Er wird aufgefordert, eine gültige Nummer anzugeben. 
+
 Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a8f62b5f4f58638f10f87a09c7d327b5b}{AUP\+\_\+\+HA\+::\+Number\+Game\+State}}.
 
 \mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_normal_a8261837969a6131db812e1fce11dcbd5}\label{class_a_u_p___h_a_1_1_number_game_state_normal_a8261837969a6131db812e1fce11dcbd5}} 
@@ -69,6 +102,10 @@ Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a8f62b5f4
 {\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Normal\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
+
+Ausführung der Logik. 
+
+Es werden nur die Übergangsbedingungen geprüft 
 
 Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a5faf1006bb8cf84925ba7bae48473786}{AUP\+\_\+\+HA\+::\+Number\+Game\+State}}.
 

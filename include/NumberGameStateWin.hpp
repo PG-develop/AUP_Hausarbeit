@@ -7,7 +7,8 @@
 namespace AUP_HA
 {
 	/**
-	* @class STATE_5
+	* @class NumberGameStateWin
+	* @brief STATE_5
 	*
 	* Der Benutzer hat die gesuchte Zahl gefunden.
 	*/

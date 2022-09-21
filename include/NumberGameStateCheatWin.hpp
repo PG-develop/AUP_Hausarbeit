@@ -9,7 +9,8 @@ namespace AUP_HA
 
 
 	/**
-	* @class STATE_9
+	* @class NumberGameStateCheatWin
+	* @brief STATE_9
 	* 
 	* Das Spiel wird sofort gewonnen.
 	*/

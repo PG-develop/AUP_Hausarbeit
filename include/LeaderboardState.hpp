@@ -10,6 +10,7 @@ namespace AUP_HA
 {
 
 	/**
+	* @class LeaderboardState
 	* @brief State für die Bestenliste
 	*/
 	class LeaderboardState : public State

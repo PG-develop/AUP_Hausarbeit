@@ -2,6 +2,11 @@
 \label{class_a_u_p___h_a_1_1_state_manager}\index{AUP\_HA::StateManager@{AUP\_HA::StateManager}}
 
 
+Steuerung der Programmzustände Grundgerüst.  
+
+
+
+
 {\ttfamily \#include $<$State\+Manager.\+hpp$>$}
 
 \doxysubsection*{Öffentliche Methoden}
@@ -11,7 +16,7 @@
 \begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager_ac32b45daea1b906d8569a64149716097}{$\sim$\+State\+Manager}} ()
 \begin{DoxyCompactList}\small\item\em Destruktor. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager_a83219986d153ef27e0c8947b79a6c7e5}{register\+States}} (\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711}{States\+::\+ID}} state\+ID)
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager_a4ec06ef420b9e70f34a43a1f4d0f7bad}{register\+States}} (\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711}{States\+::\+ID}} state\+ID\+\_\+p)
 \begin{DoxyCompactList}\small\item\em Registriert der Zustände in der Zustandsfabrik. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager_a439ffd28d35e90eb12e2507c44678442}{Render}} ()
 \begin{DoxyCompactList}\small\item\em Darstellung des \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states}{States}}. \end{DoxyCompactList}\item 
@@ -33,7 +38,9 @@ std\+::map$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad8
 
 
 \doxysubsection{Ausführliche Beschreibung}
-Spiellogik 
+Steuerung der Programmzustände Grundgerüst. 
+
+Steuert die grundlegenenden Programmzustände. 
 
 \doxysubsection{Beschreibung der Konstruktoren und Destruktoren}
 \mbox{\Hypertarget{class_a_u_p___h_a_1_1_state_manager_a7896a906b03c72d32dc5d312a7a1c768}\label{class_a_u_p___h_a_1_1_state_manager_a7896a906b03c72d32dc5d312a7a1c768}} 
@@ -63,7 +70,7 @@ Keine Funktion
 \index{AUP\_HA::StateManager@{AUP\_HA::StateManager}!changeState@{changeState}}
 \index{changeState@{changeState}!AUP\_HA::StateManager@{AUP\_HA::StateManager}}
 \doxysubsubsection{\texorpdfstring{changeState()}{changeState()}}
-{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+State\+Manager\+::change\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711}{States\+::\+ID}}}]{state\+ID }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+State\+Manager\+::change\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711}{States\+::\+ID}}}]{state\+ID\+\_\+p }\end{DoxyParamCaption})}
 
 
 
@@ -75,7 +82,7 @@ Der aktive \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}} wird gelöscht 
 
 
 \begin{DoxyParams}{Parameter}
-{\em \mbox{[}state\+ID\mbox{]}} & \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711}{States\+::\+ID}} Zustandsidentifiziierer \\
+{\em \mbox{[}state\+ID\+\_\+p\mbox{]}} & \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711}{States\+::\+ID}} Zustandsidentifiziierer \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{class_a_u_p___h_a_1_1_state_manager_a344b3865242f3a2b3da6d1e2b6c9e3e1}\label{class_a_u_p___h_a_1_1_state_manager_a344b3865242f3a2b3da6d1e2b6c9e3e1}} 
@@ -102,7 +109,7 @@ TRUE, wenn ein \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}} aktiv ist.~
 
 Behandlung der Eingabestreams / Events. 
 
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_state_manager_a83219986d153ef27e0c8947b79a6c7e5}\label{class_a_u_p___h_a_1_1_state_manager_a83219986d153ef27e0c8947b79a6c7e5}} 
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_state_manager_a4ec06ef420b9e70f34a43a1f4d0f7bad}\label{class_a_u_p___h_a_1_1_state_manager_a4ec06ef420b9e70f34a43a1f4d0f7bad}} 
 \index{AUP\_HA::StateManager@{AUP\_HA::StateManager}!registerStates@{registerStates}}
 \index{registerStates@{registerStates}!AUP\_HA::StateManager@{AUP\_HA::StateManager}}
 \doxysubsubsection{\texorpdfstring{registerStates()}{registerStates()}}

@@ -2,6 +2,11 @@
 \label{class_a_u_p___h_a_1_1_setup_state}\index{AUP\_HA::SetupState@{AUP\_HA::SetupState}}
 
 
+Einstellungs \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}}.  
+
+
+
+
 {\ttfamily \#include $<$Setup\+State.\+hpp$>$}
 
 Klassendiagramm für AUP\+\_\+\+HA\+::Setup\+State\+:\begin{figure}[H]
@@ -13,33 +18,33 @@ Klassendiagramm für AUP\+\_\+\+HA\+::Setup\+State\+:\begin{figure}[H]
 \doxysubsection*{Öffentliche Methoden}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_state_a0179cebf831fc689fb8820de8fa5b9ab}{Setup\+State}} (\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} \&state\+Manager)
-\item 
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_state_a39a2588fe410db460a3d645912fd3c56}{Setup\+State}} (\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} \&state\+Manager\+\_\+p)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_state_a9ed103b37b4eb89f02b87df314f906eb}{$\sim$\+Setup\+State}} ()
 \item 
 virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_state_a84f31a95c5e5fb25181c82df752dc9ef}{Render}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Anzeige des \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states}{States}}. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_state_a97a5e027fd3db883bb3df5a91e0c1fc8}{Process\+Events}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Benutztereingabe. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_state_a03f25d82957222719bf1bc05fbc0bd5d}{Update}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Ausführung der Statelogic. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Methoden}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_state_a365ecee6db700a80f78a92a6df51fa33}{register\+Menu}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Registrierung der Menühandlers. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_state_a5c7ece0e7957963a2bf863fb1468a87b}{on\+Game\+Setup}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Handler für den Menüpunkt \mbox{[}1\mbox{]} Wechsel zu den Spieleinstellungen. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_state_a47b1cddf5c8ea1a7f3dea706180fd630}{on\+Clear}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Handler für den Menüpunkt \mbox{[}2\mbox{]} Bestenliste löschen. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_state_ac5b346e991ab69b608e8449eea3c7dbd}{on\+Exit}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Handler für den Menüpunkt \mbox{[}3\mbox{]} Wechsel zum MAIN \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attribute}
 \begin{DoxyCompactItemize}
 \item 
 std\+::string \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_state_a220ec6963dd35e449b55de480ee5b86b}{m\+Userinput}}
 \item 
-std\+::pair$<$ int, int $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_state_a594e63c7e398164e1805b5d608978fdf}{m\+Limits}}
+std\+::pair$<$ std\+::int32\+\_\+t, std\+::int32\+\_\+t $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_state_aec2a4699fe1758bb6587877c686362ed}{m\+Limits}}
 \item 
 \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager}{Menu\+Manager}}$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_setup_menu_a4180816c97a061e74e2e08b459a111d6}{Setup\+Menu\+::\+ID}} $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_state_a6e024b14bcb3ba98db5259d0257e8f52}{m\+Menu}}
 \item 
@@ -48,20 +53,42 @@ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository
 \doxysubsection*{Weitere Geerbte Elemente}
 
 
+\doxysubsection{Ausführliche Beschreibung}
+Einstellungs \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}}. 
+
+
+\begin{DoxyEnumerate}
+\item Ebene der Einstellungen~\newline
+Weiter zur Ebenene der Spieleinstellungen oder Reset der Bestenliste 
+\end{DoxyEnumerate}
+
 \doxysubsection{Beschreibung der Konstruktoren und Destruktoren}
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_state_a0179cebf831fc689fb8820de8fa5b9ab}\label{class_a_u_p___h_a_1_1_setup_state_a0179cebf831fc689fb8820de8fa5b9ab}} 
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_state_a39a2588fe410db460a3d645912fd3c56}\label{class_a_u_p___h_a_1_1_setup_state_a39a2588fe410db460a3d645912fd3c56}} 
 \index{AUP\_HA::SetupState@{AUP\_HA::SetupState}!SetupState@{SetupState}}
 \index{SetupState@{SetupState}!AUP\_HA::SetupState@{AUP\_HA::SetupState}}
 \doxysubsubsection{\texorpdfstring{SetupState()}{SetupState()}}
-{\footnotesize\ttfamily AUP\+\_\+\+HA\+::\+Setup\+State\+::\+Setup\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} \&}]{state\+Manager }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily AUP\+\_\+\+HA\+::\+Setup\+State\+::\+Setup\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} \&}]{state\+Manager\+\_\+p }\end{DoxyParamCaption})}
 
+
+
+Konstruktor. 
+
+Erstelle das \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_repository}{Setup\+Repository}} und initialisiere Menü für die Auswahl
+
+
+\begin{DoxyParams}{Parameter}
+{\em \mbox{[}state\+Manager\+\_\+p\mbox{]}} & \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_state_a9ed103b37b4eb89f02b87df314f906eb}\label{class_a_u_p___h_a_1_1_setup_state_a9ed103b37b4eb89f02b87df314f906eb}} 
 \index{AUP\_HA::SetupState@{AUP\_HA::SetupState}!````~SetupState@{$\sim$SetupState}}
 \index{````~SetupState@{$\sim$SetupState}!AUP\_HA::SetupState@{AUP\_HA::SetupState}}
 \doxysubsubsection{\texorpdfstring{$\sim$SetupState()}{~SetupState()}}
 {\footnotesize\ttfamily AUP\+\_\+\+HA\+::\+Setup\+State\+::$\sim$\+Setup\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+brief Destruktor
 
+Keine Funktion 
 
 \doxysubsection{Dokumentation der Elementfunktionen}
 \mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_state_a47b1cddf5c8ea1a7f3dea706180fd630}\label{class_a_u_p___h_a_1_1_setup_state_a47b1cddf5c8ea1a7f3dea706180fd630}} 
@@ -70,11 +97,19 @@ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository
 \doxysubsubsection{\texorpdfstring{onClear()}{onClear()}}
 {\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Setup\+State\+::on\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Handler für den Menüpunkt \mbox{[}2\mbox{]} Bestenliste löschen. 
+
 \mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_state_ac5b346e991ab69b608e8449eea3c7dbd}\label{class_a_u_p___h_a_1_1_setup_state_ac5b346e991ab69b608e8449eea3c7dbd}} 
 \index{AUP\_HA::SetupState@{AUP\_HA::SetupState}!onExit@{onExit}}
 \index{onExit@{onExit}!AUP\_HA::SetupState@{AUP\_HA::SetupState}}
 \doxysubsubsection{\texorpdfstring{onExit()}{onExit()}}
 {\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Setup\+State\+::on\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Handler für den Menüpunkt \mbox{[}3\mbox{]} Wechsel zum MAIN \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}}. 
 
 \mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_state_a5c7ece0e7957963a2bf863fb1468a87b}\label{class_a_u_p___h_a_1_1_setup_state_a5c7ece0e7957963a2bf863fb1468a87b}} 
 \index{AUP\_HA::SetupState@{AUP\_HA::SetupState}!onGameSetup@{onGameSetup}}
@@ -82,11 +117,19 @@ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository
 \doxysubsubsection{\texorpdfstring{onGameSetup()}{onGameSetup()}}
 {\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Setup\+State\+::on\+Game\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Handler für den Menüpunkt \mbox{[}1\mbox{]} Wechsel zu den Spieleinstellungen. 
+
 \mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_state_a97a5e027fd3db883bb3df5a91e0c1fc8}\label{class_a_u_p___h_a_1_1_setup_state_a97a5e027fd3db883bb3df5a91e0c1fc8}} 
 \index{AUP\_HA::SetupState@{AUP\_HA::SetupState}!ProcessEvents@{ProcessEvents}}
 \index{ProcessEvents@{ProcessEvents}!AUP\_HA::SetupState@{AUP\_HA::SetupState}}
 \doxysubsubsection{\texorpdfstring{ProcessEvents()}{ProcessEvents()}}
 {\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Setup\+State\+::\+Process\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Benutztereingabe. 
 
 
 
@@ -98,6 +141,10 @@ Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a8de555f139a20f120ace
 \doxysubsubsection{\texorpdfstring{registerMenu()}{registerMenu()}}
 {\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Setup\+State\+::register\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Registrierung der Menühandlers. 
+
 \mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_state_a84f31a95c5e5fb25181c82df752dc9ef}\label{class_a_u_p___h_a_1_1_setup_state_a84f31a95c5e5fb25181c82df752dc9ef}} 
 \index{AUP\_HA::SetupState@{AUP\_HA::SetupState}!Render@{Render}}
 \index{Render@{Render}!AUP\_HA::SetupState@{AUP\_HA::SetupState}}
@@ -105,6 +152,10 @@ Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a8de555f139a20f120ace
 {\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Setup\+State\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
+
+Anzeige des \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states}{States}}. 
+
+Gibt die Menüstruktur aus. 
 
 Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a828f0dad7106f8de0236146ce86aff85}{AUP\+\_\+\+HA\+::\+State}}.
 
@@ -116,16 +167,20 @@ Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a828f0dad7106f8de0236
 
 
 
+Ausführung der Statelogic. 
+
+
+
 Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_abead46b048770dc17d4edab5e490c092}{AUP\+\_\+\+HA\+::\+State}}.
 
 
 
 \doxysubsection{Dokumentation der Datenelemente}
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_state_a594e63c7e398164e1805b5d608978fdf}\label{class_a_u_p___h_a_1_1_setup_state_a594e63c7e398164e1805b5d608978fdf}} 
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_state_aec2a4699fe1758bb6587877c686362ed}\label{class_a_u_p___h_a_1_1_setup_state_aec2a4699fe1758bb6587877c686362ed}} 
 \index{AUP\_HA::SetupState@{AUP\_HA::SetupState}!mLimits@{mLimits}}
 \index{mLimits@{mLimits}!AUP\_HA::SetupState@{AUP\_HA::SetupState}}
 \doxysubsubsection{\texorpdfstring{mLimits}{mLimits}}
-{\footnotesize\ttfamily std\+::pair$<$int, int$>$ AUP\+\_\+\+HA\+::\+Setup\+State\+::m\+Limits\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::pair$<$std\+::int32\+\_\+t, std\+::int32\+\_\+t$>$ AUP\+\_\+\+HA\+::\+Setup\+State\+::m\+Limits\hspace{0.3cm}{\ttfamily [private]}}
 
 \mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_state_a6e024b14bcb3ba98db5259d0257e8f52}\label{class_a_u_p___h_a_1_1_setup_state_a6e024b14bcb3ba98db5259d0257e8f52}} 
 \index{AUP\_HA::SetupState@{AUP\_HA::SetupState}!mMenu@{mMenu}}

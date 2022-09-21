@@ -12,7 +12,7 @@ namespace AUP_HA
 	*
 	* Laden der Übergangsbedingungen: W
 	* 
-	* @param [stateManager_p] NumberGameStateManager 
+	* @param [manager_p] NumberGameStateManager 
 	*/
 	NumberGameStateCheatWin::NumberGameStateCheatWin(NumberGameStateManager& manager_p) : NumberGameState(manager_p)
 	{
@@ -23,7 +23,7 @@ namespace AUP_HA
 	}
 
 	/**
-	* @Destruktor
+	* @brief Destruktor
 	*
 	* Keine Funktion
 	*/

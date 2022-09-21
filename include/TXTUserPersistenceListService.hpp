@@ -7,6 +7,7 @@ namespace AUP_HA
 {
 	/**
 	* @class TXTUserPersistenceListService
+	* @brief PersistenceListService für User in TXT
 	*
 	* Service für das Model User\n
 	* Daten werden in einer TXT-Datei gespeichert.

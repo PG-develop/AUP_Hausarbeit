@@ -7,7 +7,8 @@
 namespace AUP_HA 
 {
 	/**
-	* @class State für die Introanzeige
+	* @class IntroState
+	* @brief State für die Introanzeige
 	*/
 	class IntroState : public State
 	{

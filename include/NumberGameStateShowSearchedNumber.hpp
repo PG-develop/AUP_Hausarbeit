@@ -5,7 +5,8 @@
 namespace AUP_HA
 {
 	/**
-	* @class STATE_8
+	* @class NumberGameStateShowSearchedNumber
+	* @brief STATE_8
 	*
 	* Sonderfunktion
 	* Dem Benutzer wird die gesuchte Zahl angezeigt.

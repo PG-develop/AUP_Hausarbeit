@@ -5,7 +5,7 @@
 namespace AUP_HA
 {
 	/**
-	* @struct Model Setup
+	* @brief Model Setup
 	* 
 	* Speichert Daten für die Spieleinstellungen\n
 	* Anzahl der Versuche\n

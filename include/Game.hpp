@@ -11,8 +11,8 @@ namespace AUP_HA
 
 	/**
 	* @class Game
+	* @brief Zahlenratespiel
 	* 
-	* Zahlenratespiel\n
 	* Es wird eine Zahl generiert die ein Benutzer herausfinden muss.\n
 	* Um die Option mit begrenzter Anzahl an Versuchen zu aktiveren, mMaxTries mit einer anderen Zahl als 0 initialisieren.
 	*/

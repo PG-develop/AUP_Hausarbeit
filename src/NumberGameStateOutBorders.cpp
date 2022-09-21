@@ -9,7 +9,7 @@ namespace AUP_HA
 	*
 	* Laden der Übergangsbedingungen: NN, C, OB, NH
 	* 
-	* @param [stateManager_p] NumberGameStateManager 
+	* @param [manager_p] NumberGameStateManager 
 	*/
 	NumberGameStateOutBorders::NumberGameStateOutBorders(NumberGameStateManager& manager_p) : NumberGameState(manager_p)
 	{
@@ -20,7 +20,7 @@ namespace AUP_HA
 	}
 
 	/**
-	* @Destruktor
+	* @brief Destruktor
 	*
 	* Keine Funktion
 	*/

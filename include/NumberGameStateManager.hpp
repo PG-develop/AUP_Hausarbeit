@@ -13,7 +13,8 @@
 namespace AUP_HA
 {
 	/**
-	* @class StateManager für die Spiellogik
+	* @class NumberGameStateManager
+	* @brief StateManager für die Spiellogik
 	*/
 	class NumberGameStateManager
 	{

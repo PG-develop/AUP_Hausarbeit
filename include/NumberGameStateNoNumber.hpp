@@ -5,7 +5,8 @@
 namespace AUP_HA
 {
 	/**
-	* @class STATE_3
+	* @class NumberGameStateNoNumber
+	* @brief STATE_3
 	*
 	* Der Benutzer hat keine gültige Nummer eingetippt.
 	* Der Benutzer wird aufgefordert, eine Nummer einzugeben.

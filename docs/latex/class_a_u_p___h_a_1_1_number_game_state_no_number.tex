@@ -2,6 +2,11 @@
 \label{class_a_u_p___h_a_1_1_number_game_state_no_number}\index{AUP\_HA::NumberGameStateNoNumber@{AUP\_HA::NumberGameStateNoNumber}}
 
 
+STATE\+\_\+3.  
+
+
+
+
 {\ttfamily \#include $<$Number\+Game\+State\+No\+Number.\+hpp$>$}
 
 Klassendiagramm für AUP\+\_\+\+HA\+::Number\+Game\+State\+No\+Number\+:\begin{figure}[H]
@@ -13,26 +18,42 @@ Klassendiagramm für AUP\+\_\+\+HA\+::Number\+Game\+State\+No\+Number\+:\begin{f
 \doxysubsection*{Öffentliche Methoden}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_no_number_a79afd4047572f5316bedcea1bc833ea7}{Number\+Game\+State\+No\+Number}} (\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager}{Number\+Game\+State\+Manager}} \&manager)
-\item 
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_no_number_a5cb30a7291df2143a0785d6f0d9e82ac}{Number\+Game\+State\+No\+Number}} (\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager}{Number\+Game\+State\+Manager}} \&manager\+\_\+p)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_no_number_ab70330be46e885b44914d559a9db64ea}{$\sim$\+Number\+Game\+State\+No\+Number}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Destruktor. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_no_number_aa3fe0859ccad5ee499d358e527c7e494}{Render}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Spielanzeige. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_no_number_ac94ceacabb84a7d1909db3f3fecb9bfd}{Process\+Events}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Benutzereingabe. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_no_number_ad39ba300eb75191fa611cb6c41609c7c}{Update}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Ausführung der Logik. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Weitere Geerbte Elemente}
 
 
+\doxysubsection{Ausführliche Beschreibung}
+STATE\+\_\+3. 
+
+Der Benutzer hat keine gültige Nummer eingetippt. Der Benutzer wird aufgefordert, eine Nummer einzugeben. 
+
 \doxysubsection{Beschreibung der Konstruktoren und Destruktoren}
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_no_number_a79afd4047572f5316bedcea1bc833ea7}\label{class_a_u_p___h_a_1_1_number_game_state_no_number_a79afd4047572f5316bedcea1bc833ea7}} 
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_no_number_a5cb30a7291df2143a0785d6f0d9e82ac}\label{class_a_u_p___h_a_1_1_number_game_state_no_number_a5cb30a7291df2143a0785d6f0d9e82ac}} 
 \index{AUP\_HA::NumberGameStateNoNumber@{AUP\_HA::NumberGameStateNoNumber}!NumberGameStateNoNumber@{NumberGameStateNoNumber}}
 \index{NumberGameStateNoNumber@{NumberGameStateNoNumber}!AUP\_HA::NumberGameStateNoNumber@{AUP\_HA::NumberGameStateNoNumber}}
 \doxysubsubsection{\texorpdfstring{NumberGameStateNoNumber()}{NumberGameStateNoNumber()}}
-{\footnotesize\ttfamily AUP\+\_\+\+HA\+::\+Number\+Game\+State\+No\+Number\+::\+Number\+Game\+State\+No\+Number (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager}{Number\+Game\+State\+Manager}} \&}]{manager }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily AUP\+\_\+\+HA\+::\+Number\+Game\+State\+No\+Number\+::\+Number\+Game\+State\+No\+Number (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager}{Number\+Game\+State\+Manager}} \&}]{manager\+\_\+p }\end{DoxyParamCaption})}
 
+
+
+Konstruktor. 
+
+Laden der Übergangsbedingungen\+: NN, C, OB, NH
+
+
+\begin{DoxyParams}{Parameter}
+{\em \mbox{[}manager\+\_\+p\mbox{]}} & \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager}{Number\+Game\+State\+Manager}} \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_no_number_ab70330be46e885b44914d559a9db64ea}\label{class_a_u_p___h_a_1_1_number_game_state_no_number_ab70330be46e885b44914d559a9db64ea}} 
 \index{AUP\_HA::NumberGameStateNoNumber@{AUP\_HA::NumberGameStateNoNumber}!````~NumberGameStateNoNumber@{$\sim$NumberGameStateNoNumber}}
 \index{````~NumberGameStateNoNumber@{$\sim$NumberGameStateNoNumber}!AUP\_HA::NumberGameStateNoNumber@{AUP\_HA::NumberGameStateNoNumber}}
@@ -41,12 +62,20 @@ virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_no_number_
 
 
 
+Destruktor. 
+
+Keine Funktion 
+
 \doxysubsection{Dokumentation der Elementfunktionen}
 \mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_no_number_ac94ceacabb84a7d1909db3f3fecb9bfd}\label{class_a_u_p___h_a_1_1_number_game_state_no_number_ac94ceacabb84a7d1909db3f3fecb9bfd}} 
 \index{AUP\_HA::NumberGameStateNoNumber@{AUP\_HA::NumberGameStateNoNumber}!ProcessEvents@{ProcessEvents}}
 \index{ProcessEvents@{ProcessEvents}!AUP\_HA::NumberGameStateNoNumber@{AUP\_HA::NumberGameStateNoNumber}}
 \doxysubsubsection{\texorpdfstring{ProcessEvents()}{ProcessEvents()}}
 {\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Number\+Game\+State\+No\+Number\+::\+Process\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Benutzereingabe. 
 
 
 
@@ -60,6 +89,10 @@ Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a3f654578
 
 
 
+Spielanzeige. 
+
+Dem Benutzer wird mitgeteilt, keine gültige Nummer angegeben zu haben. Er wird aufgefordert, eine gültige Nummer anzugeben. 
+
 Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a8f62b5f4f58638f10f87a09c7d327b5b}{AUP\+\_\+\+HA\+::\+Number\+Game\+State}}.
 
 \mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_no_number_ad39ba300eb75191fa611cb6c41609c7c}\label{class_a_u_p___h_a_1_1_number_game_state_no_number_ad39ba300eb75191fa611cb6c41609c7c}} 
@@ -69,6 +102,10 @@ Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a8f62b5f4
 {\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Number\+Game\+State\+No\+Number\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
+
+Ausführung der Logik. 
+
+Es werden nur die Übergangsbedingungen geprüft 
 
 Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a5faf1006bb8cf84925ba7bae48473786}{AUP\+\_\+\+HA\+::\+Number\+Game\+State}}.
 

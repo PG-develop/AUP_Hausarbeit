@@ -11,7 +11,8 @@
 namespace AUP_HA
 {
 	/**
-	* @class State für die Spielsession
+	* @class GameState
+	* @brief State für die Spielsession
 	*/
 	class GameState : public State
 	{

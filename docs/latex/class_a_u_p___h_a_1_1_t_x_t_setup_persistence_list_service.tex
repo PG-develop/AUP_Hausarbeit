@@ -14,14 +14,14 @@ Klassendiagramm für AUP\+\_\+\+HA\+::TXTSetup\+Persistence\+List\+Service\+:\be
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_a_u_p___h_a_1_1_t_x_t_setup_persistence_list_service_ae9a554eda4462f50cf7f4e1e8d7810e8}{TXTSetup\+Persistence\+List\+Service}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_a_u_p___h_a_1_1_t_x_t_setup_persistence_list_service_ab0ceaffa000cc3b7c8032746d04339cd}{$\sim$\+TXTSetup\+Persistence\+List\+Service}} ()
-\item 
-virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_t_x_t_setup_persistence_list_service_a7a2e3683b0098f46713cfe118e32e013}{push\+List}} (const std\+::vector$<$ \mbox{\hyperlink{struct_a_u_p___h_a_1_1_setup}{Setup}} $>$ \&list)
+\begin{DoxyCompactList}\small\item\em Destruktor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_t_x_t_setup_persistence_list_service_ade62425081baf4a527ee5f875b6f4005}{Push\+List}} (const std\+::vector$<$ \mbox{\hyperlink{struct_a_u_p___h_a_1_1_setup}{Setup}} $>$ \&list\+\_\+p)
 \begin{DoxyCompactList}\small\item\em Datensatz speichern. \end{DoxyCompactList}\item 
-virtual std\+::vector$<$ \mbox{\hyperlink{struct_a_u_p___h_a_1_1_setup}{Setup}} $>$ \& \mbox{\hyperlink{class_a_u_p___h_a_1_1_t_x_t_setup_persistence_list_service_ac6da5f52f7ad0c2386d706a90b1d17fd}{get\+List}} ()
-\item 
-virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_t_x_t_setup_persistence_list_service_ac0d160bb48446206224b8d820116b34f}{clear}} ()
+virtual std\+::vector$<$ \mbox{\hyperlink{struct_a_u_p___h_a_1_1_setup}{Setup}} $>$ \& \mbox{\hyperlink{class_a_u_p___h_a_1_1_t_x_t_setup_persistence_list_service_a153d95b6b9a2d7e8ed95f9268ca03319}{Get\+List}} ()
+\begin{DoxyCompactList}\small\item\em Liest die aktuelle Leaderboarddatei ein. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_t_x_t_setup_persistence_list_service_a39fc33b784fcdd1cdb006edf47b6f826}{Clear}} ()
 \begin{DoxyCompactList}\small\item\em Löscht die Einstellungen Wird nicht benötigt und daher nicht implementiert Kann eventuell für das Zurücksetzen auf Werkseinstellungen benutzt werden. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attribute}
 \begin{DoxyCompactItemize}
@@ -38,7 +38,11 @@ std\+::string \mbox{\hyperlink{class_a_u_p___h_a_1_1_t_x_t_setup_persistence_lis
 \doxysubsubsection{\texorpdfstring{TXTSetupPersistenceListService()}{TXTSetupPersistenceListService()}}
 {\footnotesize\ttfamily AUP\+\_\+\+HA\+::\+TXTSetup\+Persistence\+List\+Service\+::\+TXTSetup\+Persistence\+List\+Service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_t_x_t_setup_persistence_list_service_ab0ceaffa000cc3b7c8032746d04339cd}\label{class_a_u_p___h_a_1_1_t_x_t_setup_persistence_list_service_ab0ceaffa000cc3b7c8032746d04339cd}} 
+
+
+Konstruktor. 
+
+Prüft, ob die Datei für die Datenspeicherung bereits existiert. Wenn nicht, wird eine Datei erstellt. \mbox{\Hypertarget{class_a_u_p___h_a_1_1_t_x_t_setup_persistence_list_service_ab0ceaffa000cc3b7c8032746d04339cd}\label{class_a_u_p___h_a_1_1_t_x_t_setup_persistence_list_service_ab0ceaffa000cc3b7c8032746d04339cd}} 
 \index{AUP\_HA::TXTSetupPersistenceListService@{AUP\_HA::TXTSetupPersistenceListService}!````~TXTSetupPersistenceListService@{$\sim$TXTSetupPersistenceListService}}
 \index{````~TXTSetupPersistenceListService@{$\sim$TXTSetupPersistenceListService}!AUP\_HA::TXTSetupPersistenceListService@{AUP\_HA::TXTSetupPersistenceListService}}
 \doxysubsubsection{\texorpdfstring{$\sim$TXTSetupPersistenceListService()}{~TXTSetupPersistenceListService()}}
@@ -46,12 +50,16 @@ std\+::string \mbox{\hyperlink{class_a_u_p___h_a_1_1_t_x_t_setup_persistence_lis
 
 
 
+Destruktor. 
+
+Keine Funktion 
+
 \doxysubsection{Dokumentation der Elementfunktionen}
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_t_x_t_setup_persistence_list_service_ac0d160bb48446206224b8d820116b34f}\label{class_a_u_p___h_a_1_1_t_x_t_setup_persistence_list_service_ac0d160bb48446206224b8d820116b34f}} 
-\index{AUP\_HA::TXTSetupPersistenceListService@{AUP\_HA::TXTSetupPersistenceListService}!clear@{clear}}
-\index{clear@{clear}!AUP\_HA::TXTSetupPersistenceListService@{AUP\_HA::TXTSetupPersistenceListService}}
-\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
-{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+TXTSetup\+Persistence\+List\+Service\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_t_x_t_setup_persistence_list_service_a39fc33b784fcdd1cdb006edf47b6f826}\label{class_a_u_p___h_a_1_1_t_x_t_setup_persistence_list_service_a39fc33b784fcdd1cdb006edf47b6f826}} 
+\index{AUP\_HA::TXTSetupPersistenceListService@{AUP\_HA::TXTSetupPersistenceListService}!Clear@{Clear}}
+\index{Clear@{Clear}!AUP\_HA::TXTSetupPersistenceListService@{AUP\_HA::TXTSetupPersistenceListService}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+TXTSetup\+Persistence\+List\+Service\+::\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -59,23 +67,30 @@ Löscht die Einstellungen Wird nicht benötigt und daher nicht implementiert Kan
 
 
 
-Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_persistence_list_service_ae5be2422f4cc60b48b48046b11258862}{AUP\+\_\+\+HA\+::\+Persistence\+List\+Service$<$ Setup $>$}}.
+Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_persistence_list_service_afe6cc3b99f6740ae8727f8f81ec95255}{AUP\+\_\+\+HA\+::\+Persistence\+List\+Service$<$ Setup $>$}}.
 
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_t_x_t_setup_persistence_list_service_ac6da5f52f7ad0c2386d706a90b1d17fd}\label{class_a_u_p___h_a_1_1_t_x_t_setup_persistence_list_service_ac6da5f52f7ad0c2386d706a90b1d17fd}} 
-\index{AUP\_HA::TXTSetupPersistenceListService@{AUP\_HA::TXTSetupPersistenceListService}!getList@{getList}}
-\index{getList@{getList}!AUP\_HA::TXTSetupPersistenceListService@{AUP\_HA::TXTSetupPersistenceListService}}
-\doxysubsubsection{\texorpdfstring{getList()}{getList()}}
-{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{struct_a_u_p___h_a_1_1_setup}{Setup}} $>$ \& AUP\+\_\+\+HA\+::\+TXTSetup\+Persistence\+List\+Service\+::get\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_t_x_t_setup_persistence_list_service_a153d95b6b9a2d7e8ed95f9268ca03319}\label{class_a_u_p___h_a_1_1_t_x_t_setup_persistence_list_service_a153d95b6b9a2d7e8ed95f9268ca03319}} 
+\index{AUP\_HA::TXTSetupPersistenceListService@{AUP\_HA::TXTSetupPersistenceListService}!GetList@{GetList}}
+\index{GetList@{GetList}!AUP\_HA::TXTSetupPersistenceListService@{AUP\_HA::TXTSetupPersistenceListService}}
+\doxysubsubsection{\texorpdfstring{GetList()}{GetList()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{struct_a_u_p___h_a_1_1_setup}{Setup}} $>$ \& AUP\+\_\+\+HA\+::\+TXTSetup\+Persistence\+List\+Service\+::\+Get\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_persistence_list_service_a09165931283da3eae9e1a6175576b9bf}{AUP\+\_\+\+HA\+::\+Persistence\+List\+Service$<$ Setup $>$}}.
+Liest die aktuelle Leaderboarddatei ein. 
 
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_t_x_t_setup_persistence_list_service_a7a2e3683b0098f46713cfe118e32e013}\label{class_a_u_p___h_a_1_1_t_x_t_setup_persistence_list_service_a7a2e3683b0098f46713cfe118e32e013}} 
-\index{AUP\_HA::TXTSetupPersistenceListService@{AUP\_HA::TXTSetupPersistenceListService}!pushList@{pushList}}
-\index{pushList@{pushList}!AUP\_HA::TXTSetupPersistenceListService@{AUP\_HA::TXTSetupPersistenceListService}}
-\doxysubsubsection{\texorpdfstring{pushList()}{pushList()}}
-{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+TXTSetup\+Persistence\+List\+Service\+::push\+List (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_a_u_p___h_a_1_1_setup}{Setup}} $>$ \&}]{list }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+\begin{DoxyReturn}{Rückgabe}
+std\+::vector$<$\+Setup$>$ Referenz auf die aktuelle Liste 
+\end{DoxyReturn}
+
+
+Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_persistence_list_service_abee9146684ca93500c7e7c686a8999c7}{AUP\+\_\+\+HA\+::\+Persistence\+List\+Service$<$ Setup $>$}}.
+
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_t_x_t_setup_persistence_list_service_ade62425081baf4a527ee5f875b6f4005}\label{class_a_u_p___h_a_1_1_t_x_t_setup_persistence_list_service_ade62425081baf4a527ee5f875b6f4005}} 
+\index{AUP\_HA::TXTSetupPersistenceListService@{AUP\_HA::TXTSetupPersistenceListService}!PushList@{PushList}}
+\index{PushList@{PushList}!AUP\_HA::TXTSetupPersistenceListService@{AUP\_HA::TXTSetupPersistenceListService}}
+\doxysubsubsection{\texorpdfstring{PushList()}{PushList()}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+TXTSetup\+Persistence\+List\+Service\+::\+Push\+List (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_a_u_p___h_a_1_1_setup}{Setup}} $>$ \&}]{list\+\_\+p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -85,12 +100,12 @@ Der Datensatz wird in einem String vorbereitet und in die Datei setup.\+txt gesp
 
 
 \begin{DoxyParams}{Parameter}
-{\em \mbox{[}list\mbox{]}} & const std\+::vector$<$\+Setup$>$\& zu speichernde Liste \\
+{\em \mbox{[}list\+\_\+p\mbox{]}} & const std\+::vector$<$\+Setup$>$\& zu speichernde Liste \\
 \hline
 \end{DoxyParams}
 
 
-Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_persistence_list_service_aa63ca9873a18070fc8f11a167d28bf03}{AUP\+\_\+\+HA\+::\+Persistence\+List\+Service$<$ Setup $>$}}.
+Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_persistence_list_service_a7ce66c54338227a70a5f6e88575ff6eb}{AUP\+\_\+\+HA\+::\+Persistence\+List\+Service$<$ Setup $>$}}.
 
 
 
@@ -101,7 +116,7 @@ Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_persistence_list_service_aa
 \doxysubsubsection{\texorpdfstring{mFileName}{mFileName}}
 {\footnotesize\ttfamily std\+::string AUP\+\_\+\+HA\+::\+TXTSetup\+Persistence\+List\+Service\+::m\+File\+Name\hspace{0.3cm}{\ttfamily [private]}}
 
-
+Name der zu speichernden Datei 
 
 Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
 \item 

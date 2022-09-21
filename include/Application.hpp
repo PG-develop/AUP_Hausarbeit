@@ -11,8 +11,9 @@ namespace AUP_HA
 
 	/**
 	* @class Application
+	* @brief Programm-Shell
 	* 
-	* Programmeinstieg, steuert den Grundlegenden Programmfluss
+	* Programm-Shell - Steuert den grundsätzlichen Programmablauf
 	*/
 	class Application 
 	{

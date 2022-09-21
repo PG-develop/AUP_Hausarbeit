@@ -4,15 +4,16 @@
 
 namespace AUP_HA
 {
+	template <typename T>
 	/**
 	* @class PersistenceListService
-	* 
+	* @brief PersistenceListService - Basisklasse
+	*
 	* Abstrakte Klasse\n
 	* Basisklasse für die PersistenceListServices
-	* 
+	*
 	* @tparam [T] Model für den Service
 	*/
-	template <typename T>
 	class PersistenceListService
 	{
 	public:

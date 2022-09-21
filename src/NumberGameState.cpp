@@ -8,7 +8,7 @@ namespace AUP_HA
 	* 
 	* Referenzübergabe von der Spielinstanz
 	* 
-	* @param [stateManager_p] NumberGameStateManager 
+	* @param [manager_p] NumberGameStateManager 
 	*/
 	NumberGameState::NumberGameState(NumberGameStateManager& manager_p) : mInputBuffer(), mManager{&manager_p}
 	{
@@ -16,7 +16,7 @@ namespace AUP_HA
 	}
 
 	/**
-	* Destruktor
+	* @brief Destruktor
 	* 
 	* Keine Funktion
 	*/

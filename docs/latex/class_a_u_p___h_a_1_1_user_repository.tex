@@ -18,7 +18,7 @@ Repository für Userdaten.
 \begin{DoxyCompactList}\small\item\em Destruktor. \end{DoxyCompactList}\item 
 const std\+::vector$<$ \mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}} $>$ \& \mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository_ad5030ebe0017f0fa36f472db98245dbe}{Get\+User\+Sorted\+By\+Rang}} ()
 \begin{DoxyCompactList}\small\item\em Gibt das aktuelle \mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository}{User\+Repository}} zurück. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository_a475687681d7de01eb997243eec6ca437}{Save\+Or\+Update}} (\mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}} user)
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository_a195e2b094b5c6f2ca6f7ba807ca4dd38}{Save\+Or\+Update}} (\mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}} user\+\_\+p)
 \begin{DoxyCompactList}\small\item\em Versucht einen \mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}} ins Leaderboard hinzuzufügen. Dabei wird geprüft, ob der neue \mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}} berechtigt ist, in die Bestenliste mit aufgenommen zu werden (max. 20 Benutzer). \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository_ac98ca52660e757284a15e97a7d969bea}{Clear\+Repository}} ()
 \begin{DoxyCompactList}\small\item\em Löschen des Repositories. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -33,8 +33,6 @@ std\+::vector$<$ \mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}} $>$ \mbox{
 
 \doxysubsection{Ausführliche Beschreibung}
 Repository für Userdaten. 
-
-
 
 \doxysubsection{Beschreibung der Konstruktoren und Destruktoren}
 \mbox{\Hypertarget{class_a_u_p___h_a_1_1_user_repository_ac3c77e847c087f197c184b011a136691}\label{class_a_u_p___h_a_1_1_user_repository_ac3c77e847c087f197c184b011a136691}} 
@@ -81,13 +79,13 @@ Löschen des Repositories.
 Gibt das aktuelle \mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository}{User\+Repository}} zurück. 
 
 \begin{DoxyReturn}{Rückgabe}
-Referenz auf die Benutzerliste in sortierter Reihenfolge 
+std\+::vector$<$\+User$>$ Referenz auf die Benutzerliste in sortierter Reihenfolge 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_user_repository_a475687681d7de01eb997243eec6ca437}\label{class_a_u_p___h_a_1_1_user_repository_a475687681d7de01eb997243eec6ca437}} 
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_user_repository_a195e2b094b5c6f2ca6f7ba807ca4dd38}\label{class_a_u_p___h_a_1_1_user_repository_a195e2b094b5c6f2ca6f7ba807ca4dd38}} 
 \index{AUP\_HA::UserRepository@{AUP\_HA::UserRepository}!SaveOrUpdate@{SaveOrUpdate}}
 \index{SaveOrUpdate@{SaveOrUpdate}!AUP\_HA::UserRepository@{AUP\_HA::UserRepository}}
 \doxysubsubsection{\texorpdfstring{SaveOrUpdate()}{SaveOrUpdate()}}
-{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+User\+Repository\+::\+Save\+Or\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}}}]{user }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+User\+Repository\+::\+Save\+Or\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}}}]{user\+\_\+p }\end{DoxyParamCaption})}
 
 
 
@@ -95,7 +93,7 @@ Versucht einen \mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}} ins Leaderbo
 
 
 \begin{DoxyParams}{Parameter}
-{\em \mbox{[}user\mbox{]}} & \mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}} Benutzer der zum Repository hinzugefügt werden soll \\
+{\em \mbox{[}user\+\_\+p\mbox{]}} & \mbox{\hyperlink{struct_a_u_p___h_a_1_1_user}{User}} Benutzer der zum Repository hinzugefügt werden soll \\
 \hline
 \end{DoxyParams}
 

@@ -10,8 +10,8 @@
 namespace AUP_HA
 {
 	/**
+	* @class UserRepository
 	* @brief Repository für Userdaten 
-	* 
 	*/
 	class UserRepository
 	{

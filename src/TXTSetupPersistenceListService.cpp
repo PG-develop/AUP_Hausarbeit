@@ -40,7 +40,7 @@ namespace AUP_HA
 	* 
 	* Der Datensatz wird in einem String vorbereitet und in die Datei setup.txt gespeichert.
 	* 
-	* @param [list] const std::vector<Setup>& zu speichernde Liste
+	* @param [list_p] const std::vector<Setup>& zu speichernde Liste
 	*/
 	void TXTSetupPersistenceListService::PushList(const std::vector<Setup>& list_p)
 	{

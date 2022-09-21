@@ -5,11 +5,11 @@ var searchData=
   ['numbergamestateasknewgame_2',['NumberGameStateAskNewGame',['../class_a_u_p___h_a_1_1_number_game_state_ask_new_game.html#a1c63827bdaee8c0baccbe0548c74a2d9',1,'AUP_HA::NumberGameStateAskNewGame']]],
   ['numbergamestatecheatwin_3',['NumberGameStateCheatWin',['../class_a_u_p___h_a_1_1_number_game_state_cheat_win.html#a29e5938f0726bb404c279f08d6de9a7e',1,'AUP_HA::NumberGameStateCheatWin']]],
   ['numbergamestatemanager_4',['NumberGameStateManager',['../class_a_u_p___h_a_1_1_number_game_state_manager.html#a9cc9c97eecaea474e06f56197e43d49a',1,'AUP_HA::NumberGameStateManager']]],
-  ['numbergamestatename_5',['NumberGameStateName',['../class_a_u_p___h_a_1_1_number_game_state_name.html#aed690b669e65ea66cbbae3a1e3ce9294',1,'AUP_HA::NumberGameStateName']]],
-  ['numbergamestatenonumber_6',['NumberGameStateNoNumber',['../class_a_u_p___h_a_1_1_number_game_state_no_number.html#a79afd4047572f5316bedcea1bc833ea7',1,'AUP_HA::NumberGameStateNoNumber']]],
-  ['numbergamestatenormal_7',['NumberGameStateNormal',['../class_a_u_p___h_a_1_1_number_game_state_normal.html#ad25a937fdd6d36a76c5fc74097688d53',1,'AUP_HA::NumberGameStateNormal']]],
-  ['numbergamestateoutborders_8',['NumberGameStateOutBorders',['../class_a_u_p___h_a_1_1_number_game_state_out_borders.html#a781f2c8cc80cadc6ee179ffdedcb5633',1,'AUP_HA::NumberGameStateOutBorders']]],
+  ['numbergamestatename_5',['NumberGameStateName',['../class_a_u_p___h_a_1_1_number_game_state_name.html#a93f1988a55e454a3d2ba777290201c65',1,'AUP_HA::NumberGameStateName']]],
+  ['numbergamestatenonumber_6',['NumberGameStateNoNumber',['../class_a_u_p___h_a_1_1_number_game_state_no_number.html#a5cb30a7291df2143a0785d6f0d9e82ac',1,'AUP_HA::NumberGameStateNoNumber']]],
+  ['numbergamestatenormal_7',['NumberGameStateNormal',['../class_a_u_p___h_a_1_1_number_game_state_normal.html#ac94a93cd47e707fa5a03a7dd4a292665',1,'AUP_HA::NumberGameStateNormal']]],
+  ['numbergamestateoutborders_8',['NumberGameStateOutBorders',['../class_a_u_p___h_a_1_1_number_game_state_out_borders.html#a1b7cb67ff5c9438db416fc715bb6f430',1,'AUP_HA::NumberGameStateOutBorders']]],
   ['numbergamestateshowleaderboard_9',['NumberGameStateShowLeaderboard',['../class_a_u_p___h_a_1_1_number_game_state_show_leaderboard.html#afb93adb1ec313234fe560833aa0cae61',1,'AUP_HA::NumberGameStateShowLeaderboard']]],
-  ['numbergamestateshowsearchednumber_10',['NumberGameStateShowSearchedNumber',['../class_a_u_p___h_a_1_1_number_game_state_show_searched_number.html#a77126e8a8e3a9b025c7f38e9a11bf076',1,'AUP_HA::NumberGameStateShowSearchedNumber']]],
-  ['numbergamestatewin_11',['NumberGameStateWin',['../class_a_u_p___h_a_1_1_number_game_state_win.html#accc395d62ec933690d4b4e87b5cbcc7f',1,'AUP_HA::NumberGameStateWin']]]
+  ['numbergamestateshowsearchednumber_10',['NumberGameStateShowSearchedNumber',['../class_a_u_p___h_a_1_1_number_game_state_show_searched_number.html#a2d87d5612eace925e39449361dc9673f',1,'AUP_HA::NumberGameStateShowSearchedNumber']]],
+  ['numbergamestatewin_11',['NumberGameStateWin',['../class_a_u_p___h_a_1_1_number_game_state_win.html#a9871800961033a4c7dab5dcb03b60c0b',1,'AUP_HA::NumberGameStateWin']]]
 ];

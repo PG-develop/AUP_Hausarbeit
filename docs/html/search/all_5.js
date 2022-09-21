@@ -1,31 +1,4 @@
 var searchData=
 [
-  ['game_0',['Game',['../class_a_u_p___h_a_1_1_game.html',1,'AUP_HA::Game'],['../class_a_u_p___h_a_1_1_game.html#a2865bb136b394421a3e842dd4da6f7fa',1,'AUP_HA::Game::Game()']]],
-  ['game_1',['GAME',['../namespace_a_u_p___h_a_1_1_states.html#aba7518c4c9fcad80b303d82603931711a47b57ef49c725ce6ca4e3f74105ac168',1,'AUP_HA::States::GAME()'],['../namespace_a_u_p___h_a_1_1_main_menu.html#a9b56d6d74ceda0a307a7dfe06a103167a8804ae7d3fcb3b1f4a54204cb3143e54',1,'AUP_HA::MainMenu::GAME()']]],
-  ['game_2ecpp_2',['Game.cpp',['../_game_8cpp.html',1,'']]],
-  ['game_2ehpp_3',['Game.hpp',['../_game_8hpp.html',1,'']]],
-  ['gamesetup_4',['GAMESETUP',['../namespace_a_u_p___h_a_1_1_setup_menu.html#a4180816c97a061e74e2e08b459a111d6a5ca9406fac4661f5aa457f550c0c80c4',1,'AUP_HA::SetupMenu']]],
-  ['gamesetup_5famount_5fof_5fchoices_5',['GAMESETUP_AMOUNT_OF_CHOICES',['../namespace_a_u_p___h_a_1_1_setup_menu.html#a4180816c97a061e74e2e08b459a111d6a7917dfda23e4b9f234818440df41772c',1,'AUP_HA::SetupMenu']]],
-  ['gamesetup_5fchange_5famount_5fof_5fchoices_6',['GAMESETUP_CHANGE_AMOUNT_OF_CHOICES',['../namespace_a_u_p___h_a_1_1_s_e_t_u_p___g_a_m_e_s_e_t_u_p.html#aa283190a3cee8a065b98c26f28b754caafa014f35e3c5a74c3fff081004615a4b',1,'AUP_HA::SETUP_GAMESETUP']]],
-  ['gamesetup_5fchange_5fmax_5frange_7',['GAMESETUP_CHANGE_MAX_RANGE',['../namespace_a_u_p___h_a_1_1_s_e_t_u_p___g_a_m_e_s_e_t_u_p.html#aa283190a3cee8a065b98c26f28b754caa5b13432b8d318a46b237619318f1b767',1,'AUP_HA::SETUP_GAMESETUP']]],
-  ['gamesetup_5fgame_8',['GAMESETUP_GAME',['../namespace_a_u_p___h_a_1_1_states.html#aba7518c4c9fcad80b303d82603931711a2994a3e5e74fab38710557ae51cdb262',1,'AUP_HA::States']]],
-  ['gamesetup_5fmax_5frange_9',['GAMESETUP_MAX_RANGE',['../namespace_a_u_p___h_a_1_1_setup_menu.html#a4180816c97a061e74e2e08b459a111d6ae7c4136b5d0e6aca802b7571d471601c',1,'AUP_HA::SetupMenu']]],
-  ['gamestate_10',['GameState',['../class_a_u_p___h_a_1_1_game_state.html',1,'AUP_HA::GameState'],['../class_a_u_p___h_a_1_1_game_state.html#adefb16fcf4f3e86473b99a8463f35acf',1,'AUP_HA::GameState::GameState()']]],
-  ['gamestate_2ecpp_11',['GameState.cpp',['../_game_state_8cpp.html',1,'']]],
-  ['gamestate_2ehpp_12',['GameState.hpp',['../_game_state_8hpp.html',1,'']]],
-  ['generatenewsearchednumber_13',['generateNewSearchedNumber',['../class_a_u_p___h_a_1_1_game.html#ac6cbcf64c0b9292ff17881694d367e05',1,'AUP_HA::Game']]],
-  ['getamountofchoices_14',['getAmountOfChoices',['../class_a_u_p___h_a_1_1_setup_repository.html#a9fc42000b57e5a6f607edddd9092529c',1,'AUP_HA::SetupRepository']]],
-  ['getgame_15',['GetGame',['../class_a_u_p___h_a_1_1_number_game_state_manager.html#addd9848a721b4860bf9f62b57b579bcc',1,'AUP_HA::NumberGameStateManager']]],
-  ['getlastinput_16',['GetLastInput',['../class_a_u_p___h_a_1_1_game.html#a0a433882b2410625be07d5709952467d',1,'AUP_HA::Game']]],
-  ['getlist_17',['getList',['../class_a_u_p___h_a_1_1_t_x_t_user_persistence_list_service.html#a228d77f4842d47f04c9408e8b57498bf',1,'AUP_HA::TXTUserPersistenceListService::getList()'],['../class_a_u_p___h_a_1_1_t_x_t_setup_persistence_list_service.html#ac6da5f52f7ad0c2386d706a90b1d17fd',1,'AUP_HA::TXTSetupPersistenceListService::getList()'],['../class_a_u_p___h_a_1_1_persistence_list_service.html#a09165931283da3eae9e1a6175576b9bf',1,'AUP_HA::PersistenceListService::getList()']]],
-  ['getmaxborder_18',['GetMaxBorder',['../class_a_u_p___h_a_1_1_game.html#a1842bad047eac3f2e19c72f2fa81f8f2',1,'AUP_HA::Game']]],
-  ['getmaxrange_19',['getMaxRange',['../class_a_u_p___h_a_1_1_setup_repository.html#a8aa981cae0ba2fd1e6238a9774d5a87c',1,'AUP_HA::SetupRepository']]],
-  ['getmaxtries_20',['GetMaxTries',['../class_a_u_p___h_a_1_1_game.html#ab4839660f7f259756ddd437fc87e4931',1,'AUP_HA::Game']]],
-  ['getminborder_21',['GetMinBorder',['../class_a_u_p___h_a_1_1_game.html#acb00f4e992f361dc7a5ac4fed44ed4de',1,'AUP_HA::Game']]],
-  ['getsearchednumber_22',['GetSearchedNumber',['../class_a_u_p___h_a_1_1_game.html#a663efcd9ac16bfa96b58a955a99a678c',1,'AUP_HA::Game']]],
-  ['gettransition_23',['GetTransition',['../class_a_u_p___h_a_1_1_number_game_state_manager.html#a0d02146315279b0b0255b79eb66b6570',1,'AUP_HA::NumberGameStateManager']]],
-  ['gettries_24',['GetTries',['../class_a_u_p___h_a_1_1_game.html#ad23c024655a96b67d429d3764d547a53',1,'AUP_HA::Game']]],
-  ['getuser_25',['GetUser',['../class_a_u_p___h_a_1_1_game.html#a7a336adbb8a71da48520d7c5a7aee401',1,'AUP_HA::Game']]],
-  ['getuserrepository_26',['GetUserRepository',['../class_a_u_p___h_a_1_1_number_game_state_manager.html#ace83e07c5ecb139a5e724165f5bd5f2b',1,'AUP_HA::NumberGameStateManager']]],
-  ['getusersortedbyrang_27',['GetUserSortedByRang',['../class_a_u_p___h_a_1_1_user_repository.html#ad5030ebe0017f0fa36f472db98245dbe',1,'AUP_HA::UserRepository']]]
+  ['hasactivestate_0',['hasActiveState',['../class_a_u_p___h_a_1_1_state_manager.html#a344b3865242f3a2b3da6d1e2b6c9e3e1',1,'AUP_HA::StateManager']]]
 ];

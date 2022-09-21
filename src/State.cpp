@@ -29,7 +29,7 @@ namespace AUP_HA
 	* State fragt nach einem Zustandswechsel zu den angegebenen Zustandsidentifiziierer.
 	* Zustandsidentifiziierer muss vorher registriert worden sein.
 	* 
-	* @param[stateID] States::ID Zustandsidentifiziierer
+	* @param[stateID_p] States::ID Zustandsidentifiziierer
 	*/
 	void State::requestChange(States::ID stateID_p)
 	{

@@ -5,7 +5,8 @@
 namespace AUP_HA
 {
 	/**
-	* @class STATE_2
+	* @class NumberGameStateNormal
+	* @brief STATE_2
 	*
 	* Vorherige Eingabe war korrekt.
 	* Der Benutzer wird aufgefordert, eine Nummer einzugeben.

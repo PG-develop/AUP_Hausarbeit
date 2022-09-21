@@ -8,6 +8,7 @@ namespace AUP_HA
 {
 	/**
 	* @class MenuManager
+	* @brief Menü-Manager für Listenauswahl
 	* 
 	* Manager für numerische Menüstrukturen\n
 	* Für den generischen Typen T muss der verwendete Menu-Identifiziertyp angegeben werden.
@@ -104,7 +105,7 @@ namespace AUP_HA
 	* @brief Ruft den Handler von dem registriertem Identifikator auf.
 	* Es erfolgt keine Prüfung, ob der Identifikator auch tatsächlich existiert
 	* 
-	* @param [menuID_p] std::int32_t Identifikator als Int
+	* @param [menuIntID_p] std::int32_t Identifikator als Int
 	* @tparam [T] siehe Klassenbeschreibung
 	*/
 	template<typename T>

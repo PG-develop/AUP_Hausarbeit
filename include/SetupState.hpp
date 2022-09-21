@@ -13,6 +13,7 @@ namespace AUP_HA
 
 	/**
 	* @class SetupState
+	* @brief Einstellungs State
 	*
 	* 1. Ebene der Einstellungen\n
 	* Weiter zur Ebenene der Spieleinstellungen oder Reset der Bestenliste

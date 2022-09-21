@@ -2,6 +2,11 @@
 \label{class_a_u_p___h_a_1_1_setup_game_state}\index{AUP\_HA::SetupGameState@{AUP\_HA::SetupGameState}}
 
 
+Spieleinstellungen \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}}.  
+
+
+
+
 {\ttfamily \#include $<$Setup\+Game\+State.\+hpp$>$}
 
 Klassendiagramm für AUP\+\_\+\+HA\+::Setup\+Game\+State\+:\begin{figure}[H]
@@ -13,27 +18,27 @@ Klassendiagramm für AUP\+\_\+\+HA\+::Setup\+Game\+State\+:\begin{figure}[H]
 \doxysubsection*{Öffentliche Methoden}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_game_state_a105a631ec678018880cfb7661503e502}{Setup\+Game\+State}} (\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} \&state\+Manager)
-\item 
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_game_state_af62463f0c2f112f0260f34dae9731b7e}{Setup\+Game\+State}} (\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} \&state\+Manager\+\_\+p)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_game_state_a752f0adc3eb9e1d3cf3908ecba737112}{$\sim$\+Setup\+Game\+State}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Destruktor. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_game_state_aaabdd225b068bea710c98a84590e8cbe}{Render}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Anzeige des \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states}{States}}. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_game_state_abefb6cff60ff9985ef1ddc9d26ef4ad1}{Process\+Events}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Benutztereingabe. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_game_state_a3fca00f4d9295a2483cafe8a4078b689}{Update}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Ausführung der Statelogic. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Methoden}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_game_state_a1617709ef0e904ed99e3b8c0b45b2001}{register\+Menu}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Registrierung der Menühandlers. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_game_state_a1dd4d19e7fcf559debe09adbaf83ece2}{on\+Change\+Amount\+Of\+Choices}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Handler für den Menüpunkt \mbox{[}1\mbox{]} Anzahl der Versuche. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_game_state_ae3ebebe9663c4fa6a4b19890642c2ad0}{on\+Change\+Max\+Range}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Handler für den Menüpunkt \mbox{[}2\mbox{]} Streureichweite. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_game_state_ab6858b47b46f0683c39804cc07df2a27}{on\+Exit}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Handler für den Menüpunkt \mbox{[}3\mbox{]} Zurück. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attribute}
 \begin{DoxyCompactItemize}
 \item 
@@ -49,15 +54,28 @@ std\+::pair$<$ std\+::int32\+\_\+t, std\+::int32\+\_\+t $>$ \mbox{\hyperlink{cla
 
 
 \doxysubsection{Ausführliche Beschreibung}
-Dem Benurter soll ermöglicht werden, die Spieleinstellungen zu konfigurieren. 
+Spieleinstellungen \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}}. 
+
+Dem Benutzer soll ermöglicht werden, die Spieleinstellungen zu konfigurieren. 
 
 \doxysubsection{Beschreibung der Konstruktoren und Destruktoren}
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_game_state_a105a631ec678018880cfb7661503e502}\label{class_a_u_p___h_a_1_1_setup_game_state_a105a631ec678018880cfb7661503e502}} 
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_game_state_af62463f0c2f112f0260f34dae9731b7e}\label{class_a_u_p___h_a_1_1_setup_game_state_af62463f0c2f112f0260f34dae9731b7e}} 
 \index{AUP\_HA::SetupGameState@{AUP\_HA::SetupGameState}!SetupGameState@{SetupGameState}}
 \index{SetupGameState@{SetupGameState}!AUP\_HA::SetupGameState@{AUP\_HA::SetupGameState}}
 \doxysubsubsection{\texorpdfstring{SetupGameState()}{SetupGameState()}}
-{\footnotesize\ttfamily AUP\+\_\+\+HA\+::\+Setup\+Game\+State\+::\+Setup\+Game\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} \&}]{state\+Manager }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily AUP\+\_\+\+HA\+::\+Setup\+Game\+State\+::\+Setup\+Game\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} \&}]{state\+Manager\+\_\+p }\end{DoxyParamCaption})}
 
+
+
+Konstruktor. 
+
+Erstelle das \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_repository}{Setup\+Repository}} und initialisiere Menü für die Auswahl
+
+
+\begin{DoxyParams}{Parameter}
+{\em \mbox{[}state\+Manager\+\_\+p\mbox{]}} & \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_game_state_a752f0adc3eb9e1d3cf3908ecba737112}\label{class_a_u_p___h_a_1_1_setup_game_state_a752f0adc3eb9e1d3cf3908ecba737112}} 
 \index{AUP\_HA::SetupGameState@{AUP\_HA::SetupGameState}!````~SetupGameState@{$\sim$SetupGameState}}
 \index{````~SetupGameState@{$\sim$SetupGameState}!AUP\_HA::SetupGameState@{AUP\_HA::SetupGameState}}
@@ -66,6 +84,10 @@ Dem Benurter soll ermöglicht werden, die Spieleinstellungen zu konfigurieren.
 
 
 
+Destruktor. 
+
+Keine Funktion 
+
 \doxysubsection{Dokumentation der Elementfunktionen}
 \mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_game_state_a1dd4d19e7fcf559debe09adbaf83ece2}\label{class_a_u_p___h_a_1_1_setup_game_state_a1dd4d19e7fcf559debe09adbaf83ece2}} 
 \index{AUP\_HA::SetupGameState@{AUP\_HA::SetupGameState}!onChangeAmountOfChoices@{onChangeAmountOfChoices}}
@@ -73,23 +95,39 @@ Dem Benurter soll ermöglicht werden, die Spieleinstellungen zu konfigurieren.
 \doxysubsubsection{\texorpdfstring{onChangeAmountOfChoices()}{onChangeAmountOfChoices()}}
 {\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Setup\+Game\+State\+::on\+Change\+Amount\+Of\+Choices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_game_state_ae3ebebe9663c4fa6a4b19890642c2ad0}\label{class_a_u_p___h_a_1_1_setup_game_state_ae3ebebe9663c4fa6a4b19890642c2ad0}} 
+
+
+Handler für den Menüpunkt \mbox{[}1\mbox{]} Anzahl der Versuche. 
+
+Ändert die maximale Anzahl der Versuche. Wenn die Anzahl gleich 0 ist, ist die Anzahl unbegrenzt. \mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_game_state_ae3ebebe9663c4fa6a4b19890642c2ad0}\label{class_a_u_p___h_a_1_1_setup_game_state_ae3ebebe9663c4fa6a4b19890642c2ad0}} 
 \index{AUP\_HA::SetupGameState@{AUP\_HA::SetupGameState}!onChangeMaxRange@{onChangeMaxRange}}
 \index{onChangeMaxRange@{onChangeMaxRange}!AUP\_HA::SetupGameState@{AUP\_HA::SetupGameState}}
 \doxysubsubsection{\texorpdfstring{onChangeMaxRange()}{onChangeMaxRange()}}
 {\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Setup\+Game\+State\+::on\+Change\+Max\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_game_state_ab6858b47b46f0683c39804cc07df2a27}\label{class_a_u_p___h_a_1_1_setup_game_state_ab6858b47b46f0683c39804cc07df2a27}} 
+
+
+Handler für den Menüpunkt \mbox{[}2\mbox{]} Streureichweite. 
+
+Ändert die Streureichweite. \mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_game_state_ab6858b47b46f0683c39804cc07df2a27}\label{class_a_u_p___h_a_1_1_setup_game_state_ab6858b47b46f0683c39804cc07df2a27}} 
 \index{AUP\_HA::SetupGameState@{AUP\_HA::SetupGameState}!onExit@{onExit}}
 \index{onExit@{onExit}!AUP\_HA::SetupGameState@{AUP\_HA::SetupGameState}}
 \doxysubsubsection{\texorpdfstring{onExit()}{onExit()}}
 {\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Setup\+Game\+State\+::on\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_game_state_abefb6cff60ff9985ef1ddc9d26ef4ad1}\label{class_a_u_p___h_a_1_1_setup_game_state_abefb6cff60ff9985ef1ddc9d26ef4ad1}} 
+
+
+Handler für den Menüpunkt \mbox{[}3\mbox{]} Zurück. 
+
+Ändert den \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{State}} auf SETUP \mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_game_state_abefb6cff60ff9985ef1ddc9d26ef4ad1}\label{class_a_u_p___h_a_1_1_setup_game_state_abefb6cff60ff9985ef1ddc9d26ef4ad1}} 
 \index{AUP\_HA::SetupGameState@{AUP\_HA::SetupGameState}!ProcessEvents@{ProcessEvents}}
 \index{ProcessEvents@{ProcessEvents}!AUP\_HA::SetupGameState@{AUP\_HA::SetupGameState}}
 \doxysubsubsection{\texorpdfstring{ProcessEvents()}{ProcessEvents()}}
 {\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Setup\+Game\+State\+::\+Process\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Benutztereingabe. 
 
 
 
@@ -101,6 +139,10 @@ Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a8de555f139a20f120ace
 \doxysubsubsection{\texorpdfstring{registerMenu()}{registerMenu()}}
 {\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Setup\+Game\+State\+::register\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Registrierung der Menühandlers. 
+
 \mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_game_state_aaabdd225b068bea710c98a84590e8cbe}\label{class_a_u_p___h_a_1_1_setup_game_state_aaabdd225b068bea710c98a84590e8cbe}} 
 \index{AUP\_HA::SetupGameState@{AUP\_HA::SetupGameState}!Render@{Render}}
 \index{Render@{Render}!AUP\_HA::SetupGameState@{AUP\_HA::SetupGameState}}
@@ -109,6 +151,10 @@ Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a8de555f139a20f120ace
 
 
 
+Anzeige des \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states}{States}}. 
+
+Gibt die Menüstruktur aus. 
+
 Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a828f0dad7106f8de0236146ce86aff85}{AUP\+\_\+\+HA\+::\+State}}.
 
 \mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_game_state_a3fca00f4d9295a2483cafe8a4078b689}\label{class_a_u_p___h_a_1_1_setup_game_state_a3fca00f4d9295a2483cafe8a4078b689}} 
@@ -116,6 +162,10 @@ Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a828f0dad7106f8de0236
 \index{Update@{Update}!AUP\_HA::SetupGameState@{AUP\_HA::SetupGameState}}
 \doxysubsubsection{\texorpdfstring{Update()}{Update()}}
 {\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+Setup\+Game\+State\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Ausführung der Statelogic. 
 
 
 
@@ -130,25 +180,25 @@ Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_abead46b048770dc17d4e
 \doxysubsubsection{\texorpdfstring{mLimits}{mLimits}}
 {\footnotesize\ttfamily std\+::pair$<$std\+::int32\+\_\+t, std\+::int32\+\_\+t$>$ AUP\+\_\+\+HA\+::\+Setup\+Game\+State\+::m\+Limits\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_game_state_a146b687b4e5e2ed27b61d667ca686ffd}\label{class_a_u_p___h_a_1_1_setup_game_state_a146b687b4e5e2ed27b61d667ca686ffd}} 
+Limitierung für das Menu \mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_game_state_a146b687b4e5e2ed27b61d667ca686ffd}\label{class_a_u_p___h_a_1_1_setup_game_state_a146b687b4e5e2ed27b61d667ca686ffd}} 
 \index{AUP\_HA::SetupGameState@{AUP\_HA::SetupGameState}!mMenu@{mMenu}}
 \index{mMenu@{mMenu}!AUP\_HA::SetupGameState@{AUP\_HA::SetupGameState}}
 \doxysubsubsection{\texorpdfstring{mMenu}{mMenu}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager}{Menu\+Manager}}$<$\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_s_e_t_u_p___g_a_m_e_s_e_t_u_p_aa283190a3cee8a065b98c26f28b754ca}{SETUP\+\_\+\+GAMESETUP\+::\+ID}}$>$ AUP\+\_\+\+HA\+::\+Setup\+Game\+State\+::m\+Menu\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_game_state_aab98d6f56efc78099e206e03b25998f5}\label{class_a_u_p___h_a_1_1_setup_game_state_aab98d6f56efc78099e206e03b25998f5}} 
+Menustruktur \mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_game_state_aab98d6f56efc78099e206e03b25998f5}\label{class_a_u_p___h_a_1_1_setup_game_state_aab98d6f56efc78099e206e03b25998f5}} 
 \index{AUP\_HA::SetupGameState@{AUP\_HA::SetupGameState}!mSetupRepository@{mSetupRepository}}
 \index{mSetupRepository@{mSetupRepository}!AUP\_HA::SetupGameState@{AUP\_HA::SetupGameState}}
 \doxysubsubsection{\texorpdfstring{mSetupRepository}{mSetupRepository}}
 {\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_repository}{Setup\+Repository}}$>$ AUP\+\_\+\+HA\+::\+Setup\+Game\+State\+::m\+Setup\+Repository\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_game_state_a982c1a9c5a0d695267adae6d31342128}\label{class_a_u_p___h_a_1_1_setup_game_state_a982c1a9c5a0d695267adae6d31342128}} 
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_repository}{Setup\+Repository}} \mbox{\Hypertarget{class_a_u_p___h_a_1_1_setup_game_state_a982c1a9c5a0d695267adae6d31342128}\label{class_a_u_p___h_a_1_1_setup_game_state_a982c1a9c5a0d695267adae6d31342128}} 
 \index{AUP\_HA::SetupGameState@{AUP\_HA::SetupGameState}!mUserinput@{mUserinput}}
 \index{mUserinput@{mUserinput}!AUP\_HA::SetupGameState@{AUP\_HA::SetupGameState}}
 \doxysubsubsection{\texorpdfstring{mUserinput}{mUserinput}}
 {\footnotesize\ttfamily std\+::string AUP\+\_\+\+HA\+::\+Setup\+Game\+State\+::m\+Userinput\hspace{0.3cm}{\ttfamily [private]}}
 
-
+Eingabe des Benutzers 
 
 Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
 \item 

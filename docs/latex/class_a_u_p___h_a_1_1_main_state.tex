@@ -18,7 +18,7 @@ Klassendiagramm für AUP\+\_\+\+HA\+::Main\+State\+:\begin{figure}[H]
 \doxysubsection*{Öffentliche Methoden}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_a4027b4f634b3130277dcbed8d88bd831}{Main\+State}} (\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} \&state\+Manager)
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_a4d77bb489f050710311f8dbe63304733}{Main\+State}} (\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} \&state\+Manager\+\_\+p)
 \begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_aefc603b8276ee7598c9fd9efc96c20c2}{$\sim$\+Main\+State}} ()
 \begin{DoxyCompactList}\small\item\em Destruktor. \end{DoxyCompactList}\item 
@@ -46,7 +46,7 @@ void \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_aeb7ad0eabcd3c8c64bb607af
 \item 
 std\+::string \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_af7f1d5bb7aca133c3a7d19e2200aad9d}{m\+Userinput}}
 \item 
-std\+::pair$<$ int, int $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_aec2e26a9e2b317a4a5228cd93e075783}{m\+Limits}}
+std\+::pair$<$ std\+::int32\+\_\+t, std\+::int32\+\_\+t $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_a3e3e6a57bf7c6aa4d4d9a7b7e7300fed}{m\+Limits}}
 \item 
 \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager}{Menu\+Manager}}$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_main_menu_a9b56d6d74ceda0a307a7dfe06a103167}{Main\+Menu\+::\+ID}} $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_a14029721af85b4b3ca88b3297f0a8248}{m\+Menu}}
 \end{DoxyCompactItemize}
@@ -57,17 +57,24 @@ std\+::pair$<$ int, int $>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_ae
 Hauptabzweig für die verschiedene Programmflüsse. 
 
 \doxysubsection{Beschreibung der Konstruktoren und Destruktoren}
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_main_state_a4027b4f634b3130277dcbed8d88bd831}\label{class_a_u_p___h_a_1_1_main_state_a4027b4f634b3130277dcbed8d88bd831}} 
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_main_state_a4d77bb489f050710311f8dbe63304733}\label{class_a_u_p___h_a_1_1_main_state_a4d77bb489f050710311f8dbe63304733}} 
 \index{AUP\_HA::MainState@{AUP\_HA::MainState}!MainState@{MainState}}
 \index{MainState@{MainState}!AUP\_HA::MainState@{AUP\_HA::MainState}}
 \doxysubsubsection{\texorpdfstring{MainState()}{MainState()}}
-{\footnotesize\ttfamily AUP\+\_\+\+HA\+::\+Main\+State\+::\+Main\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} \&}]{state\+Manager }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily AUP\+\_\+\+HA\+::\+Main\+State\+::\+Main\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} \&}]{state\+Manager\+\_\+p }\end{DoxyParamCaption})}
 
 
 
 Konstruktor. 
 
-Instanziierung des Menu \mbox{\Hypertarget{class_a_u_p___h_a_1_1_main_state_aefc603b8276ee7598c9fd9efc96c20c2}\label{class_a_u_p___h_a_1_1_main_state_aefc603b8276ee7598c9fd9efc96c20c2}} 
+Instanziierung des Menu
+
+
+\begin{DoxyParams}{Parameter}
+{\em \mbox{[}state\+Manager\+\_\+p\mbox{]}} & \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_main_state_aefc603b8276ee7598c9fd9efc96c20c2}\label{class_a_u_p___h_a_1_1_main_state_aefc603b8276ee7598c9fd9efc96c20c2}} 
 \index{AUP\_HA::MainState@{AUP\_HA::MainState}!````~MainState@{$\sim$MainState}}
 \index{````~MainState@{$\sim$MainState}!AUP\_HA::MainState@{AUP\_HA::MainState}}
 \doxysubsubsection{\texorpdfstring{$\sim$MainState()}{~MainState()}}
@@ -154,7 +161,7 @@ Registrierung der Menühandlers.
 
 Anzeige des \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states}{States}}. 
 
-Gibt die Menüstruktor aus. 
+Gibt die Menüstruktur aus. 
 
 Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a828f0dad7106f8de0236146ce86aff85}{AUP\+\_\+\+HA\+::\+State}}.
 
@@ -175,11 +182,11 @@ Implementiert \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_abead46b048770dc17d4e
 
 
 \doxysubsection{Dokumentation der Datenelemente}
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_main_state_aec2e26a9e2b317a4a5228cd93e075783}\label{class_a_u_p___h_a_1_1_main_state_aec2e26a9e2b317a4a5228cd93e075783}} 
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_main_state_a3e3e6a57bf7c6aa4d4d9a7b7e7300fed}\label{class_a_u_p___h_a_1_1_main_state_a3e3e6a57bf7c6aa4d4d9a7b7e7300fed}} 
 \index{AUP\_HA::MainState@{AUP\_HA::MainState}!mLimits@{mLimits}}
 \index{mLimits@{mLimits}!AUP\_HA::MainState@{AUP\_HA::MainState}}
 \doxysubsubsection{\texorpdfstring{mLimits}{mLimits}}
-{\footnotesize\ttfamily std\+::pair$<$int, int$>$ AUP\+\_\+\+HA\+::\+Main\+State\+::m\+Limits\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::pair$<$std\+::int32\+\_\+t, std\+::int32\+\_\+t$>$ AUP\+\_\+\+HA\+::\+Main\+State\+::m\+Limits\hspace{0.3cm}{\ttfamily [private]}}
 
 Grenzen für die Menüeingabe \mbox{\Hypertarget{class_a_u_p___h_a_1_1_main_state_a14029721af85b4b3ca88b3297f0a8248}\label{class_a_u_p___h_a_1_1_main_state_a14029721af85b4b3ca88b3297f0a8248}} 
 \index{AUP\_HA::MainState@{AUP\_HA::MainState}!mMenu@{mMenu}}

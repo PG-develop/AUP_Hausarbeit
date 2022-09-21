@@ -5,7 +5,8 @@
 namespace AUP_HA
 {
 	/**
-	* @class STATE_1
+	* @class NumberGameStateName
+	* @brief STATE_1
 	*
 	* Der Benutzer wird aufgefordert seinen Namen einzutragen.
 	*/

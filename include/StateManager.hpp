@@ -10,7 +10,8 @@
 namespace AUP_HA 
 {
 	/**
-	* @class Steuerung der Programmzustände
+	* @class StateManager
+	* @brief Steuerung der Programmzustände Grundgerüst
 	* 
 	* Steuert die grundlegenenden Programmzustände.
 	*/

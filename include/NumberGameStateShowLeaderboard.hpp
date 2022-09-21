@@ -6,7 +6,8 @@
 namespace AUP_HA
 {
 	/**
-	* @class STATE_3
+	* @class NumberGameStateShowLeaderboard
+	* @brief STATE_6
 	*
 	* Der Benutzer hat keine gültige Nummer eingetippt.
 	* Der Benutzer wird aufgefordert, eine Nummer einzugeben.

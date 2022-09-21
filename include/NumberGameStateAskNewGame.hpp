@@ -5,6 +5,7 @@
 namespace AUP_HA
 {
 	/**
+	* @class NumberGameStateAskNewGame
 	* @brief STATE_7
 	* 
 	* Abfrage, ob ein neues Spiel gestartet werden soll.

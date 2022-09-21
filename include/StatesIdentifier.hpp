@@ -2,6 +2,9 @@
 
 namespace AUP_HA
 {
+	/**
+	* @brief Namensraum für Grundgerüst-States
+	*/
 	namespace States
 	{
 		enum ID
@@ -16,9 +19,11 @@ namespace AUP_HA
 		};
 	}
 
+	/**
+	* @brief Namensraum für Spiel-States
+	*/
 	namespace GameStates
 	{
-		//TODO: Namen der IDs müssen noch angepasst werden
 		enum ID
 		{
 			NONE,		/**< Kein aktiver State */

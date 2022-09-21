@@ -7,6 +7,7 @@ namespace AUP_HA
 {
 	/**
 	* @class TXTUserPersistenceListService
+	* @brief PersistenceListService für Setup in TXT
 	* 
 	* Service für das Model Setup\n
 	* Daten werden in einer TXT-Datei gespeichert.

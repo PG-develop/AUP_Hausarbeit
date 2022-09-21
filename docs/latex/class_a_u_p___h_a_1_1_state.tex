@@ -2,6 +2,11 @@
 \label{class_a_u_p___h_a_1_1_state}\index{AUP\_HA::State@{AUP\_HA::State}}
 
 
+Virtuelle Basisklasse für alle \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states}{States}}.  
+
+
+
+
 {\ttfamily \#include $<$State.\+hpp$>$}
 
 Klassendiagramm für AUP\+\_\+\+HA\+::State\+:\begin{figure}[H]
@@ -18,7 +23,7 @@ typedef std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_state}{
 \doxysubsection*{Öffentliche Methoden}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_abc6da0b8d836768761682bb29b8c69b7}{State}} (\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} \&state\+Manager)
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a994dd02a5990c9f59a268762a05b1f2d}{State}} (\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} \&state\+Manager\+\_\+p)
 \begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_a4f4cd6f3771adfc6bff7daa76b4270d1}{$\sim$\+State}} ()
 \begin{DoxyCompactList}\small\item\em Destruktor. \end{DoxyCompactList}\item 
@@ -31,7 +36,7 @@ virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_abead46b048770dc17d4ed
 \doxysubsection*{Geschützte Methoden}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_ad606ceeeca891b2bb21d040114cf3f2a}{request\+Change}} (\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711}{States\+::\+ID}} state\+ID)
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_ad65db2323b5640d740c8b42303877f53}{request\+Change}} (\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711}{States\+::\+ID}} state\+ID\+\_\+p)
 \begin{DoxyCompactList}\small\item\em Anfrage nach einem Zustandswechsel. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attribute}
 \begin{DoxyCompactItemize}
@@ -41,9 +46,7 @@ void \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_ad606ceeeca891b2bb21d040114cf3
 
 
 \doxysubsection{Ausführliche Beschreibung}
-Spielsession
-
-Introanzeige 
+Virtuelle Basisklasse für alle \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states}{States}}. 
 
 \doxysubsection{Dokumentation der benutzerdefinierten Datentypen}
 \mbox{\Hypertarget{class_a_u_p___h_a_1_1_state_a2886a8eec41a10ee511b7d23376bc55c}\label{class_a_u_p___h_a_1_1_state_a2886a8eec41a10ee511b7d23376bc55c}} 
@@ -55,17 +58,24 @@ Introanzeige
 
 
 \doxysubsection{Beschreibung der Konstruktoren und Destruktoren}
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_state_abc6da0b8d836768761682bb29b8c69b7}\label{class_a_u_p___h_a_1_1_state_abc6da0b8d836768761682bb29b8c69b7}} 
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_state_a994dd02a5990c9f59a268762a05b1f2d}\label{class_a_u_p___h_a_1_1_state_a994dd02a5990c9f59a268762a05b1f2d}} 
 \index{AUP\_HA::State@{AUP\_HA::State}!State@{State}}
 \index{State@{State}!AUP\_HA::State@{AUP\_HA::State}}
 \doxysubsubsection{\texorpdfstring{State()}{State()}}
-{\footnotesize\ttfamily AUP\+\_\+\+HA\+::\+State\+::\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} \&}]{state\+Manager }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily AUP\+\_\+\+HA\+::\+State\+::\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} \&}]{state\+Manager\+\_\+p }\end{DoxyParamCaption})}
 
 
 
 Konstruktor. 
 
-Übergabe des State\+Managers \mbox{\Hypertarget{class_a_u_p___h_a_1_1_state_a4f4cd6f3771adfc6bff7daa76b4270d1}\label{class_a_u_p___h_a_1_1_state_a4f4cd6f3771adfc6bff7daa76b4270d1}} 
+Übergabe des State\+Managers
+
+
+\begin{DoxyParams}{Parameter}
+{\em \mbox{[}state\+Manager\+\_\+p\mbox{]}} & \mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_state_a4f4cd6f3771adfc6bff7daa76b4270d1}\label{class_a_u_p___h_a_1_1_state_a4f4cd6f3771adfc6bff7daa76b4270d1}} 
 \index{AUP\_HA::State@{AUP\_HA::State}!````~State@{$\sim$State}}
 \index{````~State@{$\sim$State}!AUP\_HA::State@{AUP\_HA::State}}
 \doxysubsubsection{\texorpdfstring{$\sim$State()}{~State()}}
@@ -98,11 +108,11 @@ Implementiert in \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_state_a49bda9ddd1a9
 
 Implementiert in \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_state_a2f54f7a2c8161b22a7ed9fc01ac92359}{AUP\+\_\+\+HA\+::\+Game\+State}}, \mbox{\hyperlink{class_a_u_p___h_a_1_1_intro_state_a3a88c07924c269cdc33155e4fecaef28}{AUP\+\_\+\+HA\+::\+Intro\+State}}, \mbox{\hyperlink{class_a_u_p___h_a_1_1_leaderboard_state_a23418dc0a4ad5510b6a33e0ae78bf3ce}{AUP\+\_\+\+HA\+::\+Leaderboard\+State}}, \mbox{\hyperlink{class_a_u_p___h_a_1_1_main_state_a15fe5c0450276f7936839bfee9b448ee}{AUP\+\_\+\+HA\+::\+Main\+State}}, \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_game_state_aaabdd225b068bea710c98a84590e8cbe}{AUP\+\_\+\+HA\+::\+Setup\+Game\+State}} und \mbox{\hyperlink{class_a_u_p___h_a_1_1_setup_state_a84f31a95c5e5fb25181c82df752dc9ef}{AUP\+\_\+\+HA\+::\+Setup\+State}}.
 
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_state_ad606ceeeca891b2bb21d040114cf3f2a}\label{class_a_u_p___h_a_1_1_state_ad606ceeeca891b2bb21d040114cf3f2a}} 
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_state_ad65db2323b5640d740c8b42303877f53}\label{class_a_u_p___h_a_1_1_state_ad65db2323b5640d740c8b42303877f53}} 
 \index{AUP\_HA::State@{AUP\_HA::State}!requestChange@{requestChange}}
 \index{requestChange@{requestChange}!AUP\_HA::State@{AUP\_HA::State}}
 \doxysubsubsection{\texorpdfstring{requestChange()}{requestChange()}}
-{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+State\+::request\+Change (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711}{States\+::\+ID}}}]{state\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily void AUP\+\_\+\+HA\+::\+State\+::request\+Change (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711}{States\+::\+ID}}}]{state\+ID\+\_\+p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
@@ -112,7 +122,7 @@ Anfrage nach einem Zustandswechsel.
 
 
 \begin{DoxyParams}{Parameter}
-{\em \mbox{[}state\+ID\mbox{]}} & \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711}{States\+::\+ID}} Zustandsidentifiziierer \\
+{\em \mbox{[}state\+ID\+\_\+p\mbox{]}} & \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_states_aba7518c4c9fcad80b303d82603931711}{States\+::\+ID}} Zustandsidentifiziierer \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{class_a_u_p___h_a_1_1_state_abead46b048770dc17d4edab5e490c092}\label{class_a_u_p___h_a_1_1_state_abead46b048770dc17d4edab5e490c092}} 

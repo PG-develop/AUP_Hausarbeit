@@ -5,7 +5,7 @@
 namespace AUP_HA
 {
 	/**
-	* @struct Model User
+	* @brief Model User
 	*
 	* Speichert Daten für den Benutzer\n
 	* Name des Benutzers\n

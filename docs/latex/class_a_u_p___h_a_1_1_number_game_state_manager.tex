@@ -2,6 +2,11 @@
 \label{class_a_u_p___h_a_1_1_number_game_state_manager}\index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
 
 
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} für die Spiellogik.  
+
+
+
+
 {\ttfamily \#include $<$Number\+Game\+State\+Manager.\+hpp$>$}
 
 \doxysubsection*{Öffentliche Typen}
@@ -80,6 +85,9 @@ std\+::function$<$ void()$>$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Ausführliche Beschreibung}
+\mbox{\hyperlink{class_a_u_p___h_a_1_1_state_manager}{State\+Manager}} für die Spiellogik. 
+
 \doxysubsection{Dokumentation der benutzerdefinierten Datentypen}
 \mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_af971f2fe51fb775ce98be2b57a83a3f9}\label{class_a_u_p___h_a_1_1_number_game_state_manager_af971f2fe51fb775ce98be2b57a83a3f9}} 
 \index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!TransitionHandler@{TransitionHandler}}
@@ -102,7 +110,16 @@ Konstruktor.
 
 Übergabe der Referenzen~\newline
 Registrierung der Übergangsbedingungen in der Übergangsbedingungsmap~\newline
-Registrierung der Sonderfunktionen \mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_a9a43eb777a4d2e1063ea0b13c30e3c56}\label{class_a_u_p___h_a_1_1_number_game_state_manager_a9a43eb777a4d2e1063ea0b13c30e3c56}} 
+Registrierung der Sonderfunktionen
+
+
+\begin{DoxyParams}{Parameter}
+{\em \mbox{[}user\+Repository\+\_\+p\mbox{]}} & \mbox{\hyperlink{class_a_u_p___h_a_1_1_user_repository}{User\+Repository}} \\
+\hline
+{\em \mbox{[}game\+\_\+p\mbox{]}} & Spieleinstanz \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_a9a43eb777a4d2e1063ea0b13c30e3c56}\label{class_a_u_p___h_a_1_1_number_game_state_manager_a9a43eb777a4d2e1063ea0b13c30e3c56}} 
 \index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!````~NumberGameStateManager@{$\sim$NumberGameStateManager}}
 \index{````~NumberGameStateManager@{$\sim$NumberGameStateManager}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
 \doxysubsubsection{\texorpdfstring{$\sim$NumberGameStateManager()}{~NumberGameStateManager()}}
@@ -155,6 +172,11 @@ Rückgabe der Übergabebedingung nach Identifikator.
 
 Sucht im Maphandler nach der Übergangsbedingung und gibt diese zurück.
 
+
+\begin{DoxyParams}{Parameter}
+{\em \mbox{[}transition\+ID\+\_\+p\mbox{]}} & \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_aad05c1c14b35369485097dff476c742a}{Game\+States\+::\+TRANSITION}} Identifikator\\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Rückgabe}
 Transition\+Handler\& Übergangsbedingungshandler 
 \end{DoxyReturn}
@@ -220,7 +242,7 @@ ansonsten optional-\/\+Falg false
 \index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!onNegativ@{onNegativ}}
 \index{onNegativ@{onNegativ}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
 \doxysubsubsection{\texorpdfstring{onNegativ()}{onNegativ()}}
-{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$ AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::on\+Negativ (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$ AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::on\+Negativ (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string\+\_\+p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -244,7 +266,7 @@ ansonsten optional-\/\+Falg false
 \index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!onNewGame@{onNewGame}}
 \index{onNewGame@{onNewGame}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
 \doxysubsubsection{\texorpdfstring{onNewGame()}{onNewGame()}}
-{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$ AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::on\+New\+Game (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$ AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::on\+New\+Game (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string\+\_\+p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -290,7 +312,7 @@ ansonsten optional-\/\+Falg false
 \index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!onOutBorders@{onOutBorders}}
 \index{onOutBorders@{onOutBorders}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
 \doxysubsubsection{\texorpdfstring{onOutBorders()}{onOutBorders()}}
-{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$ AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::on\+Out\+Borders (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$ AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::on\+Out\+Borders (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string\+\_\+p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -311,7 +333,7 @@ ansonsten optional-\/\+Falg false
 \index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!onToIfNewGame@{onToIfNewGame}}
 \index{onToIfNewGame@{onToIfNewGame}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
 \doxysubsubsection{\texorpdfstring{onToIfNewGame()}{onToIfNewGame()}}
-{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$ AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::on\+To\+If\+New\+Game (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$ AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::on\+To\+If\+New\+Game (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string\+\_\+p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -332,7 +354,7 @@ ansonsten optional-\/\+Falg false
 \index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!onToLeaderboard@{onToLeaderboard}}
 \index{onToLeaderboard@{onToLeaderboard}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
 \doxysubsubsection{\texorpdfstring{onToLeaderboard()}{onToLeaderboard()}}
-{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$ AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::on\+To\+Leaderboard (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$ AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::on\+To\+Leaderboard (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string\+\_\+p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -353,7 +375,7 @@ ansonsten optional-\/\+Falg false
 \index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!onWin@{onWin}}
 \index{onWin@{onWin}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
 \doxysubsubsection{\texorpdfstring{onWin()}{onWin()}}
-{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$ AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::on\+Win (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{namespace_a_u_p___h_a_1_1_game_states_a1b17bc41f62783923ee390158b0ec673}{Game\+States\+::\+ID}} $>$ AUP\+\_\+\+HA\+::\+Number\+Game\+State\+Manager\+::on\+Win (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string\+\_\+p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -361,7 +383,7 @@ ansonsten optional-\/\+Falg false
 
 Prüft, ob die Eingabe für die Rateversuche größer 0 ist.~\newline
 Wenn die Eingabe korrekt ist, wechsel zum \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_state}{Game\+State}} STATE\+\_\+6~\newline
-Wenn die Eingabe nicht korrekt ist, wechsel zum \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_state}{Game\+State}} \mbox{\hyperlink{class_s_t_a_t_e__9}{STATE\+\_\+9}}
+Wenn die Eingabe nicht korrekt ist, wechsel zum \mbox{\hyperlink{class_a_u_p___h_a_1_1_game_state}{Game\+State}} STATE\+\_\+9
 
 
 \begin{DoxyParams}{Parameter}
@@ -402,7 +424,14 @@ Sonderfunktionszahlen müssen negativ sein. \mbox{\Hypertarget{class_a_u_p___h_a
 
 Übergabe des Spielende-\/\+Handlers. 
 
-Handler wird aufgerufen, sobald das Spiel beendet werden soll. \mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_a01d68990f3aff15f1ff282f759994293}\label{class_a_u_p___h_a_1_1_number_game_state_manager_a01d68990f3aff15f1ff282f759994293}} 
+Handler wird aufgerufen, sobald das Spiel beendet werden soll.
+
+
+\begin{DoxyParams}{Parameter}
+{\em \mbox{[}handler\+\_\+p\mbox{]}} & std\+::function$<$void()$>$ Handler für Spielende \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_manager_a01d68990f3aff15f1ff282f759994293}\label{class_a_u_p___h_a_1_1_number_game_state_manager_a01d68990f3aff15f1ff282f759994293}} 
 \index{AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}!RegisterStates@{RegisterStates}}
 \index{RegisterStates@{RegisterStates}!AUP\_HA::NumberGameStateManager@{AUP\_HA::NumberGameStateManager}}
 \doxysubsubsection{\texorpdfstring{RegisterStates()}{RegisterStates()}}

@@ -97,9 +97,9 @@ $(function() {
 <tr class="memitem:ad5030ebe0017f0fa36f472db98245dbe"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="struct_a_u_p___h_a_1_1_user.html">User</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_user_repository.html#ad5030ebe0017f0fa36f472db98245dbe">GetUserSortedByRang</a> ()</td></tr>
 <tr class="memdesc:ad5030ebe0017f0fa36f472db98245dbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gibt das aktuelle <a class="el" href="class_a_u_p___h_a_1_1_user_repository.html" title="Repository für Userdaten.">UserRepository</a> zurück.  <a href="class_a_u_p___h_a_1_1_user_repository.html#ad5030ebe0017f0fa36f472db98245dbe">Mehr ...</a><br /></td></tr>
 <tr class="separator:ad5030ebe0017f0fa36f472db98245dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a475687681d7de01eb997243eec6ca437"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_user_repository.html#a475687681d7de01eb997243eec6ca437">SaveOrUpdate</a> (<a class="el" href="struct_a_u_p___h_a_1_1_user.html">User</a> user)</td></tr>
-<tr class="memdesc:a475687681d7de01eb997243eec6ca437"><td class="mdescLeft">&#160;</td><td class="mdescRight">Versucht einen <a class="el" href="struct_a_u_p___h_a_1_1_user.html" title="Model für User.">User</a> ins Leaderboard hinzuzufügen. Dabei wird geprüft, ob der neue <a class="el" href="struct_a_u_p___h_a_1_1_user.html" title="Model für User.">User</a> berechtigt ist, in die Bestenliste mit aufgenommen zu werden (max. 20 Benutzer).  <a href="class_a_u_p___h_a_1_1_user_repository.html#a475687681d7de01eb997243eec6ca437">Mehr ...</a><br /></td></tr>
-<tr class="separator:a475687681d7de01eb997243eec6ca437"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a195e2b094b5c6f2ca6f7ba807ca4dd38"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_user_repository.html#a195e2b094b5c6f2ca6f7ba807ca4dd38">SaveOrUpdate</a> (<a class="el" href="struct_a_u_p___h_a_1_1_user.html">User</a> user_p)</td></tr>
+<tr class="memdesc:a195e2b094b5c6f2ca6f7ba807ca4dd38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Versucht einen <a class="el" href="struct_a_u_p___h_a_1_1_user.html" title="Model User.">User</a> ins Leaderboard hinzuzufügen. Dabei wird geprüft, ob der neue <a class="el" href="struct_a_u_p___h_a_1_1_user.html" title="Model User.">User</a> berechtigt ist, in die Bestenliste mit aufgenommen zu werden (max. 20 Benutzer).  <a href="class_a_u_p___h_a_1_1_user_repository.html#a195e2b094b5c6f2ca6f7ba807ca4dd38">Mehr ...</a><br /></td></tr>
+<tr class="separator:a195e2b094b5c6f2ca6f7ba807ca4dd38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac98ca52660e757284a15e97a7d969bea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_u_p___h_a_1_1_user_repository.html#ac98ca52660e757284a15e97a7d969bea">ClearRepository</a> ()</td></tr>
 <tr class="memdesc:ac98ca52660e757284a15e97a7d969bea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Löschen des Repositories.  <a href="class_a_u_p___h_a_1_1_user_repository.html#ac98ca52660e757284a15e97a7d969bea">Mehr ...</a><br /></td></tr>
 <tr class="separator:ac98ca52660e757284a15e97a7d969bea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -190,12 +190,12 @@ Private Attribute</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Gibt das aktuelle <a class="el" href="class_a_u_p___h_a_1_1_user_repository.html" title="Repository für Userdaten.">UserRepository</a> zurück. </p>
-<dl class="section return"><dt>Rückgabe</dt><dd>Referenz auf die Benutzerliste in sortierter Reihenfolge </dd></dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>std::vector&lt;User&gt; Referenz auf die Benutzerliste in sortierter Reihenfolge </dd></dl>
 
 </div>
 </div>
-<a id="a475687681d7de01eb997243eec6ca437" name="a475687681d7de01eb997243eec6ca437"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a475687681d7de01eb997243eec6ca437">&#9670;&#160;</a></span>SaveOrUpdate()</h2>
+<a id="a195e2b094b5c6f2ca6f7ba807ca4dd38" name="a195e2b094b5c6f2ca6f7ba807ca4dd38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a195e2b094b5c6f2ca6f7ba807ca4dd38">&#9670;&#160;</a></span>SaveOrUpdate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -204,16 +204,16 @@ Private Attribute</h2></td></tr>
           <td class="memname">void AUP_HA::UserRepository::SaveOrUpdate </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_a_u_p___h_a_1_1_user.html">User</a>&#160;</td>
-          <td class="paramname"><em>user</em></td><td>)</td>
+          <td class="paramname"><em>user_p</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Versucht einen <a class="el" href="struct_a_u_p___h_a_1_1_user.html" title="Model für User.">User</a> ins Leaderboard hinzuzufügen. Dabei wird geprüft, ob der neue <a class="el" href="struct_a_u_p___h_a_1_1_user.html" title="Model für User.">User</a> berechtigt ist, in die Bestenliste mit aufgenommen zu werden (max. 20 Benutzer). </p>
+<p>Versucht einen <a class="el" href="struct_a_u_p___h_a_1_1_user.html" title="Model User.">User</a> ins Leaderboard hinzuzufügen. Dabei wird geprüft, ob der neue <a class="el" href="struct_a_u_p___h_a_1_1_user.html" title="Model User.">User</a> berechtigt ist, in die Bestenliste mit aufgenommen zu werden (max. 20 Benutzer). </p>
 <dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
-    <tr><td class="paramname">[user]</td><td><a class="el" href="struct_a_u_p___h_a_1_1_user.html" title="Model für User.">User</a> Benutzer der zum Repository hinzugefügt werden soll </td></tr>
+    <tr><td class="paramname">[user_p]</td><td><a class="el" href="struct_a_u_p___h_a_1_1_user.html" title="Model User.">User</a> Benutzer der zum Repository hinzugefügt werden soll </td></tr>
   </table>
   </dd>
 </dl>
@@ -240,7 +240,7 @@ Private Attribute</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p ><a class="el" href="class_a_u_p___h_a_1_1_persistence_list_service.html">PersistenceListService</a> </p>
+<p ><a class="el" href="class_a_u_p___h_a_1_1_persistence_list_service.html" title="PersistenceListService - Basisklasse.">PersistenceListService</a> </p>
 
 </div>
 </div>

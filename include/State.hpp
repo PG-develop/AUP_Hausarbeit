@@ -10,7 +10,8 @@ namespace AUP_HA
 	class StateManager;
 
 	/**
-	* @class Virtuelle Basisklasse für alle States
+	* @class State
+	* @brief Virtuelle Basisklasse für alle States
 	*/
 	class State 
 	{

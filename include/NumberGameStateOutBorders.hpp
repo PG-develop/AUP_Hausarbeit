@@ -5,7 +5,8 @@
 namespace AUP_HA
 {
 	/**
-	* @class STATE_4
+	* @class NumberGameStateOutBorders
+	* @brief STATE_4
 	*
 	* Die Eingabe des Benutzers war auﬂerhalb der Grenzen.
 	* Der Benutzer wird aufgefordert, eine Nummer einzugeben.

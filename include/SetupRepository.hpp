@@ -7,7 +7,6 @@ namespace AUP_HA
 {
 	/**
 	* @brief Repository für Einstellungen
-	*
 	*/
 	class SetupRepository
 	{

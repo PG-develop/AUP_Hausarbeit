@@ -15,7 +15,8 @@ namespace AUP_HA
 	class NumberGameStateManager;
 
 	/**
-	* @class Basisklasse für NumberGameStates
+	* @class NumberGameState
+	* @brief Basisklasse für NumberGameStates
 	*/
 	class NumberGameState
 	{

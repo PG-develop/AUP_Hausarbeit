@@ -2,6 +2,11 @@
 \label{class_a_u_p___h_a_1_1_number_game_state}\index{AUP\_HA::NumberGameState@{AUP\_HA::NumberGameState}}
 
 
+Basisklasse für Number\+Game\+States.  
+
+
+
+
 {\ttfamily \#include $<$Number\+Game\+State.\+hpp$>$}
 
 Klassendiagramm für AUP\+\_\+\+HA\+::Number\+Game\+State\+:\begin{figure}[H]
@@ -21,7 +26,7 @@ typedef std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_
 \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_aed65b8b8540b44f5d496c906a9264c50}{Number\+Game\+State}} (\mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager}{Number\+Game\+State\+Manager}} \&manager\+\_\+p)
 \begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a5c300563900b06b299be7db076f320e4}{$\sim$\+Number\+Game\+State}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Destruktor. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a8f62b5f4f58638f10f87a09c7d327b5b}{Render}} ()=0
 \item 
 virtual void \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_a3f654578466f2979ad50eb9035314c5c}{Process\+Events}} ()=0
@@ -51,6 +56,9 @@ std\+::vector$<$ std\+::function$<$ std\+::optional$<$ \mbox{\hyperlink{namespac
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Ausführliche Beschreibung}
+Basisklasse für Number\+Game\+States. 
+
 \doxysubsection{Dokumentation der benutzerdefinierten Datentypen}
 \mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_a55a54265c98d8349461d00129b430392}\label{class_a_u_p___h_a_1_1_number_game_state_a55a54265c98d8349461d00129b430392}} 
 \index{AUP\_HA::NumberGameState@{AUP\_HA::NumberGameState}!Ptr@{Ptr}}
@@ -71,13 +79,22 @@ std\+::vector$<$ std\+::function$<$ std\+::optional$<$ \mbox{\hyperlink{namespac
 
 Konstruktor. 
 
-Referenzübergabe von der Spielinstanz \mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_a5c300563900b06b299be7db076f320e4}\label{class_a_u_p___h_a_1_1_number_game_state_a5c300563900b06b299be7db076f320e4}} 
+Referenzübergabe von der Spielinstanz
+
+
+\begin{DoxyParams}{Parameter}
+{\em \mbox{[}manager\+\_\+p\mbox{]}} & \mbox{\hyperlink{class_a_u_p___h_a_1_1_number_game_state_manager}{Number\+Game\+State\+Manager}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_number_game_state_a5c300563900b06b299be7db076f320e4}\label{class_a_u_p___h_a_1_1_number_game_state_a5c300563900b06b299be7db076f320e4}} 
 \index{AUP\_HA::NumberGameState@{AUP\_HA::NumberGameState}!````~NumberGameState@{$\sim$NumberGameState}}
 \index{````~NumberGameState@{$\sim$NumberGameState}!AUP\_HA::NumberGameState@{AUP\_HA::NumberGameState}}
 \doxysubsubsection{\texorpdfstring{$\sim$NumberGameState()}{~NumberGameState()}}
 {\footnotesize\ttfamily AUP\+\_\+\+HA\+::\+Number\+Game\+State\+::$\sim$\+Number\+Game\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-Destruktor
+
+
+Destruktor. 
 
 Keine Funktion 
 

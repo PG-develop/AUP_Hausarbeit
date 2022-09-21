@@ -2,6 +2,11 @@
 \label{class_a_u_p___h_a_1_1_menu_manager}\index{AUP\_HA::MenuManager$<$ T $>$@{AUP\_HA::MenuManager$<$ T $>$}}
 
 
+Menü-\/\+Manager für Listenauswahl.  
+
+
+
+
 {\ttfamily \#include $<$Menu\+Manager.\+hpp$>$}
 
 \doxysubsection*{Öffentliche Methoden}
@@ -11,13 +16,13 @@
 \begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager_aef91586329f835c2885cd3ee0f8c0ed4}{$\sim$\+Menu\+Manager}} ()
 \begin{DoxyCompactList}\small\item\em Destruktor. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager_aad940fb8196adab2d38763bf8c8323f2}{register\+Menu}} (T menu\+ID, std\+::function$<$ void()$>$ handler)
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager_a4eb3562a93ab46da6315c67628ae800d}{Register\+Menu}} (T menu\+ID\+\_\+p, std\+::function$<$ void()$>$ handler\+\_\+p)
 \begin{DoxyCompactList}\small\item\em Registriert Event\+Handler für das Menü. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager_aed8484038f7a31ee8146048b6aacdf25}{select\+Menu\+Item}} (T menu\+ID)
-\begin{DoxyCompactList}\small\item\em Ruft den Handler von dem registriertem Identifizierer auf. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager_aa65c1f18e5776b410a0c63e36d766660}{select\+Menu\+Item}} (std\+::int32\+\_\+t menu\+Int\+ID)
-\begin{DoxyCompactList}\small\item\em Ruft den Handler von dem registriertem Identifizierer auf. Es erfolgt keine Prüfung, ob der Identifizierer auch tatsächlich existiert. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager_a82057d7788ba1fcebbcdcc81ac3656a9}{count}} () const
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager_abb81e832e28488e77bef7b973870e373}{Select\+Menu\+Item}} (T menu\+ID\+\_\+p)
+\begin{DoxyCompactList}\small\item\em Ruft den Handler von dem registriertem Identifikator auf. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager_afd4983d5a022f092c2875d6bf1ec390b}{Select\+Menu\+Item}} (std\+::int32\+\_\+t menu\+Int\+ID\+\_\+p)
+\begin{DoxyCompactList}\small\item\em Ruft den Handler von dem registriertem Identifikator auf. Es erfolgt keine Prüfung, ob der Identifikator auch tatsächlich existiert. \end{DoxyCompactList}\item 
+std\+::int32\+\_\+t \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager_ab075c219a884a90eccccb8f92e026bfd}{Count}} () const
 \begin{DoxyCompactList}\small\item\em Gibt die Anzahl der registrierten Handlers zurück. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attribute}
 \begin{DoxyCompactItemize}
@@ -29,6 +34,8 @@ std\+::map$<$ T, std\+::function$<$ void()$>$ $>$ \mbox{\hyperlink{class_a_u_p__
 \doxysubsection{Ausführliche Beschreibung}
 \subsubsection*{template$<$typename T$>$\newline
 class AUP\+\_\+\+HA\+::\+Menu\+Manager$<$ T $>$}
+Menü-\/\+Manager für Listenauswahl. 
+
 Manager für numerische Menüstrukturen~\newline
 Für den generischen Typen T muss der verwendete Menu-\/\+Identifiziertyp angegeben werden.
 
@@ -79,12 +86,12 @@ Keine Funktion
 
 
 \doxysubsection{Dokumentation der Elementfunktionen}
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_menu_manager_a82057d7788ba1fcebbcdcc81ac3656a9}\label{class_a_u_p___h_a_1_1_menu_manager_a82057d7788ba1fcebbcdcc81ac3656a9}} 
-\index{AUP\_HA::MenuManager$<$ T $>$@{AUP\_HA::MenuManager$<$ T $>$}!count@{count}}
-\index{count@{count}!AUP\_HA::MenuManager$<$ T $>$@{AUP\_HA::MenuManager$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{count()}{count()}}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_menu_manager_ab075c219a884a90eccccb8f92e026bfd}\label{class_a_u_p___h_a_1_1_menu_manager_ab075c219a884a90eccccb8f92e026bfd}} 
+\index{AUP\_HA::MenuManager$<$ T $>$@{AUP\_HA::MenuManager$<$ T $>$}!Count@{Count}}
+\index{Count@{Count}!AUP\_HA::MenuManager$<$ T $>$@{AUP\_HA::MenuManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Count()}{Count()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-int \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager}{AUP\+\_\+\+HA\+::\+Menu\+Manager}}$<$ T $>$\+::count\hspace{0.3cm}{\ttfamily [inline]}}
+std\+::int32\+\_\+t \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager}{AUP\+\_\+\+HA\+::\+Menu\+Manager}}$<$ T $>$\+::\+Count\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -95,12 +102,12 @@ Gibt die Anzahl der registrierten Handlers zurück.
 {\em \mbox{[}\+T\mbox{]}} & siehe Klassenbeschreibung \\
 \hline
 \end{DoxyTemplParams}
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_menu_manager_aad940fb8196adab2d38763bf8c8323f2}\label{class_a_u_p___h_a_1_1_menu_manager_aad940fb8196adab2d38763bf8c8323f2}} 
-\index{AUP\_HA::MenuManager$<$ T $>$@{AUP\_HA::MenuManager$<$ T $>$}!registerMenu@{registerMenu}}
-\index{registerMenu@{registerMenu}!AUP\_HA::MenuManager$<$ T $>$@{AUP\_HA::MenuManager$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{registerMenu()}{registerMenu()}}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_menu_manager_a4eb3562a93ab46da6315c67628ae800d}\label{class_a_u_p___h_a_1_1_menu_manager_a4eb3562a93ab46da6315c67628ae800d}} 
+\index{AUP\_HA::MenuManager$<$ T $>$@{AUP\_HA::MenuManager$<$ T $>$}!RegisterMenu@{RegisterMenu}}
+\index{RegisterMenu@{RegisterMenu}!AUP\_HA::MenuManager$<$ T $>$@{AUP\_HA::MenuManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{RegisterMenu()}{RegisterMenu()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-void \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager}{AUP\+\_\+\+HA\+::\+Menu\+Manager}}$<$ T $>$\+::register\+Menu (\begin{DoxyParamCaption}\item[{T}]{menu\+ID,  }\item[{std\+::function$<$ void()$>$}]{handler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager}{AUP\+\_\+\+HA\+::\+Menu\+Manager}}$<$ T $>$\+::\+Register\+Menu (\begin{DoxyParamCaption}\item[{T}]{menu\+ID\+\_\+p,  }\item[{std\+::function$<$ void()$>$}]{handler\+\_\+p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -110,30 +117,9 @@ Die Handler müssen in der gleichen Reihenfolge wie die zugehörigen Aufrufzahle
 
 
 \begin{DoxyParams}{Parameter}
-{\em \mbox{[}menu\+ID\mbox{]}} & T Identifizierer für den Funktions\+Handler \\
+{\em \mbox{[}menu\+ID\+\_\+p\mbox{]}} & T Identifikator für den Funktions\+Handler \\
 \hline
-{\em \mbox{[}handler\mbox{]}} & std\+::function$<$void()$>$ Zu registrierender Handler \\
-\hline
-\end{DoxyParams}
-
-\begin{DoxyTemplParams}{Template-\/\+Parameter}
-{\em \mbox{[}\+T\mbox{]}} & siehe Klassenbeschreibung \\
-\hline
-\end{DoxyTemplParams}
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_menu_manager_aa65c1f18e5776b410a0c63e36d766660}\label{class_a_u_p___h_a_1_1_menu_manager_aa65c1f18e5776b410a0c63e36d766660}} 
-\index{AUP\_HA::MenuManager$<$ T $>$@{AUP\_HA::MenuManager$<$ T $>$}!selectMenuItem@{selectMenuItem}}
-\index{selectMenuItem@{selectMenuItem}!AUP\_HA::MenuManager$<$ T $>$@{AUP\_HA::MenuManager$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{selectMenuItem()}{selectMenuItem()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-void \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager}{AUP\+\_\+\+HA\+::\+Menu\+Manager}}$<$ T $>$\+::select\+Menu\+Item (\begin{DoxyParamCaption}\item[{std\+::int32\+\_\+t}]{menu\+Int\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Ruft den Handler von dem registriertem Identifizierer auf. Es erfolgt keine Prüfung, ob der Identifizierer auch tatsächlich existiert. 
-
-
-\begin{DoxyParams}{Parameter}
-{\em \mbox{[}menu\+ID\mbox{]}} & std\+::int32\+\_\+t Identifizierer als Int \\
+{\em \mbox{[}handler\+\_\+p\mbox{]}} & std\+::function$<$void()$>$ Zu registrierender Handler \\
 \hline
 \end{DoxyParams}
 
@@ -141,20 +127,41 @@ Ruft den Handler von dem registriertem Identifizierer auf. Es erfolgt keine Prü
 {\em \mbox{[}\+T\mbox{]}} & siehe Klassenbeschreibung \\
 \hline
 \end{DoxyTemplParams}
-\mbox{\Hypertarget{class_a_u_p___h_a_1_1_menu_manager_aed8484038f7a31ee8146048b6aacdf25}\label{class_a_u_p___h_a_1_1_menu_manager_aed8484038f7a31ee8146048b6aacdf25}} 
-\index{AUP\_HA::MenuManager$<$ T $>$@{AUP\_HA::MenuManager$<$ T $>$}!selectMenuItem@{selectMenuItem}}
-\index{selectMenuItem@{selectMenuItem}!AUP\_HA::MenuManager$<$ T $>$@{AUP\_HA::MenuManager$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{selectMenuItem()}{selectMenuItem()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_menu_manager_afd4983d5a022f092c2875d6bf1ec390b}\label{class_a_u_p___h_a_1_1_menu_manager_afd4983d5a022f092c2875d6bf1ec390b}} 
+\index{AUP\_HA::MenuManager$<$ T $>$@{AUP\_HA::MenuManager$<$ T $>$}!SelectMenuItem@{SelectMenuItem}}
+\index{SelectMenuItem@{SelectMenuItem}!AUP\_HA::MenuManager$<$ T $>$@{AUP\_HA::MenuManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SelectMenuItem()}{SelectMenuItem()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-void \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager}{AUP\+\_\+\+HA\+::\+Menu\+Manager}}$<$ T $>$\+::select\+Menu\+Item (\begin{DoxyParamCaption}\item[{T}]{menu\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager}{AUP\+\_\+\+HA\+::\+Menu\+Manager}}$<$ T $>$\+::\+Select\+Menu\+Item (\begin{DoxyParamCaption}\item[{std\+::int32\+\_\+t}]{menu\+Int\+ID\+\_\+p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Ruft den Handler von dem registriertem Identifizierer auf. 
+Ruft den Handler von dem registriertem Identifikator auf. Es erfolgt keine Prüfung, ob der Identifikator auch tatsächlich existiert. 
 
 
 \begin{DoxyParams}{Parameter}
-{\em \mbox{[}menu\+ID\mbox{]}} & T Identifizierer \\
+{\em \mbox{[}menu\+Int\+ID\+\_\+p\mbox{]}} & std\+::int32\+\_\+t Identifikator als Int \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template-\/\+Parameter}
+{\em \mbox{[}\+T\mbox{]}} & siehe Klassenbeschreibung \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{class_a_u_p___h_a_1_1_menu_manager_abb81e832e28488e77bef7b973870e373}\label{class_a_u_p___h_a_1_1_menu_manager_abb81e832e28488e77bef7b973870e373}} 
+\index{AUP\_HA::MenuManager$<$ T $>$@{AUP\_HA::MenuManager$<$ T $>$}!SelectMenuItem@{SelectMenuItem}}
+\index{SelectMenuItem@{SelectMenuItem}!AUP\_HA::MenuManager$<$ T $>$@{AUP\_HA::MenuManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SelectMenuItem()}{SelectMenuItem()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_a_u_p___h_a_1_1_menu_manager}{AUP\+\_\+\+HA\+::\+Menu\+Manager}}$<$ T $>$\+::\+Select\+Menu\+Item (\begin{DoxyParamCaption}\item[{T}]{menu\+ID\+\_\+p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Ruft den Handler von dem registriertem Identifikator auf. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em \mbox{[}menu\+ID\+\_\+p\mbox{]}} & T Identifikator \\
 \hline
 \end{DoxyParams}
 
