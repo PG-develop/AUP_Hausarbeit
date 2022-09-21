@@ -8,8 +8,10 @@ namespace AUP_HA
 	* @brief Konstruktor 
 	* 
 	* Übergibt seinen StateManager an die Basisklasse
+	* 
+	* @param [stateManager_p] StateManager 
 	*/
-	IntroState::IntroState(StateManager& stateManager) : State(stateManager)
+	IntroState::IntroState(StateManager& stateManager_p) : State(stateManager_p)
 	{
 	}
 

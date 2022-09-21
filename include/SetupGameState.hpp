@@ -15,7 +15,7 @@ namespace AUP_HA
 	/**
 	* @class SetupGameState
 	* 
-	* Dem Benurter soll ermöglicht werden, die Spieleinstellungen zu konfigurieren.
+	* Dem Benutzer soll ermöglicht werden, die Spieleinstellungen zu konfigurieren.
 	*/
 	class SetupGameState : public State
 	{

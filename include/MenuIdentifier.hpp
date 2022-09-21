@@ -17,11 +17,9 @@ namespace AUP_HA
 	{
 		enum ID
 		{
-			GAMESETUP = 1,
-			CLEAR,
-			EXIT,
-			GAMESETUP_AMOUNT_OF_CHOICES,
-			GAMESETUP_MAX_RANGE,
+			GAMESETUP = 1,					/**< Wechsel zu den Spieleinstellungen */
+			CLEAR,							/**< Bestenliste resetten */
+			EXIT							/**< Zurück zum Main-State*/
 		};
 	}
 

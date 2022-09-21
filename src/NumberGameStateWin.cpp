@@ -10,13 +10,15 @@ namespace AUP_HA
 	* @brief Konstruktor
 	*
 	* Laden der Übergangsbedingungen: L
+	* 
+	* @param [stateManager_p] NumberGameStateManager 
 	*/
-	NumberGameStateWin::NumberGameStateWin(NumberGameStateManager& manager) : NumberGameState(manager)
+	NumberGameStateWin::NumberGameStateWin(NumberGameStateManager& manager_p) : NumberGameState(manager_p)
 	{
-		mTransitionList.push_back(manager.GetTransition(GameStates::TRANSITION::L));
+		mTransitionList.push_back(manager_p.GetTransition(GameStates::TRANSITION::L));
 
 		// Update der Bestenliste
-		manager.GetUserRepository().SaveOrUpdate(manager.GetGame().GetUser());
+		manager_p.GetUserRepository().SaveOrUpdate(manager_p.GetGame().GetUser());
 	}
 
 	/**

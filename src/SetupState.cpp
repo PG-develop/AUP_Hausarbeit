@@ -10,6 +10,8 @@ namespace AUP_HA
 	* @brief Konstruktor
 	*
 	* Erstelle das SetupRepository und initialisiere Menü für die Auswahl
+	* 
+	* @param [stateManager_p] StateManager 
 	*/
 	SetupState::SetupState(StateManager& stateManager_p) 
 		: State(stateManager_p)

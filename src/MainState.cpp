@@ -7,9 +7,11 @@ namespace AUP_HA
 	* @brief Konstruktor
 	* 
 	* Instanziierung des Menu
+	* 
+	* @param [stateManager_p] StateManager 
 	*/
-	MainState::MainState(StateManager& stateManager)
-		: State(stateManager)
+	MainState::MainState(StateManager& stateManager_p)
+		: State(stateManager_p)
 		, mMenu()
 	{
 		// Menüregistrierung

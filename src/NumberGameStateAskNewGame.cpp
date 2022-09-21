@@ -7,6 +7,8 @@ namespace AUP_HA
 	* @brief Konstruktor
 	* 
 	* Laden der Übergangsbedingungen: NG
+	* 
+	* @param [stateManager_p] NumberGameStateManager 
 	*/
 	NumberGameStateAskNewGame::NumberGameStateAskNewGame(NumberGameStateManager& manager_p) : NumberGameState(manager_p)
 	{

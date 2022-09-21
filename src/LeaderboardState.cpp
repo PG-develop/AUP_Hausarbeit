@@ -12,9 +12,9 @@ namespace AUP_HA
 	* 
 	* Instanziierung des UserRepositories
 	* 
-	* @param [stateManager] StateManager Referenz auf seinen StateManager
+	* @param [stateManager_p] StateManager Referenz auf seinen StateManager
 	*/
-	LeaderboardState::LeaderboardState(StateManager& stateManager) : State(stateManager)
+	LeaderboardState::LeaderboardState(StateManager& stateManager_p) : State(stateManager_p)
 	{
 		mUserRepository = std::make_unique<UserRepository>();
 	}

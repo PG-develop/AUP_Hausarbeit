@@ -7,6 +7,8 @@ namespace AUP_HA
 	* @brief Konstruktor
 	* 
 	* Übergabe des StateManagers
+	* 
+	* @param [stateManager_p] StateManager 
 	*/
 	State::State(StateManager& stateManager_p) : mStateManager(&stateManager_p)
 	{

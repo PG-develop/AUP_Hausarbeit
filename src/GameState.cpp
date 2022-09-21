@@ -18,8 +18,10 @@ namespace AUP_HA
 	* 
 	* Initialsisierung der Member\n
 	* Registrierung der Spielstates
+	* 
+	* @param [stateManager_p] StateManager 
 	*/
-	GameState::GameState(StateManager& stateManager) : State(stateManager)
+	GameState::GameState(StateManager& stateManager_p) : State(stateManager_p)
 	{
 		mUserRepository = std::make_unique<UserRepository>();
 		mGame = std::make_unique<Game>();

@@ -8,6 +8,8 @@ namespace AUP_HA
 	* @brief Konstruktor
 	*
 	* Laden der Übergangsbedingungen: NN, C, OB, NH
+	* 
+	* @param [stateManager_p] NumberGameStateManager 
 	*/
 	NumberGameStateNormal::NumberGameStateNormal(NumberGameStateManager& manager_p) : NumberGameState(manager_p)
 	{

@@ -10,6 +10,8 @@ namespace AUP_HA
 	* @brief Konstruktor
 	* 
 	* Laden der Übergangsbedingungen: EMPTY
+	* 
+	* @param [stateManager_p] NumberGameStateManager 
 	*/
 	NumberGameStateName::NumberGameStateName(NumberGameStateManager& manager_p) : NumberGameState(manager_p)
 	{

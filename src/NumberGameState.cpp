@@ -7,6 +7,8 @@ namespace AUP_HA
 	* @brief Konstruktor
 	* 
 	* Referenzübergabe von der Spielinstanz
+	* 
+	* @param [stateManager_p] NumberGameStateManager 
 	*/
 	NumberGameState::NumberGameState(NumberGameStateManager& manager_p) : mInputBuffer(), mManager{&manager_p}
 	{

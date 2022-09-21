@@ -8,13 +8,15 @@ namespace AUP_HA
 	* @brief Konstruktor
 	*
 	* Laden der Übergangsbedingungen: NN, C, OB, NH
+	* 
+	* @param [stateManager_p] NumberGameStateManager 
 	*/
-	NumberGameStateOutBorders::NumberGameStateOutBorders(NumberGameStateManager& manager) : NumberGameState(manager)
+	NumberGameStateOutBorders::NumberGameStateOutBorders(NumberGameStateManager& manager_p) : NumberGameState(manager_p)
 	{
-		mTransitionList.push_back(manager.GetTransition(GameStates::TRANSITION::NN));
-		mTransitionList.push_back(manager.GetTransition(GameStates::TRANSITION::C));
-		mTransitionList.push_back(manager.GetTransition(GameStates::TRANSITION::OB));
-		mTransitionList.push_back(manager.GetTransition(GameStates::TRANSITION::NH));
+		mTransitionList.push_back(manager_p.GetTransition(GameStates::TRANSITION::NN));
+		mTransitionList.push_back(manager_p.GetTransition(GameStates::TRANSITION::C));
+		mTransitionList.push_back(manager_p.GetTransition(GameStates::TRANSITION::OB));
+		mTransitionList.push_back(manager_p.GetTransition(GameStates::TRANSITION::NH));
 	}
 
 	/**

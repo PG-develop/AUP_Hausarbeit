@@ -11,6 +11,8 @@ namespace AUP_HA
 	* @brief Konstruktor
 	*
 	* Laden der Übergangsbedingungen: W
+	* 
+	* @param [stateManager_p] NumberGameStateManager 
 	*/
 	NumberGameStateCheatWin::NumberGameStateCheatWin(NumberGameStateManager& manager_p) : NumberGameState(manager_p)
 	{

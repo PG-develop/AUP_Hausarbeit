@@ -35,10 +35,10 @@ namespace AUP_HA
 		void onExit();
 
 	private:
-		std::string						mUserinput;			// Benutzereingabe
-		std::pair<int, int>				mLimits;			// Grenzen für die Menüeingabe
-		MenuManager<SetupMenu::ID>		mMenu;				// Menü
-		std::unique_ptr<UserRepository> mUserRepository;	// UserRepository
+		std::string								mUserinput;			// Benutzereingabe
+		std::pair<std::int32_t, std::int32_t>	mLimits;			// Grenzen für die Menüeingabe
+		MenuManager<SetupMenu::ID>				mMenu;				// Menü
+		std::unique_ptr<UserRepository>			mUserRepository;	// UserRepository
 
 	};
 }

@@ -12,6 +12,9 @@ namespace AUP_HA
 	* Übergabe der Referenzen\n
 	* Registrierung der Übergangsbedingungen in der Übergangsbedingungsmap\n
 	* Registrierung der Sonderfunktionen
+	* 
+	* @param [userRepository_p] UserRepository 
+	* @param [game_p] Spieleinstanz 
 	*/
 	NumberGameStateManager::NumberGameStateManager(UserRepository& userRepository_p, Game& game_p) : mCheatCodes()
 	{
@@ -126,6 +129,8 @@ namespace AUP_HA
 	* @brief Rückgabe der Übergabebedingung nach Identifikator
 	* 
 	* Sucht im Maphandler nach der Übergangsbedingung und gibt diese zurück.
+	* 
+	* @param [transitionID_p] GameStates::TRANSITION Identifikator
 	* 
 	* @return TransitionHandler& Übergangsbedingungshandler
 	*/

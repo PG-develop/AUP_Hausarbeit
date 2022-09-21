@@ -21,32 +21,31 @@ namespace AUP_HA
 		//TODO: Namen der IDs müssen noch angepasst werden
 		enum ID
 		{
-			NONE,
+			NONE,		/**< Kein aktiver State */
 			STATE_1,	/**< NumberGameStateName: Name eingeben */
-			STATE_2,	/**< NumberGameState */
-			STATE_3,
-			STATE_4,
-			STATE_5,
-			STATE_6,
-			STATE_7,
-			STATE_8,	// Negative Zahl ohne Sonderfunktion
-			STATE_9,	// CheatState -123
-			STATE_10,	// CheatState -456
-			END
+			STATE_2,	/**< NumberGameStateNormal: Normaler Spielablauf */
+			STATE_3,	/**< NumberGameStateNoNumber: Keine Nummer */
+			STATE_4,	/**< NumberGameStateOutBorders: Außerhalb der Grenzen */
+			STATE_5,	/**< NumberGameStateWin: gesuchte Nummer gefunden */
+			STATE_6,	/**< NumberGameStateShowLeaderboard: Bestenliste anzeigen */
+			STATE_7,	/**< NumberGameStateAskNewGame: Frage nach neuem Spiel */
+			STATE_8,	/**< NumberGameStateShowSearchedNummer: Gesuchte Nummer wird angezeigt */
+			STATE_9,	/**< NumberGameStateCheatWin: Sofort gewonnen */
+			END			/**< Spielende */
 		};
 
 		enum TRANSITION
 		{
-			EMPTY,
-			NH,
-			NN,
-			OB,
-			L,
-			I,			// 
-			NG,			// Neues Spiel
-			E,			// Exit
-			C,			// Sonderfunktionen
-			W
+			EMPTY,		/**< Abfrage, ob String leer oder nicht leer ist */
+			NH,			/**< Abfrage, ob gesuchte Nummer gefunden wurde */
+			NN,			/**< Abfrage, ob String eine Nummer ist */
+			OB,			/**< Abfrage, ob Nummer innerhalb der Grenzen liegt */
+			L,			/**< Anzeige der Bestenliste */
+			I,			/**< Anzeige, ob ein neues Spiel gespielt werden soll */
+			NG,			/**< Abfrage, ob ein neues Spiel gespielt werden soll */
+			E,			/**< Spiel beenden */
+			C,			/**< Sonderfunktionen */
+			W			/**< Direkt gewonnen */
 		};
 	}
 }
