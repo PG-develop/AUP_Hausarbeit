@@ -23,7 +23,7 @@ namespace AUP_HA
 
 		void RegisterMenu(T menuID_p, std::function<void()> handler_p);
 		void SelectMenuItem(T menuID_p);
-		void SelectMenuItem(std::int32_t menuIntID);
+		void SelectMenuItem(std::int32_t menuIntID_p);
 
 		std::int32_t Count() const;
 
@@ -62,14 +62,14 @@ namespace AUP_HA
 	* Die Handler müssen in der gleichen Reihenfolge wie die zugehörigen
 	* Aufrufzahlen registriert werden.
 	* 
-	* @param [menuID_p] T Identifizierer für den FunktionsHandler
+	* @param [menuID_p] T Identifikator für den FunktionsHandler
 	* @param [handler_p] std::function<void()> Zu registrierender Handler
 	* @tparam [T] siehe Klassenbeschreibung
 	*/
 	template<typename T>
 	inline void MenuManager<T>::RegisterMenu(T menuID_p, std::function<void()> handler_p)
 	{
-		// Nur im DEBUG-Build prüfe, ob Identifizierer bereits registriert wurde.
+		// Nur im DEBUG-Build prüfe, ob Identifikator bereits registriert wurde.
 #ifdef _DEBUG
 		auto found = mRegisteredHandlers.find(menuID_p);
 
@@ -82,9 +82,9 @@ namespace AUP_HA
 	}
 
 	/**
-	* @brief Ruft den Handler von dem registriertem Identifizierer auf
+	* @brief Ruft den Handler von dem registriertem Identifikator auf
 	* 
-	* @param [menuID] T Identifizierer
+	* @param [menuID_p] T Identifikator
 	* @tparam [T] siehe Klassenbeschreibung
 	*/
 	template<typename T>
@@ -101,10 +101,10 @@ namespace AUP_HA
 	}
 
 	/**
-	* @brief Ruft den Handler von dem registriertem Identifizierer auf.
-	* Es erfolgt keine Prüfung, ob der Identifizierer auch tatsächlich existiert
+	* @brief Ruft den Handler von dem registriertem Identifikator auf.
+	* Es erfolgt keine Prüfung, ob der Identifikator auch tatsächlich existiert
 	* 
-	* @param [menuID] std::int32_t Identifizierer als Int
+	* @param [menuID_p] std::int32_t Identifikator als Int
 	* @tparam [T] siehe Klassenbeschreibung
 	*/
 	template<typename T>

@@ -50,7 +50,7 @@ A00.00.00.03
 	+ Leaderboard
 
 	- Mit der MenuManager Klasse können klassische Menüstrukturen organisiert werden.
-	  Über Identifizierer werden EventHandler aufgerufen.
+	  Über Identifikator werden EventHandler aufgerufen.
 	- Um Strings in Int-Ganzzahlen zu parsen wurde die Funktion ParseStringToInt und
 	  ParseStrinToIntWithLimits implementiert. Zweitere ermöglicht das angeben von Grenzen
 	  in denen sich die zu parsende Zahl befinden muss (impliziet).

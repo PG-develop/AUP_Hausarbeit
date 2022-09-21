@@ -15,7 +15,7 @@ namespace AUP_HA
 	class MainState : public State
 	{
 	public:
-		MainState(StateManager& stateManager);
+		MainState(StateManager& stateManager_p);
 		~MainState();
 
 		virtual void Render();
