@@ -4,8 +4,8 @@
 #include <map>
 #include <cassert>
 
-#include "StatesIdentifier.hpp"
-#include "State.hpp"
+#include "../include/StatesIdentifier.hpp"
+#include "../include/State.hpp"
 
 namespace AUP_HA 
 {
